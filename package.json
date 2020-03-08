@@ -1,21 +1,21 @@
 {
-  "name": "template",
+  "name": "noureddinedotbiz",
   "version": "1.0.0",
-  "description": "A starting point",
+  "description": "Personal portfolio 2020",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/noureddinemade/template.git"
+    "url": "git+https://github.com/noureddinemade/noureddinemade.github.io.git"
   },
   "author": "Noureddine Azhar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/noureddinemade/template/issues"
+    "url": "https://github.com/noureddinemade/noureddinemade.github.io.git/issues"
   },
-  "homepage": "https://github.com/noureddinemade/template#readme",
+  "homepage": "https://github.com/noureddinemade/noureddinemade.github.io.git#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "child_process": "^1.0.2",
