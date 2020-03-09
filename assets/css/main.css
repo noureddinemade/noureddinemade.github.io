@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,500i,700,700i&display=swap|Material+Icons&display=swap");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -39,17 +41,490 @@ input, textarea, select {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
 
+@font-face {
+  font-family: 'Young Serif';
+  src: url("/assets/font/YoungSerif-Regular.woff"), url("/assets/font/YoungSerif-Regular.woff2"); }
+
+body * {
+  box-sizing: border-box; }
+
+footer, section {
+  padding: 100px 100px; }
+  @media screen and (max-width: 1024px) {
+    footer, section {
+      padding: 84px 84px; } }
+  @media screen and (max-width: 800px) {
+    footer, section {
+      padding: 68px 68px; } }
+  @media screen and (max-width: 640px) {
+    footer, section {
+      padding: 52px 52px; } }
+  @media screen and (max-width: 480px) {
+    footer, section {
+      padding: 36px 36px; } }
+
+header .inner, footer .inner, section .inner {
+  width: 1024px;
+  max-width: 1024px; }
+  @media screen and (max-width: 1024px) {
+    header .inner, footer .inner, section .inner {
+      width: 100%; } }
+
+header .inner, footer .inner, section .inner {
+  position: relative;
+  height: 100%; }
+
 body {
-  padding: 50px;
-  font-family: sans-serif;
-  font-size: 22px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+h1, h2, h3 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  text-decoration: none; }
+
+body {
+  font-family: "EB Garamond", serif;
+  font-weight: 400; }
+
+a[href$=".pdf"]:after {
+  display: inline-block;
+  position: absolute;
+  bottom: 5px;
+  right: -38px;
+  padding: 1px 4px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #001AFF;
+  color: #FFFFFF;
+  border-radius: 20px; }
+
+@media screen and (max-width: 1600px) {
+  .hideXL {
+    display: none; } }
+
+@media screen and (max-width: 1440px) {
+  .hideLG {
+    display: none; } }
+
+@media screen and (max-width: 1024px) {
+  .hideMD {
+    display: none; } }
+
+@media screen and (max-width: 800px) {
+  .hideSM {
+    display: none; } }
+
+@media screen and (max-width: 640px) {
+  .hideXS {
+    display: none; } }
+
+@media screen and (max-width: 480px) {
+  .hideXXS {
+    display: none; } }
+
+@keyframes arrowHover {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    transform: translateX(5px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); } }
+
+@-webkit-keyframes arrowHover {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    transform: translateX(5px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); } }
+
+@keyframes logo {
+  0% {
+    fill: #FF5A6E; }
+  10% {
+    fill: #FF5A6E; }
+  11% {
+    fill: #001AFF; }
+  16% {
+    fill: #001AFF; }
+  17% {
+    fill: #FF5A6E; }
+  95% {
+    fill: #FF5A6E; }
+  96% {
+    fill: #001AFF; }
+  99% {
+    fill: #001AFF; }
+  100% {
+    fill: #FF5A6E; } }
+
+@-webkit-keyframes logo {
+  0% {
+    fill: #FF5A6E; }
+  10% {
+    fill: #FF5A6E; }
+  11% {
+    fill: #001AFF; }
+  16% {
+    fill: #001AFF; }
+  17% {
+    fill: #FF5A6E; }
+  95% {
+    fill: #FF5A6E; }
+  96% {
+    fill: #001AFF; }
+  99% {
+    fill: #001AFF; }
+  100% {
+    fill: #FF5A6E; } }
+
+html {
+  background-color: #07005B; }
+
+body {
+  min-height: 100vh;
+  font-size: 26px;
   line-height: 1.2;
-  background-color: white;
-  color: black; }
+  background-color: #FFFFFF;
+  background-size: cover;
+  color: #07005B;
+  overflow: hidden; }
+
+main {
+  background-color: #FFFFFF; }
+
+header {
+  position: absolute;
+  z-index: 99;
+  top: 100px;
+  right: 100px;
+  height: 100px;
+  width: 150px; }
+  @media screen and (max-width: 1024px) {
+    header {
+      position: relative;
+      top: 78px;
+      left: 84px;
+      right: auto;
+      width: 134px; } }
+  @media screen and (max-width: 800px) {
+    header {
+      top: 48px;
+      left: 68px;
+      width: 106px; } }
+  @media screen and (max-width: 640px) {
+    header {
+      left: 52px; } }
+  @media screen and (max-width: 480px) {
+    header {
+      left: 36px; } }
+  header .inner {
+    display: flex;
+    align-content: center; }
+  header .logoWrap {
+    position: relative;
+    display: block;
+    width: 100%; }
+    header .logoWrap:before, header .logoWrap:after {
+      display: none; }
+    header .logoWrap svg {
+      width: 100%;
+      height: 100%;
+      fill: #FF5A6E; }
+      header .logoWrap svg:hover .-top {
+        -webkit-animation-name: logo;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-fill-mode: both;
+        animation-name: logo;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-delay: 0s;
+        animation-fill-mode: both; }
+      header .logoWrap svg:hover .-bottomRight {
+        -webkit-animation-name: logo;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-delay: 0.2s;
+        -webkit-animation-fill-mode: both;
+        animation-name: logo;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-delay: 0.2s;
+        animation-fill-mode: both; }
+      header .logoWrap svg:hover .-bottomLeft {
+        -webkit-animation-name: logo;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-delay: 0.4s;
+        -webkit-animation-fill-mode: both;
+        animation-name: logo;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-delay: 0.4s;
+        animation-fill-mode: both; }
+
+footer {
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 600px; }
+  footer .inner {
+    display: flex;
+    align-content: center; }
+
+section {
+  display: block;
+  position: sticky;
+  position: -webkit-sticky;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background-color: #FFFFFF; }
+  section:last-of-type {
+    margin-bottom: 600px; }
+  section.intro {
+    min-height: 50vh; }
+    @media screen and (max-width: 800px) {
+      section.intro {
+        padding-top: 25px; } }
+    section.intro ul {
+      display: block;
+      margin: 25px 0;
+      list-style: none; }
+      section.intro ul li {
+        display: inline-block;
+        margin: 0 40px 0 0; }
+        @media screen and (max-width: 800px) {
+          section.intro ul li {
+            display: block;
+            margin: 10px 0; } }
+  section.work {
+    min-height: 100vh;
+    background-color: #FFE7EB; }
+    section.work .item {
+      z-index: 1;
+      background-color: #FFFFFF;
+      transition-property: opacity;
+      transition-duration: 0.2s;
+      transition-delay: 0s;
+      transition-timing-function: linear;
+      padding: 50px 50px; }
+      @media screen and (max-width: 1024px) {
+        section.work .item {
+          padding: 34px 34px; } }
+      @media screen and (max-width: 800px) {
+        section.work .item {
+          padding: 18px 18px; } }
+      @media screen and (max-width: 640px) {
+        section.work .item {
+          padding: 2px 2px; } }
+      @media screen and (max-width: 480px) {
+        section.work .item {
+          padding: -14px -14px; } }
+      section.work .item h3 {
+        z-index: 2; }
+      section.work .item a {
+        z-index: 2; }
+        section.work .item a:after {
+          content: '→';
+          position: absolute;
+          top: 6px;
+          right: -30px; }
+        section.work .item a:hover:after {
+          -webkit-animation-name: arrowHover;
+          -webkit-animation-duration: 1s;
+          -webkit-animation-timing-function: ease-in;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-delay: 0;
+          -webkit-animation-fill-mode: both;
+          animation-name: arrowHover;
+          animation-duration: 1s;
+          animation-timing-function: ease-in;
+          animation-iteration-count: infinite;
+          animation-delay: 0;
+          animation-fill-mode: both; }
+        section.work .item a:hover + span, section.work .item a:hover ~ img {
+          opacity: 1;
+          visibility: visible; }
+      section.work .item span, section.work .item img {
+        position: fixed;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition-property: opacity, visibility;
+        transition-duration: 0.2s, 0.2s;
+        transition-delay: 0s;
+        transition-timing-function: linear; }
+      section.work .item span {
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+      section.work .item img {
+        z-index: 1;
+        top: 25%;
+        right: 25%;
+        width: auto;
+        height: 50%;
+        object-fit: contain; }
+  section .items {
+    z-index: 10;
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 50px; }
+    @media screen and (max-width: 1024px) {
+      section .items {
+        margin: 50px 0; } }
+    @media screen and (max-width: 800px) {
+      section .items {
+        grid-template-columns: 100%;
+        margin: 33.33333px 0; } }
+
+.bgPrimary {
+  background-color: #FF5A6E; }
+
+.textPrimary {
+  color: #FF5A6E; }
+
+.fillPrimary {
+  fill: #FF5A6E; }
+
+.bgSecondary {
+  background-color: #001AFF; }
+
+.textSecondary {
+  color: #001AFF; }
+
+.fillSecondary {
+  fill: #001AFF; }
+
+.bgTertiary {
+  background-color: #FFE7EB; }
+  .bgTertiary a:before {
+    background-color: #FFFFFF;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 90%, #001AFF 90%, #001AFF 100%); }
+
+.textTertiary {
+  color: #FFE7EB; }
+
+.fillTertiary {
+  fill: #FFE7EB; }
+
+.bgDark, footer {
+  background-color: #07005B; }
+
+.textDark {
+  color: #07005B; }
+
+.fillDark {
+  fill: #07005B; }
+
+.bgLight {
+  background-color: #FFFFFF; }
+
+.textLight, footer {
+  color: #FFFFFF; }
+
+.fillLight {
+  fill: #FFFFFF; }
+
+h1, h2, h3 {
+  position: relative;
+  line-height: 1.2; }
 
 h1 {
-  margin: 10px 0;
-  font-family: serif;
-  font-size: 50px;
-  font-weight: 700;
-  color: blue; }
+  font-size: 56px; }
+  @media screen and (max-width: 1024px) {
+    h1 {
+      font-size: 40px; } }
+  @media screen and (max-width: 800px) {
+    h1 {
+      font-size: 28px; } }
+  h1 span {
+    display: inline; }
+
+h2 {
+  font-size: 42px; }
+  @media screen and (max-width: 1024px) {
+    h2 {
+      font-size: 28px; } }
+  @media screen and (max-width: 800px) {
+    h2 {
+      font-size: 24.70588px; } }
+
+a {
+  position: relative;
+  z-index: 1;
+  font-weight: 500;
+  text-decoration: none;
+  color: #001AFF;
+  transition-property: color;
+  transition-duration: 0.1s;
+  transition-delay: 0s;
+  transition-timing-function: linear; }
+  a:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #FFE7EB;
+    background-image: linear-gradient(180deg, #FFE7EB 0%, #FFE7EB 90%, #001AFF 90%, #001AFF 100%);
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-delay: 0s;
+    transition-timing-function: linear; }
+  a[href$=".pdf"]:after {
+    content: 'PDF'; }
+  a:hover {
+    border-bottom-color: #07005B;
+    color: #07005B; }
+    a:hover:before {
+      width: 0%; }
+
+.textSmall {
+  font-size: 17.33333px; }
+
+.cursor {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #001AFF; }

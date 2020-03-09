@@ -1,10 +1,10 @@
 // Colours
 
-$c1:                        blue
-$c2:                        yellow
-$c3:                        lightblue
-$c4:                        black
-$c5:                        white
+$c1:                        #FF5A6E
+$c2:                        #001AFF
+$c3:                        #FFE7EB
+$c4:                        #07005B
+$c5:                        #FFFFFF
 
 $primary:                   $c1
 $secondary:                 $c2
@@ -13,29 +13,28 @@ $dark:                      $c4
 $light:                     $c5
 
 $text:                      $dark
-$link:                      $primary
+$link:                      $secondary
 $bg:                        $light
 $splash:                    $tertiary
-$highlight:                 $secondary
+$highlight:                 $primary
 
 $palette:                   (Primary $primary, Secondary $secondary, Tertiary $tertiary ,Dark $dark, Light $light)
 
 // Fonts
 
-$fontHead:                  serif
-$fontText:                  sans-serif
-$fontIcon:                  icons
+$fontHead:                  'Young Serif', serif        // 400
+$fontText:                  'EB Garamond', serif        // 400,500,700
 
-$h1:                        50px
-$h2:                        40px
-$h3:                        30px
+$h1:                        56px
+$h2:                        42px
+$h3:                        32px
 
 // Sizes
 
-$base:                      22px
-$globalSpace:               25px
-$headerHeight:              50px
-$footerHeight:              50px
+$base:                      26px
+$globalSpace:               100px
+$headerHeight:              100px
+$footerHeight:              600px
 
 $xl:                        1600px
 $lg:                        1440px
@@ -44,7 +43,7 @@ $sm:                        800px
 $xs:                        640px
 $xxs:                       480px
 
-$maxWidth:                  $xl
+$maxWidth:                  $md
 
 $padding:                   ($md, $sm, $xs, $xxs)
 $hide:                      (XL $xl, LG $lg, MD $md, SM $sm, XS $xs, XXS $xxs)
@@ -53,3 +52,5 @@ $hide:                      (XL $xl, LG $lg, MD $md, SM $sm, XS $xs, XXS $xxs)
 
 $imgPath:                   '/assets/img/'
 $fontPath:                  '/assets/font/'
+$cursor:                    $imgPath + 'cursor/'
+$mark:                      $imgPath + 'marks/'

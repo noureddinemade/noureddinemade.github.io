@@ -1,9 +1,99 @@
+h1, h2, h3
+
+    position: relative
+
+    line-height: 1.2
+
+    @extend %fontHead
+
 h1
 
-    margin: 10px 0
-
-    font-family: $fontHead
     font-size: $h1
-    font-weight: 700
 
-    color: $primary
+    // Responsive
+
+    +screen($md)
+
+        font-size: $h1 / 1.4
+
+    +screen($sm)
+
+        font-size: $h1 / 2
+
+    // Inner
+
+    span
+
+        display: inline
+
+h2
+
+    font-size: $h2
+
+    // Responsive
+
+    +screen($md)
+
+        font-size: $h2 / 1.5
+
+    +screen($sm)
+
+        font-size: $h2 / 1.7
+
+a
+
+    position: relative
+    z-index: 1
+
+    font-weight: 500
+    text-decoration: none
+
+    color: $link
+
+    // cursor: url($cursor + 'hand-point.png'), pointer
+
+    +transition(color, .1s)
+
+    // Pseudo
+
+    &:before
+
+        content: ''
+
+        position: absolute
+        z-index: -1
+        bottom: 0
+        left: 0
+
+        width: 100%
+        height: 50%
+
+        background-color: $splash
+        background-image: linear-gradient(180deg, $splash 0%, $splash 90%, $link 90%, $link 100%)
+
+        +transition(width, .3s)
+
+    // Special
+
+    &[href$=".pdf"]:after
+
+        content: 'PDF'
+
+        @extend %linkLabel
+
+    // States
+
+    &:hover
+
+        border-bottom-color: $text
+        color: $text
+
+        &:before
+
+            width: 0%
+
+//
+
+.textSmall
+
+    font-size: $base / 1.5

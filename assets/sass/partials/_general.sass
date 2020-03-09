@@ -1,10 +1,29 @@
+// General
+
+html
+
+    // cursor: url($cursor + 'hand-two.png'), auto
+
+    background-color: $dark
+
 body
 
-    padding: 50px
+    min-height: 100vh
 
-    font-family: $fontText
     font-size: $base
     line-height: 1.2
 
     background-color: $bg
+    background-size: cover
     color: $text
+
+    overflow: hidden
+
+    @extend %font
+    @extend %fontText
+
+    // Inner
+
+    *
+
+        @extend %boxSize

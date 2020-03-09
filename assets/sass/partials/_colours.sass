@@ -1,0 +1,22 @@
+// Colours
+
+@each $label, $colour in $palette
+
+    .bg#{$label}
+
+        background-color: $colour
+
+        @if $label == Tertiary
+
+            a:before
+
+                background-color: $light
+                background-image: linear-gradient(180deg, $light 0%, $light 90%, $link 90%, $link 100%)
+
+    .text#{$label}
+
+        color: $colour
+
+    .fill#{$label}
+
+        fill: $colour

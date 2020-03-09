@@ -1,0 +1,144 @@
+// Layout
+
+%boxSize
+
+    box-sizing: border-box
+
+%padding
+
+    +padding($globalSpace, $globalSpace, 16px, $padding)
+
+%maxWidth
+
+    +maxWidth($maxWidth)
+
+%center
+
+    margin-left: auto
+    margin-right: auto
+
+%inner
+
+    position: relative
+
+    height: 100%
+
+    @extend %maxWidth
+
+// Typography
+
+%font
+
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+%fontHead
+
+    font-family: $fontHead
+    font-weight: 400
+
+    text-decoration: none
+
+%fontText
+
+    font-family: $fontText
+    font-weight: 400
+
+%bold
+
+    font-weight: 700
+
+%italic
+
+    font-style: italic
+
+// Labels
+
+%linkLabel
+
+    display: inline-block
+    position: absolute
+
+    bottom: 5px
+    right: -38px
+
+    padding: 1px 4px
+
+    font-size: $base / 2
+    font-weight: 700
+    text-transform: uppercase
+
+    background-color: $secondary
+    color: $light
+
+    border-radius: 20px
+
+// Hide
+
+@each $label, $size in $hide
+
+    .hide#{$label}
+
+        +screen($size)
+
+            display: none
+
+// Animation
+
++keyframes(arrowHover)
+
+    0%
+
+        opacity: 1
+
+        +transform(translateX, 0)
+
+    50%
+
+        opacity: 0
+
+        +transform(translateX, 5px)
+
+    100%
+
+        opacity: 1
+
+        +transform(translateX, 0)
+
++keyframes(logo)
+
+    0%
+
+        fill: $primary
+
+    10%
+
+        fill: $primary
+
+    11%
+
+        fill: $secondary
+
+    16%
+
+        fill: $secondary
+
+    17%
+
+        fill: $primary
+
+    95%
+
+        fill: $primary
+
+    96%
+
+        fill: $secondary
+
+    99%
+
+        fill: $secondary
+
+    100%
+
+        fill: $primary
