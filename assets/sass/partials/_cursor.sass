@@ -2,15 +2,37 @@
 
 .cursor
 
-    $s: 50px
-
     position: absolute
     z-index: 99
 
-    top: 0
-    left: 0
+    top: 50%
+    left: 50%
 
-    width: $s
-    height: $s
+    width: 40px
+    height: 60px
 
-    background-color: $link
+    background-image: url($cursor + 'hand-two.svg')
+    background-size: contain
+    background-position: 0 0
+    background-repeat: no-repeat
+
+    pointer-events: none
+
+    +transform(translateX, -50%)
+
+    // Classes
+
+    &.link
+
+        width: 40px
+
+        background-image: url($cursor + 'hand-point.svg')
+        background-position: 0 0
+
+        +transform(scaleX, 1)
+
+    &.rock
+
+        background-image: url($cursor + 'hand-rock.svg')
+
+        +animation(cursorRock, 1s, ease-in, infinite, 0, both)

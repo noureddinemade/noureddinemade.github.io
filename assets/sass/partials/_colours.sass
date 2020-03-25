@@ -2,7 +2,7 @@
 
 @each $label, $colour in $palette
 
-    .bg#{$label}
+    %bg#{$label}
 
         background-color: $colour
 
@@ -10,13 +10,12 @@
 
             a:before
 
-                background-color: $light
-                background-image: linear-gradient(180deg, $light 0%, $light 90%, $link 90%, $link 100%)
+                background-color: $light !important
 
-    .text#{$label}
+    %text#{$label}
 
         color: $colour
 
-    .fill#{$label}
+    %fill#{$label}
 
         fill: $colour

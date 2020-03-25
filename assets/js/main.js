@@ -1,28 +1,63 @@
 //
 
-const workItem              = document.querySelectorAll('section.work div.items div.item');
-const workLink              = document.querySelectorAll('section.work div.items div.item a');
+let mouseStill;
+
+const links                 = document.querySelectorAll('a');
 
 const pageMarks             = document.querySelectorAll('div.mark');
 
+const cursor                = document.querySelector('.cursor');
+
+const copyrightYear         = document.querySelector('.copyrightYear');
 
 //
 
-workLink.forEach(link => {
+const cursorMove = (x,y) => {
+
+    cursor.style.top        = y + 'px';
+    cursor.style.left       = x + 'px';
+}
+
+const isMouseMoving = function() {
+
+    clearInterval(mouseStill);
+
+    if (!cursor.classList.contains('rock')) {
+
+        mouseStill = setInterval(() => {
+
+            cursor.classList.add('rock');
+
+        }, 5000);
+
+    }
+
+}
+
+//
+
+document.addEventListener('mousemove', e => {
+
+    cursorMove(e.pageX, e.pageY);
+
+    cursor.classList.remove('rock');
+
+    isMouseMoving();
+
+});
+
+links.forEach(link => {
 
     link.addEventListener('mouseover', () => {
 
-        workItem.forEach(link => link.style.opacity = '0');
-        link.parentNode.style.opacity = '1';
+        cursor.classList.add('link');
 
     });
 
     link.addEventListener('mouseout', () => {
 
-        workItem.forEach(link => link.style.opacity = '1');
+        cursor.classList.remove('link');
 
     });
 
 });
-
-//

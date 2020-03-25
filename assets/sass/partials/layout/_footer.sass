@@ -2,24 +2,93 @@
 
 footer
 
-    position: fixed
+    display: block
+    position: relative
     z-index: 1
 
-    bottom: 0
-    left: 0
-
     width: 100%
-    height: $footerHeight
 
-    @extend .bgDark
-    @extend .textLight
     @extend %padding
+    @extend %bgTertiary
 
     // Children
 
     .inner
 
-        display: flex
-        align-content: center
-
         @extend %inner
+
+        p
+
+            font-size: $base + 10px
+
+            // Responsive
+
+            +screen($md)
+
+                font-size: $base + 5px
+
+            +screen($sm)
+
+                font-size: $base
+
+        ul
+
+            position: relative
+            display: flex
+            flex-wrap: wrap
+
+            margin-top: $globalSpace
+
+            width: 100%
+            height: auto
+
+            @extend %bold
+
+            // Responsive
+
+            +screen($xs)
+
+                margin-top: $globalSpace / 2
+
+                text-align: center
+
+            // Children
+
+            li
+
+                flex-grow: 1
+                order: 2
+
+                margin: 0
+
+                // Responsive
+
+                +screen($xs)
+
+                    margin: 0 20px $globalSpace / 5 20px
+                    order: 1
+
+                // Pseudo
+
+                &:last-of-type
+
+                    order: 1
+                    flex-grow: 10
+
+                    // Responsive
+
+                    +screen($md)
+
+                        order: 3
+
+                        width: 100%
+
+                        margin-top: $globalSpace / 2
+
+                // Children
+
+                p
+
+                    margin-bottom: 0
+
+                    font-size: $base - 6px !important

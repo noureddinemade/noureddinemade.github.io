@@ -2,25 +2,35 @@
 
 html
 
-    // cursor: url($cursor + 'hand-two.png'), auto
+    cursor: none
 
-    background-color: $dark
+    background-color: $outer
 
 body
 
     min-height: 100vh
 
     font-size: $base
-    line-height: 1.2
+    line-height: 1.4
 
     background-color: $bg
     background-size: cover
     color: $text
 
-    overflow: hidden
+    border: 40px solid $outer
 
     @extend %font
     @extend %fontText
+
+    // Responsive
+
+    +screen($md)
+
+        border-width: 20px
+
+    +screen($sm)
+
+        border-width: 10px
 
     // Inner
 

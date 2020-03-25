@@ -139,6 +139,7 @@ function watchAll() {
 
     watch(styleSrc, doCSS);
     watch(jsSrc, doJS);
+    watch(pdfSrc, doPDF);
     watch(imgSrc, doImg);
     watch(fontSrc, doFont);
 
@@ -157,6 +158,7 @@ function watchAll() {
 }
 
 //
+
 exports.default = function() {
 
     watchAll();
