@@ -99,7 +99,7 @@ p a[href$=".pdf"]:after {
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
-  background-color: #001AFF;
+  background-color: #1300FF;
   color: #FFFFFF;
   border-radius: 20px; }
 
@@ -129,7 +129,7 @@ p a[href$=".pdf"]:after {
 
 html {
   cursor: none;
-  background-color: #fff1f4; }
+  background-color: #fffae7; }
 
 body {
   min-height: 100vh;
@@ -137,8 +137,8 @@ body {
   line-height: 1.4;
   background-color: #FFFFFF;
   background-size: cover;
-  color: #07005B;
-  border: 40px solid #fff1f4; }
+  color: #0C0935;
+  border: 40px solid #fffae7; }
   @media screen and (max-width: 1024px) {
     body {
       border-width: 20px; } }
@@ -186,7 +186,7 @@ header {
     header .logoWrap svg {
       width: 100%;
       height: 100%;
-      fill: #FF5A6E; }
+      fill: #FF2E52; }
       header .logoWrap svg:hover .-top {
         -webkit-animation-name: logo;
         -webkit-animation-duration: 2s;
@@ -309,7 +309,7 @@ section {
     section.work a.item {
       position: relative;
       z-index: 1;
-      color: #07005B;
+      color: #0C0935;
       transition-property: opacity;
       transition-duration: 0.2s;
       transition-delay: 0s;
@@ -348,7 +348,7 @@ section {
       section.work a.item:after {
         top: 0;
         left: 0;
-        border: 2px solid #07005B; }
+        border: 2px solid #0C0935; }
       section.work a.item:hover:before {
         top: 5px;
         left: 5px; }
@@ -379,7 +379,7 @@ section {
       section.work a.item p {
         display: inline-block;
         margin: 0;
-        color: #001AFF; }
+        color: #1300FF; }
         section.work a.item p:after {
           content: '→';
           position: absolute;
@@ -416,7 +416,7 @@ section {
         margin: 33.33333px 0; } }
 
 footer, section.work {
-  background-color: #FFE7EB; }
+  background-color: #FFF4CD; }
   footer a:before, section.work a:before {
     background-color: #FFFFFF !important; }
 
@@ -438,7 +438,7 @@ h1 {
   h1 span {
     display: inline;
     position: relative;
-    color: #FF5A6E; }
+    color: #FF2E52; }
 
 h2 {
   font-size: 42px; }
@@ -454,7 +454,7 @@ a {
   z-index: 1;
   font-weight: 500;
   text-decoration: none;
-  color: #001AFF;
+  color: #1300FF;
   cursor: none;
   transition-property: color;
   transition-duration: 0.1s;
@@ -463,7 +463,7 @@ a {
 
 p a {
   padding-bottom: 2px;
-  border-bottom: 2px solid #001AFF; }
+  border-bottom: 2px solid #1300FF; }
   p a:before {
     content: '';
     position: absolute;
@@ -472,7 +472,7 @@ p a {
     left: -5px;
     width: 100%;
     height: 60%;
-    background-color: #FFE7EB;
+    background-color: #FFF4CD;
     transition-property: width;
     transition-duration: 0.3s;
     transition-delay: 0s;
@@ -480,8 +480,8 @@ p a {
   p a[href$=".pdf"]:after {
     content: 'PDF'; }
   p a:hover {
-    border-bottom-color: #07005B;
-    color: #07005B; }
+    border-bottom-color: #0C0935;
+    color: #0C0935; }
     p a:hover:before {
       width: 0%; }
 
@@ -500,6 +500,9 @@ p a {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%); }
+  @media screen and (max-width: 800px) {
+    .cursor {
+      display: none; } }
   .cursor.link {
     width: 40px;
     background-image: url("/assets/img/cursor/hand-point.svg");
@@ -602,40 +605,40 @@ p a {
 
 @keyframes logo {
   0% {
-    fill: #FF5A6E; }
+    fill: #FF2E52; }
   10% {
-    fill: #FF5A6E; }
+    fill: #FF2E52; }
   11% {
-    fill: #001AFF; }
+    fill: #1300FF; }
   16% {
-    fill: #001AFF; }
+    fill: #1300FF; }
   17% {
-    fill: #FF5A6E; }
+    fill: #FF2E52; }
   95% {
-    fill: #FF5A6E; }
+    fill: #FF2E52; }
   96% {
-    fill: #001AFF; }
+    fill: #1300FF; }
   99% {
-    fill: #001AFF; }
+    fill: #1300FF; }
   100% {
-    fill: #FF5A6E; } }
+    fill: #FF2E52; } }
 
 @-webkit-keyframes logo {
   0% {
-    fill: #FF5A6E; }
+    fill: #FF2E52; }
   10% {
-    fill: #FF5A6E; }
+    fill: #FF2E52; }
   11% {
-    fill: #001AFF; }
+    fill: #1300FF; }
   16% {
-    fill: #001AFF; }
+    fill: #1300FF; }
   17% {
-    fill: #FF5A6E; }
+    fill: #FF2E52; }
   95% {
-    fill: #FF5A6E; }
+    fill: #FF2E52; }
   96% {
-    fill: #001AFF; }
+    fill: #1300FF; }
   99% {
-    fill: #001AFF; }
+    fill: #1300FF; }
   100% {
-    fill: #FF5A6E; } }
+    fill: #FF2E52; } }
