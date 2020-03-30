@@ -135,7 +135,7 @@ body {
   min-height: 100vh;
   font-size: 26px;
   line-height: 1.4;
-  background-color: #FFF4CD;
+  background-color: #fffae7;
   background-size: cover;
   color: #0C0935;
   border: 40px solid #fffae7; }
@@ -147,7 +147,7 @@ body {
       border-width: 10px; } }
 
 main {
-  background-color: #FFF4CD; }
+  background-color: #fffae7; }
 
 header {
   position: absolute;
@@ -344,7 +344,7 @@ section {
         content: '';
         top: -5px;
         left: -5px;
-        background-color: #FFFFFF; }
+        background-color: #FFF4CD; }
       section.work a.item:after {
         top: 0;
         left: 0;
@@ -415,12 +415,12 @@ section {
         grid-template-columns: 100%;
         margin: 33.33333px 0; } }
 
-footer, section.work {
+footer, section.intro {
   background-color: #FFF4CD; }
-  footer a:before, section.work a:before {
+  footer a:before, section.intro a:before {
     background-color: #FFFFFF !important; }
 
-section.about {
+section.work, section.about {
   background-color: #FFFFFF; }
 
 h1, h2, h3 {
