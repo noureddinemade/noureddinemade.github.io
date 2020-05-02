@@ -2,59 +2,38 @@
 
 header
 
-    $logo: 150px
+    $logo: 250px
 
-    position: absolute
+    position: fixed
     z-index: 10
 
-    top: $globalSpace
-    right: $globalSpace
+    top: -50px
+    left: -50px
 
-    height: $headerHeight
-    width: $logo
-
-    // Responsive
-
-    +screen($md)
-
-        position: relative
-
-        top: $globalSpace - 22px
-        left: $globalSpace - 16px
-        right: auto
-
-        width: $logo - 16px
-
-    +screen($sm)
-
-        top: $globalSpace - 52px
-        left: $globalSpace - 32px
-
-        width: $logo - 44px
-
-    +screen($xs)
-
-        left: $globalSpace - 48px
-
-    +screen($xxs)
-
-        left: $globalSpace - 64px
+    width: auto
+    height: auto
 
     // Children
-
-    .inner
-
-        display: flex
-        align-content: center
-
-        @extend %inner
 
     .logoWrap
 
         position: relative
-        display: block
+        display: flex
 
-        width: 100%
+        width: $logo
+        height: $logo
+
+        // Responsive
+
+        +screen($md)
+
+            width: $logo / 1.5
+            height: $logo / 1.5
+
+        +screen($sm)
+
+            width: $logo / 2
+            height: $logo / 2
 
         // Pseudo
 
@@ -67,24 +46,7 @@ header
         svg
 
             width: 100%
-            height: 100%
 
             fill: $primary
 
-            // States
-
-            &:hover
-
-                // Children
-
-                .-top
-
-                    +animation(logo, 2s, linear, infinite, 0s, both)
-
-                .-bottomRight
-
-                    +animation(logo, 2s, linear, infinite, .2s, both)
-
-                .-bottomLeft
-
-                    +animation(logo, 2s, linear, infinite, .4s, both)
+            +animation(logo, 20s, linear, infinite, 0s, both)

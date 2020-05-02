@@ -9,6 +9,7 @@ h1, h2, h3
 h1
 
     font-size: $h1
+    line-height: 1.1
 
     // Responsive
 
@@ -20,6 +21,10 @@ h1
 
         font-size: $h1 / 2
 
+    +screen($xs)
+
+        font-size: $h1 / 2.5
+
     // Inner
 
     span
@@ -27,7 +32,7 @@ h1
         display: inline
         position: relative
 
-        color: $primary
+        color: $highlight
 
 h2
 
@@ -53,13 +58,21 @@ a
 
     color: $link
 
-    cursor: none
-
-    +transition(color, .1s)
+    +transition(color, $animSpeed)
 
 //
 
 p
+
+    // Responisve
+
+    +screen($md)
+
+        font-size: $base - 5px
+
+    +screen($sm)
+
+        font-size: $base - 10px
 
     // Children
 
@@ -68,14 +81,6 @@ p
         padding-bottom: 2px
 
         border-bottom: 2px solid $link
-
-        // Special
-
-        &[href$=".pdf"]:after
-
-            content: 'PDF'
-
-            @extend %linkLabel
 
         // States
 

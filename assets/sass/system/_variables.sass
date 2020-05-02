@@ -1,37 +1,35 @@
 // Colours
 
-$c1:                        #FF2E52
-$c2:                        #1300FF
-$c3:                        #FFF4CD
-$c4:                        #0C0935
-$c5:                        #FFFFFF
+$c1:                        #FFC6DA
+$c2:                        #9CEDFF
+$c3:                        #FFF3B1
+$c4:                        #0F161C
 
 $primary:                   $c1
 $secondary:                 $c2
 $tertiary:                  $c3
 $dark:                      $c4
-$light:                     $c5
+$light:                     #ffffff
 
-$text:                      $dark
-$link:                      $secondary
-$bg:                        lighten($tertiary, 5%)
-$splash:                    $tertiary
+$text:                      $light
+$link:                      $tertiary
+$bg:                        lighten($dark, 2%)
 $highlight:                 $primary
 
-$palette:                   (Primary $primary, Secondary $secondary, Tertiary $tertiary ,Dark $dark, Light $light)
+$palette:                   (Primary $primary, Secondary $secondary, Dark $dark, Light $light)
 
 // Fonts
 
-$fontHead:                  'Young Serif', serif        // 400
+$fontHead:                  'TG Praktikal', serif           // 400
 $fontText:                  'EB Garamond', serif        // 400,500,700
 
-$h1:                        56px
+$h1:                        66px
 $h2:                        42px
 $h3:                        32px
 
 // Sizes
 
-$base:                      26px
+$base:                      30px
 $globalSpace:               100px
 $headerHeight:              100px
 $footerHeight:              100vh
@@ -45,7 +43,7 @@ $sm:                        800px
 $xs:                        640px
 $xxs:                       480px
 
-$maxWidth:                  $md
+$maxWidth:                  $xl
 
 $padding:                   ($md, $sm, $xs, $xxs)
 $hide:                      (XL $xl, LG $lg, MD $md, SM $sm, XS $xs, XXS $xxs)
@@ -56,3 +54,7 @@ $imgPath:                   '/assets/img/'
 $fontPath:                  '/assets/font/'
 $cursor:                    $imgPath + 'cursor/'
 $mark:                      $imgPath + 'marks/'
+
+// Misc
+
+$animSpeed:                 .1s

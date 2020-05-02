@@ -41,11 +41,9 @@ desc: This is the home page
 
             {% for item in items %}
 
-            <a href="{{ item.permalink }}" class="item">
+            <a href="{{ item.permalink }}" class="item" style="{{ item.style }}">
 
                 <h3>{{ item.title }}</h3>
-                <p>{{ item.label }}</p>
-                <span style="{{ item.style }}"></span>
 
             </a>
 
@@ -63,17 +61,31 @@ desc: This is the home page
 
         <h2>Best read in a Sean Connery voice.</h2>
 
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, excepturi at nostrum enim, impedit veniam dignissimos doloribus. Amet asperiores sint, laudantium quasi harum dolor eaque quia, ipsam doloremque tenetur consectetur!
-        </p>
+        <div class="grid -l2">
 
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae nemo similique sed placeat pariatur cupiditate libero totam nostrum expedita repellat consequuntur repudiandae unde, eum a molestias saepe. Molestiae, nesciunt, mollitia.
-        </p>
+            <div class="col">
 
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores autem quos, suscipit deleniti, similique praesentium delectus minima, cumque culpa reprehenderit odit eaque nemo cum aliquam fugit accusantium, minus tempore eum.
-        </p>
+                <img src="/assets/img/noureddine-azhar-profile.jpg" alt="Noureddine Azhar">
+
+            </div>
+
+            <div class="col">
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, excepturi at nostrum enim, impedit veniam dignissimos doloribus. Amet asperiores sint, laudantium quasi harum dolor eaque quia, ipsam doloremque tenetur consectetur!
+                </p>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae nemo similique sed placeat pariatur cupiditate libero totam nostrum expedita repellat consequuntur repudiandae unde, eum a molestias saepe. Molestiae, nesciunt, mollitia.
+                </p>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores autem quos, suscipit deleniti, similique praesentium delectus minima, cumque culpa reprehenderit odit eaque nemo cum aliquam fugit accusantium, minus tempore eum.
+                </p>
+
+            </div>
+
+        </div>
 
     </div>
 
