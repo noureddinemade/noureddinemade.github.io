@@ -9,6 +9,9 @@ section
     width: 100%
     height: auto
 
+    padding-top: $globalSpace
+    padding-bottom: $globalSpace
+
     @extend %padding
 
     // Responsive
@@ -70,22 +73,6 @@ section
 
             +maxWidth($lg)
 
-        .items
-
-            margin-top: $globalSpace
-
-            +grid(3, 1fr, $globalSpace / 2)
-
-            // Responsive
-
-            +screen($md)
-
-                +grid(2, 1fr, $globalSpace)
-
-            +screen($sm)
-
-                +grid(1, 1fr, $globalSpace)
-
         a.item
 
             position: relative
@@ -94,6 +81,8 @@ section
             height: 400px
 
             padding: $globalSpace / 2
+
+            border: 20px solid $light
 
             // States
 

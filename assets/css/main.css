@@ -160,13 +160,13 @@ header {
     header .logoWrap svg {
       width: 100%;
       fill: #FFC6DA;
-      -webkit-animation-name: logo;
+      -webkit-animation-name: logoRotate;
       -webkit-animation-duration: 20s;
       -webkit-animation-timing-function: linear;
       -webkit-animation-iteration-count: infinite;
       -webkit-animation-delay: 0s;
       -webkit-animation-fill-mode: both;
-      animation-name: logo;
+      animation-name: logoRotate;
       animation-duration: 20s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
@@ -214,7 +214,9 @@ section {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: auto; }
+  height: auto;
+  padding-top: 100px;
+  padding-bottom: 100px; }
   @media screen and (max-width: 1024px) {
     section {
       position: relative;
@@ -245,26 +247,12 @@ section {
       @media screen and (max-width: 1440px) {
         section.work .inner {
           width: 100%; } }
-    section.work .items {
-      margin-top: 100px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 50px; }
-      @media screen and (max-width: 1024px) {
-        section.work .items {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-gap: 100px; } }
-      @media screen and (max-width: 800px) {
-        section.work .items {
-          display: grid;
-          grid-template-columns: repeat(1, 1fr);
-          grid-gap: 100px; } }
     section.work a.item {
       position: relative;
       z-index: 1;
       height: 400px;
-      padding: 50px; }
+      padding: 50px;
+      border: 20px solid #ffffff; }
       section.work a.item:hover h3 {
         background-color: #0F161C;
         color: #ffffff; }
@@ -339,32 +327,33 @@ h2 {
       font-size: 24.70588px; } }
 
 a {
-  position: relative;
-  z-index: 1;
-  font-weight: 500;
-  text-decoration: none;
-  color: #FFF3B1;
-  transition-property: color;
-  transition-duration: 0.1s;
-  transition-delay: 0s;
-  transition-timing-function: linear; }
+  text-decoration: none; }
 
-@media screen and (max-width: 1024px) {
-  p {
-    font-size: 25px; } }
-
-@media screen and (max-width: 800px) {
-  p {
-    font-size: 20px; } }
-
-p a {
-  padding-bottom: 2px;
-  border-bottom: 2px solid #FFF3B1; }
-  p a:hover {
-    border-bottom-color: #ffffff;
-    color: #ffffff; }
-    p a:hover:before {
-      width: 0%; }
+p {
+  margin-bottom: 50px; }
+  p:last-child {
+    margin-bottom: 0; }
+  @media screen and (max-width: 1024px) {
+    p {
+      font-size: 25px; } }
+  @media screen and (max-width: 800px) {
+    p {
+      font-size: 20px; } }
+  p a {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 2px;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 2px solid #FFF3B1;
+    color: #FFF3B1;
+    transition-property: border-color, color;
+    transition-duration: 0.1s, 0.1s;
+    transition-delay: 0s;
+    transition-timing-function: linear; }
+    p a:hover {
+      border-bottom-color: #ffffff;
+      color: #ffffff; }
 
 .cursor {
   position: absolute;
@@ -440,38 +429,22 @@ p a {
     -ms-transform: translateX(0);
     transform: translateX(0); } }
 
-@keyframes logo {
+@keyframes logoRotate {
   0% {
-    fill: #FFC6DA;
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg); }
-  25% {
-    fill: #9CEDFF; }
-  50% {
-    fill: #FFF3B1; }
-  75% {
-    fill: #9CEDFF; }
   100% {
-    fill: #FFC6DA;
     -webkit-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
-@-webkit-keyframes logo {
+@-webkit-keyframes logoRotate {
   0% {
-    fill: #FFC6DA;
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg); }
-  25% {
-    fill: #9CEDFF; }
-  50% {
-    fill: #FFF3B1; }
-  75% {
-    fill: #9CEDFF; }
   100% {
-    fill: #FFC6DA;
     -webkit-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg); } }
