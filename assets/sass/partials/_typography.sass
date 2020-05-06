@@ -3,13 +3,11 @@ h1, h2, h3
     position: relative
 
     line-height: 1.2
-
-    @extend %fontHead
+    font-weight: 600
 
 h1
 
     font-size: $h1
-    line-height: 1.1
 
     // Responsive
 
@@ -54,6 +52,8 @@ a
 
     text-decoration: none
 
+    color: $link
+
 p
 
     margin-bottom: $globalSpace / 2
@@ -68,11 +68,11 @@ p
 
     +screen($md)
 
-        font-size: $base - 5px
+        font-size: $fontBase - 5px
 
     +screen($sm)
 
-        font-size: $base - 10px
+        font-size: $fontBase - 10px
 
     // Children
 
@@ -89,8 +89,6 @@ p
         border-bottom: 2px solid $link
 
         color: $link
-
-        +transition((border-color, color), ($animSpeed, $animSpeed))
 
         // States
 

@@ -4,20 +4,21 @@ html
 
     background-color: $bg
 
+    overflow-x: hidden
+
 body
 
     min-height: 100vh
 
-    font-size: $base
+    font-size: $fontBase
     line-height: 1.4
 
     background-color: $bg
     background-size: cover
     color: $text
 
-    border: 40px solid $bg
+    overflow-x: hidden
 
-    @extend %font
     @extend %fontText
 
     // Responsive
@@ -30,7 +31,14 @@ body
 
         border-width: 10px
 
-    // Inner
+    // Pseudo
+
+    ::selection
+
+        background-color: $light
+        color: $dark
+
+    // Children
 
     *
 

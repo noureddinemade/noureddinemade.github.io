@@ -2,38 +2,82 @@
 
 header
 
-    $logo: 250px
+    $logo: 400px
 
-    position: fixed
+    position: relative
     z-index: 10
 
-    top: -50px
-    left: -50px
-
-    width: auto
-    height: auto
+    width: 100%
 
     // Children
 
+    ul
+
+        align-items: center
+
+        @extend %maxWidth
+        @extend %center
+
+        +grid(4,1fr,$globalSpace / 2)
+
+        // Children
+
+        li
+
+            padding-top: $globalSpace
+
+            // Children
+
+            span
+
+                display: block
+
+            a
+
+                position: relative
+                display: inline-block
+
+                text-indent: 40px
+
+                +animation(link, 1s, linear, infinite)
+
+                // Pseudo
+
+                &:before
+
+                    content: '↳'
+
+                    position: absolute
+                    top: 4px
+                    left: -40px
+
+                    color: $primary
+
+                // States
+
+                &:hover
+
+                    color: $primary
+
+                    +animation(none)
+
+
+
+
     .logoWrap
 
-        position: relative
-        display: flex
+        position: fixed
 
         width: $logo
-        height: $logo
+
+        top: -200px
+        right: -100px
 
         // Responsive
 
         +screen($md)
 
-            width: $logo / 1.5
-            height: $logo / 1.5
-
         +screen($sm)
-
-            width: $logo / 2
-            height: $logo / 2
 
         // Pseudo
 
@@ -49,4 +93,4 @@ header
 
             fill: $primary
 
-            +animation(logoRotate, 20s, linear, infinite, 0s, both)
+            +animation(logo, 20s, linear, infinite, 0s, both)

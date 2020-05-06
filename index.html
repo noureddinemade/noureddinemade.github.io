@@ -11,20 +11,6 @@ desc: This is the home page
             I&rsquo;m Noureddine Azhar. An end-to-end designer with over thirteen years of experience looking to work with decent humans trying to do good. <span>Not privileged dickheads who idolise billionaires.</span>
         </h1>
 
-        <ul>
-            <li>
-                <p><a href="mailto:me@noureddine.biz">me@noureddine.biz</a></p>
-            </li>
-
-            <li>
-                <p><a href="https://twitter.com/noureddinemade" target="_blank">@noureddinemade</a></p>
-            </li>
-
-            <li>
-                <p><a href="assets/pdf/cv-noureddine-azhar-2020.pdf" target="_blank">r&eacute;sum&eacute;</a></p>
-            </li>
-        </ul>
-
     </div>
 
 </section>
@@ -35,27 +21,31 @@ desc: This is the home page
 
         <h2>Selected work</h2>
 
-        <div class="grid -x3">
+        {% assign items = site.work | sort: 'order' %}
 
-            {% assign items = site.work | sort: 'order' %}
+        {% for item in items %}
 
-            {% for item in items %}
+        <div class="item grid -x3">
 
-            <a href="{{ item.permalink }}" class="item" style="{{ item.style }}">
+            <p>{{ item.title }}</p>
 
-                <h3>{{ item.title }}</h3>
+            <p>{{ item.type }}</p>
 
+            <a href="{{ item.permalink }}">
+                {{ item.label }}
             </a>
 
-            {% endfor %}
+            <span style="{{ item.style }}"></span>
 
         </div>
+
+        {% endfor %}
 
     </div>
 
 </section>
 
-<section class="about">
+<!-- <section class="about">
 
     <div class="inner">
 
@@ -85,4 +75,6 @@ desc: This is the home page
 
     </div>
 
-</section>
+</section> -->
+
+        <script src="/assets/js/home.js"></script>

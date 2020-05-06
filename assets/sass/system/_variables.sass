@@ -1,35 +1,37 @@
 // Colours
 
-$c1:                        #FFC6DA
-$c2:                        #9CEDFF
-$c3:                        #FFF3B1
-$c4:                        #0F161C
+$c1:                        #FF6871
+$c2:                        #5CE2FF
+$c3:                        #FFE660
+$c4:                        #06090B
+$c5:                        #FFFFFF
 
 $primary:                   $c1
 $secondary:                 $c2
 $tertiary:                  $c3
 $dark:                      $c4
-$light:                     #ffffff
+$light:                     $c5
 
 $text:                      $light
-$link:                      $tertiary
-$bg:                        lighten($dark, 2%)
-$highlight:                 $primary
+$bg:                        $dark
+$highlight:                 $tertiary
+
+$link:                      $secondary
+$hover:                     $tertiary
 
 $palette:                   (Primary $primary, Secondary $secondary, Dark $dark, Light $light)
 
 // Fonts
 
-$fontHead:                  'TG Praktikal', serif           // 400
-$fontText:                  'EB Garamond', serif        // 400,500,700
+$fontText:                  'Oakes Grotesk', sans-serif         // 400, 600
 
-$h1:                        66px
+$h1:                        120px
 $h2:                        42px
 $h3:                        32px
 
 // Sizes
 
-$base:                      30px
+$fontBase:                  30px
 $globalSpace:               100px
 $headerHeight:              100px
 $footerHeight:              100vh
@@ -58,3 +60,4 @@ $mark:                      $imgPath + 'marks/'
 // Misc
 
 $animSpeed:                 .1s
+$borderWidth:               6px
