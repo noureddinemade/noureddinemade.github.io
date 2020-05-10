@@ -11,59 +11,6 @@ header
 
     // Children
 
-    ul
-
-        align-items: center
-
-        @extend %maxWidth
-        @extend %center
-
-        +grid(4,1fr,$globalSpace / 2)
-
-        // Children
-
-        li
-
-            padding-top: $globalSpace
-
-            // Children
-
-            span
-
-                display: block
-
-            a
-
-                position: relative
-                display: inline-block
-
-                text-indent: 40px
-
-                +animation(link, 1s, linear, infinite)
-
-                // Pseudo
-
-                &:before
-
-                    content: '↳'
-
-                    position: absolute
-                    top: 4px
-                    left: -40px
-
-                    color: $primary
-
-                // States
-
-                &:hover
-
-                    color: $primary
-
-                    +animation(none)
-
-
-
-
     .logoWrap
 
         position: fixed

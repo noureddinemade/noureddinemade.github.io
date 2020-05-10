@@ -58,6 +58,11 @@ input, textarea, select {
   font-weight: 600;
   src: url("/assets/font/oakes-grotesk-semi-bold.woff"), url("/assets/font/oakes-grotesk-semi-bold.woff2"); }
 
+@font-face {
+  font-family: 'Serat';
+  font-weight: 500;
+  src: url("/assets/font/serat-demibold.woff"), url("/assets/font/serat-demibold.woff2"); }
+
 body * {
   box-sizing: border-box; }
 
@@ -76,14 +81,14 @@ section {
     section {
       padding: 20px 20px; } }
 
-section .inner, header ul {
+section .inner {
   width: 1600px;
   max-width: 1600px; }
   @media screen and (max-width: 1600px) {
-    section .inner, header ul {
+    section .inner {
       width: 100%; } }
 
-section .inner, header ul {
+section .inner, section.intro h1 {
   margin-left: auto;
   margin-right: auto; }
 
@@ -99,6 +104,10 @@ body {
   font-family: "Oakes Grotesk", sans-serif;
   font-weight: 400;
   text-decoration: none; }
+
+section.intro ul li span, h1, h2, h3 {
+  font-family: "Serat", serif;
+  font-weight: 600; }
 
 strong {
   font-weight: 700; }
@@ -156,51 +165,6 @@ header {
   position: relative;
   z-index: 10;
   width: 100%; }
-  header ul {
-    align-items: center;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 50px; }
-    header ul li {
-      padding-top: 100px; }
-      header ul li span {
-        display: block; }
-      header ul li a {
-        position: relative;
-        display: inline-block;
-        text-indent: 40px;
-        -webkit-animation-name: link;
-        -webkit-animation-duration: 1s;
-        -webkit-animation-timing-function: linear;
-        -webkit-animation-iteration-count: infinite;
-        -webkit-animation-delay: 0s;
-        -webkit-animation-fill-mode: none;
-        animation-name: link;
-        animation-duration: 1s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        animation-delay: 0s;
-        animation-fill-mode: none; }
-        header ul li a:before {
-          content: '↳';
-          position: absolute;
-          top: 4px;
-          left: -40px;
-          color: #FF6871; }
-        header ul li a:hover {
-          color: #FF6871;
-          -webkit-animation-name: none;
-          -webkit-animation-duration: 1s;
-          -webkit-animation-timing-function: linear;
-          -webkit-animation-iteration-count: infinite;
-          -webkit-animation-delay: 0s;
-          -webkit-animation-fill-mode: none;
-          animation-name: none;
-          animation-duration: 1s;
-          animation-timing-function: linear;
-          animation-iteration-count: infinite;
-          animation-delay: 0s;
-          animation-fill-mode: none; }
   header .logoWrap {
     position: fixed;
     width: 400px;
@@ -237,7 +201,8 @@ section {
       position: relative;
       box-shadow: none; } }
   section.intro {
-    padding-top: 100px; }
+    padding-top: 100px;
+    text-align: center; }
     @media screen and (max-width: 1024px) {
       section.intro {
         padding-top: 50px; } }
@@ -249,30 +214,96 @@ section {
       width: 100%;
       height: 50%;
       background-color: inherit; }
+    section.intro h1 {
+      max-width: 84%; }
     section.intro ul {
       display: block;
-      margin-top: 33.33333px;
-      list-style: none; }
+      margin-bottom: 50px;
+      align-items: center; }
       section.intro ul li {
         display: inline-block;
-        margin: 0 40px 0 0; }
-        @media screen and (max-width: 800px) {
-          section.intro ul li {
-            display: block;
-            margin: 10px 0; } }
+        margin: 0 20px; }
+        section.intro ul li span {
+          display: block; }
+        section.intro ul li a {
+          position: relative;
+          display: inline-block;
+          -webkit-animation-name: link;
+          -webkit-animation-duration: 1s;
+          -webkit-animation-timing-function: linear;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-delay: 0s;
+          -webkit-animation-fill-mode: none;
+          animation-name: link;
+          animation-duration: 1s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          animation-delay: 0s;
+          animation-fill-mode: none; }
+          section.intro ul li a:hover {
+            color: #FF6871;
+            -webkit-animation-name: none;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-delay: 0s;
+            -webkit-animation-fill-mode: none;
+            animation-name: none;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-delay: 0s;
+            animation-fill-mode: none; }
   section.work h2 {
+    position: relative;
+    z-index: 1;
     margin-bottom: 100px; }
   section.work .item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     position: relative;
-    align-items: grid-start;
-    padding: 33.33333px;
+    padding: 50px;
     margin: 0;
-    background-color: #06090B; }
-    section.work .item p, section.work .item a {
-      margin: 0;
-      padding: 0; }
-    section.work .item a:hover + span {
-      opacity: 1; }
+    height: 400px;
+    background-color: #06090B;
+    box-shadow: 0 0 50px rgba(6, 9, 11, 0.1);
+    transition-property: opacity;
+    transition-duration: 0.1s;
+    transition-delay: 0s;
+    transition-timing-function: linear; }
+    section.work .item h3, section.work .item p {
+      display: block;
+      width: 100%; }
+    section.work .item p {
+      font-size: 24px; }
+    section.work .item a {
+      display: inline-block;
+      position: relative;
+      align-self: flex-end;
+      width: auto; }
+      section.work .item a:after {
+        content: '➝';
+        position: absolute;
+        top: 2px;
+        right: -40px; }
+      section.work .item a:hover {
+        color: #FFE660; }
+        section.work .item a:hover:after {
+          -webkit-animation-name: arrowHover;
+          -webkit-animation-duration: 1s;
+          -webkit-animation-timing-function: linear;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-delay: 0s;
+          -webkit-animation-fill-mode: none;
+          animation-name: arrowHover;
+          animation-duration: 1s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          animation-delay: 0s;
+          animation-fill-mode: none; }
+        section.work .item a:hover + span {
+          opacity: 1; }
     section.work .item span {
       position: fixed;
       z-index: -1;
@@ -281,7 +312,11 @@ section {
       width: 100%;
       height: 100%;
       opacity: 0;
-      pointer-events: none; }
+      pointer-events: none;
+      transition-property: transform, opacity;
+      transition-duration: 0.1s, 0.1s;
+      transition-delay: 0s;
+      transition-timing-function: linear; }
 
 .grid {
   position: relative;
@@ -312,33 +347,32 @@ section {
 
 h1, h2, h3 {
   position: relative;
-  line-height: 1.2;
-  font-weight: 600; }
+  line-height: 1.2; }
 
 h1 {
-  font-size: 120px; }
+  font-size: 100px; }
   @media screen and (max-width: 1024px) {
     h1 {
-      font-size: 85.71429px; } }
+      font-size: 71.42857px; } }
   @media screen and (max-width: 800px) {
     h1 {
-      font-size: 60px; } }
+      font-size: 50px; } }
   @media screen and (max-width: 640px) {
     h1 {
-      font-size: 48px; } }
+      font-size: 40px; } }
   h1 span {
     display: inline;
     position: relative;
     color: #FFE660; }
 
 h2 {
-  font-size: 42px; }
+  font-size: 52px; }
   @media screen and (max-width: 1024px) {
     h2 {
-      font-size: 28px; } }
+      font-size: 34.66667px; } }
   @media screen and (max-width: 800px) {
     h2 {
-      font-size: 24.70588px; } }
+      font-size: 30.58824px; } }
 
 a {
   text-decoration: none;

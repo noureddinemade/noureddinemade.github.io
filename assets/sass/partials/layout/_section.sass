@@ -28,6 +28,8 @@ section
 
         padding-top: $globalSpace
 
+        text-align: center
+
         // Responsive
 
         +screen($md)
@@ -52,28 +54,50 @@ section
 
         // Children
 
+        h1
+
+            max-width: 84%
+
+            @extend %center
+
         ul
 
             display: block
 
-            margin-top: $globalSpace / 3
+            margin-bottom: $globalSpace / 2
 
-            list-style: none
+            align-items: center
 
             // Children
 
             li
+
                 display: inline-block
 
-                margin: 0 40px 0 0
+                margin: 0 20px
 
-                // Responsive
+                // Children
 
-                +screen($sm)
+                span
 
                     display: block
 
-                    margin: 10px 0
+                    @extend %fontHead
+
+                a
+
+                    position: relative
+                    display: inline-block
+
+                    +animation(link, 1s, linear, infinite)
+
+                    // States
+
+                    &:hover
+
+                        color: $primary
+
+                        +animation(none)
 
     &.work
 
@@ -81,32 +105,81 @@ section
 
         h2
 
+            position: relative
+            z-index: 1
+
             margin-bottom: $globalSpace
 
         .item
 
-            position: relative
-            align-items: grid-start
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
 
-            padding: $globalSpace / 3
+            position: relative
+
+            padding: $globalSpace / 2
             margin: 0
 
+            height: 400px
+
             background-color: $dark
+            box-shadow: 0 0 50px rgba($dark, .1)
+
+            +transition(opacity, $animSpeed)
 
             // Children
 
-            p, a
+            h3, p
 
-                margin: 0
-                padding: 0
+                display: block
+
+                width: 100%
+
+            p
+
+                // margin-top: $globalSpace / 5
+
+                font-size: $fontBase - 6px
 
             a
 
+                display: inline-block
+                position: relative
+
+                align-self: flex-end
+
+                width: auto
+
+
+                // Pseudo
+
+                &:after
+
+                    content: '➝'
+
+                    position: absolute
+
+                    top: 2px
+                    right: -40px
+
                 // states
 
-                &:hover + span
+                &:hover
 
-                    opacity: 1
+                    color: $hover
+
+                    // Pseudo
+
+                    &:after
+
+                        +animation(arrowHover, 1s)
+
+                    // Sibling
+
+                    + span
+
+                        opacity: 1
 
             span
 
@@ -120,8 +193,10 @@ section
                 height: 100%
 
                 opacity: 0
-
                 pointer-events: none
+
+                +transition((transform, opacity), ($animSpeed, $animSpeed))
+
 
     // Children
 

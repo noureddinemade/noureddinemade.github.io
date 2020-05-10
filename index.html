@@ -7,6 +7,20 @@ desc: This is the home page
 
     <div class="inner">
 
+        <ul>
+
+            <li>
+                <span>Want to say hi?</span>
+                <a href="mailto:me@noureddine.biz">me@noureddine.biz</a>
+            </li>
+
+            <li>
+                <span>R&eacute;sum&eacute;</span>
+                <a href="/assets/pdf/cv-noureddine-azhar-2020.pdf">View PDF</a>
+            </li>
+
+        </ul>
+
         <h1>
             I&rsquo;m Noureddine Azhar. An end-to-end designer with over thirteen years of experience looking to work with decent humans trying to do good. <span>Not privileged dickheads who idolise billionaires.</span>
         </h1>
@@ -21,25 +35,29 @@ desc: This is the home page
 
         <h2>Selected work</h2>
 
-        {% assign items = site.work | sort: 'order' %}
+        <div class="items grid -x3">
 
-        {% for item in items %}
+            {% assign items = site.work | sort: 'order' %}
 
-        <div class="item grid -x3">
+            {% for item in items %}
 
-            <p>{{ item.title }}</p>
+            <div class="item">
 
-            <p>{{ item.type }}</p>
+                <h3>{{ item.title }}</h3>
 
-            <a href="{{ item.permalink }}">
-                {{ item.label }}
-            </a>
+                <p>{{ item.type }}</p>
 
-            <span style="{{ item.style }}"></span>
+                <a href="{{ item.permalink }}">
+                    {{ item.label }}
+                </a>
+
+                <span style="{{ item.style }}"></span>
+
+            </div>
+
+            {% endfor %}
 
         </div>
-
-        {% endfor %}
 
     </div>
 

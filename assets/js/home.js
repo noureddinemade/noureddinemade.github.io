@@ -1,33 +1,34 @@
-//
+// //
 
-const workLinks = document.querySelectorAll('.work div.item a');
+// const workLinks = document.querySelectorAll('.work div.item a');
 
-//
+// //
 
-workLinks.forEach(link => {
+// workLinks.forEach(link => {
 
-    let linkParent = link.parentNode;
+//     let linkParent = link.parentNode;
 
-    link.addEventListener('mouseover', () => {
+//     link.addEventListener('mouseover', () => {
 
-        workLinks.forEach(item => {
+//         workLinks.forEach(item => {
 
-            item.parentNode.style.opacity = '0';
+//             item.parentNode.classList.add('-off');
 
-        });
+//         });
 
-        linkParent.style.opacity = '1';
+//         linkParent.classList.add('-on');
 
-    });
+//     });
 
-    link.addEventListener('mouseout', () => {
+//     link.addEventListener('mouseout', () => {
 
-        workLinks.forEach(item => {
+//         workLinks.forEach(item => {
 
-            item.parentNode.style.opacity = '1';
+//             item.parentNode.classList.remove('-off');
+//             item.parentNode.classList.remove('-on');
 
-        });
+//         });
 
-    });
+//     });
 
-});
+// });
