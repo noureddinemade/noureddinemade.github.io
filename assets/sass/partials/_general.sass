@@ -2,9 +2,11 @@
 
 html
 
+    overflow-x: hidden
+
     background-color: $bg
 
-    overflow-x: hidden
+    cursor: none
 
 body
 
@@ -35,8 +37,13 @@ body
 
     ::selection
 
-        background-color: $light
-        color: $dark
+        background-color: $dark
+        color: $light
+
+    ::-moz-selection
+
+        background-color: $dark
+        color: $light
 
     // Children
 

@@ -28,7 +28,7 @@
 
         +transform(rotate, 0deg)
 
-    9.9%
+    9%
 
         fill: $primary
 
@@ -36,7 +36,7 @@
 
         fill: $secondary
 
-    19.9%
+    19%
 
         fill: $secondary
 
@@ -44,7 +44,7 @@
 
         fill: $tertiary
 
-    29.9%
+    29%
 
         fill: $tertiary
 
@@ -52,7 +52,7 @@
 
         fill: $primary
 
-    39.9%
+    39%
 
         fill: $primary
 
@@ -60,7 +60,7 @@
 
         fill: $secondary
 
-    49.9%
+    49%
 
         fill: $secondary
 
@@ -68,7 +68,7 @@
 
         fill: $tertiary
 
-    59.9%
+    59%
 
         fill: $tertiary
 
@@ -76,7 +76,7 @@
 
         fill: $primary
 
-    69.9%
+    69%
 
         fill: $primary
 
@@ -84,7 +84,7 @@
 
         fill: $secondary
 
-    79.9%
+    79%
 
         fill: $secondary
 
@@ -92,7 +92,7 @@
 
         fill: $tertiary
 
-    89.9%
+    89%
 
         fill: $tertiary
 
@@ -100,7 +100,7 @@
 
         fill: $secondary
 
-    99.9%
+    99%
 
         fill: $secondary
 
@@ -131,3 +131,39 @@
     100%
 
         color: $link
+
++keyframes(cursorPointer)
+
+    0%
+
+        +transform(rotate, 0deg)
+
+    25%
+
+        +transform(rotate, 5deg)
+
+    50%
+
+        +transform(rotate, 0deg)
+
+    75%
+
+        +transform(rotate, -5deg)
+
+    100%
+
+        +transform(rotate, 0deg)
+
++keyframes(cursorLoading)
+
+    0%
+
+        +transform((translateY, translateX, rotate), (0, 0, 0deg))
+
+    30%
+
+        +transform((translateY, translateX, rotate), (0, 0, 0deg))
+
+    100%
+
+        +transform((translateY, translateX, rotate), (-22px, -9px, 180deg))
