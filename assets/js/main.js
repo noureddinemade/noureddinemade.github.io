@@ -39,7 +39,6 @@ allLinks.forEach(link => {
 
         link.addEventListener('mouseup', () => {
 
-            cursor.classList.add('pointer');
             cursor.classList.remove('clicked');
             cursorType.setAttribute('xlink:href', '#cursorPointer');
 

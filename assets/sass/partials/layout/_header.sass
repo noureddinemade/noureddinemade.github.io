@@ -2,7 +2,7 @@
 
 header
 
-    $logo: 400px
+    $logo: 160px
 
     position: relative
     z-index: 10
@@ -14,11 +14,19 @@ header
     .logoWrap
 
         position: fixed
+        display: flex
 
         width: $logo
+        height: $logo
 
-        top: -200px
-        right: -100px
+        top: 50px
+        right: 50px
+
+        background-color: $primary
+
+        border-radius: $logo
+
+        +animation(logo, 20s, linear, infinite, 0s, both)
 
         // Responsive
 
@@ -36,8 +44,8 @@ header
 
         svg
 
-            width: 100%
+            margin: auto
 
-            fill: $primary
+            width: 70%
 
-            +animation(logo, 20s, linear, infinite, 0s, both)
+            fill: $light
