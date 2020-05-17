@@ -2,7 +2,7 @@
 
 header
 
-    $logo: 160px
+    $logo: 180px
 
     position: relative
     z-index: 10
@@ -19,14 +19,10 @@ header
         width: $logo
         height: $logo
 
-        top: 50px
-        right: 50px
+        top: 40px
+        right: 40px
 
-        background-color: $primary
-
-        border-radius: $logo
-
-        +animation(logo, 20s, linear, infinite, 0s, both)
+        border: 0
 
         // Responsive
 
@@ -48,4 +44,26 @@ header
 
             width: 70%
 
-            fill: $light
+            +transform(translateX, -4px)
+
+            // Children
+
+            .-nou, .-re, .-dd, .-ine
+
+                fill: $primary
+
+            .-nou
+
+                +animation(logo, 5s)
+
+            .-re
+
+                +animation(logo, 5s, $delay: .4s)
+
+            .-dd
+
+                +animation(logo, 5s, $delay: .8s)
+
+            .-ine
+
+                +animation(logo, 5s, $delay: 1.2s)

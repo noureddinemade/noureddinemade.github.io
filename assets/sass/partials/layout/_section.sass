@@ -28,7 +28,7 @@ section
 
         padding-top: $globalSpace
 
-        // text-align: center
+        text-align: center
 
         // Responsive
 
@@ -83,8 +83,6 @@ section
                     position: relative
                     display: inline-block
 
-                    +animation(link, 1s, linear, infinite)
-
                     // States
 
                     &:hover
@@ -115,26 +113,30 @@ section
             padding: $globalSpace / 2
             margin: 0
 
-            height: 400px
+            height: auto
 
-            background-color: $light
+            background-color: $dark
             box-shadow: 10px 10px 50px rgba($dark, .025)
 
             +transition(opacity, $animSpeed)
 
             // Children
 
-            h3, p
+            div
 
                 display: block
 
                 width: 100%
 
-            p
+                margin-bottom: $globalSpace / 4
 
-                // margin-top: $globalSpace / 5
+                // Children
 
-                font-size: $fontBase - 6px
+                p
+
+                    margin-top: $globalSpace / 5
+
+                    font-size: $fontBase - 8px
 
             a
 
@@ -145,29 +147,11 @@ section
 
                 width: auto
 
-
-                // Pseudo
-
-                &:after
-
-                    content: '➝'
-
-                    position: absolute
-
-                    top: 2px
-                    right: -40px
-
                 // states
 
                 &:hover
 
                     color: $hover
-
-                    // Pseudo
-
-                    &:after
-
-                        +animation(arrowHover, 1s)
 
                     // Sibling
 

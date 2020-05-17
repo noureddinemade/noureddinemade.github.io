@@ -23,7 +23,7 @@ desc: This is the home page
 
         <h1>
             I&rsquo;m Noureddine Azhar. An end-to-end designer with over thirteen years of experience looking to work with decent humans.
-            <br><span>Not privileged dickheads who idolise billionaires.</span>
+            <span>Not privileged dickheads who idolise billionaires.</span>
         </h1>
 
     </div>
@@ -44,9 +44,13 @@ desc: This is the home page
 
             <div class="item">
 
-                <h3>{{ item.title }}</h3>
+                <div>
 
-                <p>{{ item.type }}</p>
+                    <h3>{{ item.title }}</h3>
+
+                    <p>{{ item.type }}</p>
+
+                </div>
 
                 <a href="{{ item.permalink }}">
                     {{ item.label }}

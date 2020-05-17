@@ -4,4 +4,21 @@ main
 
     position: relative
 
+    // Pseudo
+
+    &:after
+
+        content: ''
+
+        position: fixed
+        z-index: 10
+
+        bottom: 0
+        left: 0
+
+        width: 100%
+        height: 12%
+
+        background-image: linear-gradient(transparent, $dark)
+
 @import 'layout/header', 'layout/nav', 'layout/footer', 'layout/section', 'layout/grid'
