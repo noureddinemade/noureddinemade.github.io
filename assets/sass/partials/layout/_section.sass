@@ -9,9 +9,6 @@ section
     width: 100%
     height: auto
 
-    padding-top: $globalSpace
-    padding-bottom: $globalSpace
-
     @extend %padding
 
     // Responsive
@@ -21,6 +18,12 @@ section
         position: relative
 
         box-shadow: none
+
+    // Pseudo
+
+    &:last-of-type
+
+        padding-bottom: $globalSpace * 2
 
     // Classes
 
@@ -83,15 +86,9 @@ section
                     position: relative
                     display: inline-block
 
-                    // States
-
-                    &:hover
-
-                        color: $primary
-
-                        +animation(none)
-
     &.work
+
+        z-index: 3
 
         // Children
 
@@ -99,8 +96,6 @@ section
 
             position: relative
             z-index: 1
-
-            margin-bottom: $globalSpace
 
         .item
 
@@ -115,12 +110,44 @@ section
 
             height: auto
 
-            background-color: $bg
-            box-shadow: 10px 10px 50px rgba($dark, .025)
-
             +transition(opacity, $animSpeed)
 
+            // Classes
+
+            &.-on:before
+
+                width: 120%
+                height: 120%
+
+                box-shadow: 0 0 200px rgba($secondary, .4)
+
+            // Pseudo
+
+            &:before
+
+                content: ''
+
+                position: absolute
+                z-index: 2
+
+                top: 50%
+                left: 50%
+
+                width: 100%
+                height: 100%
+
+                background-color: $bg
+                box-shadow: 20px 20px 30px rgba($secondary, .05)
+
+                +transform((translateX, translateY),(-50%, -50%))
+                +transition((width, height, box-shadow), ($animSpeed, $animSpeed, $animSpeed))
+
             // Children
+
+            div, a
+
+                position: relative
+                z-index: 3
 
             div
 
@@ -132,6 +159,10 @@ section
 
                 // Children
 
+                h3
+
+                    text-align: left
+
                 p
 
                     margin-top: $globalSpace / 5
@@ -141,7 +172,6 @@ section
             a
 
                 display: inline-block
-                position: relative
 
                 align-self: flex-end
 
@@ -150,8 +180,6 @@ section
                 // states
 
                 &:hover
-
-                    color: $hover
 
                     // Sibling
 
@@ -162,7 +190,7 @@ section
             span
 
                 position: fixed
-                z-index: -1
+                z-index: 1
 
                 top: 0
                 left: 0

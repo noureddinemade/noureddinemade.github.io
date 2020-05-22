@@ -4,7 +4,7 @@ html
 
     overflow-x: hidden
 
-    background-color: $bg
+    background-color: $tertiary
 
     cursor: none
 
@@ -38,15 +38,42 @@ body
     ::selection
 
         background-color: $tertiary
-        color: $light
+        color: $secondary
 
     ::-moz-selection
 
         background-color: $primary
-        color: $light
+        color: $secondary
 
     // Children
 
     *
 
         @extend %boxSize
+
+    a.trainingDay
+
+        color: $text !important
+        background-color: transparent !important
+
+    span.trainingDay
+
+        position: absolute
+        z-index: 10
+
+        top: 0
+        left: 0
+
+        opacity: 0
+
+        width: 320px
+        height: 220px
+
+        pointer-events: none
+
+        background-image: url('https://media.giphy.com/media/11TU9wJqEtr2ZW/giphy.gif')
+        background-repeat: no-repeat
+        background-position: 50% 50%
+        background-size: cover
+
+        border: 10px solid $primary

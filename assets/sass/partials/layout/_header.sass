@@ -24,11 +24,19 @@ header
 
         border: 0
 
+        background-color: transparent
+
         // Responsive
 
         +screen($md)
 
         +screen($sm)
+
+        // States
+
+        &:hover
+
+            background-color: transparent
 
         // Pseudo
 
@@ -48,21 +56,17 @@ header
 
             // Children
 
-            .-nou, .-re, .-dd, .-ine
+            .-nour, .-edd, .-ine
 
                 fill: $primary
 
-            .-nou
-
-                +animation(logo, 5s)
-
-            .-re
+            .-nour
 
                 +animation(logo, 5s, $delay: .4s)
 
-            .-dd
+            .-edd
 
-                +animation(logo, 5s, $delay: .8s)
+                +animation(logo, 5s)
 
             .-ine
 

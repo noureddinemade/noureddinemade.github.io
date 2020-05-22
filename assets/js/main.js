@@ -7,10 +7,10 @@ const cursorType        = cursor.querySelector('svg use');
 
 // Functions
 
-const moveCursor = (x,y) => {
+const moveCursor = (x,y,m) => {
 
-    cursor.style.left   = x + 'px';
-    cursor.style.top    = y + 'px';
+    m.style.left   = x + 'px';
+    m.style.top    = y + 'px';
 
 };
 
@@ -18,13 +18,21 @@ const moveCursor = (x,y) => {
 
 document.addEventListener('mousemove', (e) => {
 
-    moveCursor(e.pageX, e.pageY);
+    moveCursor(e.pageX, e.pageY, cursor);
 
 });
 
 allLinks.forEach(link => {
 
-    link.addEventListener('mouseover', () => {
+    link.addEventListener('mouseover', (e) => {
+
+        if (link.classList.contains('trainingDay')) {
+
+            document.querySelector('span.trainingDay').style.opacity = '1';
+
+            moveCursor(e.pageX, e.pageY, document.querySelector('span.trainingDay'));
+
+        }
 
         cursor.classList.add('pointer');
         cursorType.setAttribute('xlink:href', '#cursorPointer');
@@ -46,7 +54,13 @@ allLinks.forEach(link => {
 
     });
 
-    link.addEventListener('mouseout', () => {
+    link.addEventListener('mouseout', (e) => {
+
+        if (link.classList.contains('trainingDay')) {
+
+            document.querySelector('span.trainingDay').style.opacity = '0';
+
+        }
 
         cursor.classList.remove('pointer');
         cursorType.setAttribute('xlink:href', '#cursorNormal');
