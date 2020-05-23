@@ -504,6 +504,18 @@ ul li {
     ul li.general:last-child:after {
       content: ''; }
 
+div.profileImg {
+  position: relative;
+  overflow: hidden; }
+  div.profileImg img {
+    position: relative;
+    z-index: 1; }
+    div.profileImg img:last-child {
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 0; }
+
 .cursorBase {
   display: none; }
 
