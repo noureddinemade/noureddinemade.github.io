@@ -1,9 +1,11 @@
 // Variables
 
-const allLinks          = document.querySelectorAll('a');
+const allLinks          = document.querySelectorAll('a.link');
 
 const cursor            = document.querySelector('.cursor');
 const cursorType        = cursor.querySelector('svg use');
+
+let egg;
 
 // Functions
 
@@ -25,14 +27,6 @@ document.addEventListener('mousemove', (e) => {
 allLinks.forEach(link => {
 
     link.addEventListener('mouseover', (e) => {
-
-        if (link.classList.contains('trainingDay')) {
-
-            document.querySelector('span.trainingDay').style.opacity = '1';
-
-            moveCursor(e.pageX, e.pageY, document.querySelector('span.trainingDay'));
-
-        }
 
         cursor.classList.add('pointer');
         cursorType.setAttribute('xlink:href', '#cursorPointer');
@@ -56,15 +50,32 @@ allLinks.forEach(link => {
 
     link.addEventListener('mouseout', (e) => {
 
-        if (link.classList.contains('trainingDay')) {
-
-            document.querySelector('span.trainingDay').style.opacity = '0';
-
-        }
-
         cursor.classList.remove('pointer');
         cursorType.setAttribute('xlink:href', '#cursorNormal');
 
     });
 
 });
+
+// The shit is chess
+
+if (document.querySelector('span.trainingDay')) {
+
+    const alonso = document.querySelector('a.trainingDay');
+    const harris = document.querySelector('span.trainingDay');
+
+    alonso.addEventListener('mouseover', () => {
+
+        harris.style.display = 'block';
+        cursor.querySelector('svg').style.display = 'none';
+
+    });
+
+    alonso.addEventListener('mouseout', () => {
+
+        harris.style.display = 'none';
+        cursor.querySelector('svg').style.display = 'block';
+
+    });
+
+}

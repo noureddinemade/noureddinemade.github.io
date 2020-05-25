@@ -37,13 +37,13 @@ body
 
     ::selection
 
-        background-color: $tertiary
-        color: $secondary
+        background-color: $secondary
+        color: $light
 
     ::-moz-selection
 
-        background-color: $primary
-        color: $secondary
+        background-color: $secondary
+        color: $light
 
     // Children
 
@@ -61,19 +61,23 @@ body
         position: absolute
         z-index: 10
 
-        top: 0
-        left: 0
+        display: none
 
-        opacity: 0
+        top: 50%
+        left: 50%
 
-        width: 320px
-        height: 220px
+        width: 300px
+        height: 300px
 
         pointer-events: none
 
         background-image: url('https://media.giphy.com/media/11TU9wJqEtr2ZW/giphy.gif')
         background-repeat: no-repeat
-        background-position: 50% 50%
-        background-size: cover
+        background-position: 50% 40%
+        background-size: 350%
 
-        border: 10px solid $primary
+        box-shadow: 0 0 50px rgba($dark, .5)
+
+        border-radius: 500px
+
+        +transform((translateY, translateX),(-50%, -50%))
