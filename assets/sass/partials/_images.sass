@@ -1,24 +1,17 @@
-//
+// Images
 
-div.profileImg
+section .inner img
 
-    position: relative
+    display: block
 
-    overflow: hidden
+    margin-bottom: $globalSpace
 
-    // Children
+    @extend %center
 
-    img
+    // Classes
 
-        position: relative
-        z-index: 1
+    &.shadow
 
-        // Pseudo
+        width: 70%
 
-        &:last-child
-
-            position: absolute
-            z-index: 3
-
-            top: 0
-            left: 0
+        box-shadow: 10px 10px 40px rgba($dark, .05)

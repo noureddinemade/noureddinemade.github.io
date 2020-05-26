@@ -33,6 +33,8 @@ section
 
         text-align: center
 
+        background-attachment: fixed
+
         // Responsive
 
         +screen($md)
@@ -85,6 +87,16 @@ section
 
                     position: relative
                     display: inline-block
+
+        .grid
+
+            margin-top: $globalSpace / 1.3
+
+            width: 90%
+
+            @extend %center
+
+            text-align: left
 
     &.work
 
@@ -203,6 +215,17 @@ section
 
                 +transition((transform, opacity), ($animSpeed, $animSpeed))
 
+    &.gallery
+
+        background-color: lighten($primary, 20%)
+
+    &.general
+
+        // Childrens
+
+        p
+
+            margin-bottom: $globalSpace
 
     // Children
 

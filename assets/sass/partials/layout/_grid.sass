@@ -5,13 +5,19 @@
     position: relative
     display: grid
 
-    // margin: $globalSpace 0
+    margin-bottom: $globalSpace
 
     // Responsive
 
     +screen($md)
 
         grid-template-columns: repeat(1, 1fr) !important
+
+    // Pseudo
+
+    &:last-child
+
+        margin-bottom: 0
 
     // Classes
 
@@ -30,6 +36,16 @@
         grid-template-columns: repeat(4, 1fr)
         grid-gap: $globalSpace / 3
 
+    &.-x5
+
+        grid-template-columns: repeat(5, 1fr)
+        grid-gap: $globalSpace / 4
+
+    &.-x6
+
+        grid-template-columns: repeat(6, 1fr)
+        grid-gap: $globalSpace / 4
+
     &.-l1
 
         grid-template-columns: 68% 30%
@@ -41,6 +57,10 @@
         grid-gap: 4%
 
     // Children
+
+    p
+
+        margin-bottom: 0 !important
 
     .col
 

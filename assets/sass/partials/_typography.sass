@@ -72,8 +72,6 @@ a
 
     color: $link
 
-    background-color: $tertiary
-
     text-decoration: none
 
     cursor: none
@@ -85,17 +83,11 @@ a
     &:hover
 
         background-color: $link
-        color: $tertiary
+        color: $light
 
 p
 
-    margin-bottom: $globalSpace / 2
-
-    // Pseudo
-
-    &:last-child
-
-        margin-bottom: 0
+    margin-bottom: $globalSpace
 
     // Responisve
 
@@ -106,6 +98,18 @@ p
     +screen($sm)
 
         font-size: $fontBase - 10px
+
+    // Pseudo
+
+    &:last-child
+
+        margin-bottom: 0 !important
+
+    // Children
+
+    span
+
+        background-color: $tertiary
 
 ul
 
@@ -125,7 +129,7 @@ ul
 
                 margin-bottom: $globalSpace / 4
 
-                color: $secondary
+                color: $primary
 
         &.-award
 

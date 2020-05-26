@@ -6,7 +6,7 @@ desc: Here.
 order: 3
 permalink: work/nps/
 label: Read case study
-style: "background-image:repeating-linear-gradient(113deg, #A36DEC, #ceb0f5, #ceb0f5 200px 400px);"
+style: "background-image:repeating-linear-gradient(113deg, #DBC9F2, #E7D7FB, #E7D7FB 200px 400px);"
 
 ---
 
@@ -14,9 +14,263 @@ style: "background-image:repeating-linear-gradient(113deg, #A36DEC, #ceb0f5, #ce
 
     <div class="inner">
 
+        <ul>
+
+            <li>
+                <span>All done?</span>
+                <a href="/" class="link">Back to portfolio</a>
+            </li>
+
+            <li>
+                <span>Who were the clients?</span>
+                NPS MedicineWise &amp; Create Studios
+            </li>
+
+            {% if page.next.url %}
+
+                <li>
+                    <span>Want more?</span>
+                    <a href="{{page.next.url}}" class="link">Next case study</a>
+                </li>
+
+            {% endif %}
+
+        </ul>
+
         <h1>
-            NPS
+            A free tool that helps sufferers of chronic pain communicate their issues accurately.
         </h1>
+
+        <div class="grid -x2">
+
+            <p>
+                By the time I was brought on to the project a lot of the research was completed. My role was to work with the Create Studios team to draft the app and iconography, test them with potential users and create the final design.
+            </p>
+
+            <p>
+                I conducted usability testing and user research, I designed the entire tool from initial sketches all the way through to final designs (including iconography) and developed the front end functionality and cosmetics.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="general">
+
+    <div class="inner">
+
+        <h2>
+            Let&rsquo;s start with the complete user flow.
+        </h2>
+
+        <p>
+            The user&rsquo;s journey was established prior to my involvement in the project. The point of this app was for it to have one purpose only. <span>This meant that the user could only follow one path from start to finish</span> unless they decided to exit the app.
+        </p>
+
+        <img srcset="/assets/img/work/nps/nps-1-flow.png, /assets/img/work/nps/nps-1-flow@2x.png 2x" src="/assets/img/work/nps/nps-1-flow@2x.png" alt="The NPS Chronic Pain Tool user flow" title="The NPS Chronic Pain Tool user flow">
+
+        <div class="grid -x2">
+
+            <p>
+                The user starts at the home screen and is presented with two options, proceed with the app or find out more about the app. Next we find out who the user is planning to talk to about their chronic pain. The user should be able to select more than one option then proceed to the next section which is the core section of the app.
+            </p>
+
+            <p>
+                This is where the user selects what they would like to talk about. Once they&rsquo;ve completed this step they move on to the next section where they can add their name, notes and prioratise what they&rsquo;d like to talk about. Once they&rsquo;re happy with everything they move on to the final step. The user can now save, share or print their summary.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="general">
+
+    <div class="inner">
+
+        <h2>
+            Designing the layout.
+        </h2>
+
+        <p>
+            First up, the categories and cards section. This section had the highest priority as it required the most amount of input from the user. <span>The user needed to easily select one of the six categories</span> and then pick statement cards to help them communicate their chronic pain better.
+        </p>
+
+        <img srcset="/assets/img/work/nps/nps-2-categories.png, /assets/img/work/nps/nps-2-categories@2x.png 2x" src="/assets/img/work/nps/nps-2-categories@2x.png" alt="Draft sketches for the caategries" title="Draft sketches for the caategries">
+
+        <div class="grid -x2">
+
+            <p>
+                The first two options displayed icons only. Each category would be represented by a specific colour and icon that represents that category. Testing for these two options revealed that users found it hard to determine what the categories were. The third sketch had no icons but instead used the category titles. This received better feedback from testing but users commented that it seemed less visually appealing.
+            </p>
+
+            <p>
+                The final sketch incorporated both the icons and category titles. Even though this could cause users with devices with smaller screens, this received the most positive feedback as users understood what each category was plus it has the visual aspect of the icons.
+            </p>
+
+        </div>
+
+        <img srcset="/assets/img/work/nps/nps-3-selection.png, /assets/img/work/nps/nps-3-selection@2x.png 2x" src="/assets/img/work/nps/nps-3-selection@2x.png" alt="Draft sketches for the card selection step" title="Draft sketches for the card selection step">
+
+        <p>
+            The three options for the card selection were sketched out. The first option made the user scroll up and down to view and select the statement cards they wanted. For the second option the user had to tap each card to view it in full and the final option was simillar to the first but instead allowed the user to take advantage of the swipe gesture they are already familiar with on their phones. <span>The third option tested the best with users.</span>
+        </p>
+
+    </div>
+
+</section>
+
+<section class="gallery">
+
+    <div class="inner">
+
+        <div class="grid -x3">
+
+            <img src="/assets/img/work/nps/wf-1.png" alt="Wireframes for the NPS Chronic Pain Tool app" title="Wireframes for the NPS Chronic Pain Tool app" class="shadow">
+
+            <img src="/assets/img/work/nps/wf-2.png" alt="Wireframes for the NPS Chronic Pain Tool app" title="Wireframes for the NPS Chronic Pain Tool app" class="shadow">
+
+            <img src="/assets/img/work/nps/wf-3.png" alt="Wireframes for the NPS Chronic Pain Tool app" title="Wireframes for the NPS Chronic Pain Tool app" class="shadow">
+
+            <img src="/assets/img/work/nps/wf-4.png" alt="Wireframes for the NPS Chronic Pain Tool app" title="Wireframes for the NPS Chronic Pain Tool app" class="shadow">
+
+            <img src="/assets/img/work/nps/wf-5.png" alt="Wireframes for the NPS Chronic Pain Tool app" title="Wireframes for the NPS Chronic Pain Tool app" class="shadow">
+
+            <img src="/assets/img/work/nps/wf-6.png" alt="Wireframes for the NPS Chronic Pain Tool app" title="Wireframes for the NPS Chronic Pain Tool app" class="shadow">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="general">
+
+    <div class="inner">
+
+        <h2>
+            Designing the iconography.
+        </h2>
+
+        <img srcset="/assets/img/work/nps/nps-4-icons.png, /assets/img/work/nps/nps-4-icons@2x.png 2x" src="/assets/img/work/nps/nps-4-icons@2x.png" alt="Draft sketches of the iconography" title="Draft sketches of the iconography">
+
+        <p>
+            The icons carried a significant amount of importance. Each icon represented a particular category. These would be displayed on the category and card selection areas.
+        </p>
+
+        <div class="grid -x6">
+
+            <img src="/assets/img/work/nps/icon-final-1.png" alt="Final icon design" title="Final icon design">
+            <img src="/assets/img/work/nps/icon-final-2.png" alt="Final icon design" title="Final icon design">
+            <img src="/assets/img/work/nps/icon-final-3.png" alt="Final icon design" title="Final icon design">
+            <img src="/assets/img/work/nps/icon-final-4.png" alt="Final icon design" title="Final icon design">
+            <img src="/assets/img/work/nps/icon-final-5.png" alt="Final icon design" title="Final icon design">
+            <img src="/assets/img/work/nps/icon-final-6.png" alt="Final icon design" title="Final icon design">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="general">
+
+    <div class="inner">
+
+        <h2>
+            Now it was time for the cards.
+        </h2>
+
+        <div class="grid -x2">
+
+            <p>
+                Each statement card represented an issue related to that particular category. The three directions for the cards resulted in simillar feedback from users. This gave me the freedom to pick the direction we liked most. The third option was approved by NPS and the Create Studios team to be the final design.
+            </p>
+
+            <img srcset="/assets/img/work/nps/nps-5-cards.png, /assets/img/work/nps/nps-5-cards@2x.png 2x" src="/assets/img/work/nps/nps-5-cards@2x.png" alt="Draft sketches of the cards" title="Draft sketches of the cards">
+
+        </div>
+
+        <div class="grid -x2">
+
+            <img src="/assets/img/work/nps/card-final-1.png" alt="Final design for the cards" alt="Final design for the cards">
+
+            <img src="/assets/img/work/nps/card-final-2.png" alt="Final design for the cards" alt="Final design for the cards">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="gallery">
+
+    <div class="inner">
+
+        <h2>
+            The final design.
+        </h2>
+
+        <p>
+            After the final drafts of the wireframes and iconography were confirmed I moved on to getting the final design completed. The final designs created were tested internally throughout their creation and apart from minor cosmetic changes, they remained almost identical to the wireframes and drafts that I created originally.
+        </p>
+
+        <div class="grid -x4">
+
+            <img src="/assets/img/work/nps/final-0.png" alt="Final designs" title="Final designs" class="shadow">
+            <img src="/assets/img/work/nps/final-1.png" alt="Final designs" title="Final designs" class="shadow">
+            <img src="/assets/img/work/nps/final-2.png" alt="Final designs" title="Final designs" class="shadow">
+            <img src="/assets/img/work/nps/final-3.png" alt="Final designs" title="Final designs" class="shadow">
+            <img src="/assets/img/work/nps/final-4.png" alt="Final designs" title="Final designs" class="shadow">
+            <img src="/assets/img/work/nps/final-5.png" alt="Final designs" title="Final designs" class="shadow">
+            <img src="/assets/img/work/nps/final-6.png" alt="Final designs" title="Final designs" class="shadow">
+            <img src="/assets/img/work/nps/final-7.png" alt="Final designs" title="Final designs" class="shadow">
+            <img src="/assets/img/work/nps/final-11.png" alt="Final designs" title="Final designs" class="shadow">
+            <img src="/assets/img/work/nps/final-8.png" alt="Final designs" title="Final designs" class="shadow">
+            <img src="/assets/img/work/nps/final-9.png" alt="Final designs" title="Final designs" class="shadow">
+            <img src="/assets/img/work/nps/final-10.png" alt="Final designs" title="Final designs" class="shadow">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="general">
+
+    <div class="inner">
+
+        <h2>
+            What happened next?
+        </h2>
+
+        <p>
+            The project ended before the app could actually be built. As is the case with a lot of large projects like this one, requirements for the project changed and the app development had to be put on hold.
+        </p>
+
+        <p>
+            However, despite the app not going into development, there had already been enough research, design and testing done to come up with a more simplified version of this tool as a part of NPS&rsquo; existing website. Working closely with the Create Studios team, a lot of the design elements as well as the iconography were incorporated into a smaller web version of the Chronic Pain Tool which was used for just over a year to gather further insights and feedback for the tool.
+        </p>
+
+        <ul class="end grid -x3">
+            <li>
+                <span>All done?</span>
+                <a href="/" class="link">Back to portfolio</a>
+            </li>
+
+            {% if page.next.url %}
+
+                <li>
+                    <span>Want more?</span>
+                    <a href="{{page.next.url}}" class="link">Next case study</a>
+                </li>
+
+            {% endif %}
+
+        </ul>
 
     </div>
 
