@@ -1,0 +1,15 @@
+// Colours
+
+@each $label, $colour in $palette
+
+    %bg#{$label}
+
+        background-color: $colour
+
+    %text#{$label}
+
+        color: $colour
+
+    %fill#{$label}
+
+        fill: $colour

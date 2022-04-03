@@ -1,0 +1,436 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img, iframe {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+input, textarea, select {
+  font: inherit;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "Oakes Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/font/oakes-grotesk-regular.woff"), url("/assets/font/oakes-grotesk-regular.woff2");
+}
+@font-face {
+  font-family: "Oakes Grotesk";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/font/oakes-grotesk-semi-bold.woff"), url("/assets/font/oakes-grotesk-semi-bold.woff2");
+}
+@font-face {
+  font-family: "Oakes Grotesk";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/assets/font/oakes-grotesk-italic.woff"), url("/assets/font/oakes-grotesk-italic.woff2");
+}
+@font-face {
+  font-family: "Ingram Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/font/ingram-mono-regular.woff"), url("/assets/font/ingram-mono-regular.woff2");
+}
+main *, body * {
+  box-sizing: border-box;
+}
+
+section .inner {
+  padding: 0 100px;
+}
+@media screen and (max-width: 1024px) {
+  section .inner {
+    padding: 0 80px;
+  }
+}
+@media screen and (max-width: 800px) {
+  section .inner {
+    padding: 0 60px;
+  }
+}
+@media screen and (max-width: 640px) {
+  section .inner {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  section .inner {
+    padding: 0 20px;
+  }
+}
+
+section .inner {
+  width: 1920px;
+  max-width: 1920px;
+}
+@media screen and (max-width: 1920px) {
+  section .inner {
+    width: 100%;
+  }
+}
+
+section .inner {
+  position: relative;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Oakes Grotesk", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+h1, section.dealbreakers ol li span, section.ticker p {
+  font-family: "Ingram Mono", sans-serif;
+  font-weight: 400;
+  font-variant: common-ligatures discretionary-ligatures historical-ligatures contextual;
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+h1, section.dealbreakers ol li span, section.ticker p {
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1600px) {
+  .hideXL {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .hideLG {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hideMD {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hideSM {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .hideXS {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hideXXS {
+    display: none;
+  }
+}
+
+html {
+  overflow-x: hidden;
+  background-color: #FFF5F2;
+}
+
+body {
+  background-color: #FFF5F2;
+}
+body ::selection {
+  background-color: #0D08FF;
+  color: #FFF5F2;
+}
+body ::-moz-selection {
+  background-color: #0D08FF;
+  color: #FFF5F2;
+}
+main {
+  position: relative;
+  z-index: 5;
+  margin-bottom: 600px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #FFF5F2;
+}
+main .echo section.gallery {
+  background-color: #cbfff0;
+}
+main .drsharif section.gallery {
+  background-color: #c5eaff;
+}
+main .nps section.gallery {
+  background-color: #E7D7FB;
+}
+main .football section.gallery {
+  background-color: #ffb0b5;
+}
+main .logos section.gallery {
+  background-color: #FFF4A2;
+}
+main .archive section.gallery {
+  background-color: #bfffd8;
+}
+
+header {
+  position: absolute;
+  z-index: 999;
+  top: 40px;
+  right: 100px;
+}
+header a.logoWrap {
+  position: relative;
+  display: block;
+  width: 280px;
+  height: auto;
+  padding: 30px;
+  background-color: #FFF5F2;
+}
+header a.logoWrap:hover svg {
+  fill: #FF5068;
+}
+header a.logoWrap:before, header a.logoWrap:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+}
+header a.logoWrap:before {
+  left: -100px;
+  background-image: linear-gradient(-90deg, #FFF5F2, transparent);
+}
+header a.logoWrap:after {
+  right: -100px;
+  background-image: linear-gradient(90deg, #FFF5F2, transparent);
+}
+header a.logoWrap svg {
+  width: 100%;
+  height: 100%;
+  fill: #0D08FF;
+  transition-property: fill;
+  transition-duration: 0.1s;
+  transition-delay: 0s;
+  transition-timing-function: linear;
+}
+
+section {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 100px;
+  width: 100%;
+  height: auto;
+}
+section.ticker {
+  margin-bottom: 50px;
+  padding-top: 100px;
+}
+section.ticker p {
+  white-space: nowrap;
+  font-size: 18px;
+  -webkit-animation-name: ticker;
+  -webkit-animation-duration: 20s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: none;
+  -webkit-animation-play-state: running;
+  animation-name: ticker;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+section.ticker p:hover {
+  animation-play-state: paused;
+}
+section.ticker p span:before {
+  content: "☻";
+  font-size: 24px;
+  color: #FFB5C7;
+}
+section.dealbreakers ol {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 50px;
+  counter-reset: dealbreakers;
+}
+section.dealbreakers ol li {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 0;
+  padding: 50px;
+  background-color: #0D08FF;
+  counter-increment: dealbreakers;
+}
+section.dealbreakers ol li p {
+  font-size: 26px;
+  line-height: 1.4;
+  color: #FFF5F2;
+}
+section.dealbreakers ol li span {
+  padding-bottom: 25px;
+  font-size: 78px;
+  color: #FF5068;
+}
+section.dealbreakers ol li span:before {
+  content: counter(dealbreakers);
+}
+h1, h2, h3 {
+  position: relative;
+  display: block;
+  width: 100%;
+  line-height: 1.1;
+}
+
+a {
+  position: relative;
+  color: #0D08FF;
+  text-decoration: none;
+}
+h1 {
+  font-size: 6.5vmin;
+}
+
+h2 {
+  font-size: 4vmin;
+  line-height: 1.3;
+}
+
+.cursorBase {
+  display: none;
+}
+
+.cursor {
+  position: absolute;
+  z-index: 100;
+  top: 0vh;
+  left: 0vw;
+  width: 38px;
+  pointer-events: none;
+  transition-property: width;
+  transition-duration: 0.1s;
+  transition-delay: 0s;
+  transition-timing-function: linear;
+}
+.cursor.pointer, .cursor.clicked {
+  width: 50px;
+}
+.cursor.pointer {
+  -webkit-animation-name: cursorPointer;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: none;
+  -webkit-animation-play-state: running;
+  animation-name: cursorPointer;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+.cursor.loading {
+  transform-origin: 50% 50%;
+  -webkit-animation-name: cursorLoading;
+  -webkit-animation-duration: 1.2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: none;
+  -webkit-animation-play-state: running;
+  animation-name: cursorLoading;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+.cursor svg {
+  width: 100%;
+  -webkit-transform: translateX(-4px) translateY(-4px);
+  -ms-transform: translateX(-4px) translateY(-4px);
+  transform: translateX(-4px) translateY(-4px);
+}
+
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    transform: translateX(-100vw);
+  }
+}
+@keyframes ticker {
+  0% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    transform: translateX(-100vw);
+  }
+}
