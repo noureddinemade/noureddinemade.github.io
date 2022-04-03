@@ -5,14 +5,8 @@ collections:
   posts:
     title: Posts
     output: true
-  uploads:
-    title: Uploads
-    output: true
   work:
     title: Work
-    output: true
-  archive:
-    title: Archive
     output: true
 defaults:
 - scope:
@@ -28,11 +22,6 @@ defaults:
 - scope:
     path: ''
     type: work
-  values:
-    layout: work
-- scope:
-    path: ''
-    type: archive
   values:
     layout: work
 email: emailme@noureddine.biz

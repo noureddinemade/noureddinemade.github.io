@@ -77,6 +77,16 @@ function createPDF(cb) {
 
 }
 
+function createFonts(cb) {
+
+    return src(fontSrc)
+        .pipe(dest(fontDest))
+        .pipe(browserSync.stream());
+
+    cb();
+
+}
+
 function prepImages(cb) {
 
     return src(imgSrc)
@@ -121,8 +131,9 @@ function watchAll() {
 
     watch(styleSrc, createStyle);
     watch(jsSrc, createJS);
-    watch(pdfSrc, createPDF);
     watch(imgSrc, prepImages);
+    watch(pdfSrc, createPDF);
+    watch(fontSrc, createFonts);
 
     watch(
         [
