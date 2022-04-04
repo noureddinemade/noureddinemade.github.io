@@ -50,12 +50,6 @@ input, textarea, select {
 }
 
 @font-face {
-  font-family: "Ingram Mono";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/assets/font/ingram-mono-regular.woff"), url("/assets/font/ingram-mono-regular.woff2");
-}
-@font-face {
   font-family: "Riposte";
   font-style: normal;
   font-weight: 300;
@@ -70,4 +64,32 @@ input, textarea, select {
 body {
   font-family: "Riposte";
   font-weight: 300;
+}
+body * {
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  background-color: red;
+  text-align: center;
+}
+header .logoWrap {
+  position: relative;
+  display: inline-block;
+  height: auto;
+  width: 200px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+header .logoWrap .logo {
+  width: 100%;
+}
+header .logoWrap .logo * {
+  fill: #0500FF;
 }

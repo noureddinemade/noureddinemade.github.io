@@ -1,42 +1,26 @@
 // Colours
 
-$c1:                        #FF5068
-$c2:                        #0D08FF
-$c3:                        #000A22
-$c4:                        #FFF5F2
-$c5:                        #FFB5C7
+$c1:                        #0500FF
+$c2:                        #FFF0FE
+$c3:                        #000000
+$c4:                        #ffffff
 
 $primary:                   $c1
 $secondary:                 $c2
-$tertiary:                  $c5
 $dark:                      $c3
 $light:                     $c4
 
 $text:                      $dark
 $bg:                        $light
-$highlight:                 $tertiary
+$highlight:                 $secondary
 
-$bgAlt1:                    lighten($tertiary, 8%)
-$bgAlt2:                    lighten($secondary, 45%)
+$link:                      $primary
 
-$link:                      $secondary
-$hover:                     $primary
-
-$palette:                   (Primary $primary, Secondary $secondary, Tertiary $tertiary, Dark $dark, Light $light)
-
-$echo:                      #cbfff0
-$drsharif:                  #c5eaff
-$nps:                       #E7D7FB
-$football:                  #ffb0b5
-$logos:                     #FFF4A2
-$archive:                   #bfffd8
-
-$projects:                  (echo $echo, drsharif $drsharif, nps $nps, football $football, logos $logos, archive $archive)
+$palette:                   (Primary $primary, Secondary $secondary, Dark $dark, Light $light)
 
 // Fonts
 
-$fontText:                  'Oakes Grotesk', sans-serif        // 400, 600
-$fontHead:                  'Ingram Mono', sans-serif          // 400
+$fontText:                  'Riposte', sans-serif        // 300, 500
 
 $h1:                        6.5vmin
 $h2:                        4vmin
@@ -44,31 +28,25 @@ $h3:                        28px
 
 // Sizes
 
-$fontBase:                  26px
+$fontBase:                  30px
 $globalSpace:               100px
 $headerHeight:              100px
-$footerHeight:              600px
+$footerHeight:              700px
 
 $border:                    20px
 
-$xl:                        1600px
 $lg:                        1440px
 $md:                        1024px
 $sm:                        800px
 $xs:                        640px
-$xxs:                       480px
 
-$maxWidth:                  $xl * 1.2
-
-$padding:                   ($md, $sm, $xs, $xxs)
-$hide:                      (XL $xl, LG $lg, MD $md, SM $sm, XS $xs, XXS $xxs)
+$padding:                   ($lg, $md, $sm, $xs)
+$hide:                      (LG $lg, MD $md, SM $sm, XS $xs)
 
 // Paths
 
 $imgPath:                   '/assets/img/'
 $fontPath:                  '/assets/font/'
-$cursor:                    $imgPath + 'cursors/'
-$mark:                      $imgPath + 'marks/'
 
 // Misc
 
