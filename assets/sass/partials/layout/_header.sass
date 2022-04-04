@@ -11,7 +11,7 @@ header
     top: 0
     left: 0
 
-    background-color: red
+    overflow: hidden
 
     text-align: center
 
@@ -22,12 +22,13 @@ header
         position: relative
         display: inline-block
 
-        height: auto
         width: 200px
+        height: auto
 
         padding: 20px
 
-        background-color: $light
+        @extend %bgcLight
+        @extend %noLinkHover
 
         // Children
 
@@ -37,4 +38,56 @@ header
 
             *
             
-                fill: $primary
+                @extend %fcPrimary
+
+    ul.ticker
+
+        display: flex
+        position: absolute
+
+        align-items: center
+
+        top: 0
+        left: 0
+
+        height: 100%
+
+        font-size: 16px
+
+        letter-spacing: 0.6px
+
+        white-space: nowrap
+
+        @extend %uppercase
+
+        +animation(ticker, 15s)
+
+        // States
+
+        &:hover
+
+            -webkit-animation-play-state: paused
+            animation-play-state: paused
+
+        // Children
+
+        li
+
+            display: inline-block
+
+            margin-right: 10px
+
+            // Psuedo
+
+            &:after
+
+                content: '•'
+
+                margin-left: 10px
+
+            &:last-child
+                
+                content: ''
+
+                margin-left: 0
+                

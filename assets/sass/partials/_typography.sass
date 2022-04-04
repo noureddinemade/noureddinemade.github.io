@@ -1,1 +1,19 @@
 // Typography
+
+a
+
+    text-decoration: none
+
+    @extend %tcPrimary
+
+    +transition(opacity, $animSpeed)
+
+    // States
+
+    &:hover
+
+        opacity: .7
+
+    &:active
+
+        opacity: 1
