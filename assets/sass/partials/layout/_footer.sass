@@ -1,1 +1,25 @@
 // Footer
+
+footer
+
+    width: 100%
+
+    // Children
+
+    .content
+
+        @extend %contentPadding
+        @extend %maxWidth
+        @extend %centerLayout
+        @extend %textCenter
+
+        // Children
+
+        nav.footer
+
+            display: flex
+            justify-content: space-between
+
+            margin-top: calc($globalSpace / 2)
+
+            font-size: 14px

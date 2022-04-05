@@ -62,36 +62,36 @@ input, textarea, select {
   font-weight: 500;
   src: url("/assets/font/gtfripostetrial-medium-webfont.woff"), url("/assets/font/gtfripostetrial-medium-webfont.woff2");
 }
-section .content {
+section .content, footer .content {
   padding: 100px 100px;
 }
 @media screen and (max-width: 1440px) {
-  section .content {
+  section .content, footer .content {
     padding: 80px 80px;
   }
 }
 @media screen and (max-width: 1024px) {
-  section .content {
+  section .content, footer .content {
     padding: 60px 60px;
   }
 }
 @media screen and (max-width: 800px) {
-  section .content {
+  section .content, footer .content {
     padding: 40px 40px;
   }
 }
 @media screen and (max-width: 640px) {
-  section .content {
+  section .content, footer .content {
     padding: 20px 20px;
   }
 }
 
-section .content {
+section .content, footer .content {
   width: 100%;
   max-width: 1600px;
 }
 
-section .content {
+section .content, footer .content {
   margin-left: auto;
   margin-right: auto;
 }
@@ -112,11 +112,12 @@ span.underline, h2 {
   text-decoration: underline;
 }
 
-header .logoWrap {
-  opacity: 1 !important;
+header .logoWrap:hover, header .logoWrap:active {
+  color: inherit !important;
+  background-color: inherit !important;
 }
 
-section .content {
+section .content, footer .content {
   text-align: center;
 }
 
@@ -148,7 +149,7 @@ main ul li * {
 
 header {
   position: fixed;
-  z-index: 0;
+  z-index: 100;
   width: 100%;
   height: auto;
   top: 0;
@@ -162,6 +163,8 @@ header .logoWrap {
   width: 220px;
   height: auto;
   padding: 20px;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle at top, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 80%);
 }
 header .logoWrap .logo {
   width: 100%;
@@ -208,6 +211,16 @@ header ul.ticker li:last-child {
   margin-left: 0;
 }
 
+footer {
+  width: 100%;
+}
+footer .content nav.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  font-size: 14px;
+}
+
 section {
   position: relative;
   z-index: 2;
@@ -219,7 +232,7 @@ section.pageHeading {
 section .content h2, section .content h3, section .content p {
   margin-bottom: 20px;
 }
-section .content h2:last-of-type, section .content h3:last-of-type, section .content p:last-of-type {
+section .content h2:last-child, section .content h3:last-child, section .content p:last-child {
   margin-bottom: 0;
 }
 section .content img {
@@ -238,7 +251,7 @@ body {
   color: #000000;
 }
 
-html, body, header .logoWrap {
+html, body {
   background-color: #ffffff;
 }
 
@@ -257,16 +270,14 @@ h2 {
 
 a {
   text-decoration: none;
-  transition-property: opacity;
-  transition-duration: 0.1s;
-  transition-delay: 0s;
-  transition-timing-function: linear;
 }
 a:hover {
-  opacity: 0.7;
+  background-color: #0500FF;
+  color: #ffffff;
 }
 a:active {
-  opacity: 1;
+  background-color: transparent;
+  color: #0500FF;
 }
 
 p {

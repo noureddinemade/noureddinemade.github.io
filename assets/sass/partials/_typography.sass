@@ -24,17 +24,17 @@ a
 
     @extend %tcPrimary
 
-    +transition(opacity, $animSpeed)
-
     // States
 
     &:hover
 
-        opacity: .7
+        background-color: $primary
+        color: $light
 
     &:active
 
-        opacity: 1
+        background-color: transparent
+        color: $link
 
 p
     
