@@ -3,7 +3,7 @@
 header
 
     position: fixed
-    z-index: 99
+    z-index: 0
 
     width: 100%
     height: auto
@@ -22,7 +22,7 @@ header
         position: relative
         display: inline-block
 
-        width: 200px
+        width: 220px
         height: auto
 
         padding: 20px
@@ -52,10 +52,8 @@ header
 
         height: 100%
 
-        font-size: 16px
-
-        letter-spacing: 0.6px
-
+        font-size: 20px
+        letter-spacing: 1px
         white-space: nowrap
 
         @extend %uppercase
@@ -75,15 +73,15 @@ header
 
             display: inline-block
 
-            margin-right: 10px
+            margin-right: 20px
 
             // Psuedo
 
             &:after
 
-                content: '•'
+                content: '☻'
 
-                margin-left: 10px
+                margin-left: 20px
 
             &:last-child
                 

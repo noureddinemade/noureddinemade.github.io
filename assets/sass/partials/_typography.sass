@@ -1,5 +1,23 @@
 // Typography
 
+h1, h2, h3
+
+    @extend %fontHeading
+
+h1
+
+    font-size: $h1
+
+    +screen($xs)
+
+        font-size: 32px
+
+h2
+
+    font-size: $h2
+
+    @extend %underline
+
 a
 
     text-decoration: none
@@ -17,3 +35,35 @@ a
     &:active
 
         opacity: 1
+
+p
+    
+    line-height: 1.6
+
+    opacity: .8
+
+    // Responsive
+
+    +screen($sm)
+
+        font-size: calc($fontBase - 6px)
+
+    // Classes
+
+    &.intro
+
+        font-size: 36px
+
+        opacity: 1
+
+span
+
+    // Classes
+
+    &.bold
+
+        @extend %fontBold
+    
+    &.underline
+
+        @extend %underline

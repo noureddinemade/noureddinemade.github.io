@@ -1,19 +1,30 @@
 // Helpers
 
+// Layout
+
+%contentPadding
+
+    +padding($globalSpace, $z: 20px, $breaks: $padding)
+
+%maxWidth
+
+    +maxWidth($xl)
+
+%centerLayout
+
+    margin-left: auto
+    margin-right: auto
+
 
 // Typography
 
-%fontBase
+%fontRegular
 
-    font-family: $font
-    font-size: $fontBase
     font-weight: 300
 
-%fontHeading
+%fontBold
 
     font-weight: 500
-
-    @extend %fontBase
 
 %uppercase
 
@@ -26,3 +37,20 @@
 %noLinkHover
 
     opacity: 1 !important
+
+%textCenter
+
+    text-align: center
+
+%fontBase
+
+    font-family: $font
+    font-size: $fontBase
+
+    @extend %fontRegular
+
+%fontHeading
+
+    @extend %fontBold
+    @extend %fontBase
+    @extend %uppercase

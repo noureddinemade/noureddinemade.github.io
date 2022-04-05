@@ -1,1 +1,39 @@
 // Section
+
+section
+
+    position: relative
+    z-index: 2
+
+    width: 100%
+
+    // Classes
+
+    &.pageHeading
+
+        margin-top: $globalSpace
+
+    // Children
+
+    .content
+
+        @extend %contentPadding
+        @extend %maxWidth
+        @extend %centerLayout
+        @extend %textCenter
+
+        // Children
+
+        h2, h3, p
+
+            margin-bottom: 20px
+
+            // Psuedo
+
+            &:last-of-type
+                
+                margin-bottom: 0
+
+        img
+
+            width: 100%

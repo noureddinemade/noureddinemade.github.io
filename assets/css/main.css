@@ -62,27 +62,93 @@ input, textarea, select {
   font-weight: 500;
   src: url("/assets/font/gtfripostetrial-medium-webfont.woff"), url("/assets/font/gtfripostetrial-medium-webfont.woff2");
 }
-body {
-  font-family: "Riposte", sans-serif;
-  font-size: 30px;
+section .content {
+  padding: 100px 100px;
+}
+@media screen and (max-width: 1440px) {
+  section .content {
+    padding: 80px 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  section .content {
+    padding: 60px 60px;
+  }
+}
+@media screen and (max-width: 800px) {
+  section .content {
+    padding: 40px 40px;
+  }
+}
+@media screen and (max-width: 640px) {
+  section .content {
+    padding: 20px 20px;
+  }
+}
+
+section .content {
+  width: 100%;
+  max-width: 1600px;
+}
+
+section .content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body, h1, h2, h3 {
   font-weight: 300;
 }
 
-header ul.ticker {
+span.bold, h1, h2, h3 {
+  font-weight: 500;
+}
+
+header ul.ticker, h1, h2, h3 {
   text-transform: uppercase;
+}
+
+span.underline, h2 {
+  text-decoration: underline;
 }
 
 header .logoWrap {
   opacity: 1 !important;
 }
 
+section .content {
+  text-align: center;
+}
+
+body, h1, h2, h3 {
+  font-family: "Riposte", sans-serif;
+  font-size: 30px;
+}
+
 body * {
   box-sizing: border-box;
 }
 
+main hr {
+  display: block;
+  height: 50px;
+  border: 0;
+}
+main ul {
+  list-style: none;
+}
+main ul li {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+main ul li * {
+  margin-bottom: 0;
+}
+
 header {
   position: fixed;
-  z-index: 99;
+  z-index: 0;
   width: 100%;
   height: auto;
   top: 0;
@@ -93,7 +159,7 @@ header {
 header .logoWrap {
   position: relative;
   display: inline-block;
-  width: 200px;
+  width: 220px;
   height: auto;
   padding: 20px;
 }
@@ -107,8 +173,8 @@ header ul.ticker {
   top: 0;
   left: 0;
   height: 100%;
-  font-size: 16px;
-  letter-spacing: 0.6px;
+  font-size: 20px;
+  letter-spacing: 1px;
   white-space: nowrap;
   -webkit-animation-name: ticker;
   -webkit-animation-duration: 15s;
@@ -131,15 +197,33 @@ header ul.ticker:hover {
 }
 header ul.ticker li {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 header ul.ticker li:after {
-  content: "•";
-  margin-left: 10px;
+  content: "☻";
+  margin-left: 20px;
 }
 header ul.ticker li:last-child {
   content: "";
   margin-left: 0;
+}
+
+section {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+section.pageHeading {
+  margin-top: 100px;
+}
+section .content h2, section .content h3, section .content p {
+  margin-bottom: 20px;
+}
+section .content h2:last-of-type, section .content h3:last-of-type, section .content p:last-of-type {
+  margin-bottom: 0;
+}
+section .content img {
+  width: 100%;
 }
 
 a {
@@ -158,6 +242,19 @@ html, body, header .logoWrap {
   background-color: #ffffff;
 }
 
+h1 {
+  font-size: 7.4vmin;
+}
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+
+h2 {
+  font-size: 24px;
+}
+
 a {
   text-decoration: none;
   transition-property: opacity;
@@ -169,6 +266,20 @@ a:hover {
   opacity: 0.7;
 }
 a:active {
+  opacity: 1;
+}
+
+p {
+  line-height: 1.6;
+  opacity: 0.8;
+}
+@media screen and (max-width: 800px) {
+  p {
+    font-size: 24px;
+  }
+}
+p.intro {
+  font-size: 36px;
   opacity: 1;
 }
 
