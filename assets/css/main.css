@@ -96,6 +96,12 @@ section .content, footer .content {
   margin-right: auto;
 }
 
+@media screen and (max-width: 640px) {
+  header ul.ticker {
+    display: none !important;
+  }
+}
+
 body, h1, h2, h3 {
   font-weight: 300;
 }
@@ -123,7 +129,7 @@ section .content, footer .content {
 
 body, h1, h2, h3 {
   font-family: "Riposte", sans-serif;
-  font-size: 30px;
+  font-size: 26px;
 }
 
 body * {
@@ -146,6 +152,11 @@ main ul li {
   width: 100%;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 640px) {
+  main ul li {
+    margin-bottom: 10px;
+  }
+}
 main ul li * {
   margin-bottom: 0;
 }
@@ -163,14 +174,14 @@ header {
 header .logoWrap {
   position: relative;
   display: inline-block;
-  width: 260px;
+  width: 280px;
   height: auto;
   padding: 20px;
   background: rgb(255, 255, 255);
-  background: radial-gradient(circle at 50% -20%, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 60%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle at 50% -18%, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 60%, rgba(255, 255, 255, 0) 70%);
 }
 header .logoWrap .logo {
-  width: 100%;
+  width: 80%;
 }
 header ul.ticker {
   display: flex;
@@ -221,11 +232,24 @@ footer {
   height: 500px;
   bottom: 0;
 }
+@media screen and (max-width: 800px) {
+  footer {
+    position: relative;
+    height: auto;
+  }
+}
 footer .content nav.footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 100px;
   font-size: 20px;
+}
+@media screen and (max-width: 800px) {
+  footer .content nav.footer {
+    flex-direction: column;
+    margin-top: 33.3333333333px;
+  }
 }
 footer .content nav.footer ul > li {
   display: inline-block;
@@ -240,9 +264,6 @@ section {
 }
 section.pageHeading {
   margin-top: 100px;
-}
-section.images {
-  z-index: 5;
 }
 section .content h2, section .content h3, section .content p, section .content img {
   margin-bottom: 20px;

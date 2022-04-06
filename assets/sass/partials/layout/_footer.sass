@@ -12,6 +12,13 @@ footer
 
     @extend %bgcSecondary
 
+    // Responsive
+
+    +screen($sm)
+
+        position: relative
+        height: auto
+
     // Children
 
     .content
@@ -27,10 +34,19 @@ footer
 
             display: flex
             justify-content: space-between
+            align-items: center
 
             margin-top: $globalSpace
 
             font-size: 20px
+
+            // Responsive
+
+            +screen($sm)
+
+                flex-direction: column
+
+                margin-top: calc($globalSpace / 3)
 
             // Children
             
