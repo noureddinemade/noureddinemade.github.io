@@ -130,6 +130,9 @@ body * {
   box-sizing: border-box;
 }
 
+main {
+  position: relative;
+}
 main hr {
   display: block;
   height: 50px;
@@ -149,7 +152,7 @@ main ul li * {
 
 header {
   position: fixed;
-  z-index: 100;
+  z-index: 4;
   width: 100%;
   height: auto;
   top: 0;
@@ -160,11 +163,11 @@ header {
 header .logoWrap {
   position: relative;
   display: inline-block;
-  width: 220px;
+  width: 260px;
   height: auto;
   padding: 20px;
   background: rgb(255, 255, 255);
-  background: radial-gradient(circle at top, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 80%);
+  background: radial-gradient(circle at 50% -20%, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 60%, rgba(255, 255, 255, 0) 70%);
 }
 header .logoWrap .logo {
   width: 100%;
@@ -212,27 +215,39 @@ header ul.ticker li:last-child {
 }
 
 footer {
+  position: sticky;
+  z-index: 0;
   width: 100%;
+  height: 500px;
+  bottom: 0;
 }
 footer .content nav.footer {
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
-  font-size: 14px;
+  margin-top: 100px;
+  font-size: 20px;
+}
+footer .content nav.footer ul > li {
+  display: inline-block;
+  margin-right: 10px;
 }
 
 section {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   width: 100%;
+  background-color: #ffffff;
 }
 section.pageHeading {
   margin-top: 100px;
 }
-section .content h2, section .content h3, section .content p {
+section.images {
+  z-index: 5;
+}
+section .content h2, section .content h3, section .content p, section .content img {
   margin-bottom: 20px;
 }
-section .content h2:last-child, section .content h3:last-child, section .content p:last-child {
+section .content h2:last-child, section .content h3:last-child, section .content p:last-child, section .content img:last-child {
   margin-bottom: 0;
 }
 section .content img {
@@ -245,6 +260,10 @@ a {
 
 header .logoWrap .logo * {
   fill: #0500FF;
+}
+
+footer {
+  background-color: #FFF0FE;
 }
 
 body {

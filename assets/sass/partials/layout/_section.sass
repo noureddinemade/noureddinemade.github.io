@@ -3,15 +3,21 @@
 section
 
     position: relative
-    z-index: 2
+    z-index: 1
 
     width: 100%
+
+    background-color: $bg
 
     // Classes
 
     &.pageHeading
 
         margin-top: $globalSpace
+
+    &.images
+
+        z-index: 5
 
     // Children
 
@@ -24,7 +30,7 @@ section
 
         // Children
 
-        h2, h3, p
+        h2, h3, p, img
 
             margin-bottom: 20px
 

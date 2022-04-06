@@ -2,7 +2,15 @@
 
 footer
 
+    position: sticky
+    z-index: 0
+
     width: 100%
+    height: $footerHeight
+
+    bottom: 0
+
+    @extend %bgcSecondary
 
     // Children
 
@@ -20,6 +28,14 @@ footer
             display: flex
             justify-content: space-between
 
-            margin-top: calc($globalSpace / 2)
+            margin-top: $globalSpace
 
-            font-size: 14px
+            font-size: 20px
+
+            // Children
+            
+            ul > li
+
+                display: inline-block
+
+                margin-right: 10px
