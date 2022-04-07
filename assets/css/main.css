@@ -97,7 +97,7 @@ section .content, footer .content {
 }
 
 @media screen and (max-width: 640px) {
-  header ul.ticker {
+  header ul.ticker, main hr {
     display: none !important;
   }
 }
@@ -179,6 +179,11 @@ header .logoWrap {
   padding: 20px;
   background: rgb(255, 255, 255);
   background: radial-gradient(circle at 50% -18%, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 60%, rgba(255, 255, 255, 0) 70%);
+}
+@media screen and (max-width: 640px) {
+  header .logoWrap {
+    width: 200px;
+  }
 }
 header .logoWrap .logo {
   width: 80%;
@@ -262,8 +267,18 @@ section {
   width: 100%;
   background-color: #ffffff;
 }
+section:last-of-type {
+  padding-bottom: 50px;
+}
 section.pageHeading {
   margin-top: 100px;
+}
+section.cover .content {
+  padding: 0 !important;
+  max-width: 100%;
+}
+section.cover .content img {
+  width: 100%;
 }
 section .content h2, section .content h3, section .content p, section .content img {
   margin-bottom: 20px;
@@ -277,13 +292,31 @@ section .content img {
 section .content .blocks {
   display: grid;
 }
+@media screen and (max-width: 1024px) {
+  section .content .blocks {
+    display: block !important;
+  }
+}
 section .content .blocks.-two {
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 33.3333333333px;
+}
+section .content .blocks.-three {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-gap: 33.3333333333px;
 }
 section .content .blocks .block {
-  background-color: red;
+  display: block;
+}
+@media screen and (max-width: 1024px) {
+  section .content .blocks .block {
+    margin-bottom: 25px;
+  }
+  section .content .blocks .block:last-child {
+    margin-bottom: 0;
+  }
 }
 
 a {

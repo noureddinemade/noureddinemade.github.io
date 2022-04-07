@@ -2,10 +2,10 @@
 
 // Grid
 
-@mixin grid($columns, $fraction, $gap)
+@mixin grid($columns, $gap)
 
     display: grid
-    grid-template-columns: repeat($columns, $fraction)
+    grid-template-columns: repeat($columns, minmax(0, 1fr))
     grid-gap: $gap
 
 // Media Query

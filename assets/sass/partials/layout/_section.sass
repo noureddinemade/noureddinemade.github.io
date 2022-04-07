@@ -9,11 +9,32 @@ section
 
     background-color: $bg
 
+    // Psuedo
+
+    &:last-of-type
+        
+        padding-bottom: calc($globalSpace / 2)
+
     // Classes
 
     &.pageHeading
 
         margin-top: $globalSpace
+
+    &.cover
+
+        // Children
+
+        .content
+
+            padding: 0 !important
+            max-width: 100%
+
+            // Children
+            
+            img
+
+                width: 100%
 
     // Children
 
@@ -44,14 +65,36 @@ section
 
             display: grid
 
+            // Responsive
+
+            +screen($md)
+
+                display: block !important
+
             // Classes
 
             &.-two
 
-                +grid(2, 50%, calc($globalSpace / 3))
+                +grid(2, calc($globalSpace / 3))
+
+            &.-three
+
+                +grid(3, calc($globalSpace / 3))
 
             // Children
 
             .block
 
-                background-color: red
+                display: block
+
+                // Responsive
+
+                +screen($md)
+
+                    margin-bottom: calc($globalSpace / 4)
+
+                    // Psuedo
+                    
+                    &:last-child
+                        
+                        margin-bottom: 0
