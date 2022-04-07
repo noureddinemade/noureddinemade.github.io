@@ -274,6 +274,17 @@ section .content h2:last-child, section .content h3:last-child, section .content
 section .content img {
   width: 100%;
 }
+section .content .blocks {
+  display: grid;
+}
+section .content .blocks.-two {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-gap: 33.3333333333px;
+}
+section .content .blocks .block {
+  background-color: red;
+}
 
 a {
   color: #0500FF;

@@ -15,10 +15,6 @@ section
 
         margin-top: $globalSpace
 
-    &.images
-
-        // z-index: 5
-
     // Children
 
     .content
@@ -43,3 +39,19 @@ section
         img
 
             width: 100%
+
+        .blocks
+
+            display: grid
+
+            // Classes
+
+            &.-two
+
+                +grid(2, 50%, calc($globalSpace / 3))
+
+            // Children
+
+            .block
+
+                background-color: red
