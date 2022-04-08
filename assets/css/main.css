@@ -118,11 +118,6 @@ span.underline, h2 {
   text-decoration: underline;
 }
 
-header .logoWrap:hover, header .logoWrap:active {
-  color: inherit !important;
-  background-color: inherit !important;
-}
-
 section .content, footer .content {
   text-align: center;
 }
@@ -174,11 +169,11 @@ header {
 header .logoWrap {
   position: relative;
   display: inline-block;
-  width: 280px;
+  width: 240px;
   height: auto;
-  padding: 20px;
-  background: rgb(255, 255, 255);
-  background: radial-gradient(circle at 50% -18%, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 60%, rgba(255, 255, 255, 0) 70%);
+  padding: 20px 10px;
+  background-color: #ffffff;
+  border-radius: 0 0 100px 100px;
 }
 @media screen and (max-width: 640px) {
   header .logoWrap {
@@ -355,11 +350,11 @@ h2 {
 a {
   text-decoration: none;
 }
-a:hover {
+a:not(.noLinkHover):hover {
   background-color: #0500FF;
   color: #ffffff;
 }
-a:active {
+a:not(.noLinkHover):active {
   background-color: transparent;
   color: #0500FF;
 }

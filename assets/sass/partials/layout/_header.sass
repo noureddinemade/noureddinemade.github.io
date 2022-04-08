@@ -22,15 +22,14 @@ header
         position: relative
         display: inline-block
 
-        width: 280px
+        width: 240px
         height: auto
 
-        padding: 20px
+        padding: 20px 10px
 
-        background: rgb(255,255,255)
-        background: radial-gradient(circle at 50% -18%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 70%)
+        background-color: $bg
 
-        @extend %noLinkHover
+        +borderRadius($br: 100px, $bl: 100px)
 
         // Responsive
 

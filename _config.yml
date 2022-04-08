@@ -24,7 +24,7 @@ defaults:
     type: work
   values:
     layout: work
-email: emailme@noureddine.biz
+email: me@noureddine.biz
 description: Personal portfolio 2020
 baseurl:
 url:
