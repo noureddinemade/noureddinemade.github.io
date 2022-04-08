@@ -125,6 +125,17 @@ function buildJekyll(cb) {
 
 //
 
+function buildSite() {
+
+    createStyle();
+    createJS();
+    prepImages();
+    createPDF();
+    createFonts();
+    buildJekyll();
+
+}
+
 function watchAll() {
 
     startBrowser();
@@ -154,5 +165,13 @@ function watchAll() {
 exports.default = function() {
 
     watchAll();
+
+}
+
+exports.build = function(cb) {
+
+    buildSite();
+
+    cb();
 
 }
