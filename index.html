@@ -30,15 +30,17 @@ class: home
                 </h2>
             </li>
 
-            {{ collection.work }}
+            {% for i in site.work %}
 
-            {% for i in collection.work %}
+                {% if i.highlight == "true" %}
 
-                <li>
-                    <a href="{{ i.permalink }}">
-                        {{ i.title }}
-                    </a>
-                </li>
+                    <li>
+                        <a href="{{ i.permalink }}">
+                            {{ i.title }}
+                        </a>
+                    </li>
+
+                {% endif %}
                 
             {% endfor %}
 
@@ -55,6 +57,20 @@ class: home
                     And before that I
                 </h2>
             </li>
+
+            {% for i in site.work %}
+
+                {% if i.highlight == "false" %}
+
+                    <li>
+                        <a href="{{ i.permalink }}">
+                            {{ i.title }}
+                        </a>
+                    </li>
+
+                {% endif %}
+                
+            {% endfor %}
 
         </ul>
 
