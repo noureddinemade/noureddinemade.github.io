@@ -173,7 +173,7 @@ header .logoWrap {
   height: auto;
   padding: 20px 10px;
   background-color: #ffffff;
-  border-radius: 0 0 100px 100px;
+  border-radius: 0 0 200px 200px;
 }
 @media screen and (max-width: 640px) {
   header .logoWrap {
