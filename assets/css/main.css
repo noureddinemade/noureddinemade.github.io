@@ -127,12 +127,16 @@ body, h1, h2, h3 {
   font-size: 26px;
 }
 
+body {
+  border: 20px solid #ffffff;
+}
 body * {
   box-sizing: border-box;
 }
 
 main {
   position: relative;
+  z-index: 3;
 }
 main hr {
   display: block;
@@ -172,7 +176,6 @@ header .logoWrap {
   width: 240px;
   height: auto;
   padding: 20px 10px;
-  background-color: #ffffff;
   border-radius: 0 0 200px 200px;
 }
 @media screen and (max-width: 640px) {
@@ -260,13 +263,12 @@ section {
   position: relative;
   z-index: 1;
   width: 100%;
-  background-color: #ffffff;
 }
 section:last-of-type {
   padding-bottom: 50px;
 }
 section.pageHeading {
-  margin-top: 100px;
+  padding-top: 100px;
 }
 section.cover .content {
   padding: 0 !important;
@@ -322,16 +324,28 @@ header .logoWrap .logo * {
   fill: #0500FF;
 }
 
-footer {
-  background-color: #FFF0FE;
-}
-
 body {
   color: #000000;
 }
 
-html, body {
+html, body, body.general header .logoWrap, body.general main {
   background-color: #ffffff;
+}
+
+body.pink header .logoWrap, body.pink main, footer {
+  background-color: #FFF0FE;
+}
+
+body.yellow header .logoWrap, body.yellow main {
+  background-color: #FFFCF0;
+}
+
+body.green header .logoWrap, body.green main {
+  background-color: #F0FFF2;
+}
+
+body.blue header .logoWrap, body.blue main {
+  background-color: #F0F2FF;
 }
 
 h1 {

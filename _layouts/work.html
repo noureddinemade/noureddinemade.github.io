@@ -3,66 +3,11 @@
 
     {% include head.html %}
 
-    <body>
+    <body class="{{ page.class }}"">
 
         {% include header.html %}
 
-        <main id="top" class="{{ page.class }}">
-
-            <section class="cover">
-
-                <div class="content">
-
-                    <img src="/assets/img/blank-img.png" alt="Project Cover">
-
-                </div>
-
-            </section>
-
-            <section class="general">
-
-                <div class="content">
-
-                    <h1>
-                        {{ page.title }}
-                    </h1>
-
-                </div>
-
-            </section>
-
-            <section class="general">
-
-                <div class="content">
-
-                    <div class="blocks -three">
-
-                        <div class="block">
-
-                            <h2>Who was the client?</h2>
-                            <p>{{ page.client }}</p>
-
-                        </div>
-
-                        <div class="block">
-
-                            <h2>What was my role?</h2>
-                            <p>{{ page.role }}</p>
-
-                        </div>
-
-                        <div class="block">
-
-                            <h2>Another questione here?</h2>
-                            <p>Yep, a third answer</p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
+        <main id="top">
 
             {{ content }}
 

@@ -6,8 +6,72 @@ html, body
 
 body
 
+    border: 20px solid $bg
+
     @extend %fontBase
     @extend %tcDark
+
+    // Classes
+
+    &.general
+
+        // Children
+
+        header .logoWrap
+
+            @extend %bgcLight
+            
+        main
+
+            @extend %bgcLight
+
+    &.pink
+
+        // Children
+
+        header .logoWrap
+
+            @extend %bgcPink
+            
+        main
+
+            @extend %bgcPink
+
+    &.yellow
+
+        // Children
+
+        header .logoWrap
+
+            @extend %bgcYellow
+            
+        main
+
+            @extend %bgcYellow
+
+    &.green
+
+        // Children
+
+        header .logoWrap
+
+            @extend %bgcGreen
+            
+        main
+
+            @extend %bgcGreen
+
+    &.blue
+
+        // Children
+
+        header .logoWrap
+
+            @extend %bgcBlue
+            
+        main
+
+            @extend %bgcBlue
 
     // All
 

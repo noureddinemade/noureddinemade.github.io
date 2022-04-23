@@ -3,11 +3,11 @@
 
     {% include head.html %}
 
-    <body>
+    <body class="{{ page.class }}">
 
         {% include header.html %}
 
-        <main id="top" class="{{ page.class }}">
+        <main id="top">
 
             {{ content }}
 
