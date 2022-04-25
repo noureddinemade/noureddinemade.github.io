@@ -11,67 +11,39 @@ body
     @extend %fontBase
     @extend %tcDark
 
+    // Responsive
+
+    +screen($md)
+
+        border: 10px solid $bg
+
     // Classes
 
     &.general
 
+        @extend %bgcLight
+
         // Children
 
-        header .logoWrap
-
-            @extend %bgcLight
-            
-        main
+        header .logoWrap, main
 
             @extend %bgcLight
 
-    &.pink
+    &.bg1, &.bg1 header .logoWrap, &.bg1 main
 
-        // Children
+        @extend %bgcBG1
+    
+    &.bg2, &.bg2 header .logoWrap, &.bg2 main
 
-        header .logoWrap
+        @extend %bgcBG2
 
-            @extend %bgcPink
-            
-        main
+    &.bg3, &.bg3 header .logoWrap, &.bg3 main
 
-            @extend %bgcPink
+        @extend %bgcBG3
 
-    &.yellow
+    &.bg4, &.bg4 header .logoWrap, &.bg4 main
 
-        // Children
-
-        header .logoWrap
-
-            @extend %bgcYellow
-            
-        main
-
-            @extend %bgcYellow
-
-    &.green
-
-        // Children
-
-        header .logoWrap
-
-            @extend %bgcGreen
-            
-        main
-
-            @extend %bgcGreen
-
-    &.blue
-
-        // Children
-
-        header .logoWrap
-
-            @extend %bgcBlue
-            
-        main
-
-            @extend %bgcBlue
+        @extend %bgcBG4
 
     // All
 

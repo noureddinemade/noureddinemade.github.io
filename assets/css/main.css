@@ -130,6 +130,11 @@ body, h1, h2, h3 {
 body {
   border: 20px solid #ffffff;
 }
+@media screen and (max-width: 1024px) {
+  body {
+    border: 10px solid #ffffff;
+  }
+}
 body * {
   box-sizing: border-box;
 }
@@ -161,12 +166,10 @@ main ul li * {
 }
 
 header {
-  position: fixed;
+  position: relative;
   z-index: 4;
   width: 100%;
   height: auto;
-  top: 0;
-  left: 0;
   overflow: hidden;
   text-align: center;
 }
@@ -267,9 +270,6 @@ section {
 section:last-of-type {
   padding-bottom: 50px;
 }
-section.pageHeading {
-  padding-top: 100px;
-}
 section.cover .content {
   padding: 0 !important;
   max-width: 100%;
@@ -328,23 +328,23 @@ body {
   color: #000000;
 }
 
-html, body, body.general header .logoWrap, body.general main {
+html, body, body.general, body.general header .logoWrap, body.general main {
   background-color: #ffffff;
 }
 
-body.pink header .logoWrap, body.pink main, footer {
+body.bg1, body.bg1 header .logoWrap, body.bg1 main, footer {
   background-color: #FFF0FE;
 }
 
-body.yellow header .logoWrap, body.yellow main {
+body.bg2, body.bg2 header .logoWrap, body.bg2 main {
   background-color: #FFFCF0;
 }
 
-body.green header .logoWrap, body.green main {
+body.bg3, body.bg3 header .logoWrap, body.bg3 main {
   background-color: #F0FFF2;
 }
 
-body.blue header .logoWrap, body.blue main {
+body.bg4, body.bg4 header .logoWrap, body.bg4 main {
   background-color: #F0F2FF;
 }
 
