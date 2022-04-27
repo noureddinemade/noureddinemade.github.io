@@ -6,28 +6,14 @@ html, body
 
 body
 
-    border: 20px solid $bg
-
     @extend %fontBase
     @extend %tcDark
 
-    // Responsive
-
-    +screen($md)
-
-        border: 10px solid $bg
-
     // Classes
 
-    &.general
+    &.bg0, &.bg0 main
 
-        @extend %bgcLight
-
-        // Children
-
-        header .logoWrap, main
-
-            @extend %bgcLight
+        @extend %bgcBG0
 
     &.bg1, &.bg1 header .logoWrap, &.bg1 main
 

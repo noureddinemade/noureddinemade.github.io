@@ -71,3 +71,38 @@ span
     &.underline
 
         @extend %underline
+
+ul
+    
+    list-style: none  
+
+    // Classes
+
+    &.info
+
+        margin-top: calc($globalSpace / 2)
+
+        font-size: 24px
+        letter-spacing: 1px
+
+        @extend %uppercase
+
+        opacity: .8
+
+        // Children
+        
+        li
+
+            display: inline-block
+
+    // Children
+
+    li
+
+        padding: 6px
+
+        // Classes
+        
+        &.block
+
+            display: block

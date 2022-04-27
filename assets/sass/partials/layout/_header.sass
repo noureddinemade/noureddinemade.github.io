@@ -8,9 +8,14 @@ header
     width: 100%
     height: auto
 
+    padding: calc($globalSpace / 2) 0
+
     overflow: hidden
 
     text-align: center
+
+    @extend %maxWidth
+    @extend %centerLayout
     
     // Children
 
@@ -19,12 +24,8 @@ header
         position: relative
         display: inline-block
 
-        width: 240px
+        width: 200px
         height: auto
-
-        padding: 20px 10px
-
-        +borderRadius($br: 200px, $bl: 200px)
 
         // Responsive
 
@@ -41,54 +42,5 @@ header
             *
             
                 @extend %fcPrimary
-
-    ul.ticker
-
-        display: flex
-        position: absolute
-
-        align-items: center
-
-        top: 0
-        left: 0
-
-        height: 100%
-
-        font-size: 20px
-        letter-spacing: 1px
-        white-space: nowrap
-
-        @extend %uppercase
-        @extend %hideXS
-
-        +animation(ticker, 15s)
-
-        // States
-
-        &:hover
-
-            -webkit-animation-play-state: paused
-            animation-play-state: paused
-
-        // Children
-
-        li
-
-            display: inline-block
-
-            margin-right: 20px
-
-            // Psuedo
-
-            &:after
-
-                content: '☻'
-
-                margin-left: 20px
-
-            &:last-child
                 
-                content: ''
-
-                margin-left: 0
                 
