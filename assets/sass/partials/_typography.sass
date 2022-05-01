@@ -8,9 +8,13 @@ h1
 
     font-size: $h1
 
+    +screen($md)
+
+        font-size: calc($h1 / 1.2)
+
     +screen($xs)
 
-        font-size: 32px
+        font-size: calc($h1 / 1.6)
 
 h2
 
@@ -80,20 +84,19 @@ ul
 
     &.info
 
+        display: flex
+        justify-content: center
+        gap: 0px calc($globalSpace/2)
+
         margin-top: calc($globalSpace / 2)
 
-        font-size: 24px
+        font-size: 22px
+        line-height: 1.2
         letter-spacing: 1px
 
         @extend %uppercase
 
         opacity: .8
-
-        // Children
-        
-        li
-
-            display: inline-block
 
     // Children
 

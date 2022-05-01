@@ -61,26 +61,26 @@ input, textarea, select {
   font-weight: 500;
   src: url("/assets/font/gtfripostetrial-medium-webfont.woff"), url("/assets/font/gtfripostetrial-medium-webfont.woff2");
 }
-.content {
+.content, header {
   padding: 100px 100px;
 }
 @media screen and (max-width: 1440px) {
-  .content {
+  .content, header {
     padding: 80px 80px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .content {
+  .content, header {
     padding: 60px 60px;
   }
 }
 @media screen and (max-width: 800px) {
-  .content {
+  .content, header {
     padding: 40px 40px;
   }
 }
 @media screen and (max-width: 640px) {
-  .content {
+  .content, header {
     padding: 20px 20px;
   }
 }
@@ -145,7 +145,6 @@ header {
   z-index: 4;
   width: 100%;
   height: auto;
-  padding: 50px 0;
   overflow: hidden;
   text-align: center;
 }
@@ -192,6 +191,10 @@ section {
 }
 section:last-of-type {
   padding-bottom: 50px;
+}
+section.pageHeading .content {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 section.cover .content {
   padding: 0 !important;
@@ -277,11 +280,16 @@ body.bg4, body.bg4 header .logoWrap, body.bg4 main {
 }
 
 h1 {
-  font-size: 5vmin;
+  font-size: 52px;
+}
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 43.3333333333px;
+  }
 }
 @media screen and (max-width: 640px) {
   h1 {
-    font-size: 32px;
+    font-size: 32.5px;
   }
 }
 
@@ -323,13 +331,14 @@ ul {
   list-style: none;
 }
 ul.info {
+  display: flex;
+  justify-content: center;
+  gap: 0px 50px;
   margin-top: 50px;
-  font-size: 24px;
+  font-size: 22px;
+  line-height: 1.2;
   letter-spacing: 1px;
   opacity: 0.8;
-}
-ul.info li {
-  display: inline-block;
 }
 ul li {
   padding: 6px;
