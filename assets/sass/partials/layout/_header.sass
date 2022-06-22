@@ -5,25 +5,40 @@ header
     position: relative
     z-index: 4
 
+    display: flex
+    justify-content: space-around
+    align-items: center
+
     width: 100%
+    max-width: 1000px
     height: auto
 
     overflow: hidden
 
-    text-align: center
+    font-size: 20px
 
     @extend %maxWidth
-    @extend %contentPadding
+    // @extend %contentPadding
     @extend %centerLayout
+    @extend %fontHead
+    @extend %uppercase
     
     // Children
+
+    span.name, .logoWrap, nav
+
+        display: inline-block
+
+    span.name, nav
+
+        width: 260px
 
     .logoWrap
 
         position: relative
         display: inline-block
 
-        width: 200px
+        width: 180px
         height: auto
 
         // Responsive
@@ -36,10 +51,8 @@ header
 
         .logo
 
-            width: 80%
+            width: 100%
 
             *
             
                 @extend %fcPrimary
-                
-                

@@ -10,34 +10,16 @@ footer
 
     // Responsive
 
-    +screen($sm)
-
-        
+    +screen($sm) 
 
     // Children
     
     nav.footer
 
-        display: flex
-        justify-content: space-between
-        align-items: center
-
         margin-top: $globalSpace
 
-        font-size: 20px
+        font-size: 16px
 
-        // Responsive
+        text-align: center
 
-        +screen($sm)
-
-            flex-direction: column
-
-            margin-top: calc($globalSpace / 3)
-
-        // Children
-        
-        ul > li
-
-            display: inline-block
-
-            margin-right: 10px
+        @extend %uppercase

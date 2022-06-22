@@ -26,13 +26,25 @@
 
 // Typography
 
+%fontSize
+
+    font-size: $fontBase
+
+%fontText
+
+    font-family: $fontText
+
+%fontHead
+
+    font-family: $fontHead
+
 %fontRegular
 
-    font-weight: 300
+    font-weight: 400
 
 %fontBold
 
-    font-weight: 500
+    font-weight: 700
 
 %uppercase
 
@@ -48,9 +60,7 @@
 
 %fontBase
 
-    font-family: $font
-    font-size: $fontBase
-
+    @extend %fontSize
     @extend %fontRegular
 
 %fontHeading
