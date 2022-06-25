@@ -91,7 +91,7 @@ input, textarea, select {
   }
 }
 
-.content, header {
+.content {
   width: 100%;
   max-width: 1600px;
 }
@@ -101,8 +101,14 @@ h1, .content, header {
   margin-right: auto;
 }
 
+@media screen and (max-width: 1024px) {
+  header .logoWrap .logo-outter {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 640px) {
-  main hr {
+  header .navLink, main hr {
     display: none !important;
   }
 }
@@ -165,23 +171,23 @@ main hr {
 }
 
 header {
-  position: relative;
+  position: absolute;
+  top: -50px;
+  left: 20%;
   z-index: 4;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
-  max-width: 800px;
+  width: 60%;
   height: auto;
-  margin-top: -50px;
-  margin-bottom: 100px;
   font-size: 20px;
 }
-header span.name, header .logoWrap, header nav {
-  display: inline-block;
-}
-header span.name, header nav {
-  width: 260px;
+@media screen and (max-width: 1024px) {
+  header {
+    top: 50px;
+    left: 0;
+    width: 100%;
+  }
 }
 header .logoWrap {
   position: relative;
@@ -191,6 +197,12 @@ header .logoWrap {
   width: 240px;
   height: 240px;
 }
+@media screen and (max-width: 1024px) {
+  header .logoWrap {
+    width: 180px;
+    height: auto;
+  }
+}
 header .logoWrap .logo-inner {
   position: absolute;
   z-index: 2;
@@ -199,6 +211,15 @@ header .logoWrap .logo-inner {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+@media screen and (max-width: 1024px) {
+  header .logoWrap .logo-inner {
+    position: relative;
+    top: auto;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
 header .logoWrap .logo-outter {
   position: relative;
@@ -219,7 +240,6 @@ header .logoWrap .logo-outter {
   animation-fill-mode: none;
   animation-play-state: running;
 }
-
 footer {
   position: relative;
   width: 100%;
@@ -241,7 +261,9 @@ section:last-of-type {
 section.pageHeading {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  height: 100vh;
+  padding-bottom: 150px;
 }
 section.pageHeading .content {
   padding-top: 0;
@@ -389,6 +411,7 @@ ul.info {
 ul.info li {
   display: block;
   margin: 0 30px;
+  width: 100%;
   max-width: 240px;
 }
 ul li {
