@@ -6,7 +6,7 @@ h1, h2, h3
 
 h1
 
-    max-width: 1100px
+    // max-width: 1100px
 
     font-size: $h1
 
@@ -50,8 +50,6 @@ p
     
     line-height: 1.6
 
-    @extend %fontText
-
     // Responsive
 
     +screen($sm)
@@ -72,7 +70,6 @@ p
 
         opacity: 1
 
-        @extend %fontHead
         @extend %fontRegular
         @extend %uppercase
 
@@ -111,16 +108,14 @@ ul
 
             display: block
 
-            margin: 0 30px
-
             width: 100%
-            max-width: 240px
+            max-width: 320px
 
     // Children
 
     li
 
-        padding: 6px
+        margin-bottom: 12px
 
         // Classes
         

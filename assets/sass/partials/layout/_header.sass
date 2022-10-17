@@ -2,9 +2,8 @@
 
 header
 
-    position: absolute
-    top: - calc($globalSpace / 2)
-    left: 20%
+    position: sticky
+    top: calc($globalSpace / 2)
 
     z-index: 4
 
@@ -13,12 +12,10 @@ header
     align-items: center
 
     width: 60%
-    height: auto
 
     font-size: 20px
 
     @extend %centerLayout
-    @extend %fontHead
     @extend %uppercase
 
     // Responsive
@@ -39,49 +36,13 @@ header
         justify-content: center
         align-items: middle
 
-        width: 240px
-        height: 240px
-
-        @extend %textCenter
-
-        // Responsive
-
-        +screen($md)
-
-            width: 180px
-            height: auto
+        height: 38px
 
         // Children
 
-        .logo-inner
+        .logo
 
-            position: absolute
-            z-index: 2
-            top: 50%
-
-            width: 100%
-
-            +transform(translateY,-50%)
-
-            // Responsive
-
-            +screen($md)
-
-                position: relative
-                top: auto
-
-                +transform(translateY,0)
-
-        .logo-outter
-
-            position: relative
-            z-index: 1
-
-            width: 80%
-
-            +animation(logoSpin, 20s)
-
-            @extend %hideMD
+            fill: $primary
 
     .navLink
 

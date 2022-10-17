@@ -30,14 +30,6 @@
 
     font-size: $fontBase
 
-%fontText
-
-    font-family: $fontText
-
-%fontHead
-
-    font-family: $fontHead
-
 %fontRegular
 
     font-weight: 400
@@ -60,6 +52,8 @@
 
 %fontBase
 
+    font-family: $fontFamily
+
     @extend %fontSize
     @extend %fontRegular
 
@@ -67,4 +61,3 @@
 
     @extend %fontBold
     @extend %fontBase
-    @extend %uppercase
