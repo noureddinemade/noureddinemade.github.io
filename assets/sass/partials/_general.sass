@@ -2,55 +2,16 @@
 
 html, body
 
-    @extend %bgcLight
+    background-color: $bg
+
+    @extend %fontBase
 
 body
 
-    @extend %fontBase
-    @extend %fontRegular
-    @extend %tcDark
-
-    // Classes
-
-    &.bg0, &.bg0 main
-
-        @extend %bgcBG0
-
-    &.bg1, &.bg1 main
-
-        @extend %bgcBG1
-    
-    &.bg2, &.bg2 main
-
-        @extend %bgcBG2
-
-    &.bg3, &.bg3 main
-
-        @extend %bgcBG3
-
-    &.bg4, &.bg4 main
-
-        @extend %bgcBG4
+    @extend %globalPadding
 
     // All
 
     *
 
         box-sizing: border-box
-
-    // Children
-
-    .trueCenter
-
-        position: fixed
-        z-index: 9999
-
-        top: 0
-        left: 0
-
-        width: 100%
-        height: 100%
-
-        background-image: url('/assets/img/truecenter.png')
-        background-repeat: no-repeat
-        background-position: center

@@ -1,63 +1,60 @@
 // Helpers
 
-// Layout
+%globalPadding
 
-%contentPadding
-
-    +padding($globalSpace, $z: 20px, $breaks: $padding)
+    +padding($globalSpace, $globalSpace, 16px, $padding)
 
 %maxWidth
 
     +maxWidth($xl)
 
-%centerLayout
+%center
 
     margin-left: auto
     margin-right: auto
 
-@each $label, $size in $hide
-
-    %hide#{$label}
-
-        +screen($size)
-
-            display: none !important
-
+%content
 
 // Typography
+
+%fontFamily
+
+    font-family: $fontFamily
 
 %fontSize
 
     font-size: $fontBase
 
+%fontLight
+
+    font-weight: 300
+
 %fontRegular
 
     font-weight: 400
 
-%fontBold
+%fontMedium
 
-    font-weight: 700
+    font-weight: 500
 
-%uppercase
+%fontUpperCase
 
     text-transform: uppercase
 
-%underline
+%fontUnderline
 
     text-decoration: underline
 
-%textCenter
-
-    text-align: center
-
 %fontBase
 
-    font-family: $fontFamily
+    line-height: 1.2
 
+    @extend %fontFamily
+    @extend %fontLight
     @extend %fontSize
-    @extend %fontRegular
 
 %fontHeading
 
-    @extend %fontBold
     @extend %fontBase
+    @extend %fontUpperCase
+    @extend %fontRegular

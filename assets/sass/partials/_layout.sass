@@ -1,22 +1,10 @@
 // Layout
 
-main
+main, header, footer
 
-    position: relative
-    z-index: 3
-
-    // Children
-
-    hr
-
-        display: block
-
-        height: calc($globalSpace / 2)
-
-        border: 0
-
-        @extend %hideXS
+    @extend %maxWidth
+    @extend %center
 
 //
 
-@import 'layout/header', 'layout/nav', 'layout/footer', 'layout/section', 'layout/content'
+@import 'layout/header', 'layout/footer', 'layout/section', 'layout/content'

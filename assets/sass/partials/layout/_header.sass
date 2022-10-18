@@ -2,48 +2,39 @@
 
 header
 
-    position: sticky
-    top: calc($globalSpace / 2)
-
-    z-index: 4
-
     display: flex
-    justify-content: space-around
+    justify-content: space-between
     align-items: center
 
-    width: 60%
+    position: sticky
+    top: $globalSpace
 
-    font-size: 20px
+    font-size: 16px
 
-    @extend %centerLayout
-    @extend %uppercase
+    @extend %fontUpperCase
 
     // Responsive
 
-    +screen($md)
+    @each $break in $padding
 
-        top: calc($globalSpace / 2)
-        left: 0
+        +screen($break)
 
-        width: 100%
-    
+            top: calc($globalSpace - 16px)
+
     // Children
 
-    .logoWrap
+    nav, div.info
 
-        position: relative
         display: flex
-        justify-content: center
-        align-items: middle
+        gap: 16px
 
-        height: 38px
+    a.logoWrap
+
+        width: 70px
+        height: auto
 
         // Children
 
         .logo
 
             fill: $primary
-
-    .navLink
-
-        @extend %hideXS
