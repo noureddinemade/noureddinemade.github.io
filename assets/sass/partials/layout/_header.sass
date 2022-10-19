@@ -2,36 +2,65 @@
 
 header
 
+    @extend %fontUpperCase
+
     display: flex
     justify-content: space-between
     align-items: center
 
     position: sticky
     top: $globalSpace
+    z-index: 10
 
     font-size: 16px
 
-    @extend %fontUpperCase
-
     // Responsive
 
-    @each $break in $padding
+    +screen($xl)
 
-        +screen($break)
+        top: calc($globalSpace - 8px)
 
-            top: calc($globalSpace - 16px)
+    +screen($lg)
+
+        top: calc($globalSpace - 16px)
+
+    +screen($md)
+
+        top: calc($globalSpace - 24px)
+
+    +screen($sm)
+
+        top: calc($globalSpace - 32px)
+
+    +screen($xs)
+
+        top: calc($globalSpace - 40px)
 
     // Children
+
+    p.fullName
+
+        @extend %hideAtMD
 
     nav, div.info
 
         display: flex
         gap: 16px
 
+    div.info
+
+        @extend %hideAtLG
+
     a.logoWrap
 
         width: 70px
         height: auto
+
+        // Responsive
+
+        +screen($md)
+
+            width: 60px
 
         // Children
 

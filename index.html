@@ -2,7 +2,6 @@
 
 title: Oh, hello there!
 desc: This is the home page
-class: bg0
 
 ---
 
@@ -14,49 +13,35 @@ class: bg0
             Hello internet pals, I&rsquo;m Noureddine. An end-to-end designer who enjoys working with decent humans. Not dickheads who idolise billionaires.
         </h1>
 
-        <hr>
-
-        <ul class="info">
-
-            <li>
-                Noureddine Azhar<br>
-                Naarm (Melbourne)
-            </li>
-
-            <li>
-                Wanna get in touch?<br>
-                <a href="/before-you-contact-me/">Please read this first</a>
-            </li>
-
-            <li>
-                Branding, Product<br>
-                &amp; Digital Design
-            </li>
-
-        </ul>
-
     </div>
 
 </section>
 
-<section class="caseStudies">
+
+<section>
 
     <div class="content">
 
         <h2>
-            In the last two years I worked on
+            Currently:
         </h2>
 
-        <ul>
+        <ul class="cases">
+
+            <li class="featured">
+                <span class="date">2022/??</span>
+                <span class="title">Looking for my next role babyy!!</span>
+                <a href="./my-next-role" class="navLink">Please read this first &#9758;</a>
+            </li>
 
             {% for i in site.work %}
 
-                {% if i.highlight == "true" %}
+                {% if i.current == "true" %}
 
                     <li>
-                        <a href="{{ i.permalink }}">
-                            {{ i.title }}
-                        </a>
+                        <span class="date">{{ i.dateRange }}</span>
+                        <span class="title">{{ i.title }}</span>
+                        <a href="{{ i.permalink }}" class="navLink">Read case study &#9758;</a>
                     </li>
 
                 {% endif %}
@@ -67,23 +52,27 @@ class: bg0
 
     </div>
 
+</section>
+
+<section>
+
     <div class="content">
 
         <h2>
-            And before that I
+            Previously:
         </h2>
 
-        <ul>
+        <ul class="cases">
 
             {% for i in site.work %}
 
-                {% if i.highlight == "false" %}
+                {% if i.current == "false" %}
 
-                    <li>
-                        <a href="{{ i.permalink }}">
-                            {{ i.title }}
-                        </a>
-                    </li>
+                <li>
+                    <span class="date">{{ i.dateRange }}</span>
+                    <span class="title">{{ i.title }}</span>
+                    <a href="{{ i.permalink }}" class="navLink">Read case study &#9758;</a>
+                </li>
 
                 {% endif %}
                 
@@ -95,29 +84,15 @@ class: bg0
     
 </section>
 
-<section class="general">
+<section>
 
     <div class="content">
 
-        <h2>What I bring to the table</h2>
+        <h2>Who? Me?</h2>
 
-        <p>
-           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, culpa mollitia dicta assumenda animi aliquam minus reprehenderit illo reiciendis, odio impedit hic harum est quis laudantium sint dolorum vel quia? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore neque nobis labore culpa modi a eos odit laudantium doloribus perferendis asperiores aliquam, ex voluptas excepturi, fugit officia nisi at error! 
+        <p class="intro">
+            I&rsquo;m a Naarm (Melbourne) based creative problem solver with over fifteen years of experience, a desire to do some good and an ass that just won&rsquo;t quit. If you like the sound of that and want to create some stuff and things then <a href="./my-next-role" class="navLink">please read this first.</a>
         </p>
-
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque non voluptas quidem id aliquam, alias reiciendis autem assumenda blanditiis eum accusamus nam? Eos amet saepe omnis facere voluptatibus, obcaecati culpa.
-        </p>
-
-    </div>
-
-</section>
-
-<section class="images">
-
-    <div class="content">
-
-        <img src="/assets/img/blank-img.png" alt="Noureddine Azhar">
 
     </div>
 

@@ -4,13 +4,31 @@ h1, h2, h3, h4
 
     @extend %fontHeading
 
+@each $label, $h in $headings
+
+    #{$label}
+
+        font-size: $h
+
+        // Responsive
+
+        +screen($md)
+
+            font-size: calc($h / 1.4)
+
+        +screen($sm)
+
+            font-size: calc($h / 1.8)
+
+//
+
 a
+
+    @extend %fontUnderline
 
     color: $link
 
     +transition(opacity, $animSpeed)
-    
-    @extend %fontUnderline
 
     // States
 
@@ -23,3 +41,119 @@ a
         opacity: 1
 
 p
+
+    line-height: 1.4
+
+    // Children
+
+    &.intro
+
+        font-size: calc($fontBase + 8px)
+
+        // Responsive
+
+        +screen($md)
+
+            font-size: $fontBase
+
+        +screen($sm)
+
+            font-size: calc($fontBase - 2px)
+
+ul
+
+    display: flex
+    flex-direction: column
+    gap: 8px
+
+    // Children
+    
+    li
+
+        padding-left: 8px
+
+        // Psuedo
+        
+        &:before
+
+            content: '•'
+
+            padding-right: 8px
+
+    // Classes
+
+    &.grid
+
+        flex-direction: row
+        gap: 16px
+
+        // Children
+
+        li
+
+            // Pseudo
+
+            &:before
+
+                display: none
+
+    &.cases
+
+        gap: 16px
+
+        font-size: 28px
+
+        // Responsive
+
+        +screen($md)
+
+            font-size: 22px
+
+        // Children
+
+        li
+
+            display: flex
+            gap: 16px
+
+            width: 100%
+            
+            padding-left: 0
+            padding-bottom: 16px
+
+            border-bottom: 1px $dark solid
+
+            // Responsive
+
+            +screen($md)
+
+                flex-direction: column
+                gap: 8px
+
+            // Pseudo
+
+            &:before
+
+                display: none
+
+            // Classes
+
+            &.featured
+                
+                @extend %fontMedium
+
+            // Children
+
+            .date
+
+                width: 120px
+
+                opacity: .2
+
+            .title
+
+                flex-grow: 2
+
+            a
+
+                text-decoration: none

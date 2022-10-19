@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -72,27 +73,27 @@ body {
 }
 @media screen and (max-width: 1440px) {
   body {
-    padding: 56px 56px;
+    padding: 64px 64px;
   }
 }
 @media screen and (max-width: 1024px) {
   body {
-    padding: 40px 40px;
+    padding: 56px 56px;
   }
 }
 @media screen and (max-width: 800px) {
   body {
-    padding: 24px 24px;
+    padding: 48px 48px;
   }
 }
 @media screen and (max-width: 640px) {
   body {
-    padding: 8px 8px;
+    padding: 40px 40px;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 380px) {
   body {
-    padding: -8px -8px;
+    padding: 32px 32px;
   }
 }
 
@@ -106,12 +107,34 @@ main, header, footer {
   margin-right: auto;
 }
 
+@media screen and (max-width: 1024px) {
+  header div.info {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header p.fullName {
+    display: none !important;
+  }
+}
+
 html, body, h1, h2, h3, h4 {
   font-family: "Riposte", sans-serif;
 }
 
 html, body, h1, h2, h3, h4 {
   font-size: 22px;
+}
+@media screen and (max-width: 800px) {
+  html, body, h1, h2, h3, h4 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 640px) {
+  html, body, h1, h2, h3, h4 {
+    font-size: 18px;
+  }
 }
 
 html, body, h1, h2, h3, h4 {
@@ -122,7 +145,11 @@ h1, h2, h3, h4 {
   font-weight: 400;
 }
 
-header, h1, h2, h3, h4 {
+ul.cases li.featured {
+  font-weight: 500;
+}
+
+footer, header, h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 
@@ -148,11 +175,12 @@ header {
   align-items: center;
   position: sticky;
   top: 72px;
+  z-index: 10;
   font-size: 16px;
 }
 @media screen and (max-width: 1440px) {
   header {
-    top: 56px;
+    top: 64px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -162,17 +190,17 @@ header {
 }
 @media screen and (max-width: 800px) {
   header {
-    top: 56px;
+    top: 48px;
   }
 }
 @media screen and (max-width: 640px) {
   header {
-    top: 56px;
+    top: 40px;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 380px) {
   header {
-    top: 56px;
+    top: 32px;
   }
 }
 header nav, header div.info {
@@ -183,8 +211,150 @@ header a.logoWrap {
   width: 70px;
   height: auto;
 }
+@media screen and (max-width: 800px) {
+  header a.logoWrap {
+    width: 60px;
+  }
+}
 header a.logoWrap .logo {
   fill: #0500FF;
+}
+
+footer {
+  font-size: 16px;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+  padding: 36px 0;
+}
+@media screen and (max-width: 800px) {
+  section {
+    padding: 24px 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  section {
+    padding: 18px 0;
+  }
+}
+section.pageHeading {
+  padding-top: 72px;
+  text-align: justify;
+}
+@media screen and (max-width: 1440px) {
+  section.pageHeading {
+    padding-top: 64px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  section.pageHeading {
+    padding-top: 56px;
+  }
+}
+@media screen and (max-width: 800px) {
+  section.pageHeading {
+    padding-top: 48px;
+  }
+}
+@media screen and (max-width: 640px) {
+  section.pageHeading {
+    padding-top: 40px;
+  }
+}
+@media screen and (max-width: 380px) {
+  section.pageHeading {
+    padding-top: 32px;
+  }
+}
+section .content h2, section .content p.intro, section .content img {
+  margin-bottom: 36px;
+}
+section .content h3, section .content h4, section .content p {
+  margin-bottom: 24px;
+}
+section .content img {
+  width: 100%;
+  height: auto;
+}
+section .content .noMargin {
+  margin-bottom: 0 !important;
+}
+section .blocks {
+  display: flex;
+  justify-content: space-between;
+  gap: 36px;
+}
+@media screen and (max-width: 1024px) {
+  section .blocks {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+section .blocks * {
+  width: calc(50% - 24px) !important;
+}
+@media screen and (max-width: 1024px) {
+  section .blocks * {
+    width: 100% !important;
+  }
+}
+
+h1 {
+  font-size: 68px;
+}
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 48.5714285714px;
+  }
+}
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 37.7777777778px;
+  }
+}
+
+h2 {
+  font-size: 42px;
+}
+@media screen and (max-width: 800px) {
+  h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 640px) {
+  h2 {
+    font-size: 23.3333333333px;
+  }
+}
+
+h3 {
+  font-size: 32px;
+}
+@media screen and (max-width: 800px) {
+  h3 {
+    font-size: 22.8571428571px;
+  }
+}
+@media screen and (max-width: 640px) {
+  h3 {
+    font-size: 17.7777777778px;
+  }
+}
+
+h4 {
+  font-size: 24px;
+}
+@media screen and (max-width: 800px) {
+  h4 {
+    font-size: 17.1428571429px;
+  }
+}
+@media screen and (max-width: 640px) {
+  h4 {
+    font-size: 13.3333333333px;
+  }
 }
 
 a {
@@ -199,4 +369,77 @@ a:not(.noLinkHover):hover {
 }
 a:not(.noLinkHover):active {
   opacity: 1;
+}
+
+p {
+  line-height: 1.4;
+}
+p.intro {
+  font-size: 30px;
+}
+@media screen and (max-width: 800px) {
+  p.intro {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 640px) {
+  p.intro {
+    font-size: 20px;
+  }
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+ul li {
+  padding-left: 8px;
+}
+ul li:before {
+  content: "•";
+  padding-right: 8px;
+}
+ul.grid {
+  flex-direction: row;
+  gap: 16px;
+}
+ul.grid li:before {
+  display: none;
+}
+ul.cases {
+  gap: 16px;
+  font-size: 28px;
+}
+@media screen and (max-width: 800px) {
+  ul.cases {
+    font-size: 22px;
+  }
+}
+ul.cases li {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  padding-left: 0;
+  padding-bottom: 16px;
+  border-bottom: 1px #25283D solid;
+}
+@media screen and (max-width: 800px) {
+  ul.cases li {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+ul.cases li:before {
+  display: none;
+}
+ul.cases li .date {
+  width: 120px;
+  opacity: 0.2;
+}
+ul.cases li .title {
+  flex-grow: 2;
+}
+ul.cases li a {
+  text-decoration: none;
 }

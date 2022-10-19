@@ -2,7 +2,7 @@
 
 %globalPadding
 
-    +padding($globalSpace, $globalSpace, 16px, $padding)
+    +padding($globalSpace, $globalSpace, 8px, $padding)
 
 %maxWidth
 
@@ -13,7 +13,15 @@
     margin-left: auto
     margin-right: auto
 
-%content
+// Responsive
+
+@each $label, $size in $hide
+
+    %hideAt#{$label}
+
+        +screen($size)
+
+            display: none !important
 
 // Typography
 
@@ -24,6 +32,16 @@
 %fontSize
 
     font-size: $fontBase
+
+    // Responsive
+
+    +screen($md)
+
+        font-size: calc($fontBase - 2px)
+
+    +screen($sm)
+
+        font-size: calc($fontBase - 4px)
 
 %fontLight
 
@@ -47,11 +65,11 @@
 
 %fontBase
 
-    line-height: 1.2
-
     @extend %fontFamily
     @extend %fontLight
     @extend %fontSize
+
+    line-height: 1.2
 
 %fontHeading
 

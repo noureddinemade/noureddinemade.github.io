@@ -1,3 +1,96 @@
 // Section
 
 section
+
+    position: relative
+    z-index: 1
+
+    padding: calc($globalSpace / 2) 0
+
+    // Responsive
+
+    +screen($md)
+
+        padding: calc($globalSpace / 3) 0
+
+    +screen($sm)
+
+        padding: calc($globalSpace / 4) 0
+
+    // Classes
+
+    &.pageHeading
+
+        padding-top: $globalSpace
+
+        text-align: justify
+
+        // Responsive
+
+        +screen($xl)
+
+            padding-top: calc($globalSpace - 8px)
+
+        +screen($lg)
+
+            padding-top: calc($globalSpace - 16px)
+
+        +screen($md)
+
+            padding-top: calc($globalSpace - 24px)
+
+        +screen($sm)
+
+            padding-top: calc($globalSpace - 32px)
+
+        +screen($xs)
+
+            padding-top: calc($globalSpace - 40px)
+
+    // Children
+
+    .content
+
+        // Children
+
+        h2, p.intro, img
+
+            margin-bottom: calc($globalSpace / 2)
+
+        h3, h4, p
+
+            margin-bottom: calc($globalSpace / 3)
+
+        img
+
+            width: 100%
+            height: auto
+
+        .noMargin
+
+            margin-bottom: 0 !important
+
+    .blocks
+
+        display: flex
+        justify-content: space-between
+        gap: calc($globalSpace / 2)
+
+        // Responsive
+
+        +screen($lg)
+
+            flex-direction: column
+            gap: 0
+
+        // Children
+
+        *
+
+            width: calc(50% - calc($globalSpace / 3)) !important
+
+            // Responsive
+
+            +screen($lg)
+
+                width: 100% !important
