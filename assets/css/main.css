@@ -292,26 +292,26 @@ section .blocks {
     gap: 0;
   }
 }
-section .blocks * {
+section .blocks p, section .blocks span {
   width: calc(50% - 24px) !important;
 }
 @media screen and (max-width: 1024px) {
-  section .blocks * {
+  section .blocks p, section .blocks span {
     width: 100% !important;
   }
 }
 
 h1 {
-  font-size: 68px;
+  font-size: 72px;
 }
 @media screen and (max-width: 800px) {
   h1 {
-    font-size: 48.5714285714px;
+    font-size: 51.4285714286px;
   }
 }
 @media screen and (max-width: 640px) {
   h1 {
-    font-size: 37.7777777778px;
+    font-size: 40px;
   }
 }
 
