@@ -165,6 +165,9 @@ html, body {
   background-color: #FFFAEF;
 }
 
+body {
+  overflow-x: hidden;
+}
 body * {
   box-sizing: border-box;
 }
@@ -299,6 +302,9 @@ section .blocks p, section .blocks span {
   section .blocks p, section .blocks span {
     width: 100% !important;
   }
+}
+section .blocks span p, section .blocks span span {
+  width: 100% !important;
 }
 
 h1 {
@@ -442,4 +448,8 @@ ul.cases li .title {
 }
 ul.cases li a {
   text-decoration: none;
+}
+
+span.crossed {
+  text-decoration: line-through;
 }
