@@ -179,7 +179,7 @@ header {
   align-items: center;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 1;
   font-size: 16px;
 }
 header nav, header div.info {
@@ -234,7 +234,7 @@ section .content.--gallery .inner {
   overflow-x: scroll;
 }
 section .content.--gallery .inner img {
-  max-width: 1600px;
+  width: 90%;
   margin-bottom: 0 !important;
 }
 section .content.--blocks {
