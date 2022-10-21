@@ -5,98 +5,94 @@ section
     position: relative
     z-index: 1
 
-    padding: calc($globalSpace / 2) 0
-
-    // Responsive
-
-    +screen($md)
-
-        padding: calc($globalSpace / 3) 0
-
-    +screen($sm)
-
-        padding: calc($globalSpace / 4) 0
-
-    // Classes
-
-    &.pageHeading
-
-        padding-top: $globalSpace
-
-        text-align: justify
-
-        // Responsive
-
-        +screen($xl)
-
-            padding-top: calc($globalSpace - 8px)
-
-        +screen($lg)
-
-            padding-top: calc($globalSpace - 16px)
-
-        +screen($md)
-
-            padding-top: calc($globalSpace - 24px)
-
-        +screen($sm)
-
-            padding-top: calc($globalSpace - 32px)
-
-        +screen($xs)
-
-            padding-top: calc($globalSpace - 40px)
-
     // Children
-
+    
     .content
+
+        @extend %globalPadding
+        @extend %maxWidth
+        @extend %center
 
         // Children
 
-        h2, p.intro, img
+        h2, img
 
             margin-bottom: calc($globalSpace / 2)
 
-        h3, h4, p
+        p.intro, h3
 
             margin-bottom: calc($globalSpace / 3)
 
-        img
+        p, h4
 
-            width: 100%
-            height: auto
+            margin-bottom: calc($globalSpace / 4)
 
-        .noMargin
+        h2, h3, h4, p
 
-            margin-bottom: 0 !important
+            &:last-child
+                
+                margin-bottom: 0 !important
 
-    .blocks
+        // Variations
 
-        display: flex
-        justify-content: space-between
-        gap: calc($globalSpace / 2)
+        &.--heading
 
-        // Responsive
+            text-align: justify
 
-        +screen($lg)
+        &.--gallery
 
-            flex-direction: column
-            gap: 0
+            max-width: 100%
 
-        // Children
+            padding: 0 !important
 
-        p, span
+            // Children
 
-            width: calc(50% - calc($globalSpace / 3)) !important
+            .inner
+
+                @extend %globalPadding
+
+                display: flex
+                flex-direction: row
+                flex-wrap: nowrap
+                gap: calc($globalSpace / 2)
+
+                overflow-x: scroll
+                
+                // Children
+
+                img
+
+                    max-width: 1600px
+
+                    margin-bottom: 0 !important
+
+        &.--blocks
+
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            gap: calc($globalSpace / 2)
 
             // Responsive
 
             +screen($lg)
 
-                width: 100% !important
+                flex-direction: column
+                gap: 0
 
-        span 
+            // Children
+
+            .fullWidth
+
+                width: 100%
+                flex-grow: 2
             
-            p, span
+            div.block
 
-                width: 100% !important
+                width: calc(50% - calc($globalSpace / 2))
+
+                // Responsive
+
+                +screen($lg)
+
+                    width: 100%

@@ -68,41 +68,41 @@ input, textarea, select {
   font-weight: 500;
   src: url("/assets/font/gtfriposte-medium.woff"), url("/assets/font/gtfriposte-medium.woff2");
 }
-body {
+section .content.--gallery .inner, section .content, header, footer {
   padding: 72px 72px;
 }
 @media screen and (max-width: 1440px) {
-  body {
+  section .content.--gallery .inner, section .content, header, footer {
     padding: 64px 64px;
   }
 }
 @media screen and (max-width: 1024px) {
-  body {
+  section .content.--gallery .inner, section .content, header, footer {
     padding: 56px 56px;
   }
 }
 @media screen and (max-width: 800px) {
-  body {
+  section .content.--gallery .inner, section .content, header, footer {
     padding: 48px 48px;
   }
 }
 @media screen and (max-width: 640px) {
-  body {
+  section .content.--gallery .inner, section .content, header, footer {
     padding: 40px 40px;
   }
 }
 @media screen and (max-width: 380px) {
-  body {
+  section .content.--gallery .inner, section .content, header, footer {
     padding: 32px 32px;
   }
 }
 
-main, header, footer {
+section .content {
   width: 100%;
   max-width: 1440px;
 }
 
-main, header, footer {
+section .content {
   margin-left: auto;
   margin-right: auto;
 }
@@ -169,6 +169,7 @@ body {
   overflow-x: hidden;
 }
 body * {
+  position: relative;
   box-sizing: border-box;
 }
 
@@ -177,34 +178,9 @@ header {
   justify-content: space-between;
   align-items: center;
   position: sticky;
-  top: 72px;
+  top: 0;
   z-index: 10;
   font-size: 16px;
-}
-@media screen and (max-width: 1440px) {
-  header {
-    top: 64px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  header {
-    top: 56px;
-  }
-}
-@media screen and (max-width: 800px) {
-  header {
-    top: 48px;
-  }
-}
-@media screen and (max-width: 640px) {
-  header {
-    top: 40px;
-  }
-}
-@media screen and (max-width: 380px) {
-  header {
-    top: 32px;
-  }
 }
 header nav, header div.info {
   display: flex;
@@ -230,81 +206,60 @@ footer {
 section {
   position: relative;
   z-index: 1;
-  padding: 36px 0;
 }
-@media screen and (max-width: 800px) {
-  section {
-    padding: 24px 0;
-  }
-}
-@media screen and (max-width: 640px) {
-  section {
-    padding: 18px 0;
-  }
-}
-section.pageHeading {
-  padding-top: 72px;
-  text-align: justify;
-}
-@media screen and (max-width: 1440px) {
-  section.pageHeading {
-    padding-top: 64px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  section.pageHeading {
-    padding-top: 56px;
-  }
-}
-@media screen and (max-width: 800px) {
-  section.pageHeading {
-    padding-top: 48px;
-  }
-}
-@media screen and (max-width: 640px) {
-  section.pageHeading {
-    padding-top: 40px;
-  }
-}
-@media screen and (max-width: 380px) {
-  section.pageHeading {
-    padding-top: 32px;
-  }
-}
-section .content h2, section .content p.intro, section .content img {
+section .content h2, section .content img {
   margin-bottom: 36px;
 }
-section .content h3, section .content h4, section .content p {
+section .content p.intro, section .content h3 {
   margin-bottom: 24px;
 }
-section .content img {
-  width: 100%;
-  height: auto;
+section .content p, section .content h4 {
+  margin-bottom: 18px;
 }
-section .content .noMargin {
+section .content h2:last-child, section .content h3:last-child, section .content h4:last-child, section .content p:last-child {
   margin-bottom: 0 !important;
 }
-section .blocks {
+section .content.--heading {
+  text-align: justify;
+}
+section .content.--gallery {
+  max-width: 100%;
+  padding: 0 !important;
+}
+section .content.--gallery .inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 36px;
+  overflow-x: scroll;
+}
+section .content.--gallery .inner img {
+  max-width: 1600px;
+  margin-bottom: 0 !important;
+}
+section .content.--blocks {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 36px;
 }
 @media screen and (max-width: 1024px) {
-  section .blocks {
+  section .content.--blocks {
     flex-direction: column;
     gap: 0;
   }
 }
-section .blocks p, section .blocks span {
-  width: calc(50% - 24px) !important;
+section .content.--blocks .fullWidth {
+  width: 100%;
+  flex-grow: 2;
+}
+section .content.--blocks div.block {
+  width: calc(50% - 36px);
 }
 @media screen and (max-width: 1024px) {
-  section .blocks p, section .blocks span {
-    width: 100% !important;
+  section .content.--blocks div.block {
+    width: 100%;
   }
-}
-section .blocks span p, section .blocks span span {
-  width: 100% !important;
 }
 
 h1 {
