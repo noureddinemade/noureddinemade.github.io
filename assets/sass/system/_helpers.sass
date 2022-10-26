@@ -25,9 +25,13 @@
 
 // Typography
 
-%fontFamily
+%fontHead
 
-    font-family: $fontFamily
+    font-family: $fontHead
+
+%fontText
+
+    font-family: $fontText
 
 %fontSize
 
@@ -65,7 +69,6 @@
 
 %fontBase
 
-    @extend %fontFamily
     @extend %fontLight
     @extend %fontSize
 
@@ -74,5 +77,8 @@
 %fontHeading
 
     @extend %fontBase
+    @extend %fontHead
     @extend %fontUpperCase
     @extend %fontRegular
+
+    line-height: 1

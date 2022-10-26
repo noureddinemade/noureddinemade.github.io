@@ -51,22 +51,28 @@ input, textarea, select {
 }
 
 @font-face {
-  font-family: "Riposte";
-  font-style: normal;
-  font-weight: 300;
-  src: url("/assets/font/gtfriposte-light.woff"), url("/assets/font/gtfriposte-light.woff2");
-}
-@font-face {
-  font-family: "Riposte";
+  font-family: "Basier";
   font-style: normal;
   font-weight: 400;
-  src: url("/assets/font/gtfriposte-regular.woff"), url("/assets/font/gtfriposte-regular.woff2");
+  src: url("/assets/font/basiersquare-regular.woff"), url("/assets/font/basiersquare-regular.woff2");
 }
 @font-face {
-  font-family: "Riposte";
+  font-family: "Basier";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/assets/font/basiersquare-regularitalic.woff"), url("/assets/font/basiersquare-regularitalic.woff2");
+}
+@font-face {
+  font-family: "Basier";
   font-style: normal;
-  font-weight: 500;
-  src: url("/assets/font/gtfriposte-medium.woff"), url("/assets/font/gtfriposte-medium.woff2");
+  font-weight: 600;
+  src: url("/assets/font/basiersquare-semibold.woff"), url("/assets/font/basiersquare-semibold.woff2");
+}
+@font-face {
+  font-family: "Floyd";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/font/bn-floyd-webfont.woff"), url("/assets/font/bn-floyd-webfont.woff2");
 }
 section .content.--gallery .inner, section .content, header, footer {
   padding: 72px 72px;
@@ -119,8 +125,12 @@ section .content {
   }
 }
 
-html, body, h1, h2, h3, h4 {
-  font-family: "Riposte", sans-serif;
+h1, h2, h3, h4 {
+  font-family: "Floyd", sans-serif;
+}
+
+html, body {
+  font-family: "Basier", sans-serif;
 }
 
 html, body, h1, h2, h3, h4 {
@@ -161,8 +171,12 @@ html, body, h1, h2, h3, h4 {
   line-height: 1.2;
 }
 
+h1, h2, h3, h4 {
+  line-height: 1;
+}
+
 html, body {
-  background-color: #FFFAEF;
+  background-color: #FFFEF1;
 }
 
 body {
@@ -177,9 +191,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 10;
+  width: 100%;
   font-size: 16px;
 }
 header nav, header div.info {
@@ -219,11 +235,15 @@ section .content p, section .content h4 {
 section .content h2:last-child, section .content h3:last-child, section .content h4:last-child, section .content p:last-child {
   margin-bottom: 0 !important;
 }
+section .content.--heading, section .content.--gallery {
+  max-width: 100%;
+  height: 100vh;
+}
 section .content.--heading {
-  text-align: justify;
+  display: flex;
+  align-items: flex-end;
 }
 section .content.--gallery {
-  max-width: 100%;
   padding: 0 !important;
 }
 section .content.--gallery .inner {
@@ -234,7 +254,7 @@ section .content.--gallery .inner {
   overflow-x: scroll;
 }
 section .content.--gallery .inner img {
-  width: 90%;
+  width: 80%;
   margin-bottom: 0 !important;
 }
 section .content.--blocks {
@@ -262,17 +282,32 @@ section .content.--blocks div.block {
   }
 }
 
+.sop .--heading, .sop .--gallery {
+  background-color: #ECF1FF !important;
+}
+.sop h1 {
+  color: #00237E !important;
+}
+
+section .content.--heading {
+  background-color: #E2EDBB;
+}
+
+h1, h2, h3, h4 {
+  color: #0F2210;
+}
+
 h1 {
-  font-size: 72px;
+  font-size: 68px;
 }
 @media screen and (max-width: 800px) {
   h1 {
-    font-size: 51.4285714286px;
+    font-size: 48.5714285714px;
   }
 }
 @media screen and (max-width: 640px) {
   h1 {
-    font-size: 40px;
+    font-size: 37.7777777778px;
   }
 }
 
@@ -383,7 +418,7 @@ ul.cases li {
   width: 100%;
   padding-left: 0;
   padding-bottom: 16px;
-  border-bottom: 1px #25283D solid;
+  border-bottom: 1px #0F2210 solid;
 }
 @media screen and (max-width: 800px) {
   ul.cases li {

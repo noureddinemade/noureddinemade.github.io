@@ -35,13 +35,19 @@ section
 
         // Variations
 
-        &.--heading
-
-            text-align: justify
-
-        &.--gallery
+        &.--heading, &.--gallery
 
             max-width: 100%
+            height: 100vh
+
+        &.--heading
+
+            @extend %bgcAlt2
+
+            display: flex
+            align-items: flex-end
+
+        &.--gallery
 
             padding: 0 !important
 
@@ -63,7 +69,7 @@ section
                 img
 
                     // max-width: 1600px
-                    width: 90%
+                    width: 80%
 
                     margin-bottom: 0 !important
 
