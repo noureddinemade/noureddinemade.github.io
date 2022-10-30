@@ -29,7 +29,6 @@ desc: This is the home page
         <ul class="cases">
 
             <li class="featured">
-                <span class="date">2022/??</span>
                 <span class="title">Looking for my next role babyy!!</span>
                 <a href="./my-next-role" class="navLink">Please read this first &#9758;</a>
             </li>
@@ -39,9 +38,9 @@ desc: This is the home page
                 {% if i.current == "true" %}
 
                     <li>
-                        <span class="date">{{ i.dateRange }}</span>
                         <span class="title">{{ i.title }}</span>
                         <a href="{{ i.permalink }}" class="navLink">Read case study &#9758;</a>
+                        <div class="hover {{ i.class }}"></div>
                     </li>
 
                 {% endif %}
@@ -65,9 +64,9 @@ desc: This is the home page
                 {% if i.current == "false" %}
 
                 <li>
-                    <span class="date">{{ i.dateRange }}</span>
                     <span class="title">{{ i.title }}</span>
                     <a href="{{ i.permalink }}" class="navLink">Read case study &#9758;</a>
+                    <div class="hover {{ i.class }}"></div>
                 </li>
 
                 {% endif %}

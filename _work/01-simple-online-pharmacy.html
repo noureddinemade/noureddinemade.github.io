@@ -7,7 +7,6 @@ layout: work
 
 heading:    Creating a task based internal system  for a digital pharmacy to manage patients and orders.
 current:    "true"
-dateRange:  2021/22
 class:      sop
 
 ---
@@ -29,11 +28,15 @@ class:      sop
     <div class="content">
 
         <p class="intro">
-            The goal was to create an internal system that was simple and easy to understand and onboard but could also handle complex tasks as well as automating a lot of the manual tasks whenever possible.
+            The goal of this project was to create a new internal tool that can be used by the pharmacy, clinical and support teams to manage patients and orders. The tool needed to be simple and easy to understand and onboard new staff but could also handle complex tasks as well as automating a lot of the manual tasks whenever possible.
         </p>
 
         <p>
-            Since we were also working on creating the NHS product for the business which allowed patients to request their repeat prescriptions through us we decided that the MVP for the internal system would be purely focused on NHS patients/orders with the long term goal of bringing all other patient and order types into the system.
+            This was needed because the existing tool was getting to the point of being virtually unusable and had started causing an unacceptable amount of errors. As we were in charge of getting medication to people, even 1 error was too many.
+        </p>
+        
+        <p>
+            The existing tool was a mix of a lot of manual work and a tool that tries to do everything all at once. It couldn't scale with the business, it wasn't user friendly which made it hard to onboard new staff and it had loads of manual tasks that were either not needed or could be automated easily.
         </p>
 
     </div>
@@ -45,12 +48,44 @@ class:      sop
     <div class="content">
 
         <h2>
-            How it worked so far
+            Starting out
         </h2>
 
         <p class="intro">
-            The existing system was a mix of a lot of manual work and a tool that tries to do everything all at once. While this approach was currently working, there were major issues with it. It couldn&rsquo;t scale with the business, it wasn&rsquo;t user friendly which made it hard to onboard new staff and it had loads of manual tasks that were either not needed or could be automated easily.
+            As we were in a very lucky position of having access to 100% of the users who will be using the product, I decided that before starting to even plan the project that I would take a few days to speak with at least 2 people in each of the departments that take care of a patients order from start to finish. While this was happening I also created a short survey comprised of 3 questions. Two multiple choice and 1 free text.
         </p>
+
+    </div>
+
+    <div class="content">
+
+        <div class="block"><img srcset="./assets/img/cases/SOP/Admin/002_surveyintro@2x.png 2x" src="./assets/img/cases/SOP/Admin/002_surveyintro.png" alt="Survey results - Intro" title="Survey results - Intro"></div>
+
+        <div class="block"><img srcset="./assets/img/cases/SOP/Admin/002_surveyfeaturedquotes@2x.png 2x" src="./assets/img/cases/SOP/Admin/002_surveyfeaturedquotes.png" alt="Survey results - Featured quotes" title="Survey results - Featured quotes"></div>
+
+        <div class="block"><img srcset="./assets/img/cases/SOP/Admin/002_surveyfeaturedq1@2x.png 2x" src="./assets/img/cases/SOP/Admin/002_surveyfeaturedq1.png" alt="Survey results - Featured question" title="Survey results - Featured question"></div>
+
+        <div class="block"><img srcset="./assets/img/cases/SOP/Admin/002_surveyfeaturedq2@2x.png 2x" src="./assets/img/cases/SOP/Admin/002_surveyfeaturedq2.png" alt="Survey results - Featured question" title="Survey results - Featured question"></div>
+
+    </div>
+
+    <div class="content">
+
+        <p class="intro">
+            After 3 days of many conversations I wanted to see if I can map out the full business process of an order from start to finish which included any pharmacy tools (such as Titan) that were being used.
+        </p>
+
+    </div>
+
+    <div class="content --gallery">
+
+        <div class="inner">
+
+            <img srcset="./assets/img/cases/SOP/Admin/001_fullbizflow@2x.png 2x" src="./assets/img/cases/SOP/Admin/001_fullbizflow.png" alt="Full business flow" title="Full business flow">
+
+            <img srcset="./assets/img/cases/SOP/Admin/001_statusmap@2x.png 2x" src="./assets/img/cases/SOP/Admin/001_statusmap.png" alt="Task status map" title="Task status map">
+
+        </div>
 
     </div>
 
@@ -58,27 +93,34 @@ class:      sop
 
 <section>
 
-    <div class="content --blocks">
+    <div class="content">
 
-        <h2 class="fullWidth">
-            Where to start?
+        <h2>
+            Planning
         </h2>
 
-        <div class="block">
+        <p class="intro">
+            After this was done it was time to start planning the project. My first activity was to run a workshop with both the co founders and team leads in the operational teams (pharmacy, clinical, support, warehouse). 
+        </p>
 
-            <p>
-                Unlike a regular ecommerce order, a patient&rsquo;s NHS order couldn&rsquo;t just go from the warehouse to the back of a truck to be shipped and because we were dealing with medication and regulatory pharmacy requirements, we could never have a fully automated system.
-            </p>
+        <p>
+            The goal of this workshop was to define what the MVP would be, the key problems that needed to be solved and the metrics we would use to measure the success of our solutions.
+        </p>
 
-        </div>
+        <p>
+            We decided that for the MVP, we would focus only on the core order flow of a NHS prescription order. This decision was made because it has the most complex flows and much of the automation that could be created for an NHS order would work perfectly for other order types.
+        </p>
 
-        <div class="block">
+        <p>
+            The main problems we wanted to solver were:
+        </p>
 
-            <p>
-                The flow of an NHS order was used to map out the core tasks that were needed for the MVP as well as figuring out what could and couldn&rsquo;t be automated.
-            </p>
-
-        </div>
+        <ul>
+            <li>The inability to find key pieces of information quickly</li>
+            <li>Too much manual data entry</li>
+            <li>Constant human errors</li>
+            <li>Lack of automation</li>
+        </ul>
 
     </div>
 

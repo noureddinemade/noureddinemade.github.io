@@ -69,10 +69,10 @@ input, textarea, select {
   src: url("/assets/font/basiersquare-semibold.woff"), url("/assets/font/basiersquare-semibold.woff2");
 }
 @font-face {
-  font-family: "Floyd";
+  font-family: "Authentic Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("/assets/font/bn-floyd-webfont.woff"), url("/assets/font/bn-floyd-webfont.woff2");
+  src: url("/assets/font/AUTHENTICSans-150.woff"), url("/assets/font/AUTHENTICSans-150.woff2");
 }
 section .content.--gallery .inner, section .content, header, footer {
   padding: 72px 72px;
@@ -126,7 +126,7 @@ section .content {
 }
 
 h1, h2, h3, h4 {
-  font-family: "Floyd", sans-serif;
+  font-family: "Authentic Sans", sans-serif;
 }
 
 html, body {
@@ -156,7 +156,7 @@ h1, h2, h3, h4 {
 }
 
 ul.cases li.featured {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 footer, header, h1, h2, h3, h4 {
@@ -176,7 +176,8 @@ h1, h2, h3, h4 {
 }
 
 html, body {
-  background-color: #FFFEF1;
+  background-color: #FFEEEE;
+  color: #340809;
 }
 
 body {
@@ -196,6 +197,7 @@ header {
   left: 0;
   z-index: 10;
   width: 100%;
+  padding-top: 24px;
   font-size: 16px;
 }
 header nav, header div.info {
@@ -212,7 +214,7 @@ header a.logoWrap {
   }
 }
 header a.logoWrap .logo {
-  fill: #0500FF;
+  fill: #D5161B;
 }
 
 footer {
@@ -241,7 +243,8 @@ section .content.--heading, section .content.--gallery {
 }
 section .content.--heading {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  text-align: center;
 }
 section .content.--gallery {
   padding: 0 !important;
@@ -282,32 +285,63 @@ section .content.--blocks div.block {
   }
 }
 
-.sop .--heading, .sop .--gallery {
-  background-color: #ECF1FF !important;
+.sop {
+  background-color: #ECF1FF;
+  color: black;
 }
-.sop h1 {
-  color: #00237E !important;
+.sop h1, .sop h2, .sop h3, .sop h4 {
+  color: #00237E;
+}
+.sop a {
+  color: #1D5CFF;
+}
+.sop header a.logoWrap .logo {
+  fill: #1D5CFF;
 }
 
-section .content.--heading {
-  background-color: #E2EDBB;
+.echo {
+  background-color: #E8FBF6;
+  color: black;
+}
+.echo h1, .echo h2, .echo h3, .echo h4 {
+  color: #0E5641;
+}
+.echo a {
+  color: #8362BE;
+}
+.echo header a.logoWrap .logo {
+  fill: #8362BE;
+}
+
+.verve {
+  background-color: #F7EDFF;
+  color: black;
+}
+.verve h1, .verve h2, .verve h3, .verve h4 {
+  color: #4B0085;
+}
+.verve a {
+  color: #9000FE;
+}
+.verve header a.logoWrap .logo {
+  fill: #9000FE;
 }
 
 h1, h2, h3, h4 {
-  color: #0F2210;
+  color: #D5161B;
 }
 
 h1 {
-  font-size: 68px;
+  font-size: 88px;
 }
 @media screen and (max-width: 800px) {
   h1 {
-    font-size: 48.5714285714px;
+    font-size: 62.8571428571px;
   }
 }
 @media screen and (max-width: 640px) {
   h1 {
-    font-size: 37.7777777778px;
+    font-size: 48.8888888889px;
   }
 }
 
@@ -354,7 +388,7 @@ h4 {
 }
 
 a {
-  color: #0500FF;
+  color: #D5161B;
   transition-property: opacity;
   transition-duration: 0.2s;
   transition-delay: 0s;
@@ -418,7 +452,8 @@ ul.cases li {
   width: 100%;
   padding-left: 0;
   padding-bottom: 16px;
-  border-bottom: 1px #0F2210 solid;
+  border-bottom: 1px #340809 solid;
+  background-color: transparent !important;
 }
 @media screen and (max-width: 800px) {
   ul.cases li {
@@ -438,6 +473,23 @@ ul.cases li .title {
 }
 ul.cases li a {
   text-decoration: none;
+}
+ul.cases li a:hover + .hover {
+  opacity: 1;
+}
+ul.cases li .hover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  transition-delay: 0s;
+  transition-timing-function: linear;
 }
 
 span.crossed {

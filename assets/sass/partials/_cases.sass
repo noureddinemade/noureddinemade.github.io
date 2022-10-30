@@ -1,13 +1,24 @@
 // Cases
 
-.sop 
-    
-    .--heading, .--gallery
+@use 'sass:list'
 
-        background-color: #ECF1FF !important
+@each $label, $colours in $cases
 
-    // Children
+    .#{$label}
 
-    h1
-        
-        color: #00237E !important
+        background-color: list.nth($colours, 1)
+        color: black
+
+        // Children
+
+        h1, h2, h3, h4
+
+            color: list.nth($colours, 2)
+
+        a
+            
+            color: list.nth($colours, 3)
+
+        header a.logoWrap .logo
+
+            fill: list.nth($colours, 3)
