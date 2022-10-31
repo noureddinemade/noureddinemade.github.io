@@ -124,81 +124,75 @@ class:      sop
 
     </div>
 
-    <div class="content --gallery">
+</section>
 
-        <div class="inner">
+<section>
 
-            <img srcset="./assets/img/cases/SOP/Admin/001_fullbizflow@2x.png 2x" src="./assets/img/cases/SOP/Admin/001_fullbizflow.png" alt="Full business flow" title="Full business flow">
+    <div class="content">
 
-            <img srcset="./assets/img/cases/SOP/Admin/001_statusmap@2x.png 2x" src="./assets/img/cases/SOP/Admin/001_statusmap.png" alt="Task status map" title="Task status map">
+        <h2>
+            The Idea
+        </h2>
 
+        <p class="intro">
+            Unlike a regular ecommerce order, a patient’s NHS order couldn’t just go from the warehouse to the back of a truck to be shipped and because we were dealing with medication and regulatory pharmacy requirements, we could never have a fully automated system.
+        </p>
+
+        <p>
+            The flow of an NHS order was used to map out the core tasks that were needed for the MVP as well as figuring out what could and couldn’t be automated.
+        </p>
+
+        <div class="content">
+
+            <img srcset="./assets/img/cases/SOP/Admin/001_taskdefinition@2x.png 2x" src="./assets/img/cases/SOP/Admin/001_taskdefinition.png" alt="Drafts - Task definition" title="Drafts - Task definition">
+    
+            <img srcset="./assets/img/cases/SOP/Admin/001_taskautomation@2x.png 2x" src="./assets/img/cases/SOP/Admin/001_taskautomation.png" alt="Drafts - Task automation" title="Drafts - Task automation">
+    
         </div>
 
-    </div>
-
-    <div class="content">
-
-        <img srcset="./assets/img/cases/SOP/Admin/001_taskdefinition@2x.png 2x" src="./assets/img/cases/SOP/Admin/001_taskdefinition.png" alt="Drafts - Task definition" title="Drafts - Task definition">
-
-        <img srcset="./assets/img/cases/SOP/Admin/001_taskautomation@2x.png 2x" src="./assets/img/cases/SOP/Admin/001_taskautomation.png" alt="Drafts - Task automation" title="Drafts - Task automation">
-
-    </div>
-
-</section>
-
-<section>
-
-    <div class="content">
-
-        <h2>
-            But will it actually work?
-        </h2>
-
-        <p class="intro">
-            Before proceeding with this idea we needed to ensure that the internal teams actually understood the concept and this made sense with their work flows especially for the pharmacy team.
+        <p>
+            The core tasks that were defined were:
         </p>
+        
+        <h3>
+            Nomination
+        </h3>
 
         <p>
-            We were in a very lucky position of having access to 100% of the users who will be using the product.
+            When a patient signs up to our product they must agree to us being their nominated pharmacy. This means that when their GP issues a prescription, it is sent to us directly. This task couldn't be performed in our internal system as patients need to be nominated using an official NHS nominations tool. However it needs a lot of manual entry and that is something that our internal system could help with.
         </p>
+
+        <h3>
+            First time call
+        </h3>
 
         <p>
-            I created a short survey that asked questions about the existing tool, current pain points and any ideas they had. The results of the survey aligned with most of the ideas that I had within the task based concept.
+            The first time call is an optional service that is offered during sign up for patients that need help adding and requesting medication. During this call a member of the patient care team would explain our processes to the patient and then add medication for them as well as creating their first order.
         </p>
 
-    </div>
-
-    <div class="content --blocks">
-
-        <div class="block"><img srcset="./assets/img/cases/SOP/Admin/002_surveyintro@2x.png 2x" src="./assets/img/cases/SOP/Admin/002_surveyintro.png" alt="Survey results - Intro" title="Survey results - Intro"></div>
-
-        <div class="block"><img srcset="./assets/img/cases/SOP/Admin/002_surveyfeaturedquotes@2x.png 2x" src="./assets/img/cases/SOP/Admin/002_surveyfeaturedquotes.png" alt="Survey results - Featured quotes" title="Survey results - Featured quotes"></div>
-
-        <div class="block"><img srcset="./assets/img/cases/SOP/Admin/002_surveyfeaturedq1@2x.png 2x" src="./assets/img/cases/SOP/Admin/002_surveyfeaturedq1.png" alt="Survey results - Featured question" title="Survey results - Featured question"></div>
-
-        <div class="block"><img srcset="./assets/img/cases/SOP/Admin/002_surveyfeaturedq2@2x.png 2x" src="./assets/img/cases/SOP/Admin/002_surveyfeaturedq2.png" alt="Survey results - Featured question" title="Survey results - Featured question"></div>
-
-    </div>
-
-</section>
-
-<section>
-
-    <div class="content">
+        <h3>
+            Contact GP (Request)
+        </h3>
 
         <p>
-            Over the next 2 weeks I ran 6 sessions with each one having different members from different internal teams. Before each session I sent rough wireframes and concepts for the teams to look through then during the sessions I guided them through the ideas and got them to give feedback on both the existing product.
+            This task is where we would send the patients prescription request to their GP surgery. Using the national GP surgery database, we're able to automate this task by using the information provided on that database about a GP surgery's preferred request contact type and sending the request using that method.
         </p>
+
+        <h3>
+            Contact GP (Chase)
+        </h3>
 
         <p>
-            The findings from these sessions and the survey were pretty straight forward in terms of the main problems which were:
+            This task would only occur if we don't receive a response from the GP surgery after sending a request. This task cannot be automated as we need to contact the GP surgery directly to follow up the patient's request.
         </p>
 
-        <ul>
-            <li>Hard to find things</li>
-            <li>A lot of manual data entry</li>
-            <li>Constant human errors</li>
-        </ul>
+        <h3>
+            To be shipped
+        </h3>
+
+        <p>
+            In between this task and the previous tasks are where the pharmacy tasks that cannot be automated and cannot be built into our system occur. After these checks are done and the medication is dispensed, the order is now ready to be shipped.
+        </p>
 
     </div>
 
@@ -209,32 +203,16 @@ class:      sop
     <div class="content">
 
         <h2>
-            Now for the designs
+            Research
         </h2>
 
         <p class="intro">
-            After the sessions, we were in a really good place to start designs. To ensure that the designs reflected the feedback from the sessions along with the goal of creating a better system than the existing one, we started a weekly feedback loop.
+            For the first time in a while, the research portion of the project was not going to be something that I would spend a lot of time on. Mainly because my research in the past has been focused on competitors, the market and potential users.
         </p>
 
         <p>
-            Every week I&rsquo;d send over wireframes, looms, designs and other ideas to the internal teams and would receive loads of helpful feedback.
+            This time around, there were no competitors and market. Just users, users that we had access to all the time. I decided that I would jump straight into talking to our internal teams and work with them on defining wireframes and prototypes.
         </p>
-
-        <p>
-            At this point, I had spent 6 weeks of research and initial designs. The designs were finally starting to take shape. The concept of the task based system was working very well and was understood really clearly.
-        </p>
-
-    </div>
-
-    <div class="content --blocks">
-
-        <div class="block"><img srcset="./assets/img/cases/SOP/Admin/003_draftslayout1@2x.png 2x" src="./assets/img/cases/SOP/Admin/003_draftslayout1.png" alt="Drafts - Layout" title="Drafts - Layout"></div>
-
-        <div class="block"><img srcset="./assets/img/cases/SOP/Admin/003_draftslayout2@2x.png 2x" src="./assets/img/cases/SOP/Admin/003_draftslayout2.png" alt="Drafts - Layout" title="Drafts - Layout"></div>
-
-        <div class="block"><img srcset="./assets/img/cases/SOP/Admin/003_draftslayout3@2x.png 2x" src="./assets/img/cases/SOP/Admin/003_draftslayout3.png" alt="Drafts - Layout" title="Drafts - Layout"></div>
-
-        <div class="block"><img srcset="./assets/img/cases/SOP/Admin/003_draftslayout4@2x.png 2x" src="./assets/img/cases/SOP/Admin/003_draftslayout4.png" alt="Drafts - Layout" title="Drafts - Layout"></div>
 
     </div>
 
@@ -265,11 +243,47 @@ class:      sop
     <div class="content">
 
         <h2>
-            Final designs
+            Design
         </h2>
 
         <p class="intro">
-            Now was time to start working on the final designs for the MVP. I&rsquo;ve always known that when it came to putting the UI together, it was going to be really plain (in the best way possible). There was no need for anything flash and it didn&rsquo;t need to reinvent the wheel.
+            Over the next 2 weeks I ran 6 sessions with each one having different members from different internal teams. Before each session I sent rough wireframes and concepts for the teams to look through then during the sessions I guided them through the ideas and got them to give feedback on both the existing product.
+        </p>
+
+        <p>
+            The findings from these sessions reinforced the survey results and aligned for the most part directly with what the plan was for the MVP and the problems that we wanted to solve.
+        </p>
+
+        <p>
+            After the sessions, we were in a really good place to start designs. To ensure that the designs reflected the feedback from the sessions along with the goal of creating a better system than the existing one, we started a weekly feedback loop.
+        </p>
+
+        <p>
+            Every week I’d send over wireframes, looms, designs and other ideas to the internal teams and would receive loads of helpful feedback.
+        </p>
+
+    </div>
+
+    <div class="content --blocks">
+
+        <div class="block"><img srcset="./assets/img/cases/SOP/Admin/003_draftslayout1@2x.png 2x" src="./assets/img/cases/SOP/Admin/003_draftslayout1.png" alt="Drafts - Layout" title="Drafts - Layout"></div>
+
+        <div class="block"><img srcset="./assets/img/cases/SOP/Admin/003_draftslayout2@2x.png 2x" src="./assets/img/cases/SOP/Admin/003_draftslayout2.png" alt="Drafts - Layout" title="Drafts - Layout"></div>
+
+        <div class="block"><img srcset="./assets/img/cases/SOP/Admin/003_draftslayout3@2x.png 2x" src="./assets/img/cases/SOP/Admin/003_draftslayout3.png" alt="Drafts - Layout" title="Drafts - Layout"></div>
+
+        <div class="block"><img srcset="./assets/img/cases/SOP/Admin/003_draftslayout4@2x.png 2x" src="./assets/img/cases/SOP/Admin/003_draftslayout4.png" alt="Drafts - Layout" title="Drafts - Layout"></div>
+
+    </div>
+
+    <div class="content">
+
+        <p class="intro">
+            Now was time to start working on the final designs for the MVP. I’ve always known that when it came to putting the UI together, it was going to be really plain (in the best way possible). There was no need for anything flash and it didn’t need to reinvent the wheel.
+        </p>
+
+        <p>
+            The first major milestone of the project was reached, we finally had the designs for the MVP ready, we had a simple click through prototype that had been passed around for the last week and had been a big success in terms of understanding. Some staff even joked that they were able to find out more about fake patients and their information in this prototype than they've been able to find out about a real patient using the old tool.
         </p>
 
     </div>
@@ -313,40 +327,20 @@ class:      sop
     <div class="content">
 
         <h2>
-            Working remotely or remotely working?
+            Development
         </h2>
 
         <p class="intro">
-            Being able to clearly describe designs is already a hard skill to learn. Being fully remote made this particular skill an even harder one to master. Especially working with a team that was all onsite or at least on the same timezone. Using Loom to record video explainers, walkthroughs, rants etc. made this process so simple.
+            While I was working on the designs, the 2 backend engineers were hard at work on the core system bones. We had been keeping in contact throughout the entire process and I was keeping them informed about what the requirements were in terms of how the back end would be built.
         </p>
 
-    </div>
+        <p>
+            Whenever I ran a session to walk through a wireframe or prototype with the internal teams I ensured that one of the engineers were present so that if anything came up in terms of how the back end was being built they would have sufficient context, be able to give us more information or to simply tell us that wouldn't work. Luckily the solutions we were coming up with didn't deviate significantly from the initial concept.
+        </p>
 
-    <div class="content --blocks">
-
-        <div class="block">
-            <a href="https://www.loom.com/share/c9d66c1a4800401487d745893574752c" target="_blank">
-                <img src="https://cdn.loom.com/sessions/thumbnails/c9d66c1a4800401487d745893574752c-with-play.gif" alt="Loom thumbnail">
-            </a>
-        </div>
-
-        <div class="block">
-            <a href="https://www.loom.com/share/854827ac2ccf444093aafcf0e970688a" target="_blank">
-                <img src="https://cdn.loom.com/sessions/thumbnails/854827ac2ccf444093aafcf0e970688a-with-play.gif" alt="Loom thumbnail">
-            </a>
-        </div>
-
-        <div class="block">
-            <a href="https://www.loom.com/share/acab3a0af0084b5fb18c6538ea4904c5" target="_blank">
-                <img src="https://cdn.loom.com/sessions/thumbnails/acab3a0af0084b5fb18c6538ea4904c5-with-play.gif" alt="Loom thumbnail">
-            </a>
-        </div>
-
-        <div class="block">
-            <a href="https://www.loom.com/share/75a74e6d5050446e8ab491c5177d3243" target="_blank">
-                <img src="https://cdn.loom.com/sessions/thumbnails/75a74e6d5050446e8ab491c5177d3243-with-play.gif" alt="Loom thumbnail">
-            </a>
-        </div>
+        <p>
+            The 2 front end engineers started working on the UI as well as starting to link the back end API and the tool was starting to finally look and feel like we envisioned.
+        </p>
 
     </div>
 
@@ -357,11 +351,39 @@ class:      sop
     <div class="content">
 
         <h2>
-            Conclusion
+            Starting to test
         </h2>
 
         <p class="intro">
-            As the system is still being developed, the full version is still not available. However a light version was built using only a few of the basic tasks (Nominations & First Time Calls) and patient view. While this doesn&rsquo;t give us a full and clear picture of any improvements or failures, it has given us some insight into those specific tasks and the patient view.
+            As the tool was being built, we were continuously testing it. We would get some members of the internal teams to test specific views outside of tasks like searching for an order or a patient and see what their thoughts were and how it felt like now that we were working with something that wasn't a basic click through prototype.
+        </p>
+
+        <p>
+            The feedback was consistently helpful. Little things like interactions with the search menu or basic filters helped us quickly refine, iterate and then test again to get a better result.
+        </p>
+
+        <p>
+            I had the idea of taking a task and getting the internal teams to test it on a small group of real patients. I spoke with the engineers and we figured out the first 2 tasks in an order flow can be used independently. The patient nomination and first time call tasks were those tasks.
+        </p>
+
+        <h3>
+            Nomination
+        </h3>
+
+        <p>
+            We started with this task first and we trialed it for the a week. Using the old system a patient care member could do around 27 nominations per hour. But with the new system that number easily became close to 70 per hour. This was all due to the new system allowing for bulk copy and paste actions.
+        </p>
+
+        <h3>
+            First time call
+        </h3>
+
+        <p>
+            Depending on the duration of the call, a patient care member could make around 12 first time calls in an hour. This number wasn’t improved greatly however the new system gave the patient care team a checklist for the information they needed to provide, a way of rescheduling the call so that they wouldn’t have to follow up manually and it automated an informational email sent to the patient which provided dynamic information based on which items get checked off.
+        </p>
+
+        <p>
+            The results of these two tasks were amazing, we obviously didn't know if the whole flow would result in the same level of increase, however based on the feedback, we were in a really good position.
         </p>
 
     </div>
