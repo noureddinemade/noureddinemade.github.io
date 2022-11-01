@@ -16,6 +16,9 @@ const cp            = require("child_process");
 const imgSrc        = './assets/img/**/*';
 const imgDest       = './_site/assets/img';
 
+const vidSrc        = './assets/vid/**/*';
+const vidDest       = './_site/assets/vid';
+
 const pdfSrc        = './assets/pdf/*.pdf';
 const pdfDest       = './_site/assets/pdf';
 
@@ -77,6 +80,14 @@ function createPDF(cb) {
 
 }
 
+function moveVid(cb) {
+
+    return src(vidSrc)
+        .pipe(dest(vidDest))
+        .pipe(browserSync.stream());
+
+}
+
 function createFonts(cb) {
 
     return src(fontSrc)
@@ -130,6 +141,7 @@ function buildSite() {
     createStyle();
     createJS();
     prepImages();
+    moveVid();
     createPDF();
     createFonts();
     buildJekyll();
@@ -143,6 +155,7 @@ function watchAll() {
     watch(styleSrc, createStyle);
     watch(jsSrc, createJS);
     watch(imgSrc, prepImages);
+    watch(vidSrc, moveVid);
     watch(pdfSrc, createPDF);
     watch(fontSrc, createFonts);
 

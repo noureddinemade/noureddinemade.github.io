@@ -1,17 +1,29 @@
+    {% if page.next.url %}
     <section>
 
         <div class="content">
 
-            <h3>☻</h3>
-    
+            <p>
+                Next case study: <a href="{{ page.next.url }}">{{ page.next.title }}</a>
+            </p>
+
         </div>
-    
+
     </section>
+    {% endif %}
 
 </main>
 
 <footer>
 
-    &copy; Noureddine made this
+    <p>
+        &copy; Noureddine made this
+    </p>
+
+    <p>
+        ☻
+    </p>
+
+    <a href="./my-next-role">Please read this first</a>
 
 </footer>

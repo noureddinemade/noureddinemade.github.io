@@ -155,7 +155,7 @@ h1, h2, h3, h4 {
   font-weight: 400;
 }
 
-ul.cases li.featured {
+ul.cases li.--featured {
   font-weight: 600;
 }
 
@@ -222,6 +222,8 @@ header a.logoWrap .logo {
 }
 
 footer {
+  display: flex;
+  justify-content: space-between;
   font-size: 16px;
 }
 
@@ -229,7 +231,7 @@ section {
   position: relative;
   z-index: 1;
 }
-section .content h2, section .content img {
+section .content h2, section .content img, section .content video {
   margin-bottom: 36px;
 }
 section .content p, section .content h3, section .content h4 {
@@ -237,6 +239,10 @@ section .content p, section .content h3, section .content h4 {
 }
 section .content h2:last-child, section .content h3:last-child, section .content h4:last-child, section .content p:last-child {
   margin-bottom: 0 !important;
+}
+section .content video {
+  width: 100%;
+  height: auto;
 }
 section .content.--heading, section .content.--gallery {
   height: 100vh;
@@ -333,73 +339,80 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 88px;
+  font-size: 76px;
 }
 @media screen and (max-width: 800px) {
   h1 {
-    font-size: 62.8571428571px;
+    font-size: 54.2857142857px;
   }
 }
 @media screen and (max-width: 640px) {
   h1 {
-    font-size: 48.8888888889px;
+    font-size: 42.2222222222px;
   }
 }
 
 h2 {
-  font-size: 42px;
-}
-@media screen and (max-width: 800px) {
-  h2 {
-    font-size: 30px;
-  }
-}
-@media screen and (max-width: 640px) {
-  h2 {
-    font-size: 23.3333333333px;
-  }
-}
-
-h3 {
   font-size: 32px;
 }
 @media screen and (max-width: 800px) {
-  h3 {
+  h2 {
     font-size: 22.8571428571px;
   }
 }
 @media screen and (max-width: 640px) {
-  h3 {
+  h2 {
     font-size: 17.7777777778px;
   }
 }
 
+h3 {
+  font-size: 28px;
+}
+@media screen and (max-width: 800px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 640px) {
+  h3 {
+    font-size: 15.5555555556px;
+  }
+}
+
 h4 {
-  font-size: 24px;
+  font-size: 22px;
 }
 @media screen and (max-width: 800px) {
   h4 {
-    font-size: 17.1428571429px;
+    font-size: 15.7142857143px;
   }
 }
 @media screen and (max-width: 640px) {
   h4 {
-    font-size: 13.3333333333px;
+    font-size: 12.2222222222px;
   }
 }
 
 a {
+  display: inline-block;
   color: #D5161B;
-  transition-property: opacity;
-  transition-duration: 0.2s;
+  transition-property: opacity, transform;
+  transition-duration: 0.2s, 0.2s;
   transition-delay: 0s;
   transition-timing-function: linear;
 }
 a:not(.noLinkHover):hover {
   opacity: 0.6;
+  -webkit-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
 }
 a:not(.noLinkHover):active {
   opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 p {

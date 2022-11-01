@@ -27,9 +27,11 @@ a
 
     @extend %fontUnderline
 
+    display: inline-block
+
     color: $link
 
-    +transition(opacity, $animSpeed)
+    +transition((opacity, transform), ($animSpeed, $animSpeed))
 
     // States
 
@@ -37,9 +39,13 @@ a
 
         opacity: .6
 
+        +transform(rotate, 3deg)
+
     &:not(.noLinkHover):active
 
         opacity: 1
+
+        +transform(rotate, 0deg)
 
 p
 
@@ -141,7 +147,7 @@ ul
 
             // Classes
 
-            &.featured
+            &.--featured
                 
                 @extend %fontSemiBold
 
@@ -164,6 +170,8 @@ ul
                 // States
 
                 &:hover
+
+                    // Siblings
 
                     + .hover
 
