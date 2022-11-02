@@ -108,7 +108,7 @@ section .content {
   max-width: 1280px;
 }
 
-section .content {
+img, video, section .content {
   margin-left: auto;
   margin-right: auto;
 }
@@ -231,18 +231,21 @@ section {
   position: relative;
   z-index: 1;
 }
-section .content h2, section .content img, section .content video {
+section .content h2, section .content h3, section .content h4, section .content p, section .content img, section .content video {
   margin-bottom: 36px;
 }
-section .content p, section .content h3, section .content h4 {
-  margin-bottom: 24px;
+@media screen and (max-width: 800px) {
+  section .content h2, section .content h3, section .content h4, section .content p, section .content img, section .content video {
+    margin-bottom: 24px;
+  }
+}
+@media screen and (max-width: 640px) {
+  section .content h2, section .content h3, section .content h4, section .content p, section .content img, section .content video {
+    margin-bottom: 18px;
+  }
 }
 section .content h2:last-child, section .content h3:last-child, section .content h4:last-child, section .content p:last-child {
   margin-bottom: 0 !important;
-}
-section .content video {
-  width: 100%;
-  height: auto;
 }
 section .content.--heading, section .content.--gallery {
   height: 100vh;
@@ -265,6 +268,7 @@ section .content.--gallery .inner {
 }
 section .content.--gallery .inner img {
   width: 80%;
+  max-height: 700px;
   margin-bottom: 0 !important;
 }
 section .content.--blocks {
@@ -276,8 +280,10 @@ section .content.--blocks {
 @media screen and (max-width: 1024px) {
   section .content.--blocks {
     flex-direction: column;
-    gap: 0;
   }
+}
+section .content.--blocks h2, section .content.--blocks h3, section .content.--blocks h4, section .content.--blocks p, section .content.--blocks img, section .content.--blocks video {
+  margin-bottom: 0;
 }
 section .content.--blocks .fullWidth {
   width: 100%;
@@ -334,7 +340,49 @@ section .content.--blocks div.block {
   fill: #9000FE;
 }
 
-h1, h2, h3, h4 {
+.branding {
+  background-color: #FFEED6;
+  color: black;
+}
+.branding h1, .branding h2, .branding h3, .branding h4 {
+  color: #261E13;
+}
+.branding a {
+  color: #FF9500;
+}
+.branding header a.logoWrap .logo {
+  fill: #FF9500;
+}
+
+.mf {
+  background-color: #EEFFE0;
+  color: black;
+}
+.mf h1, .mf h2, .mf h3, .mf h4 {
+  color: #2B3621;
+}
+.mf a {
+  color: #00AB59;
+}
+.mf header a.logoWrap .logo {
+  fill: #00AB59;
+}
+
+.nps {
+  background-color: #EEE1FF;
+  color: black;
+}
+.nps h1, .nps h2, .nps h3, .nps h4 {
+  color: #6029AA;
+}
+.nps a {
+  color: #FF6600;
+}
+.nps header a.logoWrap .logo {
+  fill: #FF6600;
+}
+
+h1 {
   color: #D5161B;
 }
 
@@ -462,6 +510,7 @@ ul.cases {
 }
 ul.cases li {
   display: flex;
+  justify-content: space-between;
   gap: 16px;
   width: 100%;
   padding-left: 0;
@@ -477,13 +526,6 @@ ul.cases li {
 }
 ul.cases li:before {
   display: none;
-}
-ul.cases li .date {
-  width: 120px;
-  opacity: 0.2;
-}
-ul.cases li .title {
-  flex-grow: 2;
 }
 ul.cases li a {
   text-decoration: none;
@@ -508,4 +550,13 @@ ul.cases li .hover {
 
 span.crossed {
   text-decoration: line-through;
+}
+
+img, video {
+  display: block;
+}
+
+video {
+  width: 100%;
+  height: auto;
 }

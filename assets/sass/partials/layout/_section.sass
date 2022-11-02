@@ -15,24 +15,25 @@ section
 
         // Children
 
-        h2, img, video
+        h2, h3, h4, p, img, video
 
             margin-bottom: calc($globalSpace / 2)
 
-        p, h3, h4
+            // Responsive
 
-            margin-bottom: calc($globalSpace / 3)
+            +screen($md)
+
+                margin-bottom: calc($globalSpace / 3)
+
+            +screen($sm)
+
+                margin-bottom: calc($globalSpace / 4)
 
         h2, h3, h4, p
 
             &:last-child
                 
                 margin-bottom: 0 !important
-
-        video
-
-            width: 100%
-            height: auto
 
         // Variations
 
@@ -72,6 +73,7 @@ section
 
                     // max-width: 1600px
                     width: 80%
+                    max-height: 700px
 
                     margin-bottom: 0 !important
 
@@ -87,9 +89,12 @@ section
             +screen($lg)
 
                 flex-direction: column
-                gap: 0
 
             // Children
+
+            h2, h3, h4, p, img, video
+
+                margin-bottom: 0
 
             .fullWidth
 

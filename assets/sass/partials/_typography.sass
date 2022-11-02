@@ -3,6 +3,9 @@
 h1, h2, h3, h4
 
     @extend %fontHeading
+
+h1
+
     @extend %tcPrimary
 
 @each $label, $h in $headings
@@ -121,6 +124,7 @@ ul
         li
 
             display: flex
+            justify-content: space-between
             gap: 16px
 
             width: 100%
@@ -152,16 +156,6 @@ ul
                 @extend %fontSemiBold
 
             // Children
-
-            .date
-
-                width: 120px
-
-                opacity: .2
-
-            .title
-
-                flex-grow: 2
 
             a
 

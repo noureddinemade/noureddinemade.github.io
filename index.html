@@ -1,7 +1,7 @@
 ---
 
 title: Oh, hello there!
-desc: This is the home page
+desc: The online portfolio of the designer formerly known as Nuro.
 
 ---
 
@@ -23,53 +23,22 @@ desc: This is the home page
     <div class="content">
 
         <h2>
-            Currently:
+            What have I been up to?
         </h2>
 
         <ul class="cases">
 
             <li class="--featured">
-                <span class="title">Looking for my next role babyy!!</span>
-                <a href="./my-next-role" class="navLink">Please read this first &#9758;</a>
+                <a href="./my-next-role" class="navLink">Started looking for my next role babyy!!</a>
             </li>
 
             {% for i in site.work %}
 
-                {% if i.current == "true" %}
-
-                    <li>
-                        <span class="title">{{ i.title }}</span>
-                        <a href="{{ i.permalink }}" class="navLink">Read case study &#9758;</a>
-                        <div class="hover {{ i.class }}"></div>
-                    </li>
-
-                {% endif %}
-                
-            {% endfor %}
-
-        </ul>
-
-    </div>
-
-    <div class="content">
-
-        <h2>
-            Previously:
-        </h2>
-
-        <ul class="cases">
-
-            {% for i in site.work %}
-
-                {% if i.current == "false" %}
-
                 <li>
-                    <span class="title">{{ i.title }}</span>
-                    <a href="{{ i.permalink }}" class="navLink">Read case study &#9758;</a>
+                    <a href="{{ i.permalink }}" class="navLink">{{ i.title }}</a>
+                    <span class="emoji">{{ i.emoji }}</span>
                     <div class="hover {{ i.class }}"></div>
                 </li>
-
-                {% endif %}
                 
             {% endfor %}
 
