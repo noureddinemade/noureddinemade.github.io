@@ -1,0 +1,17 @@
+<section>
+
+    <div class="content --heading">
+
+        <h1>
+            {{ page.heading }}
+        </h1>
+
+        <div>
+            {% if page.video %}<a href="{{ page.video }}" target="_blank">{{ page.videoLabel }}</a>{% endif %}
+            <p>☻</p>
+            <a href="{{ page.permalink }}#start">Start reading</a>
+        </div>
+
+    </div>
+
+</section>

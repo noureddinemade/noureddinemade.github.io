@@ -35,8 +35,9 @@ desc: The online portfolio of the designer formerly known as Nuro.
             {% for i in site.work %}
 
                 <li>
-                    <a href="{{ i.permalink }}" class="navLink">{{ i.title }}</a>
-                    <span class="emoji">{{ i.emoji }}</span>
+                    <span class="title">{{ i.emoji }} {{ i.title }}</span>
+                    {% if i.video %}<a href="{{ i.video }}" class="navLink" target="_blank">{{ i.videoLabel }}</a>{% endif %}
+                    <a href="{{ i.permalink }}" class="navLink">{{ i.linkLabel }} &#9758;</a>
                     <div class="hover {{ i.class }}"></div>
                 </li>
                 

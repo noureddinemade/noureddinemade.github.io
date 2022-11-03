@@ -79,27 +79,27 @@ section .content.--gallery .inner, section .content, header, footer {
 }
 @media screen and (max-width: 1280px) {
   section .content.--gallery .inner, section .content, header, footer {
-    padding: 64px 64px;
+    padding: 62px 62px;
   }
 }
 @media screen and (max-width: 1024px) {
   section .content.--gallery .inner, section .content, header, footer {
-    padding: 56px 56px;
+    padding: 52px 52px;
   }
 }
 @media screen and (max-width: 800px) {
   section .content.--gallery .inner, section .content, header, footer {
-    padding: 48px 48px;
+    padding: 42px 42px;
   }
 }
 @media screen and (max-width: 640px) {
   section .content.--gallery .inner, section .content, header, footer {
-    padding: 40px 40px;
+    padding: 32px 32px;
   }
 }
 @media screen and (max-width: 380px) {
   section .content.--gallery .inner, section .content, header, footer {
-    padding: 32px 32px;
+    padding: 22px 22px;
   }
 }
 
@@ -125,7 +125,7 @@ img, video, section .content {
   }
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
   font-family: "Authentic Sans", sans-serif;
 }
 
@@ -133,25 +133,25 @@ html, body {
   font-family: "Basier", sans-serif;
 }
 
-html, body, h1, h2, h3, h4 {
+html, body, h1, h2, h3 {
   font-size: 20px;
 }
 @media screen and (max-width: 800px) {
-  html, body, h1, h2, h3, h4 {
+  html, body, h1, h2, h3 {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 640px) {
-  html, body, h1, h2, h3, h4 {
+  html, body, h1, h2, h3 {
     font-size: 16px;
   }
 }
 
-html, body, h1, h2, h3, h4 {
+html, body, h1, h2, h3 {
   font-weight: 300;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
   font-weight: 400;
 }
 
@@ -159,7 +159,7 @@ ul.cases li.--featured {
   font-weight: 600;
 }
 
-footer, header, h1, h2, h3, h4 {
+footer, header, h1, h2, h3 {
   text-transform: uppercase;
 }
 
@@ -167,16 +167,12 @@ a {
   text-decoration: underline;
 }
 
-html, body, h1, h2, h3, h4 {
+html, body, h1, h2, h3 {
   line-height: 1.2;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
   line-height: 1;
-}
-
-footer {
-  text-align: center;
 }
 
 html, body {
@@ -204,6 +200,11 @@ header {
   padding-top: 24px;
   font-size: 16px;
 }
+@media screen and (max-width: 800px) {
+  header {
+    position: relative;
+  }
+}
 header nav, header div.info {
   display: flex;
   gap: 16px;
@@ -224,7 +225,21 @@ header a.logoWrap .logo {
 footer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
   font-size: 16px;
+}
+@media screen and (max-width: 640px) {
+  footer p {
+    order: 2;
+  }
+}
+@media screen and (max-width: 640px) {
+  footer a {
+    flex-grow: 2;
+    order: 1;
+    width: 100%;
+  }
 }
 
 section {
@@ -250,10 +265,27 @@ section .content h2:last-child, section .content h3:last-child, section .content
 section .content.--heading, section .content.--gallery {
   height: 100vh;
 }
+@media screen and (max-width: 800px) {
+  section .content.--heading, section .content.--gallery {
+    height: auto;
+  }
+}
 section .content.--heading {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 16px;
   text-align: center;
+}
+section .content.--heading h1 {
+  width: 100%;
+}
+section .content.--heading div {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
 }
 section .content.--gallery {
   max-width: 100%;
@@ -282,27 +314,53 @@ section .content.--blocks {
     flex-direction: column;
   }
 }
-section .content.--blocks h2, section .content.--blocks h3, section .content.--blocks h4, section .content.--blocks p, section .content.--blocks img, section .content.--blocks video {
+@media screen and (max-width: 800px) {
+  section .content.--blocks {
+    gap: 24px;
+  }
+}
+@media screen and (max-width: 640px) {
+  section .content.--blocks {
+    gap: 18px;
+  }
+}
+section .content.--blocks * {
+  width: calc(50% - 36px);
   margin-bottom: 0;
 }
-section .content.--blocks .fullWidth {
-  width: 100%;
-  flex-grow: 2;
-}
-section .content.--blocks div.block {
-  width: calc(50% - 36px);
+section .content.--blocks div {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
 }
 @media screen and (max-width: 1024px) {
-  section .content.--blocks div.block {
-    width: 100%;
+  section .content.--blocks div {
+    flex-direction: column;
   }
+}
+@media screen and (max-width: 800px) {
+  section .content.--blocks div {
+    gap: 24px;
+  }
+}
+@media screen and (max-width: 640px) {
+  section .content.--blocks div {
+    gap: 18px;
+  }
+}
+section .content.--blocks div * {
+  width: 100%;
+}
+section .content.--blocks .fullWidth {
+  flex-grow: 2;
+  width: 100%;
 }
 
 .sop {
   background-color: #ECF1FF;
   color: black;
 }
-.sop h1, .sop h2, .sop h3, .sop h4 {
+.sop h1, .sop h2, .sop .--heading p {
   color: #00237E;
 }
 .sop a {
@@ -316,7 +374,7 @@ section .content.--blocks div.block {
   background-color: #E8FBF6;
   color: black;
 }
-.echo h1, .echo h2, .echo h3, .echo h4 {
+.echo h1, .echo h2, .echo .--heading p {
   color: #0E5641;
 }
 .echo a {
@@ -330,7 +388,7 @@ section .content.--blocks div.block {
   background-color: #F7EDFF;
   color: black;
 }
-.verve h1, .verve h2, .verve h3, .verve h4 {
+.verve h1, .verve h2, .verve .--heading p {
   color: #4B0085;
 }
 .verve a {
@@ -344,7 +402,7 @@ section .content.--blocks div.block {
   background-color: #FFEED6;
   color: black;
 }
-.branding h1, .branding h2, .branding h3, .branding h4 {
+.branding h1, .branding h2, .branding .--heading p {
   color: #261E13;
 }
 .branding a {
@@ -358,7 +416,7 @@ section .content.--blocks div.block {
   background-color: #EEFFE0;
   color: black;
 }
-.mf h1, .mf h2, .mf h3, .mf h4 {
+.mf h1, .mf h2, .mf .--heading p {
   color: #2B3621;
 }
 .mf a {
@@ -372,7 +430,7 @@ section .content.--blocks div.block {
   background-color: #EEE1FF;
   color: black;
 }
-.nps h1, .nps h2, .nps h3, .nps h4 {
+.nps h1, .nps h2, .nps .--heading p {
   color: #6029AA;
 }
 .nps a {
@@ -387,59 +445,11 @@ h1 {
 }
 
 h1 {
-  font-size: 76px;
-}
-@media screen and (max-width: 800px) {
-  h1 {
-    font-size: 54.2857142857px;
-  }
-}
-@media screen and (max-width: 640px) {
-  h1 {
-    font-size: 42.2222222222px;
-  }
+  font-size: 6vmin;
 }
 
 h2 {
-  font-size: 32px;
-}
-@media screen and (max-width: 800px) {
-  h2 {
-    font-size: 22.8571428571px;
-  }
-}
-@media screen and (max-width: 640px) {
-  h2 {
-    font-size: 17.7777777778px;
-  }
-}
-
-h3 {
-  font-size: 28px;
-}
-@media screen and (max-width: 800px) {
-  h3 {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 640px) {
-  h3 {
-    font-size: 15.5555555556px;
-  }
-}
-
-h4 {
-  font-size: 22px;
-}
-@media screen and (max-width: 800px) {
-  h4 {
-    font-size: 15.7142857143px;
-  }
-}
-@media screen and (max-width: 640px) {
-  h4 {
-    font-size: 12.2222222222px;
-  }
+  font-size: 3vmin;
 }
 
 a {
@@ -501,12 +511,6 @@ ul.grid li:before {
 }
 ul.cases {
   gap: 16px;
-  font-size: 28px;
-}
-@media screen and (max-width: 800px) {
-  ul.cases {
-    font-size: 22px;
-  }
 }
 ul.cases li {
   display: flex;
@@ -521,11 +525,16 @@ ul.cases li {
 @media screen and (max-width: 800px) {
   ul.cases li {
     flex-direction: column;
-    gap: 8px;
+  }
+  ul.cases li * {
+    width: auto;
   }
 }
 ul.cases li:before {
   display: none;
+}
+ul.cases li .title {
+  flex-grow: 2;
 }
 ul.cases li a {
   text-decoration: none;

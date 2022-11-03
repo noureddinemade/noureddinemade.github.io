@@ -1,6 +1,6 @@
 // Typography
 
-h1, h2, h3, h4
+h1, h2, h3
 
     @extend %fontHeading
 
@@ -13,16 +13,6 @@ h1
     #{$label}
 
         font-size: $h
-
-        // Responsive
-
-        +screen($md)
-
-            font-size: calc($h / 1.4)
-
-        +screen($sm)
-
-            font-size: calc($h / 1.8)
 
 //
 
@@ -54,7 +44,7 @@ p
 
     line-height: 1.4
 
-    // Children
+    // Classes
 
     &.intro
 
@@ -111,14 +101,6 @@ ul
 
         gap: 16px
 
-        font-size: 28px
-
-        // Responsive
-
-        +screen($md)
-
-            font-size: 22px
-
         // Children
 
         li
@@ -141,7 +123,12 @@ ul
             +screen($md)
 
                 flex-direction: column
-                gap: 8px
+
+                // Children
+
+                *
+
+                    width: auto
 
             // Pseudo
 
@@ -156,6 +143,10 @@ ul
                 @extend %fontSemiBold
 
             // Children
+
+            .title
+
+                flex-grow: 2
 
             a
 
