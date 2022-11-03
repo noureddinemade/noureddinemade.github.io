@@ -18,12 +18,12 @@ defaults:
     path: ''
     type: posts
   values:
-    layout: post
+    layout: page
 - scope:
     path: ''
     type: work
   values:
-    layout: work
+    layout: page
 email: me@noureddine.biz
 description: Personal portfolio 2020
 baseurl:

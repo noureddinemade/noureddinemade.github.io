@@ -62,43 +62,29 @@ p
 
 ul
 
-    display: flex
-    flex-direction: column
-    gap: 8px
+    // Variations
 
-    // Children
-    
-    li
-
-        padding-left: 8px
-
-        // Psuedo
-        
-        &:before
-
-            content: '•'
-
-            padding-right: 8px
-
-    // Classes
-
-    &.grid
-
-        flex-direction: row
-        gap: 16px
+    &.general
 
         // Children
 
         li
 
-            // Pseudo
+            padding: 6px 0
 
-            &:before
+            // Children
 
-                display: none
+            a
+
+                display: inline-block
+
+                width: auto !important
+
 
     &.cases
 
+        display: flex
+        flex-direction: column
         gap: 16px
 
         // Children
@@ -147,36 +133,6 @@ ul
             .title
 
                 flex-grow: 2
-
-            a
-
-                text-decoration: none
-
-                // States
-
-                &:hover
-
-                    // Siblings
-
-                    + .hover
-
-                        opacity: 1
-
-            .hover
-
-                position: fixed
-                top: 0
-                left: 0
-                z-index: -1
-
-                width: 100%
-                height: 100%
-
-                pointer-events: none
-
-                opacity: 0
-
-                +transition(opacity, $animSpeed)
 
 //
 

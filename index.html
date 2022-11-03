@@ -1,6 +1,6 @@
 ---
 
-title: Oh, hello there!
+title: Hey there!
 desc: The online portfolio of the designer formerly known as Nuro.
 
 ---
@@ -28,17 +28,17 @@ desc: The online portfolio of the designer formerly known as Nuro.
 
         <ul class="cases">
 
-            <li class="--featured">
-                <a href="./my-next-role" class="navLink">Started looking for my next role babyy!!</a>
+            <li class="--featured" data-bg="ffffff">
+                <span class="title">🔎 Started looking for my next role</span>
+                <a href="./my-next-role/" class="navLink">Please read this first</a>
             </li>
 
             {% for i in site.work %}
 
-                <li>
+                <li data-bg="{{ i.bg }}">
                     <span class="title">{{ i.emoji }} {{ i.title }}</span>
-                    {% if i.video %}<a href="{{ i.video }}" class="navLink" target="_blank">{{ i.videoLabel }}</a>{% endif %}
+                    {% if i.video %}<a href="{{ i.video }}" target="_blank">{{ i.videoLabel }}</a>{% endif %}
                     <a href="{{ i.permalink }}" class="navLink">{{ i.linkLabel }} &#9758;</a>
-                    <div class="hover {{ i.class }}"></div>
                 </li>
                 
             {% endfor %}
@@ -56,7 +56,7 @@ desc: The online portfolio of the designer formerly known as Nuro.
         <h2>Who? Me?</h2>
 
         <p class="intro">
-            I&rsquo;m a Naarm (Melbourne) based creative problem solver with over fifteen years of experience, a desire to do some good and an ass that just won&rsquo;t quit. If you like the sound of that and want to create some stuff and things then <a href="./my-next-role" class="navLink">please read this first.</a>
+            I&rsquo;m a Naarm (Melbourne) based creative problem solver with over fifteen years of experience, a desire to do some good and an ass that just won&rsquo;t quit. If you like the sound of that and want to create some stuff and things then <a href="./my-next-role/" class="navLink">please read this first.</a>
         </p>
 
     </div>

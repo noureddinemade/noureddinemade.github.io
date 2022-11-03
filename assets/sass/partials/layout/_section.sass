@@ -37,25 +37,7 @@ section
 
         // Variations
 
-        &.--heading, &.--gallery
-
-            height: 100vh
-
-            // Responsive
-            
-            +screen($md)
-
-                height: auto
-
         &.--heading
-
-            display: flex
-            flex-direction: column
-            align-items: center
-            justify-content: center
-            gap: 16px
-
-            text-align: center
 
             // Children
 
@@ -63,19 +45,28 @@ section
 
                 width: 100%
 
-            div
+                padding-top: calc($globalSpace / 2)
+                padding-bottom: calc($globalSpace / 4)
 
-                display: flex
-                justify-content: center
-                gap: 16px
+                // Responsive
 
-                width: 100%
+                +screen($md)
+
+                    padding-top: 0
+                    padding-bottom: 0
 
         &.--gallery
 
+            height: 100vh
             max-width: 100%
 
             padding: 0 !important
+
+            // Responsive
+            
+            +screen($md)
+
+                height: auto
 
             // Children
 
@@ -124,11 +115,17 @@ section
 
             // Children
 
-            *
+            h2, p, ul, div, img
 
                 width: $size
 
                 margin-bottom: 0
+
+                // Responsive
+
+                +screen($lg)
+
+                    width: 100%
 
             div
 
