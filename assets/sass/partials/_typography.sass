@@ -70,7 +70,19 @@ ul
 
         li
 
-            padding: 6px 0
+            display: inline-block
+
+            padding: 0 6px 0 0 
+
+            background-color: transparent
+
+            // Responsive
+
+            +screen($sm)
+
+                display: block
+
+                padding: 4px 0
 
             // Children
 
@@ -78,8 +90,7 @@ ul
 
                 display: inline-block
 
-                width: auto !important
-
+                width: auto !important 
 
     &.cases
 
@@ -101,8 +112,6 @@ ul
             padding-bottom: 16px
 
             border-bottom: 1px $dark solid
-
-            background-color: transparent !important
 
             // Responsive
 
@@ -133,6 +142,57 @@ ul
             .title
 
                 flex-grow: 2
+
+ol
+
+    // Variations
+
+    &.feature
+
+        counter-reset: feature
+
+        // Children
+
+        > li
+            
+            display: flex
+            flex-direction: column
+            gap: calc($globalSpace / 4)
+
+            margin-bottom: calc($globalSpace / 2)
+            padding: calc($globalSpace / 2)
+
+            border-radius: 10px
+
+            background-color: rgba($dark, .05)
+
+            // Responsive
+
+            +screen($md)
+
+                gap: calc($globalSpace / 6)
+
+                padding: calc($globalSpace / 3)
+
+
+            // Children
+
+            h2, p
+
+                margin: 0
+
+            h2
+
+                @extend %tcPrimary
+
+                // Psuedo
+            
+                &:before
+                    
+                    counter-increment: feature
+                    content: counter(feature)'.'
+
+                    display: inline-block
 
 //
 

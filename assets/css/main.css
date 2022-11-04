@@ -282,17 +282,17 @@ section .content h2:last-child, section .content h3:last-child, section .content
 }
 section .content.--heading h1 {
   width: 100%;
-  padding-top: 36px;
-  padding-bottom: 18px;
+  padding-top: 72px;
 }
 @media screen and (max-width: 800px) {
   section .content.--heading h1 {
     padding-top: 0;
-    padding-bottom: 0;
   }
 }
+section .content.--heading div {
+  padding-top: 18px;
+}
 section .content.--gallery {
-  height: 100vh;
   max-width: 100%;
   padding: 0 !important;
 }
@@ -369,6 +369,14 @@ section .content.--blocks div * {
 section .content.--blocks .fullWidth {
   flex-grow: 2;
   width: 100%;
+}
+section .content.--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 36px;
+}
+section .content.--grid img {
+  margin: 0;
 }
 
 .sop {
@@ -455,16 +463,16 @@ section .content.--blocks .fullWidth {
   fill: #FF6600;
 }
 
-h1 {
+ol.feature > li h2, h1 {
   color: #D5161B;
 }
 
 h1 {
-  font-size: 9vmin;
+  font-size: clamp(26px, 8vmin, 88px);
 }
 
 h2 {
-  font-size: 4vmin;
+  font-size: clamp(16px, 4vmin, 28px);
 }
 
 a {
@@ -506,7 +514,15 @@ p.intro {
 }
 
 ul.general li {
-  padding: 6px 0;
+  display: inline-block;
+  padding: 0 6px 0 0;
+  background-color: transparent;
+}
+@media screen and (max-width: 640px) {
+  ul.general li {
+    display: block;
+    padding: 4px 0;
+  }
 }
 ul.general li a {
   display: inline-block;
@@ -525,7 +541,6 @@ ul.cases li {
   padding-left: 0;
   padding-bottom: 16px;
   border-bottom: 1px #340809 solid;
-  background-color: transparent !important;
 }
 @media screen and (max-width: 800px) {
   ul.cases li {
@@ -540,6 +555,33 @@ ul.cases li:before {
 }
 ul.cases li .title {
   flex-grow: 2;
+}
+
+ol.feature {
+  counter-reset: feature;
+}
+ol.feature > li {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 36px;
+  padding: 36px;
+  border-radius: 10px;
+  background-color: rgba(52, 8, 9, 0.05);
+}
+@media screen and (max-width: 800px) {
+  ol.feature > li {
+    gap: 12px;
+    padding: 24px;
+  }
+}
+ol.feature > li h2, ol.feature > li p {
+  margin: 0;
+}
+ol.feature > li h2:before {
+  counter-increment: feature;
+  content: counter(feature) ".";
+  display: inline-block;
 }
 
 span.crossed {
