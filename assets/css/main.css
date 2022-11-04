@@ -158,7 +158,7 @@ ul.cases li.--featured {
   font-weight: 600;
 }
 
-footer, header, h1, h2, h3 {
+section .content.--logos div, footer, header, h1, h2, h3 {
   text-transform: uppercase;
 }
 
@@ -370,13 +370,23 @@ section .content.--blocks .fullWidth {
   flex-grow: 2;
   width: 100%;
 }
-section .content.--grid {
+section .content.--logos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 36px;
 }
-section .content.--grid img {
+section .content.--logos div, section .content.--logos img {
   margin: 0;
+}
+section .content.--logos div {
+  font-size: 12px;
+}
+section .content.--logos div:after {
+  content: attr(data-year) " " attr(data-name);
+  display: block;
+  width: 100%;
+  padding-top: 4px;
+  border-top: 1px solid #261E13;
 }
 
 .sop {
