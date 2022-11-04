@@ -53,25 +53,25 @@ input, textarea, select {
   font-family: "Basier";
   font-style: normal;
   font-weight: 400;
-  src: url("/assets/font/basiersquare-regular.woff"), url("/assets/font/basiersquare-regular.woff2");
+  src: url("../../assets/font/basiersquare-regular.woff"), url("../../assets/font/basiersquare-regular.woff2");
 }
 @font-face {
   font-family: "Basier";
   font-style: italic;
   font-weight: 400;
-  src: url("/assets/font/basiersquare-regularitalic.woff"), url("/assets/font/basiersquare-regularitalic.woff2");
+  src: url("../../assets/font/basiersquare-regularitalic.woff"), url("../../assets/font/basiersquare-regularitalic.woff2");
 }
 @font-face {
   font-family: "Basier";
   font-style: normal;
   font-weight: 600;
-  src: url("/assets/font/basiersquare-semibold.woff"), url("/assets/font/basiersquare-semibold.woff2");
+  src: url("../../assets/font/basiersquare-semibold.woff"), url("../../assets/font/basiersquare-semibold.woff2");
 }
 @font-face {
   font-family: "Authentic Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("/assets/font/AUTHENTICSans-150.woff"), url("/assets/font/AUTHENTICSans-150.woff2");
+  src: url("../../assets/font/AUTHENTICSans-150.woff"), url("../../assets/font/AUTHENTICSans-150.woff2");
 }
 section .content.--gallery .inner, section .content, header, footer {
   padding: 72px 72px;
