@@ -334,12 +334,12 @@ section .content.--blocks {
     gap: 18px;
   }
 }
-section .content.--blocks h2, section .content.--blocks p, section .content.--blocks ul, section .content.--blocks div, section .content.--blocks img {
+section .content.--blocks h2, section .content.--blocks p, section .content.--blocks ul, section .content.--blocks div, section .content.--blocks img, section .content.--blocks video {
   width: calc(50% - 36px);
   margin-bottom: 0;
 }
 @media screen and (max-width: 1024px) {
-  section .content.--blocks h2, section .content.--blocks p, section .content.--blocks ul, section .content.--blocks div, section .content.--blocks img {
+  section .content.--blocks h2, section .content.--blocks p, section .content.--blocks ul, section .content.--blocks div, section .content.--blocks img, section .content.--blocks video {
     width: 100%;
   }
 }
