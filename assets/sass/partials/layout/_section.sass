@@ -55,7 +55,17 @@ section
 
             div
 
+                display: flex
+                gap: calc($globalSpace / 4)
+
                 padding-top: calc($globalSpace / 4)
+
+                // Responsive
+
+                +screen($md)
+
+                    flex-direction: column
+                    gap: calc($globalSpace / 8)
 
         &.--gallery
 
