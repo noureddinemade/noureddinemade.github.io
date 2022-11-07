@@ -290,7 +290,15 @@ section .content.--heading h1 {
   }
 }
 section .content.--heading div {
+  display: flex;
+  gap: 18px;
   padding-top: 18px;
+}
+@media screen and (max-width: 800px) {
+  section .content.--heading div {
+    flex-direction: column;
+    gap: 9px;
+  }
 }
 section .content.--gallery {
   max-width: 100%;
@@ -478,7 +486,7 @@ ol.feature > li h2, h1 {
 }
 
 h1 {
-  font-size: clamp(26px, 8vmin, 88px);
+  font-size: clamp(26px, 8vmin, 72px);
 }
 
 h2 {
