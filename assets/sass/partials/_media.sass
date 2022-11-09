@@ -10,3 +10,53 @@ video
 
     width: 100%
     height: auto
+
+div.heyEveryone
+
+    @extend %hideAtMD
+
+    $s: 200px
+
+    position: fixed
+    z-index: 11
+
+    top: 10%
+    left: 60px
+
+    width: $s
+    height: $s
+
+    border-radius: $s
+    border: 1px solid rgba($dark, .2)
+    box-shadow: 4px 20px 20px rgba($dark, .2)
+
+    overflow: hidden
+
+    // Responsive
+
+    +screen($xl)
+
+        width: calc($s / 2.4)
+        height: calc($s / 2.4)
+
+    // Children
+
+    video
+
+        position: relative
+        z-index: 1
+
+        height: 100%
+
+        +transform((scale, scaleX), (2, -1))
+
+    a
+
+        position: absolute
+        z-index: 2
+
+        top: -50%
+        left: -50%
+
+        width: 200%
+        height: 200%
