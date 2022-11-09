@@ -626,12 +626,18 @@ div.heyEveryone {
   border: 1px solid rgba(52, 8, 9, 0.2);
   box-shadow: 4px 20px 20px rgba(52, 8, 9, 0.2);
   overflow: hidden;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 @media screen and (max-width: 1280px) {
   div.heyEveryone {
     width: 83.3333333333px;
     height: 83.3333333333px;
   }
+}
+div.heyEveryone:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 div.heyEveryone video {
   position: relative;
@@ -640,14 +646,6 @@ div.heyEveryone video {
   -webkit-transform: scale(2) scaleX(-1);
   -ms-transform: scale(2) scaleX(-1);
   transform: scale(2) scaleX(-1);
-}
-div.heyEveryone a {
-  position: absolute;
-  z-index: 2;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
 }
 
 @-webkit-keyframes bodyFadeIn {

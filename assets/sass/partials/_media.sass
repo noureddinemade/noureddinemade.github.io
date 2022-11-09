@@ -32,12 +32,22 @@ div.heyEveryone
 
     overflow: hidden
 
+    cursor: -webkit-grab
+    cursor: grab
+
     // Responsive
 
     +screen($xl)
 
         width: calc($s / 2.4)
         height: calc($s / 2.4)
+
+    // States
+    
+    &:active
+
+        cursor: -webkit-grabbing
+        cursor: grabbing
 
     // Children
 
@@ -49,14 +59,3 @@ div.heyEveryone
         height: 100%
 
         +transform((scale, scaleX), (2, -1))
-
-    a
-
-        position: absolute
-        z-index: 2
-
-        top: -50%
-        left: -50%
-
-        width: 200%
-        height: 200%
