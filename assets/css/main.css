@@ -620,14 +620,15 @@ div.heyEveryone {
   z-index: 11;
   top: 10%;
   left: 60px;
-  width: 200px;
-  height: 200px;
-  border-radius: 200px;
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
   border: 1px solid rgba(52, 8, 9, 0.2);
   box-shadow: 4px 20px 20px rgba(52, 8, 9, 0.2);
   overflow: hidden;
   cursor: -webkit-grab;
   cursor: grab;
+  mix-blend-mode: multiply;
   transition-property: transform, box-shadow;
   transition-duration: 0.2s, 0.2s;
   transition-delay: 0s;
@@ -635,8 +636,8 @@ div.heyEveryone {
 }
 @media screen and (max-width: 1280px) {
   div.heyEveryone {
-    width: 83.3333333333px;
-    height: 83.3333333333px;
+    width: 62.5px;
+    height: 62.5px;
   }
 }
 div.heyEveryone:hover {
