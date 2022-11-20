@@ -5,6 +5,26 @@ section
     position: relative
     z-index: 1
 
+    // Add on classes
+    
+    &#video
+
+        overflow: hidden
+
+        height: 0
+
+        opacity: 0
+
+        +transition((height, opacity), ($animSpeed, $animSpeed))
+
+        // Add on classes
+
+        &.open
+        
+            height: 100%
+
+            opacity: 1
+
     // Children
     
     .content
@@ -192,7 +212,7 @@ section
 
                 &:after
                     
-                    content: attr(data-year) ' ' attr(data-name)
+                    content: attr(data-name) ' ('attr(data-year) ')' 
 
                     display: block
 

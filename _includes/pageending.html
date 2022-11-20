@@ -1,0 +1,27 @@
+<section>
+
+    <div class="content">
+
+        <ul class="projectNav">
+
+            {% if page.next.url %}
+            <li>
+                {{ page.next.emoji }} <a href="{{ page.next.url }}">{{ page.next.title }}</a>
+            </li>
+            {% endif %}
+
+            {% if page.previous.url %}
+            <li>
+                {{ page.previous.emoji }} <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+            </li>
+            {% endif %}
+
+            <li>
+                🔎 <a href="/my-next-role">I&rsquo;m currently looking for my next role</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>

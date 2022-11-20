@@ -1,11 +1,13 @@
 // Main
 
 const videoThumb    = document.querySelector('.heyEveryone');
+const videoToggle   = document.querySelector('#toggleVideo');
+const videoSection  = document.querySelector('#video');
 
 let offset          = [0,0];
 let dragging        = false;
 
-//
+// Drag me around weeeee
 
 videoThumb.addEventListener('mousedown', (e) => {
 
@@ -28,3 +30,19 @@ document.addEventListener('mousemove', (e) => {
     }
 
 }, true);
+
+// Video Toggle
+
+if (videoToggle != null && videoSection != null) {
+
+    videoToggle.addEventListener('click', (e) => {
+
+        e.preventDefault();
+
+        videoSection.classList.contains('open')
+        ? videoSection.classList.remove('open')
+        : videoSection.classList.add('open')
+
+    })
+    
+}
