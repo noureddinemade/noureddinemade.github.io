@@ -535,7 +535,7 @@ p.intro {
 
 ul.projectNav {
   padding-top: 36px;
-  padding-top-border-top: 1px solid rgba(52, 8, 9, 0.1);
+  border-top: 1px solid rgba(52, 8, 9, 0.1);
 }
 ul.projectNav li {
   margin: 0 0 18px 0;
