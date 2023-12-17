@@ -1,14 +1,20 @@
-const { src, dest, watch, series, parallel } = require('gulp');
+import gulp from 'gulp';
+const { src, dest, watch, series, parallel } = gulp;
 
 //
 
-const browserSync   = require('browser-sync').create();
-const sass          = require('gulp-sass')(require('sass'));
-const cleanCSS      = require('gulp-clean-css');
-const sourceMap     = require('gulp-sourcemaps');
-const imagemin      = require('gulp-imagemin');
-const terser        = require('gulp-terser');
-const cp            = require("child_process");
+import gulpSourcemaps from 'gulp-sourcemaps';
+const { init, write } = gulpSourcemaps;
+
+import bs from 'browser-sync';
+const browserSync = bs.create();
+
+import sass from 'gulp-sass';
+import cleanCSS from 'gulp-clean-css';
+
+import imagemin from 'gulp-imagemin';
+import terser from 'gulp-terser';
+import { spawn } from "child_process";
 
 
 //
@@ -58,11 +64,11 @@ function reloadBrowser(cb) {
 function createStyle(cb) {
 
     return src(styleSrc)
-        .pipe(sourceMap.init())
+        .pipe(init())
         .pipe(sass())
         .pipe(dest(styleDev))
         .pipe(cleanCSS())
-        .pipe(sourceMap.write())
+        .pipe(write())
         .pipe(dest(styleDest))
         .pipe(browserSync.stream());
 
@@ -114,9 +120,9 @@ function createJS(cb) {
     // Get Javascript, uglify it and then move to ready.
 
     return src(jsSrc)
-        .pipe(sourceMap.init())
+        .pipe(init())
         .pipe(terser())
-        .pipe(sourceMap.write())
+        .pipe(write())
         .pipe(dest(jsDest))
         .pipe(browserSync.stream());
 
@@ -128,7 +134,7 @@ function buildJekyll(cb) {
 
     // Build jekyll
 
-    return cp.spawn("bundle", ["exec", "jekyll", "build"], { stdio: "inherit" });
+    return spawn("bundle", ["exec", "jekyll", "build"], { stdio: "inherit" });
 
     cb();
 
@@ -175,13 +181,14 @@ function watchAll() {
 
 //
 
-exports.default = function() {
+const _default = function () {
 
     watchAll();
 
-}
+};
+export { _default as default };
 
-exports.build = function(cb) {
+export function build(cb) {
 
     buildSite();
 
