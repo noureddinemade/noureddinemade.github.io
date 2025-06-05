@@ -1,0 +1,54 @@
+/* Typography */
+:root {
+    /* Family */
+    --nm-ff-body: 'Sinteca', sans-serif;
+    --nm-ff-heading: 'Halimonson', serif;
+
+    /* Sizes */
+    --nm-fs-base: 18px;
+    --nm-fs-sm: 16px;
+    --nm-fs-md: 24px;
+    --nm-fs-lg: 32px;
+    --nm-fs-xl: 60px;
+
+    /* Weights */
+    --nm-fw-regular: 400;
+    --nm-fw-medium: 500;
+    --nm-fw-bold: 800;
+
+    /* Line Heights */
+    --nm-lh-base: 1.5;
+    --nm-lh-sm: 1.2;
+    --nm-lh-md: 1.4;
+    --nm-lh-lg: 1.6;
+    --nm-lh-xl: 58px;
+
+    /* Letter Spacing */
+    --nm-ls-base: 0.05em;
+    --nm-ls-sm: 0.025em;
+    --nm-ls-md: 0.035em;
+    --nm-ls-lg: 0.045em;
+    --nm-ls-xl: -1%;
+}
+
+/* Heading */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--nm-ff-heading);
+    color: var(--nm-c-secondary);
+}
+
+h1 {
+    font-size: var(--nm-fs-xl);
+    font-weight: var(--nm-fw-bold);
+    line-height: var(--nm-lh-xl);
+    letter-spacing: var(--nm-ls-xl);
+}
+
+h2 {
+    font-size: var(--nm-fs-lg);
+}
