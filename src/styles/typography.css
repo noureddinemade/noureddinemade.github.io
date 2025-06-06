@@ -17,17 +17,13 @@
     --nm-fw-bold: 800;
 
     /* Line Heights */
-    --nm-lh-base: 1.5;
-    --nm-lh-sm: 1.2;
-    --nm-lh-md: 1.4;
-    --nm-lh-lg: 1.6;
+    --nm-lh-base: 24px;
+    --nm-lh-sm: 20px;
+    --nm-lh-md: 32px;
+    --nm-lh-lg: 40px;
     --nm-lh-xl: 58px;
 
     /* Letter Spacing */
-    --nm-ls-base: 0.05em;
-    --nm-ls-sm: 0.025em;
-    --nm-ls-md: 0.035em;
-    --nm-ls-lg: 0.045em;
     --nm-ls-xl: -1%;
 }
 
@@ -38,13 +34,15 @@ h3,
 h4,
 h5,
 h6 {
+    margin: 0;
+    padding: 0;
     font-family: var(--nm-ff-heading);
-    color: var(--nm-c-secondary);
+    font-weight: var(--nm-fw-bold);
+    color: var(--nm-c-heading);
 }
 
 h1 {
     font-size: var(--nm-fs-xl);
-    font-weight: var(--nm-fw-bold);
     line-height: var(--nm-lh-xl);
     letter-spacing: var(--nm-ls-xl);
 }

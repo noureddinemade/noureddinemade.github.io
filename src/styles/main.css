@@ -1,18 +1,7 @@
 /* CSS Reset and Base Styles */
+@import 'normalize.css';
+@import './fonts.css';
 @import './colours.css';
 @import './typography.css';
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--nm-ff-body);
-    font-size: var(--nm-fs-base);
-    line-height: var(--nm-lh-base);
-    letter-spacing: var(--nm-ls-base);
-    background-color: var(--nm-c-dark);
-    color: var(--nm-c-light);
-}
+@import './base.css';
+@import './layout.css';

@@ -1,7 +1,14 @@
 /* Colours */
 :root {
+    /* Theme */
     --nm-c-primary: #11ff00;
     --nm-c-secondary: #ffabcb;
     --nm-c-dark: #131313;
     --nm-c-light: #f2f2f2;
+
+    /* Base */
+    --nm-c-bg: var(--nm-c-dark);
+    --nm-c-bg-border: hsl(from var(--nm-c-dark) h s 10%);
+    --nm-c-body: var(--nm-c-light);
+    --nm-c-heading: var(--nm-c-secondary);
 }

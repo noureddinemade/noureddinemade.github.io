@@ -1,0 +1,34 @@
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 80px;
+    background-color: var(--nm-c-bg);
+    border-radius: 12px;
+}
+
+header,
+footer,
+.content {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+}
+
+header {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    p {
+        flex-grow: 2;
+        text-align: center;
+        font-size: var(--nm-fs-sm);
+        font-weight: var(--nm-fw-regular);
+    }
+}
