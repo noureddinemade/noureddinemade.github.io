@@ -5,7 +5,7 @@ nav {
     gap: 16px;
     text-align: center;
 
-    a {
+    p {
         max-width: 144px;
         flex-grow: 2;
     }

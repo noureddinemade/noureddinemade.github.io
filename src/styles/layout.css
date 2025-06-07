@@ -10,9 +10,14 @@ main {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    padding: 104px;
+    padding: 80px;
     background-color: var(--nm-c-bg);
     box-sizing: border-box;
+
+    /* Home */
+    &.home {
+        justify-content: space-between;
+    }
 
     &:after {
         content: '';

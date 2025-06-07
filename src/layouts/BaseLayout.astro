@@ -1,5 +1,5 @@
 ---
-const { title, description } = Astro.props;
+const { title, description, page } = Astro.props;
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
 ---
@@ -14,7 +14,7 @@ import Nav from '../components/Nav.astro';
         <link rel="stylesheet" href="/src/styles/main.css" />
     </head>
     <body>
-        <main>
+        <main class={page}>
             <Header />
             <Nav />
             <div class="content">

@@ -56,10 +56,13 @@ h2 {
 
 /* Links */
 a {
+    display: inline-block;
     color: var(--nm-c-link);
-    text-decoration: none;
+    text-decoration: var(--nm-c-link-underline) wavy underline;
+    text-decoration-thickness: 2px;
 
     &:hover {
-        text-decoration: underline;
+        background-color: var(--nm-c-link-hover-bg);
+        color: var(--nm-c-link-hover);
     }
 }
