@@ -12,5 +12,4 @@ body {
     letter-spacing: var(--nm-ls-base);
     background-color: var(--nm-c-bg-border);
     color: var(--nm-c-body);
-    padding: 24px;
 }

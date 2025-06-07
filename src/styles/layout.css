@@ -1,34 +1,44 @@
+@import './components/blocks.css';
+@import './components/header.css';
+@import './components/nav.css';
+
 main {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 80px;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    padding: 80px;
+    padding: 104px;
     background-color: var(--nm-c-bg);
-    border-radius: 12px;
+    box-sizing: border-box;
+
+    &:after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        border: 24px solid var(--nm-c-bg-border);
+        pointer-events: none;
+        box-sizing: border-box;
+    }
 }
 
 header,
 footer,
+nav,
 .content {
     width: 100%;
     max-width: 900px;
     display: flex;
 }
 
-header {
-    flex-direction: row;
+.content {
+    flex-direction: column;
+    gap: 80px;
     justify-content: center;
-    align-items: center;
-    gap: 24px;
-
-    p {
-        flex-grow: 2;
-        text-align: center;
-        font-size: var(--nm-fs-sm);
-        font-weight: var(--nm-fw-regular);
-    }
 }

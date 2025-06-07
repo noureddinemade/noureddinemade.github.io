@@ -5,8 +5,8 @@
     --nm-ff-heading: 'Halimonson', serif;
 
     /* Sizes */
-    --nm-fs-base: 18px;
-    --nm-fs-sm: 16px;
+    --nm-fs-base: 20px;
+    --nm-fs-sm: 18px;
     --nm-fs-md: 24px;
     --nm-fs-lg: 32px;
     --nm-fs-xl: 60px;
@@ -24,6 +24,7 @@
     --nm-lh-xl: 58px;
 
     /* Letter Spacing */
+    --nm-ls-base: 1px;
     --nm-ls-xl: -1%;
 }
 
@@ -45,8 +46,20 @@ h1 {
     font-size: var(--nm-fs-xl);
     line-height: var(--nm-lh-xl);
     letter-spacing: var(--nm-ls-xl);
+    text-align: center;
 }
 
 h2 {
     font-size: var(--nm-fs-lg);
+    line-height: var(--nm-lh-lg);
+}
+
+/* Links */
+a {
+    color: var(--nm-c-link);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }

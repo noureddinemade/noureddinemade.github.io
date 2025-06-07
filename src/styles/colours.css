@@ -1,14 +1,16 @@
 /* Colours */
 :root {
     /* Theme */
-    --nm-c-primary: #11ff00;
-    --nm-c-secondary: #ffabcb;
-    --nm-c-dark: #131313;
-    --nm-c-light: #f2f2f2;
+    --nm-c-primary: #ff1010;
+    --nm-c-secondary: #ff8d8d;
+    --nm-c-dark: #151515;
+    --nm-c-light: #ffffff;
 
     /* Base */
     --nm-c-bg: var(--nm-c-dark);
-    --nm-c-bg-border: hsl(from var(--nm-c-dark) h s 10%);
+    --nm-c-bg-border: hsl(from var(--nm-c-dark) h s 7);
     --nm-c-body: var(--nm-c-light);
-    --nm-c-heading: var(--nm-c-secondary);
+    --nm-c-heading: var(--nm-c-primary);
+    --nm-c-logo: var(--nm-c-primary);
+    --nm-c-link: var(--nm-c-secondary);
 }

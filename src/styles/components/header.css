@@ -1,0 +1,32 @@
+/* Header */
+header {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+
+    p {
+        flex-grow: 2;
+        font-size: var(--nm-fs-sm);
+        font-weight: var(--nm-fw-regular);
+        max-width: 360px;
+    }
+
+    a.logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+
+        /* SVG */
+        svg path {
+            fill: var(--nm-c-logo);
+        }
+
+        /* Hover */
+        &:hover {
+            transform: rotate(180deg);
+        }
+    }
+}
