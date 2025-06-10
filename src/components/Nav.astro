@@ -1,8 +1,15 @@
 ---
-
+const { page } = Astro.props;
 ---
 
 <nav>
-    <p><a href="/work">Work</a></p>
-    <p><a href="/info">Info</a></p>
+    <p>
+        <a href="/" class={page === 'work' ? 'current' : ''}>Work</a>
+    </p>
+    <p>
+        <a href="asset/doc/na-cv-2025.pdf">Resume</a>
+    </p>
+    <p>
+        <a href="/info" class={page === 'info' ? 'current' : ''}>Info</a>
+    </p>
 </nav>

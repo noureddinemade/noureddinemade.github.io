@@ -61,6 +61,14 @@ a {
     text-decoration: var(--nm-c-link-underline) wavy underline;
     text-decoration-thickness: 2px;
 
+    /* Addon Classes */
+    &.current {
+        color: var(--nm-c-body);
+        text-decoration: none;
+        pointer-events: none;
+    }
+
+    /* Interactions */
     &:hover {
         background-color: var(--nm-c-link-hover-bg);
         color: var(--nm-c-link-hover);

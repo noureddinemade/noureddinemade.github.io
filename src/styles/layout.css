@@ -16,7 +16,7 @@ main {
 
     /* Home */
     &.home {
-        justify-content: space-between;
+        /* justify-content: space-between; */
     }
 
     &:after {

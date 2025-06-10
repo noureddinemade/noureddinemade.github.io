@@ -26,11 +26,8 @@ header {
 
         /* Hover */
         &:hover {
-            /* transform: rotate(180deg); */
-
-            svg path {
-                fill: var(--nm-c-logo-hover);
-            }
+            transform: rotate(180deg);
+            background-color: transparent;
         }
     }
 }
