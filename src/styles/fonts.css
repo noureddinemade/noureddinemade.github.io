@@ -1,19 +1,19 @@
 /* Fonts */
 
 @font-face {
-    font-family: 'Sinteca';
+    font-family: "Sinteca";
     font-style: normal;
     font-weight: 400 900;
     font-display: swap;
-    src: url('/asset/font/sinteca-variable.woff2') format('woff2-variations');
+    src: url("/asset/font/sinteca-variable.woff2") format("woff2-variations");
 }
 
 @font-face {
-    font-family: 'Halimonson';
+    font-family: "Halimonson";
     font-style: normal;
     font-weight: 800;
     font-display: swap;
     src:
-        url('/asset/font/halimonson-extra-bold.woff2') format('woff2'),
-        url('/asset/font/halimonson-extra-bold.woff') format('woff');
+        url("/asset/font/halimonson-extra-bold.woff2") format("woff2"),
+        url("/asset/font/halimonson-extra-bold.woff") format("woff");
 }
