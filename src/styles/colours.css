@@ -1,13 +1,8 @@
 /* Colours */
 :root {
     /* Theme */
-<<<<<<< HEAD
     --nm-c-primary: #ff8222;
     --nm-c-secondary: #ffa9d6;
-=======
-    --nm-c-primary: #ff1010;
-    --nm-c-secondary: #ff8d8d;
->>>>>>> ea83027cd05eccd9ed22c3a66d3e4007e1cc5379
     --nm-c-dark: #151515;
     --nm-c-light: #ffffff;
 
