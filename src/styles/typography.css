@@ -18,9 +18,9 @@
     --nm-fw-bold: 800;
 
     /* Line Heights */
-    --nm-lh-base: 24px;
-    --nm-lh-sm: 20px;
-    --nm-lh-md: 32px;
+    --nm-lh-base: 1.2;
+    --nm-lh-sm: 1.1;
+    --nm-lh-md: 1.4;
     --nm-lh-lg: 40px;
     --nm-lh-xl: 58px;
 
@@ -57,7 +57,7 @@ h2 {
 
 /* Links */
 a {
-    display: inline-block;
+    display: inline;
     color: var(--nm-c-link);
     text-decoration: none;
 
@@ -82,5 +82,10 @@ p {
     &.large {
         font-size: var(--nm-fs-md);
         line-height: var(--nm-lh-md);
+    }
+
+    &.small {
+        font-size: var(--nm-fs-sm);
+        line-height: var(--nm-lh-sm);
     }
 }
