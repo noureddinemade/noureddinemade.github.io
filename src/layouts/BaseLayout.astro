@@ -1,7 +1,7 @@
 ---
 const { title, description, page } = Astro.props;
-import Header from '../components/Header.astro';
-import Nav from '../components/Nav.astro';
+import Header from "../components/Header.astro";
+import Nav from "../components/Nav.astro";
 ---
 
 <!doctype html>
@@ -16,7 +16,7 @@ import Nav from '../components/Nav.astro';
     <body>
         <main class={page}>
             <Header />
-            <Nav page={page} />
+            <!-- <Nav page={page} /> -->
             <div class="content">
                 <slot />
             </div>

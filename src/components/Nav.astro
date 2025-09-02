@@ -4,12 +4,14 @@ const { page } = Astro.props;
 
 <nav>
     <p>
-        <a href="/" class={page === 'work' ? 'current' : ''}>Work</a>
+        <a href="/" class={page === "work" ? "current" : ""}>Work</a>
     </p>
     <p>
-        <a href="asset/doc/na-cv-2025.pdf">Resume</a>
+        <a href="/info" class={page === "info" ? "current" : ""}>Info</a>
     </p>
     <p>
-        <a href="/info" class={page === 'info' ? 'current' : ''}>Info</a>
+        <a href="/archive" class={page === "archive" ? "current" : ""}
+            >Archive</a
+        >
     </p>
 </nav>

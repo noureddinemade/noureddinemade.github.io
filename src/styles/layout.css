@@ -1,13 +1,13 @@
-@import './components/blocks.css';
-@import './components/header.css';
-@import './components/nav.css';
+@import "./components/blocks.css";
+@import "./components/header.css";
+@import "./components/nav.css";
 
 main {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 80px;
-    align-items: center;
+    align-items: flex-start;
     width: 100vw;
     height: 100vh;
     padding: 80px;
@@ -20,7 +20,7 @@ main {
     }
 
     &:after {
-        content: '';
+        content: "";
         position: fixed;
         top: 0;
         left: 0;

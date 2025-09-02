@@ -1,8 +1,9 @@
 /* Typography */
 :root {
     /* Family */
-    --nm-ff-body: 'Sinteca', sans-serif;
-    --nm-ff-heading: 'Halimonson', serif;
+    --nm-ff-body: "Sinteca", sans-serif;
+    --nm-ff-heading: "Halimonson", serif;
+    --nm-ff-mono: "Ingram Mono", monospace;
 
     /* Sizes */
     --nm-fs-base: 20px;
@@ -24,7 +25,7 @@
     --nm-lh-xl: 58px;
 
     /* Letter Spacing */
-    --nm-ls-base: 1px;
+    --nm-ls-base: -4%;
     --nm-ls-xl: -1%;
 }
 
@@ -37,8 +38,8 @@ h5,
 h6 {
     margin: 0;
     padding: 0;
-    font-family: var(--nm-ff-heading);
-    font-weight: var(--nm-fw-bold);
+    font-family: var(--nm-ff-mono);
+    font-weight: var(--nm-fw-regular);
     color: var(--nm-c-heading);
 }
 
@@ -58,8 +59,7 @@ h2 {
 a {
     display: inline-block;
     color: var(--nm-c-link);
-    text-decoration: var(--nm-c-link-underline) wavy underline;
-    text-decoration-thickness: 2px;
+    text-decoration: none;
 
     /* Addon Classes */
     &.current {
@@ -72,5 +72,14 @@ a {
     &:hover {
         background-color: var(--nm-c-link-hover-bg);
         color: var(--nm-c-link-hover);
+    }
+}
+
+/* General */
+p {
+    /* Addon Classes */
+    &.large {
+        font-size: var(--nm-fs-md);
+        line-height: var(--nm-lh-md);
     }
 }
