@@ -1,8 +1,13 @@
 /* Colours */
 :root {
     /* Theme */
+<<<<<<< HEAD
     --nm-c-primary: #ff8222;
     --nm-c-secondary: #ffa9d6;
+=======
+    --nm-c-primary: #ff1010;
+    --nm-c-secondary: #ff8d8d;
+>>>>>>> ea83027cd05eccd9ed22c3a66d3e4007e1cc5379
     --nm-c-dark: #151515;
     --nm-c-light: #ffffff;
 
@@ -10,7 +15,7 @@
     --nm-c-bg: var(--nm-c-dark);
     --nm-c-bg-border: hsl(from var(--nm-c-dark) h s 7);
     --nm-c-body: var(--nm-c-light);
-    --nm-c-heading: var(--nm-c-secondary);
+    --nm-c-heading: var(--nm-c-primary);
     --nm-c-logo: var(--nm-c-primary);
     --nm-c-logo-hover: var(--nm-c-dark);
     --nm-c-link: var(--nm-c-primary);

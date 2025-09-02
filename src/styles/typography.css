@@ -70,6 +70,7 @@ a {
 
     /* Interactions */
     &:hover {
+        text-decoration: none;
         background-color: var(--nm-c-link-hover-bg);
         color: var(--nm-c-link-hover);
     }

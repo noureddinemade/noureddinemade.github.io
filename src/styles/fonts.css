@@ -16,6 +16,7 @@
     src:
         url("/asset/font/halimonson-extra-bold.woff2") format("woff2"),
         url("/asset/font/halimonson-extra-bold.woff") format("woff");
+<<<<<<< HEAD
 }
 
 @font-face {
@@ -25,4 +26,6 @@
     font-display: swap;
     src: url("/asset/font/ingram-mono-regular.woff2") format("woff2");
     src: url("/asset/font/ingram-mono-regular.woff") format("woff");
+=======
+>>>>>>> ea83027cd05eccd9ed22c3a66d3e4007e1cc5379
 }
