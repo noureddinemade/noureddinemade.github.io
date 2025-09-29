@@ -8,6 +8,7 @@ header {
 
     p {
         flex-grow: 2;
+        font-family: var(--nm-ff-heading);
         font-size: var(--nm-fs-sm);
         font-weight: var(--nm-fw-regular);
         max-width: 360px;
@@ -29,6 +30,20 @@ header {
         &:hover {
             transform: rotate(180deg);
             background-color: transparent;
+        }
+
+        /* Addon Classes */
+        &.regular {
+            /* Children */
+            svg.thick {
+                display: none;
+            }
+        }
+        &.thick {
+            /* Children */
+            svg.regular {
+                display: none;
+            }
         }
     }
 }

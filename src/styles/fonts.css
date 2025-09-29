@@ -26,3 +26,12 @@
     src: url("/asset/font/ingram-mono-regular.woff2") format("woff2");
     src: url("/asset/font/ingram-mono-regular.woff") format("woff");
 }
+
+@font-face {
+    font-family: "Casual Morning";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/asset/font/casual-morning-regular.woff2") format("woff2");
+    src: url("/asset/font/casual-morning-regular.woff") format("woff");
+}

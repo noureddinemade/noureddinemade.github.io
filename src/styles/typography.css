@@ -2,7 +2,7 @@
 :root {
     /* Family */
     --nm-ff-body: "Sinteca", sans-serif;
-    --nm-ff-heading: "Halimonson", serif;
+    --nm-ff-heading: "Casual Morning", serif;
     --nm-ff-mono: "Ingram Mono", monospace;
 
     /* Sizes */
@@ -25,7 +25,7 @@
     --nm-lh-xl: 58px;
 
     /* Letter Spacing */
-    --nm-ls-base: -4%;
+    --nm-ls-base: 1px;
     --nm-ls-xl: -1%;
 }
 
@@ -38,16 +38,15 @@ h5,
 h6 {
     margin: 0;
     padding: 0;
-    font-family: var(--nm-ff-mono);
+    font-family: var(--nm-ff-heading);
     font-weight: var(--nm-fw-regular);
+    letter-spacing: 0;
     color: var(--nm-c-heading);
 }
 
 h1 {
     font-size: var(--nm-fs-xl);
     line-height: var(--nm-lh-xl);
-    letter-spacing: var(--nm-ls-xl);
-    text-align: center;
 }
 
 h2 {
@@ -87,5 +86,16 @@ p {
     &.small {
         font-size: var(--nm-fs-sm);
         line-height: var(--nm-lh-sm);
+    }
+
+    /* Children */
+    span {
+        /* Addon Classes */
+        &.highlight {
+        }
+
+        &.fun {
+            font-family: var(--nm-ff-heading);
+        }
     }
 }
