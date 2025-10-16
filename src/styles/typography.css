@@ -1,9 +1,8 @@
 /* Typography */
 :root {
     /* Family */
-    --nm-ff-body: "Sinteca", sans-serif;
-    --nm-ff-heading: "Casual Morning", serif;
-    --nm-ff-mono: "Ingram Mono", monospace;
+    --nm-ff-body: "Metro Sans", sans-serif;
+    --nm-ff-heading: "Molen Dream", serif;
 
     /* Sizes */
     --nm-fs-base: 20px;
@@ -25,7 +24,7 @@
     --nm-lh-xl: 58px;
 
     /* Letter Spacing */
-    --nm-ls-base: 1px;
+    --nm-ls-base: 0;
     --nm-ls-xl: -1%;
 }
 

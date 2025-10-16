@@ -1,37 +1,43 @@
 /* Fonts */
 
 @font-face {
-    font-family: "Sinteca";
-    font-style: normal;
-    font-weight: 400 900;
-    font-display: swap;
-    src: url("/asset/font/sinteca-variable.woff2") format("woff2-variations");
-}
-
-@font-face {
-    font-family: "Halimonson";
-    font-style: normal;
-    font-weight: 800;
-    font-display: swap;
-    src:
-        url("/asset/font/halimonson-extra-bold.woff2") format("woff2"),
-        url("/asset/font/halimonson-extra-bold.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Ingram Mono";
+    font-family: "Molen Dream";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("/asset/font/ingram-mono-regular.woff2") format("woff2");
-    src: url("/asset/font/ingram-mono-regular.woff") format("woff");
+    src: url("/asset/font/molen-dream.woff2") format("woff2");
+    src: url("/asset/font/molen-dream.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Casual Morning";
-    font-style: normal;
+    font-family: "Metro Sans";
+    font-style: regular;
     font-weight: 400;
     font-display: swap;
-    src: url("/asset/font/casual-morning-regular.woff2") format("woff2");
-    src: url("/asset/font/casual-morning-regular.woff") format("woff");
+    src: url("/asset/font/metro-sans-regular.woff2") format("woff2");
+    src: url("/asset/font/metro-sans-regular.woff") format("woff");
+}
+@font-face {
+    font-family: "Metro Sans";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/asset/font/metro-sans-regular-italic.woff2") format("woff2");
+    src: url("/asset/font/metro-sans-regular-italic.woff") format("woff");
+}
+@font-face {
+    font-family: "Metro Sans";
+    font-style: regular;
+    font-weight: 600;
+    font-display: swap;
+    src: url("/asset/font/metro-sans-semi-bold.woff2") format("woff2");
+    src: url("/asset/font/metro-sans-semi-bold.woff") format("woff");
+}
+@font-face {
+    font-family: "Metro Sans";
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url("/asset/font/metro-sans-semi-bold-italic.woff2") format("woff2");
+    src: url("/asset/font/metro-sans-semi-bold-italic.woff") format("woff");
 }

@@ -1,17 +1,21 @@
 /* Header */
 header {
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 8px;
-    text-align: left;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
 
-    p {
-        flex-grow: 2;
-        font-family: var(--nm-ff-heading);
-        font-size: var(--nm-fs-sm);
-        font-weight: var(--nm-fw-regular);
-        max-width: 360px;
+    .block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 200px;
+
+        /* Children */
+        p {
+            font-size: var(--nm-fs-sm);
+        }
     }
 
     a.logo {
@@ -19,11 +23,15 @@ header {
         justify-content: center;
         align-items: center;
         text-decoration: none;
-        margin-bottom: 32px;
 
         /* SVG */
-        svg path {
-            fill: var(--nm-c-logo);
+        svg {
+            display: none;
+
+            /* Children */
+            path {
+                fill: var(--nm-c-logo);
+            }
         }
 
         /* Hover */
@@ -35,14 +43,20 @@ header {
         /* Addon Classes */
         &.regular {
             /* Children */
-            svg.thick {
-                display: none;
+            svg.regular {
+                display: block;
             }
         }
         &.thick {
             /* Children */
-            svg.regular {
-                display: none;
+            svg.thick {
+                display: block;
+            }
+        }
+        &.new {
+            /* Children */
+            svg.new {
+                display: block;
             }
         }
     }

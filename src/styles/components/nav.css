@@ -1,7 +1,7 @@
 /* Navigation */
 nav {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 24px;
     text-align: left;
 }
