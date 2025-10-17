@@ -1,0 +1,51 @@
+/* Logo */
+a.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 200px;
+
+    /* SVG */
+    svg {
+        width: 100%;
+        display: none;
+
+        /* Children */
+        path {
+            fill: var(--nm-c-logo);
+        }
+    }
+
+    /* Hover */
+    &:hover {
+        transform: rotate(180deg);
+        background-color: transparent;
+    }
+
+    /* Addon Classes */
+    &.regular {
+        /* Children */
+        svg.regular {
+            display: block;
+        }
+    }
+    &.thick {
+        /* Children */
+        svg.thick {
+            display: block;
+        }
+    }
+    &.new {
+        /* Children */
+        svg.new {
+            display: block;
+        }
+    }
+    &.footer {
+        /* Children */
+        svg.footer {
+            display: block;
+        }
+    }
+}

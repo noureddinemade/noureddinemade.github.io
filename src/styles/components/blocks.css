@@ -1,27 +1,15 @@
 /* Blocks */
 
-section.blocks {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    justify-content: flex-start;
-
-    /* Block */
-    div.block {
-        display: flex;
+section {
+    /* Classes */
+    &.page-header {
         flex-direction: column;
-        justify-content: center;
         gap: 24px;
+        max-width: 920px;
         text-align: center;
-        width: 100%;
 
-        /* List */
-        ul {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            list-style: none;
+        p.subtitle {
+            font-size: var(--nm-fs-sm);
         }
     }
 }

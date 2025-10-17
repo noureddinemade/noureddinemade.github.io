@@ -18,9 +18,7 @@ import Nav from "../components/Nav.astro";
         <main class={page}>
             <Header />
             <Nav page={page} />
-            <div class="content">
-                <slot />
-            </div>
+            <slot />
             <Footer />
         </main>
     </body>

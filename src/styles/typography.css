@@ -6,10 +6,11 @@
 
     /* Sizes */
     --nm-fs-base: 20px;
+    --nm-fs-xs: 14px;
     --nm-fs-sm: 18px;
     --nm-fs-md: 24px;
     --nm-fs-lg: 32px;
-    --nm-fs-xl: 60px;
+    --nm-fs-xl: 64px;
 
     /* Weights */
     --nm-fw-regular: 400;
@@ -21,7 +22,7 @@
     --nm-lh-sm: 1.1;
     --nm-lh-md: 1.4;
     --nm-lh-lg: 40px;
-    --nm-lh-xl: 58px;
+    --nm-lh-xl: 70px;
 
     /* Letter Spacing */
     --nm-ls-base: 0;

@@ -1,17 +1,18 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: var(--nm-ff-body);
     font-weight: var(--nm-fw-regular);
     font-size: var(--nm-fs-base);
     line-height: var(--nm-lh-base);
     letter-spacing: var(--nm-ls-base);
-    background-color: var(--nm-c-bg-border);
+    background-color: var(--nm-c-primary);
     color: var(--nm-c-body);
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+
+    /* All Children */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 }

@@ -1,6 +1,8 @@
+@import "./components/logo.css";
 @import "./components/blocks.css";
 @import "./components/header.css";
 @import "./components/nav.css";
+@import "./components/footer.css";
 
 main {
     position: relative;
@@ -14,11 +16,7 @@ main {
     background-color: var(--nm-c-bg);
     box-sizing: border-box;
 
-    /* Home */
-    &.home {
-        /* justify-content: space-between; */
-    }
-
+    /* Pseudo */
     &:after {
         content: "";
         position: fixed;
@@ -36,14 +34,7 @@ main {
 header,
 footer,
 nav,
-.content {
+section {
     width: 100%;
-    max-width: 1200px;
     display: flex;
-}
-
-.content {
-    flex-direction: column;
-    gap: 80px;
-    justify-content: center;
 }
