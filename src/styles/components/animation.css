@@ -1,0 +1,41 @@
+/* Animation */
+@keyframes heading-asterisk {
+    0% {
+        opacity: 0;
+    }
+    49% {
+        opactiy: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opcity: 0;
+    }
+}
+
+.animated-callout {
+    opacity: 0;
+    animation: heading-asterisk 2s linear infinite;
+    animation-play-state: paused;
+
+    /* Addon Classes */
+    &.-a {
+        animation-delay: 0.4s;
+    }
+    &.-b {
+        animation-delay: 0.8s;
+    }
+    &.-c {
+        animation-delay: 1.2s;
+    }
+    &.-d {
+        animation-delay: 1.6s;
+    }
+    &.-e {
+        animation-delay: 2s;
+    }
+}

@@ -8,8 +8,44 @@ section {
         max-width: 920px;
         text-align: center;
 
+        /* Children */
+
+        h1 {
+            &:hover + p.subtitle span {
+                animation-play-state: running;
+            }
+        }
+
         p.subtitle {
             font-size: var(--nm-fs-sm);
         }
+    }
+    &.work {
+        max-width: 1200px;
+        justify-content: space-between;
+        text-align: center;
+
+        /* Children */
+        div.block {
+            gap: 24px;
+
+            /* Children */
+            div.item {
+                align-items: center;
+            }
+        }
+    }
+}
+
+div.block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    /* Children */
+    div.item {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
 }

@@ -56,7 +56,7 @@ h2 {
 
 /* Links */
 a {
-    display: inline;
+    display: inline-block;
     color: var(--nm-c-link);
     text-decoration: none;
 
@@ -94,7 +94,7 @@ p {
         &.highlight {
         }
 
-        &.fun {
+        &.callout {
             font-family: var(--nm-ff-heading);
         }
     }
