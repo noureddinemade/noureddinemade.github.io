@@ -1,0 +1,46 @@
+/* Images */
+
+.svg-img {
+    /* Addon Classes */
+    &.-on {
+        display: block;
+    }
+    &.-off {
+        display: none;
+    }
+
+    /* Children */
+    svg {
+        width: 100%;
+    }
+}
+
+/* Logo */
+a.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 200px;
+
+    /* SVG */
+    svg path {
+        fill: var(--nm-c-logo);
+    }
+
+    /* Hover */
+    &:hover {
+        transform: rotate(180deg);
+        background-color: transparent;
+    }
+}
+
+/* Footer */
+div.noureddine-made-this {
+    width: 240px;
+}
+
+/* Hehe */
+div.hehe {
+    width: 60px;
+}
