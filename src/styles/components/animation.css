@@ -1,41 +1,75 @@
 /* Animation */
 @keyframes heading-asterisk {
     0% {
-        opacity: 0;
+        transform: translateY(0) rotate(0deg);
+        color: var(--nm-c-body);
     }
-    49% {
-        opactiy: 0;
+    25% {
+        transform: translateY(-4px) rotate(4deg);
+        color: var(--nm-c-primary);
     }
     50% {
-        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+        color: var(--nm-c-body);
     }
-    99% {
-        opacity: 1;
+    75% {
+        transform: translateY(4px) rotate(-4deg);
+        color: var(--nm-c-primary);
     }
     100% {
-        opcity: 0;
+        transform: translateY(0) rotate(0deg);
+        color: var(--nm-c-body);
     }
 }
 
 .animated-callout {
-    opacity: 0;
     animation: heading-asterisk 2s linear infinite;
-    animation-play-state: paused;
+    /* animation-play-state: paused; */
 
     /* Addon Classes */
     &.-a {
-        animation-delay: 0.4s;
+        animation-delay: 0s;
     }
     &.-b {
-        animation-delay: 0.8s;
+        animation-delay: 0.5s;
     }
     &.-c {
-        animation-delay: 1.2s;
+        animation-delay: 1s;
     }
     &.-d {
-        animation-delay: 1.6s;
+        animation-delay: 1.5s;
     }
     &.-e {
         animation-delay: 2s;
+    }
+}
+
+.animated-border {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    /* Addon Classes */
+    &.-a,
+    &.-b,
+    &.-c {
+        top: -44px;
+        opacity: 0.6;
+    }
+
+    &.-a {
+        width: calc(100% + 40px);
+        left: -20px;
+    }
+    &.-b {
+        width: calc(100% + 60px);
+        left: -30px;
+    }
+    &.-c {
+        width: 100%;
+        left: 0;
+        top: -20px;
     }
 }

@@ -16,6 +16,8 @@ header {
 
         /* Children */
         p {
+            position: relative;
+            z-index: 2;
             font-size: var(--nm-fs-sm);
         }
     }

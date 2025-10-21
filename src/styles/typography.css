@@ -29,6 +29,19 @@
     --nm-ls-xl: -1%;
 }
 
+/* All Text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    position: relative;
+    z-index: 1;
+}
+
 /* Heading */
 h1,
 h2,

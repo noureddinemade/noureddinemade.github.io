@@ -1,23 +1,30 @@
 /* Blocks */
 
 section {
+    position: relative;
+    z-index: 1;
     /* Classes */
     &.page-header {
         flex-direction: column;
         gap: 24px;
         max-width: 920px;
         text-align: center;
+        align-items: center;
 
         /* Children */
+
+        div.subtitle {
+            position: relative;
+            max-width: 400px;
+        }
 
         h1 {
             &:hover + p.subtitle span {
                 animation-play-state: running;
             }
         }
-
-        p.subtitle {
-            font-size: var(--nm-fs-sm);
+        p span {
+            display: inline-block;
         }
     }
     &.work {
@@ -38,6 +45,7 @@ section {
 }
 
 div.block {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
