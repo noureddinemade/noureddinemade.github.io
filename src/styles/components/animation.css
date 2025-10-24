@@ -56,7 +56,6 @@
     &.-b,
     &.-c {
         top: -44px;
-        opacity: 0.6;
     }
 
     &.-a {
@@ -68,8 +67,10 @@
         left: -30px;
     }
     &.-c {
-        width: 100%;
-        left: 0;
-        top: -20px;
+        width: 100px;
+        left: auto;
+        right: -80px;
+        top: auto;
+        bottom: -80px;
     }
 }
