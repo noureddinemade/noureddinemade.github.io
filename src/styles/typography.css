@@ -1,8 +1,8 @@
 /* Typography */
 :root {
     /* Family */
-    --nm-ff-body: "Metro Sans", sans-serif;
-    --nm-ff-heading: "Molen Dream", serif;
+    --nm-ff-body: "PP Kyoto", serif;
+    --nm-ff-heading: "Choice Sans", sans-serif;
 
     /* Sizes */
     --nm-fs-base: 20px;
@@ -13,20 +13,21 @@
     --nm-fs-xl: 64px;
 
     /* Weights */
-    --nm-fw-regular: 400;
     --nm-fw-medium: 500;
+    --nm-fw-semi-bold: 700;
     --nm-fw-bold: 800;
+    --nm-fw-black: 900;
 
     /* Line Heights */
     --nm-lh-base: 1.2;
+    --nm-lh-xs: 1;
     --nm-lh-sm: 1.1;
     --nm-lh-md: 1.4;
     --nm-lh-lg: 40px;
-    --nm-lh-xl: 70px;
+    --nm-lh-xl: 80px;
 
     /* Letter Spacing */
     --nm-ls-base: 0;
-    --nm-ls-xl: -1%;
 }
 
 /* All Text */
@@ -52,14 +53,16 @@ h6 {
     margin: 0;
     padding: 0;
     font-family: var(--nm-ff-heading);
-    font-weight: var(--nm-fw-regular);
+    font-style: normal;
+    text-transform: uppercase;
     letter-spacing: 0;
     color: var(--nm-c-heading);
 }
 
 h1 {
     font-size: var(--nm-fs-xl);
-    line-height: var(--nm-lh-xl);
+    line-height: var(--nm-lh-xs);
+    font-weight: var(--nm-fw-black);
 }
 
 h2 {
@@ -69,9 +72,12 @@ h2 {
 
 /* Links */
 a {
+    font-family: var(--nm-ff-heading);
+    text-transform: uppercase;
     display: inline-block;
     color: var(--nm-c-link);
     text-decoration: none;
+    font-style: normal;
 
     /* Addon Classes */
     &.current {
@@ -90,6 +96,13 @@ a {
 
 /* General */
 p {
+    font-style: italic;
+    font-family: var(--nm-ff-body);
+    font-weight: var(--nm-fw-medium);
+    font-size: var(--nm-fs-base);
+    line-height: var(--nm-lh-base);
+    letter-spacing: var(--nm-ls-base);
+
     /* Addon Classes */
     &.large {
         font-size: var(--nm-fs-md);

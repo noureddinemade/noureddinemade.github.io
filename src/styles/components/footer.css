@@ -9,7 +9,13 @@ footer {
     text-align: center;
 
     /* Children */
-    .noureddine-made-this {
-        margin-bottom: -80px;
+    p {
+        /* Add-on classes */
+        &.cr {
+            font-family: var(--nm-ff-heading);
+            font-size: var(--nm-fs-sm);
+            font-style: normal;
+            text-transform: uppercase;
+        }
     }
 }

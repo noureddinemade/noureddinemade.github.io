@@ -1,19 +1,19 @@
 /* Colours */
 :root {
     /* Theme */
-    --nm-c-primary: #008013;
-    --nm-c-secondary: #a60003;
-    --nm-c-dark: #002205;
+    --nm-c-primary: #000000;
+    --nm-c-secondary: #ffffff;
+    --nm-c-dark: #000000;
     --nm-c-light: #ffffff;
 
     /* Base */
-    --nm-c-bg: var(--nm-c-light);
-    --nm-c-body: var(--nm-c-dark);
-    --nm-c-heading: var(--nm-c-primary);
-    --nm-c-logo: var(--nm-c-primary);
-    --nm-c-logo-hover: var(--nm-c-secondary);
-    --nm-c-link: var(--nm-c-secondary);
-    --nm-c-link-underline: var(--nm-c-secondary);
-    --nm-c-link-hover: var(--nm-c-light);
-    --nm-c-link-hover-bg: var(--nm-c-secondary);
+    --nm-c-bg: var(--nm-c-dark);
+    --nm-c-body: var(--nm-c-light);
+    --nm-c-heading: var(--nm-c-light);
+    --nm-c-logo: var(--nm-c-light);
+    --nm-c-logo-hover: var(--nm-c-light);
+    --nm-c-link: var(--nm-c-light);
+    --nm-c-link-underline: var(--nm-c-light);
+    --nm-c-link-hover: var(--nm-c-dark);
+    --nm-c-link-hover-bg: var(--nm-c-light);
 }

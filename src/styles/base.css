@@ -1,9 +1,4 @@
 body {
-    font-family: var(--nm-ff-body);
-    font-weight: var(--nm-fw-regular);
-    font-size: var(--nm-fs-base);
-    line-height: var(--nm-lh-base);
-    letter-spacing: var(--nm-ls-base);
     background-color: var(--nm-c-primary);
     color: var(--nm-c-body);
     -moz-osx-font-smoothing: grayscale;

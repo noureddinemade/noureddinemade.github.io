@@ -21,7 +21,8 @@ a.logo {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    width: 200px;
+    min-width: 104px;
+    max-width: 124px;
 
     /* SVG */
     svg path {
@@ -35,12 +36,11 @@ a.logo {
     }
 }
 
-/* Footer */
-div.noureddine-made-this {
-    width: 240px;
-}
-
 /* Hehe */
 div.hehe {
     width: 60px;
+    /* SVG */
+    svg path {
+        fill: var(--nm-c-logo);
+    }
 }

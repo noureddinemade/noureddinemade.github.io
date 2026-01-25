@@ -1,43 +1,64 @@
 /* Fonts */
 
 @font-face {
-    font-family: "Molen Dream";
+    font-family: "Choice Sans";
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-display: swap;
-    src: url("/asset/font/molen-dream.woff2") format("woff2");
-    src: url("/asset/font/molen-dream.woff") format("woff");
+    src: url("/asset/font/choice-sans-medium.woff2") format("woff2");
+    src: url("/asset/font/choice-sans-medium.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Metro Sans";
-    font-style: regular;
-    font-weight: 400;
+    font-family: "Choice Sans";
+    font-style: normal;
+    font-weight: 800;
     font-display: swap;
-    src: url("/asset/font/metro-sans-regular.woff2") format("woff2");
-    src: url("/asset/font/metro-sans-regular.woff") format("woff");
+    src: url("/asset/font/choice-sans-bold.woff2") format("woff2");
+    src: url("/asset/font/choice-sans-bold.woff") format("woff");
 }
+
 @font-face {
-    font-family: "Metro Sans";
-    font-style: italic;
-    font-weight: 400;
+    font-family: "Choice Sans";
+    font-style: normal;
+    font-weight: 900;
     font-display: swap;
-    src: url("/asset/font/metro-sans-regular-italic.woff2") format("woff2");
-    src: url("/asset/font/metro-sans-regular-italic.woff") format("woff");
+    src: url("/asset/font/choice-sans-black.woff2") format("woff2");
+    src: url("/asset/font/choice-sans-black.woff") format("woff");
 }
+
 @font-face {
-    font-family: "Metro Sans";
+    font-family: "PP Kyoto";
     font-style: regular;
     font-weight: 600;
     font-display: swap;
-    src: url("/asset/font/metro-sans-semi-bold.woff2") format("woff2");
-    src: url("/asset/font/metro-sans-semi-bold.woff") format("woff");
+    src: url("/asset/font/pp-kyoto-medium.woff2") format("woff2");
+    src: url("/asset/font/pp-kyoto-medium.woff") format("woff");
 }
+
 @font-face {
-    font-family: "Metro Sans";
+    font-family: "PP Kyoto";
     font-style: italic;
     font-weight: 600;
     font-display: swap;
-    src: url("/asset/font/metro-sans-semi-bold-italic.woff2") format("woff2");
-    src: url("/asset/font/metro-sans-semi-bold-italic.woff") format("woff");
+    src: url("/asset/font/pp-kyoto-medium-italic.woff2") format("woff2");
+    src: url("/asset/font/pp-kyoto-medium-italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "PP Kyoto";
+    font-style: regular;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/asset/font/pp-kyoto-semi-bold.woff2") format("woff2");
+    src: url("/asset/font/pp-kyoto-semi-bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "PP Kyoto";
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/asset/font/pp-kyoto-semi-bold-italic.woff2") format("woff2");
+    src: url("/asset/font/pp-kyoto-semi-bold-italic.woff") format("woff");
 }
