@@ -31,8 +31,12 @@ a.logo {
 
     /* Hover */
     &:hover {
-        transform: rotate(180deg);
         background-color: transparent;
+
+        /* SVG */
+        svg path {
+            fill: var(--nm-c-logo-hover);
+        }
     }
 }
 

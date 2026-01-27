@@ -2,7 +2,7 @@
 nav {
     flex-direction: row;
     justify-content: center;
-    gap: 24px;
+    gap: var(--nm-s-md);
     text-align: left;
 
     /* Children */

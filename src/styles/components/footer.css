@@ -2,10 +2,10 @@
 
 footer {
     flex-direction: column;
-    max-width: 980px;
+    max-width: var(--nm-mw-lg);
     justify-content: center;
     align-items: center;
-    gap: 60px;
+    gap: var(--nm-s-lg);
     text-align: center;
 
     /* Children */

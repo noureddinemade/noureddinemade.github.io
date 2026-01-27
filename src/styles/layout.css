@@ -9,11 +9,11 @@ main {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: var(--nm-s-xl);
     align-items: center;
     width: 100vw;
     min-height: 100vh;
-    padding: 80px;
+    padding: var(--nm-s-xl);
     background-color: var(--nm-c-bg);
     box-sizing: border-box;
 }

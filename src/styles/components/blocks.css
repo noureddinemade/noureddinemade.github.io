@@ -6,21 +6,21 @@ section {
     /* Classes */
     &.page-header {
         flex-direction: column;
-        gap: 24px;
-        max-width: 980px;
+        gap: var(--nm-s-md);
+        max-width: var(--nm-mw-lg);
         text-align: center;
         align-items: center;
     }
     &.work {
-        max-width: 1200px;
+        max-width: var(--nm-mw-xl);
         justify-content: space-between;
         flex-direction: column;
         text-align: center;
-        gap: 80px;
+        gap: var(--nm-s-xl);
 
         /* Children */
         div.block {
-            gap: 24px;
+            gap: var(--nm-s-md);
 
             /* Children */
             div.item {
@@ -28,7 +28,7 @@ section {
 
                 /* Children */
                 h3 {
-                    margin-bottom: 8px;
+                    margin-bottom: var(--nm-s-xs);
                 }
                 a {
                     font-family: var(--nm-ff-body);
@@ -50,6 +50,6 @@ div.block {
     div.item {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: var(--nm-s-xs);
     }
 }

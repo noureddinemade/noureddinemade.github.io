@@ -89,6 +89,7 @@ h3 {
 a {
     display: inline-block;
     color: var(--nm-c-link);
+    text-decoration-color: var(--nm-c-link-underline);
 
     /* Addon Classes */
     &.current {

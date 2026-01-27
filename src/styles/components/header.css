@@ -4,9 +4,9 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 80px;
+    gap: var(--nm-s-xl);
     text-align: center;
-    max-width: 920px;
+    max-width: var(--nm-mw-lg);
 
     .block {
         display: flex;
