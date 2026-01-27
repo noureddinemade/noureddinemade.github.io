@@ -7,30 +7,16 @@ section {
     &.page-header {
         flex-direction: column;
         gap: 24px;
-        max-width: 920px;
+        max-width: 980px;
         text-align: center;
         align-items: center;
-
-        /* Children */
-
-        div.subtitle {
-            position: relative;
-            max-width: 400px;
-        }
-
-        h1 {
-            &:hover + p.subtitle span {
-                animation-play-state: running;
-            }
-        }
-        p span {
-            display: inline-block;
-        }
     }
     &.work {
         max-width: 1200px;
         justify-content: space-between;
+        flex-direction: column;
         text-align: center;
+        gap: 80px;
 
         /* Children */
         div.block {
@@ -39,6 +25,16 @@ section {
             /* Children */
             div.item {
                 align-items: center;
+
+                /* Children */
+                h3 {
+                    margin-bottom: 8px;
+                }
+                a {
+                    font-family: var(--nm-ff-body);
+                    font-style: italic;
+                    font-size: var(--nm-fs-md);
+                }
             }
         }
     }

@@ -10,7 +10,7 @@
     --nm-fs-sm: 18px;
     --nm-fs-md: 24px;
     --nm-fs-lg: 32px;
-    --nm-fs-xl: 64px;
+    --nm-fs-xl: 80px;
 
     /* Weights */
     --nm-fw-medium: 500;
@@ -57,6 +57,14 @@ h6 {
     text-transform: uppercase;
     letter-spacing: 0;
     color: var(--nm-c-heading);
+
+    /* Children */
+    span {
+        font-family: var(--nm-ff-body);
+        font-weight: var(--nm-fw-medium);
+        font-style: italic;
+        text-transform: none;
+    }
 }
 
 h1 {
@@ -68,16 +76,19 @@ h1 {
 h2 {
     font-size: var(--nm-fs-lg);
     line-height: var(--nm-lh-lg);
+    font-weight: var(--nm-fw-black);
+}
+
+h3 {
+    font-size: var(--nm-fs-md);
+    line-height: var(--nm-lh-md);
+    font-weight: var(--nm-fw-bold);
 }
 
 /* Links */
 a {
-    font-family: var(--nm-ff-heading);
-    text-transform: uppercase;
     display: inline-block;
     color: var(--nm-c-link);
-    text-decoration: none;
-    font-style: normal;
 
     /* Addon Classes */
     &.current {
@@ -122,6 +133,10 @@ p {
 
         &.callout {
             font-family: var(--nm-ff-heading);
+            font-weight: var(--nm-fw-black);
+            font-size: var(--nm-fs-sm);
+            text-transform: uppercase;
+            font-style: normal;
         }
     }
 }

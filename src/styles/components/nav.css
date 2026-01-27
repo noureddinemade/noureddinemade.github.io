@@ -4,4 +4,12 @@ nav {
     justify-content: center;
     gap: 24px;
     text-align: left;
+
+    /* Children */
+    a {
+        font-family: var(--nm-ff-heading);
+        font-weight: var(--nm-fw-medium);
+        text-transform: uppercase;
+        font-style: normal;
+    }
 }

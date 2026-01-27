@@ -2,7 +2,7 @@
 
 footer {
     flex-direction: column;
-    max-width: 800px;
+    max-width: 980px;
     justify-content: center;
     align-items: center;
     gap: 60px;
