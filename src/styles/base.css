@@ -11,3 +11,14 @@ body {
         box-sizing: border-box;
     }
 }
+
+::selection {
+    background-color: var(--nm-c-body);
+    color: var(--nm-c-bg);
+}
+
+/* For Firefox compatibility */
+::-moz-selection {
+    background-color: var(--nm-c-body);
+    color: var(--nm-c-bg);
+}

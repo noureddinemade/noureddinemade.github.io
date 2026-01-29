@@ -1,9 +1,19 @@
 /* Navigation */
 nav {
+    position: sticky;
+    z-index: 99;
+    top: 24px;
+    left: 0;
     flex-direction: row;
     justify-content: center;
     gap: var(--nm-s-md);
-    text-align: left;
+    padding: var(--nm-s-sm) var(--nm-s-lg);
+    width: auto !important;
+    border-radius: 144px;
+    text-align: center;
+    background-color: var(--nm-c-bg-transparent);
+    box-shadow: 0px 0px 16px var(--nm-c-bg);
+    backdrop-filter: blur(8px);
 
     /* Children */
     a {

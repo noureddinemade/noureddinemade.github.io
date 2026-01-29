@@ -71,6 +71,7 @@ h1 {
     font-size: var(--nm-fs-xl);
     line-height: var(--nm-lh-xs);
     font-weight: var(--nm-fw-black);
+    color: var(--nm-c-body);
 }
 
 h2 {
