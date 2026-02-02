@@ -11,11 +11,14 @@ section {
         text-align: center;
         align-items: center;
     }
-    &.work {
+    &.work,
+    &.big-list {
         max-width: var(--nm-mw-xl);
-        justify-content: space-between;
-        flex-direction: column;
         text-align: center;
+    }
+    &.work {
+        flex-direction: column;
+        justify-content: space-between;
         gap: var(--nm-s-xl);
 
         /* Children */
@@ -36,6 +39,26 @@ section {
                     font-size: var(--nm-fs-md);
                 }
             }
+        }
+    }
+    &.big-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--nm-s-md);
+
+        /* Children */
+        .item {
+            display: flex;
+            flex-direction: column;
+            gap: var(--nm-s-md);
+            padding: var(--nm-s-lg);
+            border-width: 2px 8px;
+            border-color: var(--nm-c-light);
+            border-style: dashed double;
+            width: 100%;
+            min-width: var(--nm-mw-sm);
+            max-width: calc(50% - var(--nm-s-md));
         }
     }
 }

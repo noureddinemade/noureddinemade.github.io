@@ -105,6 +105,31 @@ a {
         background-color: var(--nm-c-link-hover-bg);
         color: var(--nm-c-link-hover);
     }
+    &.pdf-link {
+        margin-right: var(--nm-s-xs);
+
+        /* Pseudo */
+        &:after {
+            content: "(pdf)";
+            display: none;
+            position: absolute;
+            right: 0;
+            top: -14px;
+            font-family: var(--nm-ff-heading);
+            font-size: var(--nm-fs-xs);
+            font-weight: var(--nm-fw-bold);
+            text-transform: uppercase;
+            text-decoration: none;
+            background-color: var(--nm-c-primary);
+        }
+
+        /* States */
+        &:hover {
+            &:after {
+                display: block;
+            }
+        }
+    }
 }
 
 /* General */
@@ -125,6 +150,9 @@ p {
     &.small {
         font-size: var(--nm-fs-sm);
         line-height: var(--nm-lh-sm);
+    }
+    &.subtitle {
+        opacity: 0.6;
     }
 
     /* Children */
