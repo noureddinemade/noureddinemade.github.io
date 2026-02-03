@@ -1,0 +1,28 @@
+/* Header */
+
+header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--nm-s-xl);
+    text-align: center;
+    max-width: var(--nm-mw-lg);
+
+    .block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 200px;
+
+        /* Children */
+        p {
+            position: relative;
+            z-index: 2;
+            font-family: var(--nm-ff-heading);
+            font-size: var(--nm-fs-xs);
+            font-style: normal;
+            text-transform: uppercase;
+            font-weight: var(--nm-fw-bold);
+        }
+    }
+}

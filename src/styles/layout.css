@@ -1,0 +1,27 @@
+@import "./components/animation.css";
+@import "./components/image.css";
+@import "./components/blocks.css";
+@import "./components/header.css";
+@import "./components/nav.css";
+@import "./components/footer.css";
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--nm-s-lg);
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    padding: var(--nm-s-xl);
+    background-color: var(--nm-c-bg);
+    box-sizing: border-box;
+}
+
+header,
+footer,
+nav,
+section {
+    width: 100%;
+    display: flex;
+}

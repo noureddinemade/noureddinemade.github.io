@@ -1,0 +1,12 @@
+---
+const { page } = Astro.props;
+---
+
+<nav>
+    <p>
+        <a href="/" class={page === "work" ? "current" : ""}>Work</a>
+    </p>
+    <p>
+        <a href="/info" class={page === "info" ? "current" : ""}>Info</a>
+    </p>
+</nav>

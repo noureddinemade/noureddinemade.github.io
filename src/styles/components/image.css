@@ -1,0 +1,50 @@
+/* Images */
+
+.svg-img {
+    /* Addon Classes */
+    &.-on {
+        display: block;
+    }
+    &.-off {
+        display: none;
+    }
+
+    /* Children */
+    svg {
+        width: 100%;
+    }
+}
+
+/* Logo */
+a.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    min-width: 104px;
+    max-width: 124px;
+
+    /* SVG */
+    svg path {
+        fill: var(--nm-c-logo);
+    }
+
+    /* Hover */
+    &:hover {
+        background-color: transparent;
+
+        /* SVG */
+        svg path {
+            fill: var(--nm-c-logo-hover);
+        }
+    }
+}
+
+/* Hehe */
+div.hehe {
+    width: 60px;
+    /* SVG */
+    svg path {
+        fill: var(--nm-c-logo);
+    }
+}

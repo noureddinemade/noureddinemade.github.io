@@ -1,0 +1,16 @@
+/* Spacing */
+:root {
+    /* Scale */
+    --nm-s-xs: 8px;
+    --nm-s-sm: 16px;
+    --nm-s-md: 24px;
+    --nm-s-lg: 40px;
+    --nm-s-xl: 80px;
+
+    /* Max Widths */
+    --nm-mw-xs: 320px;
+    --nm-mw-sm: 480px;
+    --nm-mw-md: 640px;
+    --nm-mw-lg: 980px;
+    --nm-mw-xl: 1200px;
+}

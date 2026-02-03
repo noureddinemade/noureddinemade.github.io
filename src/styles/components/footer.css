@@ -1,0 +1,21 @@
+/* Footer */
+
+footer {
+    flex-direction: column;
+    max-width: var(--nm-mw-lg);
+    justify-content: center;
+    align-items: center;
+    gap: var(--nm-s-lg);
+    text-align: center;
+
+    /* Children */
+    p {
+        /* Add-on classes */
+        &.cr {
+            font-family: var(--nm-ff-heading);
+            font-size: var(--nm-fs-sm);
+            font-style: normal;
+            text-transform: uppercase;
+        }
+    }
+}

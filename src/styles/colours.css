@@ -1,0 +1,20 @@
+/* Colours */
+:root {
+    /* Theme */
+    --nm-c-primary: rgb(214, 0, 0);
+    --nm-c-secondary: #ff6f00;
+    --nm-c-dark: #090909;
+    --nm-c-light: #f0f0f0;
+
+    /* Base */
+    --nm-c-bg: var(--nm-c-dark);
+    --nm-c-bg-transparent: rgba(9, 9, 9, 0.71);
+    --nm-c-body: var(--nm-c-light);
+    --nm-c-heading: var(--nm-c-light);
+    --nm-c-logo: var(--nm-c-light);
+    --nm-c-logo-hover: var(--nm-c-primary);
+    --nm-c-link: var(--nm-c-light);
+    --nm-c-link-underline: var(--nm-c-light);
+    --nm-c-link-hover: var(--nm-c-light);
+    --nm-c-link-hover-bg: var(--nm-c-primary);
+}

@@ -1,26 +1,19 @@
 {
-  "name": "test-blog",
-  "version": "1.0.0",
-  "description": "",
+  "name": "noureddinemade.github.io",
   "type": "module",
-  "main": "index.js",
+  "version": "0.0.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^3.0.4",
-    "gulp": "^5.0.1",
-    "gulp-imagemin": "^8.0.0"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "child_process": "^1.0.2",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-terser": "^2.1.0",
-    "sass": "^1.49.11"
+    "astro": "^5.13.2",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

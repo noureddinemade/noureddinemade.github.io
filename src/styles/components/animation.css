@@ -1,0 +1,76 @@
+/* Animation */
+@keyframes heading-asterisk {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        color: var(--nm-c-body);
+    }
+    25% {
+        transform: translateY(-4px) rotate(4deg);
+        color: var(--nm-c-primary);
+    }
+    50% {
+        transform: translateY(0) rotate(0deg);
+        color: var(--nm-c-body);
+    }
+    75% {
+        transform: translateY(4px) rotate(-4deg);
+        color: var(--nm-c-primary);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+        color: var(--nm-c-body);
+    }
+}
+
+.animated-callout {
+    animation: heading-asterisk 2s linear infinite;
+    /* animation-play-state: paused; */
+
+    /* Addon Classes */
+    &.-a {
+        animation-delay: 0s;
+    }
+    &.-b {
+        animation-delay: 0.5s;
+    }
+    &.-c {
+        animation-delay: 1s;
+    }
+    &.-d {
+        animation-delay: 1.5s;
+    }
+    &.-e {
+        animation-delay: 2s;
+    }
+}
+
+.animated-border {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    /* Addon Classes */
+    &.-a,
+    &.-b,
+    &.-c {
+        top: -44px;
+    }
+
+    &.-a {
+        width: calc(100% + 40px);
+        left: -20px;
+    }
+    &.-b {
+        width: calc(100% + 60px);
+        left: -30px;
+    }
+    &.-c {
+        width: 100px;
+        left: auto;
+        right: -80px;
+        top: auto;
+        bottom: -80px;
+    }
+}
