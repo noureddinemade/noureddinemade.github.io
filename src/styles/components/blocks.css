@@ -58,8 +58,12 @@ section {
             border-color: var(--nm-c-light);
             border-style: dashed double;
             width: 100%;
-            min-width: var(--nm-mw-sm);
-            max-width: calc(50% - var(--nm-s-md));
+            max-width: calc(50% - var(--nm-s-lg));
+
+            /* Responsive */
+            @media (max-width: 980px) {
+                max-width: none;
+            }
         }
     }
 }
