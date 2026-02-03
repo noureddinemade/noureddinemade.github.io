@@ -1,7 +1,7 @@
 /* Colours */
 :root {
     /* Theme */
-    --nm-c-primary: rgb(214, 0, 0);
+    --nm-c-primary: #d60000;
     --nm-c-secondary: #ff6f00;
     --nm-c-dark: #090909;
     --nm-c-light: #f0f0f0;
