@@ -1,5 +1,7 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
-    site: 'https://noureddine.biz',
+    output: "static",
+    site: "https://noureddine.biz",
+    base: "/",
 });
