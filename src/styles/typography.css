@@ -10,7 +10,7 @@
     --nm-fs-sm: 18px;
     --nm-fs-md: 24px;
     --nm-fs-lg: 32px;
-    --nm-fs-xl: 80px;
+    --nm-fs-xl: 74px;
 
     /* Weights */
     --nm-fw-medium: 500;
@@ -28,6 +28,22 @@
 
     /* Letter Spacing */
     --nm-ls-base: 0;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+    :root {
+        --nm-fs-md: 20px;
+        --nm-fs-lg: 28px;
+        --nm-fs-xl: 48px;
+    }
+}
+@media (max-width: 480px) {
+    :root {
+        --nm-fs-md: 18px;
+        --nm-fs-lg: 24px;
+        --nm-fs-xl: 32px;
+    }
 }
 
 /* All Text */
@@ -64,6 +80,10 @@ h6 {
         font-weight: var(--nm-fw-medium);
         font-style: italic;
         text-transform: none;
+
+        @media (max-width: 480px) {
+            display: block;
+        }
     }
 }
 

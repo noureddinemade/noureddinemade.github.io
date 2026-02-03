@@ -8,11 +8,21 @@ header {
     text-align: center;
     max-width: var(--nm-mw-lg);
 
+    /* Responsive */
+    @media (max-width: 980px) {
+        justify-content: center;
+    }
+
     .block {
         display: flex;
         flex-direction: column;
         justify-content: center;
         width: 200px;
+
+        /* Responsive */
+        @media (max-width: 980px) {
+            display: none;
+        }
 
         /* Children */
         p {

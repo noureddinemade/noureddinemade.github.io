@@ -3,11 +3,12 @@
 section {
     position: relative;
     z-index: 1;
+
     /* Classes */
     &.page-header {
         flex-direction: column;
         gap: var(--nm-s-md);
-        max-width: var(--nm-mw-lg);
+        max-width: var(--nm-mw-xl);
         text-align: center;
         align-items: center;
     }
