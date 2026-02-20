@@ -154,6 +154,9 @@ p {
     &.subtitle {
         opacity: 0.6;
     }
+    &.no-italics {
+        font-style: normal;
+    }
 
     /* Children */
     span {

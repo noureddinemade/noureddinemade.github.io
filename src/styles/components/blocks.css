@@ -12,14 +12,15 @@ section {
         align-items: center;
     }
     &.work,
-    &.big-list {
+    &.big-list,
+    &.page-intro {
         max-width: var(--nm-mw-xl);
-        text-align: center;
     }
     &.work {
         flex-direction: column;
         justify-content: space-between;
         gap: var(--nm-s-xl);
+        text-align: center;
 
         /* Children */
         div.block {
@@ -46,6 +47,7 @@ section {
         flex-wrap: wrap;
         justify-content: center;
         gap: var(--nm-s-md);
+        text-align: center;
 
         /* Children */
         .item {
