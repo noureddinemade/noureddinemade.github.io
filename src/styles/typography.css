@@ -72,7 +72,6 @@ h6 {
     font-style: normal;
     text-transform: uppercase;
     letter-spacing: 0;
-    color: var(--nm-c-heading);
 
     /* Children */
     span {
@@ -87,11 +86,14 @@ h6 {
     }
 }
 
+h1, h2 {
+    color: var(--nm-c-heading);
+}
+
 h1 {
     font-size: var(--nm-fs-xl);
     line-height: var(--nm-lh-xs);
     font-weight: var(--nm-fw-black);
-    color: var(--nm-c-body);
 }
 
 h2 {
