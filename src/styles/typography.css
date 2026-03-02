@@ -104,7 +104,7 @@ h2 {
 
 h3 {
     font-size: var(--nm-fs-md);
-    line-height: var(--nm-lh-md);
+    line-height: var(--nm-lh-base);
     font-weight: var(--nm-fw-bold);
 }
 

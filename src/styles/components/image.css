@@ -48,3 +48,7 @@ div.hehe {
         fill: var(--nm-c-logo);
     }
 }
+
+img.specific-image {
+    margin-bottom: var(--nm-s-sm);
+}
