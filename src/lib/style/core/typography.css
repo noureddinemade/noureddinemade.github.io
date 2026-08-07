@@ -71,16 +71,16 @@ a {
 
     &.-next:after {
         content: '';
-        mask-image: url(./../assets/icon/arrow-right-02.svg);
+        mask-image: url(./../asset/icon/arrow-right-02.svg);
     }
     &.-prev:before {
         content: '';
-        mask-image: url(./../assets/icon/arrow-left-01.svg);
+        mask-image: url(./../asset/icon/arrow-left-01.svg);
     }
 
     &.-external:before {
         content: '';
-        mask-image: url(./../assets/icon/arrow-up-01.svg);
+        mask-image: url(./../asset/icon/arrow-up-01.svg);
         rotate: 45deg;
     }
 

@@ -154,7 +154,7 @@ span.emoji {
     max-width: 60%;
     min-width: 480px;
     max-height: 800px;
-    mask-image: url(./../assets/bg/blob-05.svg);
+    mask-image: url(./../asset/bg/blob-05.svg);
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: 100% 100%; */
@@ -166,7 +166,7 @@ span.emoji {
     height: 100%;
     max-width: 60%;
     max-height: 600px;
-    mask-image: url(./../assets/bg/rectangle-04.svg);
+    mask-image: url(./../asset/bg/rectangle-04.svg);
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: 100% 100%;
@@ -385,7 +385,7 @@ figure.img-wrap {
 img {
     position: relative;
     width: 100%;
-    background-image: url(./../assets/general/spinner.svg);
+    background-image: url(./../asset/general/spinner.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 44px;

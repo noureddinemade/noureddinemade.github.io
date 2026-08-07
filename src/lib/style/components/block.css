@@ -252,7 +252,7 @@ section {
         max-width: var(--mw-lg);
         margin: var(--cta-gap) auto 0 auto;
         padding: var(--scale-xxl);
-        mask-image: url(./../assets/bg/rectangle-06.svg);
+        mask-image: url(./../asset/bg/rectangle-06.svg);
         mask-size: 100% 100%;
         mask-position: center;
         mask-repeat: no-repeat;
