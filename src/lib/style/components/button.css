@@ -1,0 +1,78 @@
+button.btn {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+
+    /* Variants */
+    &.-display-switch {
+
+        --w: 52px;
+        --h: 30px;
+        --p: 4px;
+
+        display: flex;
+        flex-direction: row;
+        gap: var(--scale-xs);
+        align-items: center;
+        justify-content: center;
+        font-family: var(--ff-serif);
+        font-size: var(--fs-lg);
+        text-align: center;
+        transition: scale .2s ease;
+        user-select: none;
+
+        /* Variants */
+        &.-off { 
+            
+            /* Pseudo */
+            &:before { --colour: var(--light-light); }
+            &:after { background-color: rgba(var(--dark-raw), .5); translate: calc(var(--p) * 2.5) -50%; }
+
+        }
+
+        &.-sm { --w: 38px; --h: 24px; --p: 2px; &.-off:after { translate: calc(var(--p) * 5) -50%; } }
+        
+        /* Pseudo */
+        &:before, &:after { content: ''; }
+        
+        &:before { 
+
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            width: var(--w);
+            height: var(--h);
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            border-radius: var(--w);
+            border: 1px solid var(--light-dark);
+            background-color: var(--colour);
+            transition: background-color .2s ease-out;
+        }
+        &:after {
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: 0;
+            width: calc(calc(var(--w) - var(--p)) / 2);
+            height: calc(calc(var(--w) - var(--p)) / 2);;
+            border-radius: var(--w);
+            background-color: var(--light-light);
+            translate: calc(var(--w) / 1.75) -50%;
+            transition: translate .4s ease-out, background-color .2s ease;
+        }
+
+    }
+
+    /* Children */
+    span.label { z-index: 1; }
+
+}

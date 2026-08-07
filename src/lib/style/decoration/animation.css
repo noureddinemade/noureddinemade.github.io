@@ -1,0 +1,239 @@
+/* Animations */
+
+/* Keyframes */
+@keyframes showHide {
+    0%{
+        display: block;
+        visibility: visible;
+    }
+    24%{
+        display: block;
+        visibility: visible;
+    }
+    25% {
+        display: none;
+        visibility: hidden;
+    }
+    99% {
+        display: none;
+        visibility: hidden;
+    }
+    100% {
+        display: block;
+        visibility: visible;
+    }
+}
+
+@keyframes revealFooter {
+
+    from { translate: 0 80%; }
+    to { translate: 0 0; }
+
+}
+
+@keyframes logoMove { to { mask-position: calc(50% + 196px) 0; } }
+
+@keyframes eyeBlink {
+
+    0% { mask-size: 100% 100%; }
+    20% { mask-size: 100% 100%; }
+    21% { mask-size: 100% 0%; }
+    23% { mask-size: 100% 100%; }
+    50% { mask-size: 100% 100%; }
+    51% { mask-size: 100% 0%; }
+    53% { mask-size: 100% 100%; }
+    80% { mask-size: 100% 100%; }
+    81% { mask-size: 100% 0%; }
+    83% { mask-size: 100% 100%; }
+    100% { mask-size: 100% 100%; }
+
+}
+
+@keyframes cursorTick {
+    0% { opacity: 1; }
+    49% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { visibility: 1; }
+}
+
+@keyframes noAI {
+
+    0% { content:'A human made this.'; }
+    25% { content:'A human with lived experience.'; }
+    50% { content:'A human with empathy.'; }
+    75% { content:'A human who values craft.'; }
+    100% { content:'A human made this.'; }
+
+}
+
+@keyframes flagRotate {
+
+    0% { content: '🇮🇶'; }
+    30% { content: '🇲🇦'; }
+    60% { content: '🇾🇪'; }
+    80% { content: '🇦🇺'; }
+
+}
+
+@keyframes pencilDraw {
+
+    0%      { rotate: 0deg; }
+    50%     { rotate: 15deg; }
+    100%    { rotate: 0deg; }
+
+}
+
+@keyframes shineReflection { to { translate: 100% 0; } }
+
+@keyframes emojiWave {
+
+    0%      { rotate: 15deg; translate: 5% 5%; }
+    50%     { rotate: 65deg; translate: -5% -5%; }
+    100%    { rotate: 15deg; translate: 5% 5%; }
+
+}
+
+@keyframes alarmClock {
+
+    0%      { rotate: 0deg;     }
+    10%     { rotate: 5deg;     }
+    20%     { rotate: -5deg;    }
+    30%     { rotate: 5deg;     }
+    40%     { rotate: -5deg;    }
+    50%     { rotate: 0deg;     }
+    60%     { rotate: 5deg;     }
+    70%     { rotate: -5deg;    }
+    80%     { rotate: 5deg;     }
+    90%     { rotate: -5deg;    }
+    100%    { rotate: 0deg;     }
+
+}
+
+@keyframes zoomDolly {
+
+    0%      { scale: 1; }
+    50%     { scale: 1.1; }
+    100%    { scale: 1; }
+
+}
+
+@keyframes floatSubtle {
+
+    0% { translate: 0 0; }
+    25% { translate: -4% 0; }
+    50% { translate: 0 -4%; }
+    75% { translate: 4% 0; }
+    100% { translate: 0 0; }
+    
+}
+
+@keyframes slightFloat {
+    0%      { translate: 0 0; }
+    50%     { translate: 0 -2%; }
+    100%    { translate: 0 0; }
+}
+
+@keyframes marquee { to { translate: -50% 0; }  }
+
+@keyframes arrowPointRight {
+
+    0% { translate: 0 0; }
+    50% { translate: 10% 0; }
+    100% { translate: 0 0; }
+    
+}
+
+@keyframes arrowPointLeft {
+
+    0% { translate: 0 0; }
+    50% { translate: -10% 0; }
+    100% { translate: 0 0; }
+    
+}
+
+@keyframes arrowPointUp {
+
+    0% { translate: 0 0; }
+    50% { translate: 0 10%; }
+    100% { translate: 0 0; }
+    
+}
+
+@keyframes arrowPointDown {
+
+    0% { translate: 0 0; }
+    50% { translate: 0 -10%; }
+    100% { translate: 0 0; }
+    
+}
+
+@keyframes enter {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Classes */
+.animation {
+    --name: none;
+    --duration: 1s;
+    --easing: linear;
+    --iterations: infinite;
+    --delay: 0s;
+
+    animation: var(--name) var(--duration) var(--easing) var(--delay) var(--iterations);
+
+    /* Variants */
+    &.-alarm-clock { --name: alarmClock; --duration: 1s; --easing: ease; }
+}
+
+/* Delay Classes */
+.animation-delay {
+
+    --delay: attr(data-delay s, 0s);
+
+    animation-delay: var(--delay) !important;
+}
+
+/* Marquee */
+[data-marquee] {
+
+    --marquee-item-gap: var(--scale-xs);
+    
+    overflow: hidden;
+    pointer-events: auto;
+
+    /* Ready */
+    &.-ready [data-marquee-track] { animation: marquee var(--marquee-duration, 12s) linear infinite; }
+
+    /* States */
+    &:hover, &:focus-within {
+        [data-marquee-track] { animation-play-state: paused; }
+    }
+
+    /* Children */
+    [data-marquee-track] {
+        display: flex;
+        width: max-content;
+
+        /* Children  */
+        > * {
+            flex: 0 0 auto;
+            white-space: nowrap;
+            margin: 0 var(--marquee-item-gap) 0 0;
+        }
+    }
+
+}
+
+[data-enter] { animation: enter .5s ease both; }
+
+/* Accessibility */
+.stop-animations { animation: none !important; }
+
+@media (prefers-reduced-motion: reduce) {
+
+    *, *::before, *::after { animation: none !important; }
+    [data-marquee] { overflow-x: auto; }
+    [data-marquee-track], [data-enter] { animation: none; }
+
+}

@@ -1,0 +1,33 @@
+/* Effects */
+
+/* Florishes */
+span.florish {
+    position: absolute;
+
+    /* Variants */
+    &.-about {
+        z-index: 1;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        translate: 120% -25%;
+    }
+}
+
+/* Follow / tilt */
+[data-follow], [data-follow-hover] {
+    position: relative;
+    translate: var(--parent-x, 0px) var(--parent-y, 0px);
+
+    /* Children */
+    .-follow { translate: var(--child-x, 0px) var(--child-y, 0px); }
+}
+
+[data-follow-tilt] {
+    transform:
+        perspective(800px)
+        translate(var(--parent-x, 0px), var(--parent-y, 0px))
+        rotateX(var(--parent-rx, 0deg))
+        rotateY(var(--parent-ry, 0deg));
+}

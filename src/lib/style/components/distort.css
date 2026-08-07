@@ -1,0 +1,13 @@
+/* Distort */
+
+.-distorted {
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    text-decoration: none;
+
+    /* Children */
+    img, video, picture { opacity: 0; }
+    svg path { fill: none !important; }
+
+}

@@ -1,0 +1,259 @@
+/* Helpers */
+
+/* Spacing */
+.spacing {
+    
+    /* Max Width */
+    &.-mw-xs { max-width: var(--mw-xs); }
+    &.-mw-sm { max-width: var(--mw-sm); }
+    &.-mw-md { max-width: var(--mw-md); }
+    &.-mw-lg { max-width: var(--mw-lg); }
+    &.-mw-xl { max-width: var(--mw-xl); }
+    &.-mw-xxl { max-width: var(--mw-xxl); }
+    
+    
+    /* Padding */
+    &.-p-t-none { padding-top: 0; } &.-p-t-xs { padding-top: var(--scale-xs); } &.-p-t-sm { padding-top: var(--scale-sm); } &.-p-t-md { padding-top: var(--scale-md); } &.-p-t-lg { padding-top: var(--scale-lg); } &.-p-t-xl { padding-top: var(--scale-xl); } &.-p-t-xxl { padding-top: var(--scale-xxl); }
+    &.-p-r-none { padding-right: 0; } &.-p-r-xs { padding-right: var(--scale-xs); } &.-p-r-sm { padding-right: var(--scale-sm); } &.-p-r-md { padding-right: var(--scale-md); } &.-p-r-lg { padding-right: var(--scale-lg); } &.-p-r-xl { padding-right: var(--scale-xl); } &.-p-r-xxl { padding-right: var(--scale-xxl); }
+    &.-p-b-none { padding-bottom: 0; } &.-p-b-xs { padding-bottom: var(--scale-xs); } &.-p-b-sm { padding-bottom: var(--scale-sm); } &.-p-b-md { padding-bottom: var(--scale-md); } &.-p-b-lg { padding-bottom: var(--scale-lg); } &.-p-b-xl { padding-bottom: var(--scale-xl); } &.-p-b-xxl { padding-bottom: var(--scale-xxl); }
+    &.-p-l-none { padding-left: 0; } &.-p-l-xs { padding-left: var(--scale-xs); } &.-p-l-sm { padding-left: var(--scale-sm); } &.-p-l-md { padding-left: var(--scale-md); } &.-p-l-lg { padding-left: var(--scale-lg); } &.-p-l-xl { padding-left: var(--scale-xl); } &.-p-l-xxl { padding-left: var(--scale-xxl); }
+    
+    /* Margin */
+    &.-m-t-none { margin-top: 0; } &.-m-t-xs { margin-top: var(--scale-xs); } &.-m-t-sm { margin-top: var(--scale-sm); } &.-m-t-md { margin-top: var(--scale-md); } &.-m-t-lg { margin-top: var(--scale-lg); } &.-m-t-xl { margin-top: var(--scale-xl); } &.-m-t-xxl { margin-top: var(--scale-xxl); }
+    &.-m-r-none { margin-right: 0; } &.-m-r-xs { margin-right: var(--scale-xs); } &.-m-r-sm { margin-right: var(--scale-sm); } &.-m-r-md { margin-right: var(--scale-md); } &.-m-r-lg { margin-right: var(--scale-lg); } &.-m-r-xl { margin-right: var(--scale-xl); } &.-m-r-xxl { margin-right: var(--scale-xxl); }
+    &.-m-b-none { margin-bottom: 0; } &.-m-b-xs { margin-bottom: var(--scale-xs); } &.-m-b-sm { margin-bottom: var(--scale-sm); } &.-m-b-md { margin-bottom: var(--scale-md); } &.-m-b-lg { margin-bottom: var(--scale-lg); } &.-m-b-xl { margin-bottom: var(--scale-xl); } &.-m-b-xxl { margin-bottom: var(--scale-xxl); }
+    &.-m-l-none { margin-left: 0; } &.-m-l-xs { margin-left: var(--scale-xs); } &.-m-l-sm { margin-left: var(--scale-sm); } &.-m-l-md { margin-left: var(--scale-md); } &.-m-l-lg { margin-left: var(--scale-lg); } &.-m-l-xl { margin-left: var(--scale-xl); } &.-m-l-xxl { margin-left: var(--scale-xxl); }
+    
+    /* Gap */
+    &.-gap-none { --gap: 0; } &.-gap-xs { --gap: var(--scale-xs); } &.-gap-sm { --gap: var(--scale-sm); } &.-gap-md { --gap: var(--scale-md); } &.-gap-lg { --gap: var(--scale-lg); } &.-gap-xl { --gap: var(--scale-xl); } &.-gap-xxl { --gap: var(--scale-xxl); }
+    
+}
+
+/* Adjust Colours */
+
+.colour {
+
+    /* Variants */
+    /* Background */
+    &.-bg {
+
+        background-color: var(--bg-colour, transparent);
+
+        /* Colours */
+        &.-bg-accent-a-base    { --bg-colour: var(--accent-a-base);     --text-contrast: var(--dark-base);    }
+        &.-bg-accent-a-light   { --bg-colour: var(--accent-a-light);    --text-contrast: var(--dark-base);    }
+        &.-bg-accent-a-dark    { --bg-colour: var(--accent-a-dark);     --text-contrast: var(--light-base);   }
+        &.-bg-accent-b-light   { --bg-colour: var(--accent-b-light);    --text-contrast: var(--dark-base);    }
+        &.-bg-accent-b-base    { --bg-colour: var(--accent-b-base);     --text-contrast: var(--dark-base);    }
+        &.-bg-accent-b-dark    { --bg-colour: var(--accent-b-dark);     --text-contrast: var(--light-base);   }
+        &.-bg-accent-c-light   { --bg-colour: var(--accent-c-light);    --text-contrast: var(--dark-base);    }
+        &.-bg-accent-c-base    { --bg-colour: var(--accent-c-base);     --text-contrast: var(--light-base);   }
+        &.-bg-accent-c-dark    { --bg-colour: var(--accent-c-dark);     --text-contrast: var(--light-base);   }
+        &.-bg-accent-d-light   { --bg-colour: var(--accent-d-light);    --text-contrast: var(--dark-base);    }
+        &.-bg-accent-d-base    { --bg-colour: var(--accent-d-base);     --text-contrast: var(--dark-base);    }
+        &.-bg-accent-d-dark    { --bg-colour: var(--accent-d-dark);     --text-contrast: var(--dark-base);    }
+        &.-bg-accent-e-light   { --bg-colour: var(--accent-e-light);    --text-contrast: var(--dark-base);    }
+        &.-bg-accent-e-base    { --bg-colour: var(--accent-e-base);     --text-contrast: var(--dark-base);    }
+        &.-bg-accent-e-dark    { --bg-colour: var(--accent-e-dark);     --text-contrast: var(--dark-base);    }
+        &.-bg-accent-f-light   { --bg-colour: var(--accent-f-light);    --text-contrast: var(--dark-base);    }
+        &.-bg-accent-f-base    { --bg-colour: var(--accent-f-base);     --text-contrast: var(--dark-base);    }
+        &.-bg-accent-f-dark    { --bg-colour: var(--accent-f-dark);     --text-contrast: var(--dark-base);    }
+        &.-bg-dark-light       { --bg-colour: var(--dark-light);        --text-contrast: var(--light-base);   }
+        &.-bg-dark-base        { --bg-colour: var(--dark-base);         --text-contrast: var(--light-base);   }
+        &.-bg-dark-dark        { --bg-colour: var(--dark-dark);         --text-contrast: var(--light-base);   }
+        &.-bg-light-light      { --bg-colour: var(--light-light);       --text-contrast: var(--dark-base);    }
+        &.-bg-light-base       { --bg-colour: var(--light-base);        --text-contrast: var(--dark-base);    }
+        &.-bg-light-dark       { --bg-colour: var(--light-dark);        --text-contrast: var(--dark-base);    }
+    }
+    /* Hover */
+    &.-hover {
+
+        &:hover { background-color: var(--hover-colour, transparent); }
+
+       /* Colours */
+        &.-hover-accent-a-base    { --hover-colour: var(--accent-a-base);     }
+        &.-hover-accent-a-light   { --hover-colour: var(--accent-a-light);    }
+        &.-hover-accent-a-dark    { --hover-colour: var(--accent-a-dark);     }
+        &.-hover-accent-b-light   { --hover-colour: var(--accent-b-light);    }
+        &.-hover-accent-b-base    { --hover-colour: var(--accent-b-base);     }
+        &.-hover-accent-b-dark    { --hover-colour: var(--accent-b-dark);     }
+        &.-hover-accent-c-light   { --hover-colour: var(--accent-c-light);    }
+        &.-hover-accent-c-base    { --hover-colour: var(--accent-c-base);     }
+        &.-hover-accent-c-dark    { --hover-colour: var(--accent-c-dark);     }
+        &.-hover-accent-d-light   { --hover-colour: var(--accent-d-light);    }
+        &.-hover-accent-d-base    { --hover-colour: var(--accent-d-base);     }
+        &.-hover-accent-d-dark    { --hover-colour: var(--accent-d-dark);     }
+        &.-hover-accent-e-light   { --hover-colour: var(--accent-e-light);    }
+        &.-hover-accent-e-base    { --hover-colour: var(--accent-e-base);     }
+        &.-hover-accent-e-dark    { --hover-colour: var(--accent-e-dark);     }
+        &.-hover-accent-f-light   { --hover-colour: var(--accent-f-light);    }
+        &.-hover-accent-f-base    { --hover-colour: var(--accent-f-base);     }
+        &.-hover-accent-f-dark    { --hover-colour: var(--accent-f-dark);     }
+        &.-hover-dark-light       { --hover-colour: var(--dark-light);        }
+        &.-hover-dark-base        { --hover-colour: var(--dark-base);         }
+        &.-hover-dark-dark        { --hover-colour: var(--dark-dark);         }
+        &.-hover-light-light      { --hover-colour: var(--light-light);       }
+        &.-hover-light-base       { --hover-colour: var(--light-base);        }
+        &.-hover-light-dark       { --hover-colour: var(--light-dark);        } 
+    }
+    /* Text */
+    &.-text { 
+        
+        color: var(--text-colour, currentColor);
+        
+        /* Colours */
+        &.-text-accent-a-base    { --text-colour: var(--accent-a-base);     }
+        &.-text-accent-a-light   { --text-colour: var(--accent-a-light);    }
+        &.-text-accent-a-dark    { --text-colour: var(--accent-a-dark);     }
+        &.-text-accent-b-light   { --text-colour: var(--accent-b-light);    }
+        &.-text-accent-b-base    { --text-colour: var(--accent-b-base);     }
+        &.-text-accent-b-dark    { --text-colour: var(--accent-b-dark);     }
+        &.-text-accent-c-light   { --text-colour: var(--accent-c-light);    }
+        &.-text-accent-c-base    { --text-colour: var(--accent-c-base);     }
+        &.-text-accent-c-dark    { --text-colour: var(--accent-c-dark);     }
+        &.-text-accent-d-light   { --text-colour: var(--accent-d-light);    }
+        &.-text-accent-d-base    { --text-colour: var(--accent-d-base);     }
+        &.-text-accent-d-dark    { --text-colour: var(--accent-d-dark);     }
+        &.-text-accent-e-light   { --text-colour: var(--accent-e-light);    }
+        &.-text-accent-e-base    { --text-colour: var(--accent-e-base);     }
+        &.-text-accent-e-dark    { --text-colour: var(--accent-e-dark);     }
+        &.-text-accent-f-light   { --text-colour: var(--accent-f-light);    }
+        &.-text-accent-f-base    { --text-colour: var(--accent-f-base);     }
+        &.-text-accent-f-dark    { --text-colour: var(--accent-f-dark);     }
+        &.-text-dark-light       { --text-colour: var(--dark-light);        }
+        &.-text-dark-base        { --text-colour: var(--dark-base);         }
+        &.-text-dark-dark        { --text-colour: var(--dark-dark);         }
+        &.-text-light-light      { --text-colour: var(--light-light);       }
+        &.-text-light-base       { --text-colour: var(--light-base);        }
+        &.-text-light-dark       { --text-colour: var(--light-dark);        }
+    }
+    /* Fill */
+    &.-fill {
+        
+        /* Colours */
+        &.-fill-accent-a-base    { --fill-colour: var(--accent-a-base);       }
+        &.-fill-accent-a-light   { --fill-colour: var(--accent-a-light);      }
+        &.-fill-accent-a-dark    { --fill-colour: var(--accent-a-dark);       }
+        &.-fill-accent-b-light   { --fill-colour: var(--accent-b-light);      }
+        &.-fill-accent-b-base    { --fill-colour: var(--accent-b-base);       }
+        &.-fill-accent-b-dark    { --fill-colour: var(--accent-b-dark);       }
+        &.-fill-accent-c-light   { --fill-colour: var(--accent-c-light);      }
+        &.-fill-accent-c-base    { --fill-colour: var(--accent-c-base);       }
+        &.-fill-accent-c-dark    { --fill-colour: var(--accent-c-dark);       }
+        &.-fill-accent-d-light   { --fill-colour: var(--accent-d-light);      }
+        &.-fill-accent-d-base    { --fill-colour: var(--accent-d-base);       }
+        &.-fill-accent-d-dark    { --fill-colour: var(--accent-d-dark);       }
+        &.-fill-accent-e-light   { --fill-colour: var(--accent-e-light);      }
+        &.-fill-accent-e-base    { --fill-colour: var(--accent-e-base);       }
+        &.-fill-accent-e-dark    { --fill-colour: var(--accent-e-dark);       }
+        &.-fill-accent-f-light   { --fill-colour: var(--accent-f-light);      }
+        &.-fill-accent-f-base    { --fill-colour: var(--accent-f-base);       }
+        &.-fill-accent-f-dark    { --fill-colour: var(--accent-f-dark);       }
+        &.-fill-dark-light       { --fill-colour: var(--dark-light);          }
+        &.-fill-dark-base        { --fill-colour: var(--dark-base);           }
+        &.-fill-dark-dark        { --fill-colour: var(--dark-dark);           }
+        &.-fill-light-light      { --fill-colour: var(--light-light);         }
+        &.-fill-light-base       { --fill-colour: var(--light-base);          }
+        &.-fill-light-dark       { --fill-colour: var(--light-dark);          }
+
+        /* Children */
+        path { fill: var(--fill-colour, currentColor); }
+    }
+    /* Misc */
+    &.-misc-accent-a-base    { --colour: var(--accent-a-base);   }
+    &.-misc-accent-a-light   { --colour: var(--accent-a-light);  }
+    &.-misc-accent-a-dark    { --colour: var(--accent-a-dark);   }
+    &.-misc-accent-b-light   { --colour: var(--accent-b-light);  }
+    &.-misc-accent-b-base    { --colour: var(--accent-b-base);   }
+    &.-misc-accent-b-dark    { --colour: var(--accent-b-dark);   }
+    &.-misc-accent-c-light   { --colour: var(--accent-c-light);  }
+    &.-misc-accent-c-base    { --colour: var(--accent-c-base);   }
+    &.-misc-accent-c-dark    { --colour: var(--accent-c-dark);   }
+    &.-misc-accent-d-light   { --colour: var(--accent-d-light);  }
+    &.-misc-accent-d-base    { --colour: var(--accent-d-base);   }
+    &.-misc-accent-d-dark    { --colour: var(--accent-d-dark);   }
+    &.-misc-accent-e-light   { --colour: var(--accent-e-light);  }
+    &.-misc-accent-e-base    { --colour: var(--accent-e-base);   }
+    &.-misc-accent-e-dark    { --colour: var(--accent-e-dark);   }
+    &.-misc-accent-f-light   { --colour: var(--accent-f-light);  }
+    &.-misc-accent-f-base    { --colour: var(--accent-f-base);   }
+    &.-misc-accent-f-dark    { --colour: var(--accent-f-dark);   }
+    &.-misc-dark-light       { --colour: var(--dark-light);      }
+    &.-misc-dark-base        { --colour: var(--dark-base);       }
+    &.-misc-dark-dark        { --colour: var(--dark-dark);       }
+    &.-misc-light-light      { --colour: var(--light-light);     }
+    &.-misc-light-base       { --colour: var(--light-base);      }
+    &.-misc-light-dark       { --colour: var(--light-dark);      }
+
+}
+
+/* Typography */
+.text {
+
+    /* Size */
+    &.-base         { font-size: var(--fs-base); }
+    &.-sm           { font-size: var(--fs-sm); }
+    &.-md           { font-size: var(--fs-md); }
+    &.-lg           { font-size: var(--fs-lg); }
+    &.-xl           { font-size: var(--fs-xl); } 
+    &.-xxl          { font-size: var(--fs-xxl); }
+    &.-xxxl         { font-size: var(--fs-xxxl); }
+    &.-huge         { font-size: var(--fs-headline); }
+    &.-headline     { font-size: var(--fs-headline); line-height: var(--lh-headline); }
+    /* Family */
+    &.-serif        { font-family: var(--ff-serif); font-weight: var(--fw-regular); }
+    &.-sans         { font-family: var(--ff-sans); }
+    &.-mono         { font-family: monospace; }
+    /* Weight */
+    &.-regular      { font-weight: var(--fw-regular); }
+    &.-medium       { font-weight: var(--fw-medium); }
+    &.-bold         { font-weight: var(--fw-bold); }
+    /* Style */
+    &.-italic       { font-style: italic; }
+    &.-uppercase    { text-transform: uppercase; }
+    &.-subtle       { opacity: .5; transition: opacity .2s ease; &:hover { opacity: 1; } }
+    /* Alignment */
+    &.-center       { text-align: center; }
+    &.-right        { text-align: right; }
+    &.-justify      { text-align: justify; }
+    &.-push         { padding-right: 4px; }
+    /* Colours */
+    &.-contrast     { --link: var(--text-contrast, currentColor); color: var(--link); }
+
+}
+
+/* Position */
+.sticky {
+
+    position: sticky;
+
+    /* Top */
+    &.-top-none { top: 0; } &.-top-xs { top: var(--scale-xs); } &.-top-sm { top: var(--scale-sm); } &.-top-md { top: var(--scale-md); } &.-top-lg { top: var(--scale-lg); } &.-top-xl { top: var(--scale-xl); } &.-top-xxl { top: var(--scale-xxl); }
+
+    /* Index */
+    &.-z-bottom { z-index: -1; } &.-z-low { z-index: 1; } &.-z-mid { z-index: 4; } &.-z-high { z-index: 7; } &.-z-top { z-index: 100; }
+
+
+}
+
+/* Layout */
+.layout {
+
+    /* Flex */
+    &.-f-a-center { align-items: center; } &.-f-a-start { align-items: flex-start; } &.-f-a-end { align-items: flex-end; } &.-f-j-center { justify-content: center; } &.-f-j-sb { justify-content: space-between; } &.-f-j-sa { justify-content: space-around; } &.-f-j-se { justify-content: space-evenly; }
+
+    /* Self */
+    &.-a-s-center { align-self: center; } &.-a-s-start { align-self: flex-start; } &.-a-s-end { align-self: flex-end; }
+
+}
+
+/* Border Radius */
+.border {
+
+    /* Radius */
+    &.-r-xs { border-radius: var(--scale-xs); } &.-r-sm { border-radius: var(--scale-sm); } &.-r-md { border-radius: var(--scale-md); }
+
+    /* Stroke */
+    &.-s-none { border: none; } &.-s-base { border: 1px solid var(--dark-base); } &.-s-thick { border: 2px solid var(--dark-base); }
+
+}

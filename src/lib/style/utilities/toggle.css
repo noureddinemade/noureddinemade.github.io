@@ -1,0 +1,32 @@
+/* Toggle */
+
+.toggle-element {
+
+    --speed: .3s;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 100%;
+    transition: grid-template-rows var(--speed) ease, margin-bottom var(--speed) ease;
+    transition-delay: 0s;
+
+    /* Pseudo */
+    &:has(.-off) {
+        grid-template-rows: 0fr;
+        margin-bottom: calc(-1 * var(--gap-item));
+        transition-delay: var(--speed);
+    }
+
+    /* Children */
+    > * {
+        min-height: 0;
+        overflow: hidden;
+        opacity: 1;
+        transition: opacity var(--speed) ease, filter var(--speed) ease;
+        transition-delay: var(--speed);
+        filter: blur(0px);
+
+        /* Variants */
+        &.-off {  opacity: 0; filter: blur(16px); transition-delay: 0s; }
+    }
+}

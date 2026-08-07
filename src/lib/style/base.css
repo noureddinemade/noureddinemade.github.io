@@ -1,0 +1,35 @@
+html, body {
+
+    /* Background */
+    --bg-static: var(--light-base);
+    --bg-dynamic: var(--light-base);
+    --body: var(--dark-base);
+
+    font-size: var(--fs-base);
+    line-height: var(--lh-base);
+    letter-spacing: var(--ls-base);
+    text-rendering: optimizeLegibility;
+    color: var(--body);
+    background-color: var(--bg-dynamic);
+
+}
+
+::selection {
+    background-color: var(--dark-light);
+    color: var(--light-base);
+}
+
+/* For Firefox compatibility */
+::-moz-selection {
+    background-color: var(--dark-base);
+    color: var(--light-base);
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body { height: auto; }
+
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: clip; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
