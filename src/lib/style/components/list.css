@@ -93,8 +93,8 @@ ul, ol {
             mask-repeat: no-repeat;
 
             /* Pseudo */
-            &:nth-child(2n+1) { mask-image: url(./../asset/bg/rectangle-06.svg); }
-            &:nth-child(2n+2) { mask-image: url(./../asset/bg/rectangle-04.svg); }
+            &:nth-child(2n+1) { mask-image: url($lib/asset/bg/rectangle-06.svg); }
+            &:nth-child(2n+2) { mask-image: url($lib/asset/bg/rectangle-04.svg); }
 
             /* Children */
             h2 {
@@ -124,7 +124,7 @@ ul, ol {
             text-transform: uppercase;
             color: var(--dark-dark);
             background-color: var(--light-dark);
-            mask-image: url(./../asset/bg/square-03.svg);
+            mask-image: url($lib/asset/bg/square-03.svg);
             mask-size: 100% 100%;
             mask-repeat: no-repeat;
             mask-position: center;

@@ -61,7 +61,7 @@ header.global {
                 width: 100%;
                 height: 90%;
                 background-color: var(--light-base);
-                mask-image: url(./../asset/brand/logo-g.svg);
+                mask-image: url($lib/asset/brand/logo-g.svg);
                 mask-repeat: repeat-x;
                 mask-size: auto 100%;
                 mask-position: 50% center;

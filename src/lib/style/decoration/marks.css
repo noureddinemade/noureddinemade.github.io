@@ -14,7 +14,7 @@ span.mark {
         rotate: 3deg;
         font-size: 0;
         background-color: var(--mark-colour, currentColor);
-        mask-image: url(./../asset/mark/underline-02.svg);
+        mask-image: url($lib/asset/mark/underline-02.svg);
         mask-position: center;
         mask-repeat: no-repeat;
         mask-size: 100% 100%;
@@ -52,12 +52,12 @@ span.mark {
         }
 
         /* Variants */
-        &.-a:after { --width: 120%; --height: 150%; --translate: -10% -20%; mask-image: url(./../asset/mark/outline-01.svg); }
-        &.-b:after { --width: 150%; --height: 200%; --translate: -20% -25%; mask-image: url(./../asset/mark/outline-02.svg); }
-        &.-c:after { --width: 130%; --height: 150%; --translate: -15% -20%; mask-image: url(./../asset/mark/outline-03.svg); }
-        &.-d:after { --width: 110%; --height: 150%; --translate: -5% -20%; mask-image: url(./../asset/mark/outline-04.svg); }
-        &.-e:after { --width: 110%; --height: 150%; --translate: -5% -20%; --rotate: 2deg; mask-image: url(./../asset/mark/outline-05.svg); }
-        &.-f:after { --width: 105%; --height: 150%; --translate: -2% -20%; --rotate: 1deg; mask-image: url(./../asset/mark/outline-06.svg); }
+        &.-a:after { --width: 120%; --height: 150%; --translate: -10% -20%; mask-image: url($lib/asset/mark/outline-01.svg); }
+        &.-b:after { --width: 150%; --height: 200%; --translate: -20% -25%; mask-image: url($lib/asset/mark/outline-02.svg); }
+        &.-c:after { --width: 130%; --height: 150%; --translate: -15% -20%; mask-image: url($lib/asset/mark/outline-03.svg); }
+        &.-d:after { --width: 110%; --height: 150%; --translate: -5% -20%; mask-image: url($lib/asset/mark/outline-04.svg); }
+        &.-e:after { --width: 110%; --height: 150%; --translate: -5% -20%; --rotate: 2deg; mask-image: url($lib/asset/mark/outline-05.svg); }
+        &.-f:after { --width: 105%; --height: 150%; --translate: -2% -20%; --rotate: 1deg; mask-image: url($lib/asset/mark/outline-06.svg); }
 
     }
 
@@ -75,12 +75,12 @@ span.mark {
         }
 
         /* Variants */
-        &.-a:after { --height: 12px; --rotate: -1deg; mask-image: url(./../asset/mark/underline-01.svg); }
-        &.-b:after { --height: 16px; --rotate: 1deg; mask-image: url(./../asset/mark/underline-02.svg); }
-        &.-c:after { --height: 24px; --rotate: 183deg; --translate: 0 2%;  mask-image: url(./../asset/mark/underline-03.svg); }
-        &.-d:after { --height: 12px; --rotate: 1deg; mask-image: url(./../asset/mark/underline-emph-01.svg); }
-        &.-e:after { --height: 16px; --rotate: 182deg; --translate: 0 20%; mask-image: url(./../asset/mark/underline-wobble-01.svg); }
-        &.-f:after { --height: 16px; --rotate: -180deg; --translate: 0 20%; mask-image: url(./../asset/mark/underline-wobble-02.svg); }
+        &.-a:after { --height: 12px; --rotate: -1deg; mask-image: url($lib/asset/mark/underline-01.svg); }
+        &.-b:after { --height: 16px; --rotate: 1deg; mask-image: url($lib/asset/mark/underline-02.svg); }
+        &.-c:after { --height: 24px; --rotate: 183deg; --translate: 0 2%;  mask-image: url($lib/asset/mark/underline-03.svg); }
+        &.-d:after { --height: 12px; --rotate: 1deg; mask-image: url($lib/asset/mark/underline-emph-01.svg); }
+        &.-e:after { --height: 16px; --rotate: 182deg; --translate: 0 20%; mask-image: url($lib/asset/mark/underline-wobble-01.svg); }
+        &.-f:after { --height: 16px; --rotate: -180deg; --translate: 0 20%; mask-image: url($lib/asset/mark/underline-wobble-02.svg); }
 
     }
 
@@ -99,8 +99,8 @@ span.mark {
         }
 
         /* Variants */
-        &.-a:after { --height: 12px; --rotate: -1deg; mask-image: url(./../asset/mark/crossout-01.svg); }
-        &.-b:after { --height: 16px; --rotate: 1deg; mask-image: url(./../asset/mark/crossout-02.svg); }
+        &.-a:after { --height: 12px; --rotate: -1deg; mask-image: url($lib/asset/mark/crossout-01.svg); }
+        &.-b:after { --height: 16px; --rotate: 1deg; mask-image: url($lib/asset/mark/crossout-02.svg); }
 
     }
 
