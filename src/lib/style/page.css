@@ -1,16 +1,12 @@
 /* Page specific overrides */
 html {
-    &.-about { background-color: var(--accent-d-light); }
-}
-main {
-
-    /* Pages */
-    &.-home {}
-    &.-work {}
-    &.-about {
-        --bg-dynamic: var(--accent-d-light);
-    }
-    &.-journal {}
-    &.-fitcheck {}
+    
+    &:has(body main.-about) { --bg-dynamic: var(--accent-d-light); }
+    
+    &:has(body main.-home) {}
+    &:has(body main.-work) {}
+    &:has(body main.-journal) {}
+    &:has(body main.-fitcheck) {}
+    
 
 }

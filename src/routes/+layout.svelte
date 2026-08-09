@@ -5,6 +5,9 @@
     import { toCssVars } from '$lib/style/css-vars.js';
     import '$lib/style/main.css';
 
+    import Header from '$lib/component/layout/Header.svelte';
+    import Footer from '$lib/component/layout/Footer.svelte';
+
     let { children } = $props();
 
     const root = `:root{${
@@ -18,12 +21,15 @@
 
 </script>
 
+
 <svelte:head>
     <title>{current?.title}</title>
     <meta name="description" content={current?.desc} />
     {@html `<style>${root}</style>`}
 </svelte:head>
 
+<Header current={current?.id} />
 <main class={`main${current ? ` -${current.id}` : ''}`}>
 	{@render children()}
 </main>
+{#if (current && current.id !== "home")}<Footer />{/if}

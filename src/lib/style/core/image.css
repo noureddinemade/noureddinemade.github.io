@@ -12,30 +12,6 @@ svg {
 
 }
 
-.svg-icon, .svg-img, .svg-bg {
-
-    --fill: attr(data-fill type(<color>), none);
-
-    /* Children */
-    svg { fill: var(--fill, currentColor); }
-
-}
-
-.svg-icon, .svg-img {
-
-    --width:        attr(data-width px, 24px);
-    --minwidth:     attr(data-minwidth px, var(--width));
-    --height:       attr(data-height px, auto);
-    --minheight:    attr(data-minheight px, var(--height));
-
-    display: inline-block;
-    width: var(--width);
-    height: var(--height);
-    min-width: var(--minwidth);
-    min-height: var(--minheight);
-
-}
-
 span.svg-instead-of-text {
     position: relative;
     -webkit-text-fill-color: transparent;

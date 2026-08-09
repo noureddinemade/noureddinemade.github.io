@@ -1,6 +1,6 @@
 /* Footer */
 
-footer {
+footer.global {
     --frame: 80px;
     --bg-colour: var(--accent-c-base);
 
@@ -15,6 +15,7 @@ footer {
     height: var(--preset-footer-height);
     background-color: transparent;
     pointer-events: none;
+    display: none;
 
     /* Children */
     div.item {
@@ -49,12 +50,13 @@ footer {
         }
 
         /* Children */
-        span.svg-img {
+        svg.svg-img {
 
             width: 80px;
+            height: auto;
             
             /* Children */
-            svg path { fill: var(--light-light); }
+            path { fill: var(--light-light); }
 
         }
     }
