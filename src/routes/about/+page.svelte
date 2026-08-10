@@ -1,7 +1,7 @@
 <script>
-    import Block from "$lib/component/dynamic/Block.svelte";
-    import PageHeader from "$lib/component/dynamic/PageHeader.svelte";
-    import Image from "$lib/component/dynamic/Image.svelte";
+    import Block from "$lib/component/layout/Block.svelte";
+    import PageHeader from "$lib/component/layout/PageHeader.svelte";
+    import Image from "$lib/component/asset/Image.svelte";
 </script>
 
 <PageHeader props={{ "class":"spacing -p-b-none" }}>

@@ -1,5 +1,5 @@
 <script>
-    import Image from "$lib/component/dynamic/Image.svelte";
+    import Image from "$lib/component/asset/Image.svelte";
     import { year } from "$lib/data/glossary";
 </script>
 

@@ -1,6 +1,6 @@
 <script>
     
-    import Link from '$lib/component/dynamic/Link.svelte';
+    import Link from '$lib/component/action/Link.svelte';
     import { pages } from '$lib/data/glossary.js';
 
     let { current } = $props();

@@ -1,7 +1,7 @@
 <script>
     import Nav from "$lib/component/layout/Nav.svelte";
-    import Link from "$lib/component/dynamic/Link.svelte";
-    import Video from "$lib/component/dynamic/Video.svelte";
+    import Link from "$lib/component/action/Link.svelte";
+    import Video from "$lib/component/asset/Video.svelte";
     import { pages } from "$lib/data/glossary";
 
     let { current } = $props();

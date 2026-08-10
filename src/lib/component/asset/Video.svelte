@@ -2,7 +2,8 @@
     let { vid, props } = $props();
 
     const { aria, poster, playback , ...wrapper } = $derived(props);
-    const vidID = vid.replaceAll('/', '');
+    let vidID = vid.replaceAll('/', '');
+        vidID = vidID.replaceAll('.mp4', '');
 
     const videos = import.meta.glob('/src/lib/asset/**/*.mp4', {
         import: 'default',

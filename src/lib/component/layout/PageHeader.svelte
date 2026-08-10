@@ -1,6 +1,6 @@
 <script>
-    import Block from "$lib/component/dynamic/Block.svelte";
-    import Tags from "$lib/component/dynamic/Tags.svelte";
+    import Block from "$lib/component/layout/Block.svelte";
+    import Tags from "$lib/component/data/Tags.svelte";
 
     let { props = {}, children } = $props();
 
