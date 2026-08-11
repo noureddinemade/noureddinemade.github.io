@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     let { vid, props } = $props();
 
     const { aria, poster, playback , ...wrapper } = $derived(props);

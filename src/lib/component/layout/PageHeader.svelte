@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import Block from "$lib/component/layout/Block.svelte";
     import Tags from "$lib/component/data/Tags.svelte";
 

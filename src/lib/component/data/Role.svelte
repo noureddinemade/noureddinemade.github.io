@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     
     import { getCasesForRole, getRoleByID } from "$lib/script/helpers";
     import Button from "$lib/component/action/Button.svelte";

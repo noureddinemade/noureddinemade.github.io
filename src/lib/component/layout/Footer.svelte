@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import Image from "$lib/component/asset/Image.svelte";
     import { year } from "$lib/data/glossary";
 </script>

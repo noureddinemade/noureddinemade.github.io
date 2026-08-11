@@ -1,15 +1,7 @@
-<script>
-
-    /**
-        * @typedef {Object} Props
-        * @property {{ content?: Record<string, any> } & Record<string, any>} [props]
-        * @property {import('svelte').Snippet} [children]
-        * @property {import('svelte').Snippet} [beforeContent]
-        * @property {import('svelte').Snippet} [afterContent]
-    */
-
-    /** @type {Props} */
-    let { props = {}, children, beforeContent, afterContent } = $props();
+<script lang="ts">
+    import type { BlockProps } from "$lib/script/types";
+    
+    let { props = {}, children, beforeContent, afterContent }: BlockProps = $props();
 
     const { content, ...sectionProps } = $derived(props);
 

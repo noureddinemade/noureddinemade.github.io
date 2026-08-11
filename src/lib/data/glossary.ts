@@ -1,4 +1,6 @@
-export const roles = {
+import type { Roles, Page, Case } from '$lib/script/types';
+
+export const roles: Roles = {
     dub:   {
         title: 'Head of Product Design',
         desc: "Conversation capture and intelligence, out-of-the-box AI solutions that help businesses uncover value from recordings. Owned product design and grew the team that built an accessible, data-focused design system, dropping custom code from 85% down to 20%. Mentored designers and shaped how we worked. Led hands-on designing the way users query their data in plain language, making extracted data into something users could explore, rebuilding the web platform, and building internal tools.",
@@ -43,171 +45,171 @@ export const roles = {
     }
 };
 
-export const cases = [
+export const cases: Case[] = [
     { 
         title:'Accessibility at Dubber', 
         desc:'', 
         href:'/work/dubber/accessibility', 
         id:'dub',
+        inNav: true,
         icon: '✺',
         accent: 'd-light',
-        inList: true,
-        inNav: true
+        inList: true
     },
     { 
         title:'Creating an accessible, data focused design system', 
         desc:'A fully documented, accessible design system that cut custom code from ~85% to ~20% and changed how design and engineering worked together at Dubber.', 
         href:'/work/dubber/design-system', 
         id:'dub',
+        inNav: true,
         icon: '❖',
         accent: 'a-dark',
-        inList: true,
-        inNav: true
+        inList: true
     },
     { 
         title:'Exploring extracted data as entities', 
         desc:'We took something as trivial as extracting keywords from a transcript and turned it into a way for users to find meaningful, contextual value inside their conversations.', 
         href:'/work/dubber/extracted-data', 
         id:'dub',
+        inNav: true,
         icon: '⚃',
         accent: 'e-dark',
-        inList: true,
-        inNav: true
+        inList: true
     },
     { 
         title:'Building an internal tool that creates brand ready illustrations', 
         desc:'', 
         href:'/work/dubber/illustration-tool', 
         id:'dub',
+        inNav: true,
         icon: '✄',
         accent: 'f-dark',
-        inList: true,
-        inNav: true
+        inList: true
     },
     { 
         title:'Built a task based internal system to manage patients and orders', 
         desc:'', 
         href:'/work/simple-online-healthcare/admin-system', 
         id:'soh',
+        inNav: true,
         icon: '✓',
         accent: 'b-dark',
-        inList: true,
-        inNav: true
+        inList: true
     },
     { 
         title:'Created the brand and app experience for a holistic weight care product', 
         desc:'', 
         href:'/work/simple-online-healthcare/holistic-care', 
         id:'soh',
+        inNav: true,
         icon: '',
         accent: '',
-        inList: true,
-        inNav: true
+        inList: true
     },
     { 
         title:'Refreshed the brand for the digital pharmacy', 
         desc:'', 
         href:'/work/simple-online-healthcare/brand-refresh', 
         id:'soh',
+        inNav: true,
         icon: '',
         accent: '',
-        inList: true,
-        inNav: true
+        inList: true
     },
     { 
         title:'Created the experience for the NHS prescriptions app', 
         desc:'', 
         href:'/work/simple-online-healthcare/app-experience', 
         id:'soh',
+        inNav: true,
         icon: '',
         accent: '',
-        inList: true,
-        inNav: true
+        inList: true
     },
     { 
         title:'Designed the first version of the web experience', 
         desc:'', 
         href:'/work/echo/web-app-v1', 
         id:'echo',
+        inNav: true,
         icon: '',
         accent: '',
-        inList: true,
-        inNav: true
+        inList: true
     },
     { 
         title:'Designing a bunch of interesting stuff for a bunch of shitty people.', 
         desc:'', 
-        href:'/work/verve/my-time-at-verve', 
+        href:'/work/verve/various-projects', 
         id:'ver',
+        inNav: true,
         icon: '',
         accent: '',
-        inList: false,
-        inNav: true
+        inList: false
     },
     { 
         title:'Led the discovery and designed the sales flow experience for new global markets', 
         desc:'', 
-        href:'/work/verve/my-time-at-verve#', 
+        href:'/work/verve/various-projects#', 
         id:'ver',
+        inNav: false,
         icon: '',
         accent: '',
-        inList: true,
-        inNav: false
+        inList: true
         
     },
     { 
         title:'Designed new recruit pages that gave ambassadors more context and insights', 
         desc:'', 
-        href:'/work/verve/my-time-at-verve#', 
+        href:'/work/verve/various-projects#', 
         id:'ver',
+        inNav: false,
         icon: '',
         accent: '',
-        inList: true,
-        inNav: false
+        inList: true
     },
     { 
         title:'Created and built a brand new iconography ecosystem', 
         desc:'', 
-        href:'/work/verve/my-time-at-verve#iconography', 
+        href:'/work/verve/various-projects#iconography', 
         id:'ver',
+        inNav: false,
         icon: '',
         accent: '',
-        inList: true,
-        inNav: false
+        inList: true
     },
     { 
         title:'Designed the full experience for sporting events and travel', 
         desc:'', 
-        href:'/work/verve/my-time-at-verve#', 
+        href:'/work/verve/various-projects#', 
         id:'ver',
+        inNav: false,
         icon: '',
         accent: '',
-        inList: true,
-        inNav: false
+        inList: true
     },
     { 
         title:'Designed and built a free communication tool for sufferers of chronic pain', 
         desc:'', 
-        href:'/work/archive/nps', 
+        href:'/work/archive/chronic-pain-communication-tool', 
         id:'nm',
+        inNav: true,
         icon: '',
         accent: '',
-        inList: true,
-        inNav: true
+        inList: true
     },
     { 
         title:'A collection of some of my favourite branding bits and pieces (2015 - 2022)', 
         desc:'', 
         href:'/work/archive/brand-15-22', 
         id:'nm',
+        inNav: true,
         icon: '',
         accent: '',
-        inList: true,
-        inNav: true
+        inList: true
     },
 ]
 
-export const pages = [
+export const pages: Page[] = [
     { 
         title:'Home', 
         desc:'The online portfolio of Noureddine Azhar.', 
@@ -245,4 +247,4 @@ export const pages = [
     }
 ]
 
-export const year = new Date().getFullYear();
+export const year: number = new Date().getFullYear();

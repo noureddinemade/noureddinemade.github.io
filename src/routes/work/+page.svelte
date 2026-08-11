@@ -3,6 +3,8 @@
     import PageHeader from "$lib/component/layout/PageHeader.svelte";
     import Role from "$lib/component/data/Role.svelte";
     import Link from "$lib/component/action/Link.svelte";
+    import Emoji from "$lib/component/asset/Emoji.svelte";
+    import CompanyIcon from "$lib/component/asset/CompanyIcon.svelte";
 
     const caseCursor = { "data-cursor":"", "data-cursor-attach":"#readCaseStudy" };
 </script>
@@ -15,10 +17,36 @@
 
 <Block props={{ "class":"work" }}>
 
-    <!-- <CompanyIcon company="dub"/> -->
     <Role id="dub">
-        Conversation capture and intelligence !ICON! out-of-the-box AI solutions that help businesses uncover value from recordings. Owned product design and grew the team that built an <Link props={{ "href":"/work/dubber/accessibility", "label":{"data-text":"accessible"}, ...caseCursor }} />, data-focused <Link props={{ "href":"/work/dubber/design-system", "label":{"data-text":"design system"}, ...caseCursor }} />, dropping custom code from 85% down to 20%. Mentored designers and shaped how we worked. Led hands-on <span class="emoji" data-follow-hover><span class="-follow">🖐🏽</span></span> designing the way users query their data in plain language, making <Link props={{ "href":"/work/dubber/extracted-data", "label":{"data-text":"extracted data into something users could explore"}, ...caseCursor }} />, rebuilding the web platform, and <Link props={{ "href":"/work/dubber/illustration-tool", "label":{"data-text":"buiding internal tools"}, ...caseCursor }} />.
+        Conversation capture and intelligence <CompanyIcon id="dub"/> out-of-the-box AI solutions that help businesses uncover value from recordings. Owned product design and grew the team that built an <Link props={{ "href":"/work/dubber/accessibility", "label":{"data-text":"accessible"}, ...caseCursor }} />, data-focused <Link props={{ "href":"/work/dubber/design-system", "label":{"data-text":"design system"}, ...caseCursor }} />, dropping custom code from 85% down to 20%. Mentored designers and shaped how we worked. Led hands-on <Emoji emoji="🖐🏽" /> designing the way users query their data in plain language, making <Link props={{ "href":"/work/dubber/extracted-data", "label":{"data-text":"extracted data into something users could explore"}, ...caseCursor }} />, rebuilding the web platform, and <Link props={{ "href":"/work/dubber/illustration-tool", "label":{"data-text":"buiding internal tools"}, ...caseCursor }} />.
     </Role>
+
+    <!-- <CompanyIcon company="soh"/> -->
+    <Role id="soh">
+        Digital healthcare !ICON! across four brands !ICON! !ICON! !ICON! !ICON! and three countries <Emoji emoji="🇬🇧🇩🇪🇦🇺"/>. Ran design end-to-end and shaped the culture. Set roadmaps and stayed hands-on <span class="emoji">🤙🏽</span> building a <Link props={{ "href":"/work/soh/admin-system", "label":{"data-text":"task based system"}, ...caseCursor }} /> for pharmacists to manage patients and orders that improved high volume tasks. Created a cohesive, multi-brand design system, a <Link props={{ "href":"/work/dubber/holistic-care", "label":{"data-text":"holistic weight care product"}, ...caseCursor }} />, and an <Link props={{ "href":"/work/dubber/app-experience", "label":{"data-text":"NHS prescriptions mobile experience"}, ...caseCursor }} /> that never got built. Redesigned Australia specific flows to keep the service compliant as new regulations came in, and rebuilt one brand&rsquo;s entire digital experience in Webflow.
+    </Role>
+    
+    <!-- <CompanyIcon company="echo"/> -->
+    <Role id="echo">
+        NHS repeat prescription management !!ICON!! deeply tied into the GP system behind it. Led patient-facing design across web and mobile. <Link props={{ "href":"/work/dubber/app-experience", "label":{"data-text":"Created the first web experience"}, ...caseCursor }} /> for a product that until then was app-only <Emoji emoji="📱"/> the first channel that could bring patients in outside the app. Shipped key reminder <Emoji emoji="⏰" addOnClasses="animation -alarm-clock"/> features, improved critical app functions, and conceptualised the core third-party integration flows.
+    </Role>
+
+    <!-- <CompanyIcon company="ver"/> -->
+    <Role id="ver">
+        Ambassador-led ticketing platform !!ICON!! selling through personal networks. Worked across the web product in a cross-functional team of engineers, researchers and product owners, taking features from discovery <Emoji emoji="🔍" text=""/> through to ship. Led the <Link props={{ "href":"/work/verve/various-projects#", "label":{"data-text":"sales flow for the company&rsquo;s expansion into Europe"}, ...caseCursor }} />, rebuilt to clear strict anti-spam law in markets like <Emoji emoji="🇩🇪"/> Germany. Redesigned the global checkout, <Link props={{ "href":"/work/verve/various-projects#", "label":{"data-text":"created a new iconography system"}, ...caseCursor }} />, reworked the ambassador <Link props={{ "href":"/work/verve/various-projects#", "label":{"data-text":"recruit pages"}, ...caseCursor }} />, and designed the experience for the move into <Link props={{ "href":"/work/verve/various-projects#", "label":{"data-text":"seated group events and sporting events"}, ...caseCursor }} />.
+    </Role>
+    
+    <!-- <CompanyIcon company="ga"/> -->
+    <Role id="ga">
+        Tech education company !!ICON!! focused on immersive, industry-led teaching. Taught the practical, industry side of UX design and worked with the instructional team to reshape the curriculum and course structure. Sat one-on-one with students <Emoji emoji="🧑🏽‍💻"/> lectured on visual design and branding, ran tutorials on forms and mobile design, and led workshops on development and industry tools.
+    </Role>
+    
+    <!-- <CompanyIcon company="nm"/> -->
+    <Role id="nm">
+        Freelance, contract and consultation work across product, digital and brand. Designed digital experiences and campaigns for worldwide clients !!ICON!! !!ICON!! !!ICON!! !!ICON!! !!ICON!! !!ICON!! !!ICON!! !!ICON!!. Ran research and usability testing for a building-material marketplace, built the kiosk experience for diabetes tools with CDM London, and designed and built a <Link props={{ "href":"/work/archive/chronic-pain-communication-tool", "label":{"data-text":"free communication tool for people living with chronic pain"}, ...caseCursor }} /> with NPS MedicineWise.
+    </Role>
+
+
 
 </Block>
 

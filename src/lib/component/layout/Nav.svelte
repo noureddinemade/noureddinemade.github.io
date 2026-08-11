@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
     
     import Link from '$lib/component/action/Link.svelte';
-    import { pages } from '$lib/data/glossary.js';
+    import { pages } from '$lib/data/glossary';
 
     let { current } = $props();
 

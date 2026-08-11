@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
     let { src, alt, desc=null, props, parent={} } = $props();
 
-    const type = src.split('.').pop();
+    const type = $derived(src.split('.').pop());
 
     const svgs = import.meta.glob('/src/lib/asset/**/*.svg', {
         query: '?raw',
@@ -35,12 +35,25 @@
             : { class: 'img-wrap' }
     );
 </script>
-
-{#if type === 'svg'} {@html image}
+{#if type === 'svg'}
+{#if (parent)}
+        <span {...parent}>
+            {@html image}
+        </span>
+    {:else}
+        {@html image}
+    {/if}
 {:else if desc}
     <figure {...figureProps}>
         <img src={image} {alt} />
         <figcaption>{desc}</figcaption>
     </figure>
-{:else} <img src={image} {alt} {...props} />
+{:else}
+    {#if (parent)}
+        <span {...parent}>
+            <img src={image} {alt} {...props} />
+        </span>
+    {:else}
+        <img src={image} {alt} {...props} />
+    {/if}
 {/if}

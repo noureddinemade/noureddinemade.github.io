@@ -1,8 +1,7 @@
-<script>
+<script lang="ts">
     import { page } from '$app/state';
-    import { theme, spacing, typography, animation } from '$lib/style/variables.js';
-    import { getMetaByPath } from '$lib/script/helpers';
-    import { toCssVars } from '$lib/style/css-vars.js';
+    import { theme, spacing, typography, animation } from '$lib/style/variables';
+    import { getMetaByPath, toCssVars } from '$lib/script/helpers';
     import '$lib/style/main.css';
 
     import Header from '$lib/component/layout/Header.svelte';

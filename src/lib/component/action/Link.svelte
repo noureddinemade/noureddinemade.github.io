@@ -1,23 +1,17 @@
-<script>
+<script lang="ts">
 
-    let { props } = $props();
+    import type { LinkProps } from "$lib/script/types";
 
-    const { label, newWindow, ...link } = $derived(props);
+    let { props }: LinkProps = $props();
 
-    const windowAttrs = $derived(
-        newWindow ? { target: '_blank', rel: 'noopener noreferrer nofollow' } : {}
-    );
-
-    const labelAttrs = $derived(
-        label
-            ? { ...label, class: label.class ? `label ${label.class}` : 'label' }
-            : label
-    );
+    const { label, ...link } = $derived(props);
+    const windowAttrs = $derived(link['data-window'] ? { target: '_blank', rel: 'noopener noreferrer nofollow' } : {});
+    const labelAttrs = $derived(label ? { ...label, class: label.class ? `label ${label.class}` : 'label' } : label);
     
 </script>
 
 <a {...link} {...windowAttrs}>
     <span {...labelAttrs}>
-        {@html labelAttrs['data-text']}
+        {@html label['data-text']}
     </span>
 </a>

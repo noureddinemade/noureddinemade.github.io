@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import Nav from "$lib/component/layout/Nav.svelte";
     import Link from "$lib/component/action/Link.svelte";
     import Video from "$lib/component/asset/Video.svelte";
