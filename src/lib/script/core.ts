@@ -63,8 +63,9 @@ export const viewportProgress = (el: HTMLElement): number => {
     return Math.min(1, Math.max(0, raw));
 };
 
-export const onScroll = (fn: (e: Lenis) => void) => {
+export const onScroll = (fn: (e: Lenis) => void): (() => void) => {
     lenis?.on('scroll', fn);
+    return () => lenis?.off('scroll', fn);
 };
 
 export const getScroll = () => lenis?.scroll ?? 0;

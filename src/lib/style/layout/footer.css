@@ -15,7 +15,6 @@ footer.global {
     height: var(--preset-footer-height);
     background-color: transparent;
     pointer-events: none;
-    display: none;
 
     /* Children */
     div.item {

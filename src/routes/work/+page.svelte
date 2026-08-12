@@ -1,4 +1,7 @@
 <script>
+    import { onMount } from "svelte";
+    import { toggleInit } from "$lib/script/toggle";
+
     import Block from "$lib/component/layout/Block.svelte";
     import PageHeader from "$lib/component/layout/PageHeader.svelte";
     import Role from "$lib/component/data/Role.svelte";
@@ -7,6 +10,11 @@
     import CompanyIcon from "$lib/component/asset/CompanyIcon.svelte";
 
     const caseCursor = { "data-cursor":"", "data-cursor-attach":"#readCaseStudy" };
+
+    onMount(() => {
+        toggleInit();
+    });
+
 </script>
 
 <PageHeader props={{ "data-sticky":"true", "data-sticky-offset":"244", "content":{ "class":"spacing -mw-lg" } }}>

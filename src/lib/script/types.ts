@@ -99,3 +99,23 @@ export interface RoleProps {
     id: string;
     children: Snippet;
 }
+
+// Effect types
+export interface FollowItem {
+    parent: HTMLElement;
+    child: HTMLElement;
+    axisX: number;
+    axisY: number;
+    hover: boolean;
+    hovered: boolean;
+    px: number; py: number;
+    ex: number; ey: number;
+    cx: number; cy: number;
+    tx: number; ty: number;
+    tilt: number;
+    rx: number; ry: number;
+    hw: number; hh: number;
+    lerp: number;
+    nudge: number;
+    reach: number;
+}

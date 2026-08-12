@@ -1,7 +1,13 @@
 <script>
+    import { onMount } from "svelte";
+    import { followInit } from "$lib/script/follow";
+
     import Block from "$lib/component/layout/Block.svelte";
     import PageHeader from "$lib/component/layout/PageHeader.svelte";
     import Image from "$lib/component/asset/Image.svelte";
+
+    onMount(() => followInit());
+
 </script>
 
 <PageHeader props={{ "class":"spacing -p-b-none" }}>

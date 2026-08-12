@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { browser } from '$app/environment';
     import { onMount } from 'svelte';
     import { page } from '$app/state';
     import { onNavigate, afterNavigate } from '$app/navigation';
@@ -7,11 +8,14 @@
     import { imgLoad } from '$lib/script/utils';
     import { coreInit, resetScroll } from '$lib/script/core';
     import { cursorCleanup, cursorInit } from '$lib/script/cursor';
+    import { footerInit } from '$lib/script/footer';
     import '$lib/style/main.css';
 
     import Header from '$lib/component/layout/Header.svelte';
     import Footer from '$lib/component/layout/Footer.svelte';
 
+    if (browser) coreInit();
+    
     let { children } = $props();
     let phase = $state('');
 
@@ -27,10 +31,10 @@
         transition = Number(transition);
 
     const current = $derived(getMetaByPath(page.url.pathname));
+    const footer = browser ? footerInit() : null;
 
     onMount(() => {
         
-        coreInit();
         cursorInit();
         return cursorCleanup;
 
@@ -51,6 +55,7 @@
     afterNavigate(() => {
         imgLoad();
         resetScroll();
+        footer?.remeasure();
     })
 
 </script>
