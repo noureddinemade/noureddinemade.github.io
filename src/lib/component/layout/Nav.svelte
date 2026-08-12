@@ -3,7 +3,7 @@
     import Link from '$lib/component/action/Link.svelte';
     import { pages } from '$lib/data/glossary';
 
-    let { current } = $props();
+    let { current }: { current: string; } = $props();
 
 </script>
 

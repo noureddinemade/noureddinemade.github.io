@@ -12,6 +12,11 @@ main {
     margin-bottom: var(--preset-footer-height);
     box-sizing: border-box;
     background-color: var(--bg-dynamic);
+    opacity: 1;
+    filter: none;
+    translate: none;
+    /* will-change: opacity, filter, translate, background-color; */
+    transition: background-color calc(var(--pg-transition-speed) / 1.5);
 
     /* Psuedo */
     &:after {

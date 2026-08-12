@@ -1,16 +1,23 @@
 <script lang="ts">
-    let { vid, props } = $props();
+    import type { VideoProps } from "$lib/script/types";
 
-    const { aria, poster, playback , ...wrapper } = $derived(props);
-    let vidID = vid.replaceAll('/', '');
-        vidID = vidID.replaceAll('.mp4', '');
+    let { vid, props }: VideoProps = $props();
 
-    const videos = import.meta.glob('/src/lib/asset/**/*.mp4', {
+    const vidID = $derived.by(() => {
+
+        let vidType = vid.replaceAll('/', '');
+            vidType = vidType.replaceAll('.mp4', '');
+        
+            return vidType;
+
+    });
+
+    const videos = import.meta.glob<string>('/src/lib/asset/**/*.mp4', {
         import: 'default',
         eager: true
     });
     
-    const posters = import.meta.glob('/src/lib/asset/**/*', {
+    const posters = import.meta.glob<string>('/src/lib/asset/**/*', {
         import: 'default',
         eager: true
     });
@@ -25,9 +32,9 @@
     
     const posterImage = $derived.by(() => {
         let img;
-        if (poster) {
+        if (props && props.poster) {
     
-            const posterPath = `/src/lib/asset/${poster}`;
+            const posterPath = `/src/lib/asset/${props.poster}`;
             const posterPool = posters;
             img = posterPool[posterPath];
 
@@ -36,24 +43,23 @@
         return img;
     });
 
-
     const vidProps = $derived(
         props
-            ? { ...wrapper, class: props.class ? `video-wrap ${props.class}` : 'video-wrap' }
+            ? { ...props, class: props.class ? `video-wrap ${props.class}` : 'video-wrap' }
             : { class: 'video-wrap' }
     );
 </script>
 
 <!-- <div {...vidProps} data-cursor=`playback${ playback && playback.a ? '-paused' : '-playing' }` data-video={vidID}> -->
-<div {...vidProps} data-video={vidID}>
+<div id={vidProps.id} class={vidProps.class} data-video={vidID}>
 <video 
         data-video={vidID}
-        autoplay={ playback && playback.a ? false : true }
-        loop={ playback && playback.l ? false : true }
-        muted={ playback && playback.m ? false : true }
+        autoplay={ props && props.autoplay ? true : false }
+        muted={ props && props.muted ? true : false }
+        loop={ props && props.loop ? true : false }
         playsinline
         preload="metadata"
-        aria-label={aria}
+        aria-label={props?.["aria-label"]}
         poster={posterImage}
     >
         <source src={video} type="video/mp4">

@@ -1,20 +1,14 @@
 <script lang="ts">
 
-    let { props } = $props();
+    import type { HTMLAttributes, HTMLButtonAttributes } from 'svelte/elements';
+    import type { ButtonProps } from "$lib/script/types";
+
+    let { props }: ButtonProps = $props();
 
     const { label, ...button } = $derived(props);
 
-    const labelAttrs = $derived(
-        label
-            ? { ...label, class: label.class ? `label ${label.class}` : 'label' }
-            : label
-    );
-
-    const buttonAttrs = $derived(
-        button
-            ? { ...button, class: button.class ? `btn ${button.class}` : 'btn' }
-            : button
-    );
+    const labelAttrs: HTMLAttributes<HTMLElement> = $derived({ ...label, class: label.class ? `label ${label.class}` : 'label' });
+    const buttonAttrs: HTMLButtonAttributes = $derived({ ...button, class: button.class ? `btn ${button.class}` : 'btn' });
     
 </script>
 

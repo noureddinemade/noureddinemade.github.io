@@ -4,7 +4,7 @@
     import Video from "$lib/component/asset/Video.svelte";
     import { pages } from "$lib/data/glossary";
 
-    let { current } = $props();
+    let { current }: { current: string; } = $props();
 
 </script>
 
@@ -31,9 +31,9 @@
             </div>
         </div>
         <Link props={{
-            href: pages.filter(p => p.title === 'Fitcheck')[0].title,
-            class: 'colour -bg -bg-accent-b-dark -hover -hover-accent-b-base text -contrast',
-            label: { 'data-text': 'Are we a good fit?' }
+            "href": pages.filter(p => p.title === 'Fitcheck')[0].title,
+            "class": 'colour -bg -bg-accent-b-dark -hover -hover-accent-b-base text -contrast',
+            "label": { 'data-text': 'Are we a good fit?' }
         }} />
     </div>
 
@@ -41,8 +41,7 @@
     <Video 
         vid="vid/noureddine.mp4"
         props={{ 
-            "aria":"A timelapse of Noureddine through the years.",
-            "poster":"",
+            "aria-label":"A timelapse of Noureddine through the years.",
             "class":"cursor-attach -noureddine",
             "id":"noureddine"
     }}/>

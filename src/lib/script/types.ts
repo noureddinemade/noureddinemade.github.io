@@ -1,5 +1,5 @@
 import type { Snippet } from "svelte";
-import type { HTMLAttributes } from 'svelte/elements';
+import type { HTMLAttributes, HTMLAnchorAttributes, HTMLButtonAttributes, HTMLImgAttributes, SVGAttributes, HTMLVideoAttributes } from 'svelte/elements';
 
 // Pages
 export interface Page {
@@ -53,17 +53,49 @@ export type ThemeSwatches = Record<string, ThemeSwatch>;
 // Components
 export interface BlockProps {
     children: Snippet;
-    props?: HTMLAttributes<HTMLElement> & { content?: HTMLAttributes<HTMLElement> };
+    props?: HTMLAttributes<HTMLElement> & { 
+        content?: HTMLAttributes<HTMLElement> 
+    };
     beforeContent?: Snippet;
     afterContent?: Snippet;
 }
 
+export interface PageHeaderProps {
+    props?: HTMLAttributes<HTMLElement> & { 
+        tags?: string[];
+        content?:HTMLAttributes<HTMLElement>; 
+    };
+    children: Snippet;
+}
+
 export interface LinkProps {
-    props: HTMLAttributes<HTMLElement> & { label?: HTMLAttributes<HTMLElement> };
+    props: HTMLAnchorAttributes & { label: HTMLAttributes<HTMLElement> };
+}
+
+export interface ButtonProps {
+    props: HTMLButtonAttributes & { label: HTMLAttributes<HTMLElement> };
 }
 
 export interface EmojiProps {
     emoji: string;
     text?: string;
     addOnClasses?: string;
+}
+
+export interface ImageProps {
+    src: string;
+    alt: string;
+    desc?: string;
+    props?: HTMLImgAttributes | SVGAttributes<SVGElement> | HTMLAttributes<HTMLElement> ;
+    parent?: HTMLAttributes<HTMLElement>;
+}
+
+export interface VideoProps {
+    vid: string;
+    props?: HTMLVideoAttributes;
+}
+
+export interface RoleProps {
+    id: string;
+    children: Snippet;
 }

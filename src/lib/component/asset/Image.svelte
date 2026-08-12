@@ -1,15 +1,18 @@
 <script lang="ts">
-    let { src, alt, desc=null, props, parent={} } = $props();
+    import type { HTMLAttributes, HTMLImgAttributes } from "svelte/elements";
+    import type { ImageProps } from "$lib/script/types";
+
+    let { src, alt, desc, props, parent }: ImageProps = $props();
 
     const type = $derived(src.split('.').pop());
 
-    const svgs = import.meta.glob('/src/lib/asset/**/*.svg', {
+    const svgs = import.meta.glob<string>('/src/lib/asset/**/*.svg', {
         query: '?raw',
         import: 'default',
         eager: true
     });
 
-    const images = import.meta.glob('/src/lib/asset/**/*', {
+    const images = import.meta.glob<string>('/src/lib/asset/**/*', {
         import: 'default',
         eager: true
     });
@@ -44,16 +47,16 @@
         {@html image}
     {/if}
 {:else if desc}
-    <figure {...figureProps}>
+    <figure {...(figureProps as HTMLAttributes<HTMLElement>)}>
         <img src={image} {alt} />
         <figcaption>{desc}</figcaption>
     </figure>
 {:else}
     {#if (parent)}
         <span {...parent}>
-            <img src={image} {alt} {...props} />
+            <img src={image} {alt} {...(props as HTMLImgAttributes)} />
         </span>
     {:else}
-        <img src={image} {alt} {...props} />
+        <img src={image} {alt} {...(props as HTMLImgAttributes)} />
     {/if}
 {/if}

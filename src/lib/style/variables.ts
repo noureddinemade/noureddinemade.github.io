@@ -97,9 +97,17 @@ const fw: Record<string, number> = {
 
 // Animation
 const movement = {}
+const pgTransition: Record<string, string> = {
+    speed: '500ms',
+    blur: '4px',
+    opacity: '0',
+    posY: '24px',
+    posX: '0'
+}
+// const pgTransition = '400ms';
 
 // Export
-export const animation = { movement };
+export const animation = { movement, pgTransition };
 export const typography = { fs, ff, fw, lh, ls };
 export const spacing = { scale, mw, gap, padding, preset };
 export const theme: ThemeSwatches = {

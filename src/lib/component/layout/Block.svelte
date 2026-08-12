@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { BlockProps } from "$lib/script/types";
     
-    let { props = {}, children, beforeContent, afterContent }: BlockProps = $props();
+    let { props={} , children, beforeContent, afterContent }: BlockProps = $props();
 
     const { content, ...sectionProps } = $derived(props);
 
