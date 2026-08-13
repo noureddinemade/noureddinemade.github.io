@@ -10,23 +10,51 @@ export const flags = {
 
 export let lenis: Lenis | null = null;
 
-const subscribers = new Set<(time: number) => void>();
+const tickSubscribers = new Set<(time: number) => void>();
+const scrollSubscribers = new Set<() => void>();
 
 export const pointer = { x: 0, y: 0 };
+
+// native-scroll fallback state (only used when Lenis isn't running)
+let lastNativeY = 0;
+let nativeVelocity = 0;
+let scrollScheduled = false;
 
 const trackPointer = (e: PointerEvent) => {
     pointer.x = e.clientX;
     pointer.y = e.clientY;
 };
 
+const notifyScroll = () => {
+    for (const fn of scrollSubscribers) fn();
+};
+
+// rAF-batched native scroll handler (fallback when Lenis is absent)
+const onNativeScroll = () => {
+    if (scrollScheduled) return;
+    scrollScheduled = true;
+    requestAnimationFrame(() => {
+        scrollScheduled = false;
+        const y = window.scrollY;
+        nativeVelocity = y - lastNativeY;
+        lastNativeY = y;
+        notifyScroll();
+    });
+};
+
 export const onTick = (fn: (time: number) => void): (() => void) => {
-    subscribers.add(fn);
-    return () => subscribers.delete(fn);
+    tickSubscribers.add(fn);
+    return () => { tickSubscribers.delete(fn); };
+};
+
+export const onScroll = (fn: () => void): (() => void) => {
+    scrollSubscribers.add(fn);
+    return () => { scrollSubscribers.delete(fn); };
 };
 
 const frame = (time: number) => {
     lenis?.raf(time);
-    for (const fn of subscribers) fn(time);
+    for (const fn of tickSubscribers) fn(time);
     requestAnimationFrame(frame);
 };
 
@@ -39,21 +67,34 @@ export const coreInit = () => {
         pointer.x = window.innerWidth / 2;
         pointer.y = window.innerHeight / 2;
         window.addEventListener('pointermove', trackPointer, { passive: true });
-        
+
         lenis = new Lenis({
             lerp: 0.1,
             wheelMultiplier: 1,
             autoRaf: false,
-            stopInertiaOnNavigate: true
+            stopInertiaOnNavigate: true,
         });
 
+        // Lenis feeds the scroll subscribers
+        lenis.on('scroll', notifyScroll);
+
         requestAnimationFrame(frame);
+    } else {
+        // no Lenis: native scroll still feeds the scroll subscribers
+        lastNativeY = window.scrollY;
+        window.addEventListener('scroll', onNativeScroll, { passive: true });
     }
 };
 
 export const resetScroll = () => {
-    lenis?.scrollTo(0, { immediate: true });
-    lenis?.resize();
+    if (lenis) {
+        lenis.scrollTo(0, { immediate: true });
+        lenis.resize();
+    } else {
+        window.scrollTo(0, 0);
+        lastNativeY = 0;
+        nativeVelocity = 0;
+    }
 };
 
 export const viewportProgress = (el: HTMLElement): number => {
@@ -63,13 +104,8 @@ export const viewportProgress = (el: HTMLElement): number => {
     return Math.min(1, Math.max(0, raw));
 };
 
-export const onScroll = (fn: (e: Lenis) => void): (() => void) => {
-    lenis?.on('scroll', fn);
-    return () => lenis?.off('scroll', fn);
-};
-
-export const getScroll = () => lenis?.scroll ?? 0;
-export const getVelocity = () => lenis?.velocity ?? 0;
+export const getScroll = () => lenis?.scroll ?? window.scrollY;
+export const getVelocity = () => lenis?.velocity ?? nativeVelocity;
 
 export const num = (v: string, d: number): number => {
     const n = parseFloat(v);

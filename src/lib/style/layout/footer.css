@@ -16,6 +16,9 @@ footer.global {
     background-color: transparent;
     pointer-events: none;
 
+    /* Variants */
+    &.-exit div.item { transition: translate calc(var(--pg-transition-speed) / 1.5) ease; }
+
     /* Children */
     div.item {
         position: relative;
@@ -28,7 +31,7 @@ footer.global {
         height: 100%;
         width: 100%;
         padding: var(--scale-md);
-        translate: 0 calc((1 - var(--footer-reveal, 1)) * 700px);
+        translate: 0 calc((1 - var(--footer-reveal, 0)) * 700px);
         color: var(--light-light);
         background-color: var(--bg-colour);
         pointer-events: auto;
