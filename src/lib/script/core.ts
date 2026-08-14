@@ -12,6 +12,7 @@ export let lenis: Lenis | null = null;
 
 const tickSubscribers = new Set<(time: number) => void>();
 const scrollSubscribers = new Set<() => void>();
+const resizeSubscribers = new Set<() => void>();
 
 export const pointer = { x: 0, y: 0 };
 
@@ -27,6 +28,17 @@ const trackPointer = (e: PointerEvent) => {
 
 const notifyScroll = () => {
     for (const fn of scrollSubscribers) fn();
+};
+
+// shared debounced resize — one listener fans out to all subscribers
+let resizeTimer = 0;
+const RESIZE_DEBOUNCE = 150;
+
+const onNativeResize = () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(() => {
+        for (const fn of resizeSubscribers) fn();
+    }, RESIZE_DEBOUNCE);
 };
 
 // rAF-batched native scroll handler (fallback when Lenis is absent)
@@ -50,6 +62,11 @@ export const onTick = (fn: (time: number) => void): (() => void) => {
 export const onScroll = (fn: () => void): (() => void) => {
     scrollSubscribers.add(fn);
     return () => { scrollSubscribers.delete(fn); };
+};
+
+export const onResize = (fn: () => void): (() => void) => {
+    resizeSubscribers.add(fn);
+    return () => { resizeSubscribers.delete(fn); };
 };
 
 const frame = (time: number) => {
@@ -89,6 +106,9 @@ export const coreInit = () => {
         lastNativeY = window.scrollY;
         window.addEventListener('scroll', onNativeScroll, { passive: true });
     }
+
+    window.addEventListener('resize', onNativeResize, { passive: true });
+
 };
 
 export const resetScroll = () => {

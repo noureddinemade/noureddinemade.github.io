@@ -1,11 +1,14 @@
 <script lang="ts">
+    import { onMount } from "svelte";
     import Nav from "$lib/component/layout/Nav.svelte";
     import Link from "$lib/component/action/Link.svelte";
     import Video from "$lib/component/asset/Video.svelte";
     import { pages } from "$lib/data/glossary";
+    import { marqueeInit } from "$lib/script/marquee";
 
     let { current }: { current: string; } = $props();
 
+    onMount(marqueeInit);
 </script>
 
 <header class="global">
