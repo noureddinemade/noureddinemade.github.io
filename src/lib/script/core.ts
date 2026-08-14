@@ -58,7 +58,12 @@ const frame = (time: number) => {
     requestAnimationFrame(frame);
 };
 
+let initialised = false;
+
 export const coreInit = () => {
+    if (initialised) return;
+    initialised = true;
+
     flags.reduce = mq('(prefers-reduced-motion: reduce)');
     flags.rich = mq('(hover: hover) and (pointer: fine)');
     flags.enabled = flags.rich && !flags.reduce;

@@ -9,24 +9,22 @@ export const followInit = (): (() => void) => {
     const LERP = 0.2, REACH = 100, PARENT_NUDGE = 20;
 
     const state: FollowItem[] = [...document.querySelectorAll<HTMLElement>('[data-follow], [data-follow-hover]')]
-        .map((parent) => {
-            const child = parent.querySelector<HTMLElement>('.-follow');
-            return {
-                parent,
-                child: child as HTMLElement,
-                axisX: parent.hasAttribute('data-follow-axis-y') ? 0 : 1,
-                axisY: parent.hasAttribute('data-follow-axis-x') ? 0 : 1,
-                hover: parent.hasAttribute('data-follow-hover'),
-                hovered: false,
-                px: 0, py: 0, ex: 0, ey: 0, cx: 0, cy: 0, tx: 0, ty: 0,
-                tilt: parent.hasAttribute('data-follow-tilt') ? num(parent.dataset.followTilt ?? '', 10) : 0,
-                rx: 0, ry: 0, hw: 1, hh: 1,
-                lerp: num(parent.dataset.followLerp ?? '', LERP),
-                nudge: num(parent.dataset.followNudge ?? '', PARENT_NUDGE),
-                reach: num(parent.dataset.followReach ?? '', REACH),
-            };
-        })
-        .filter((s) => s.child);
+        .map((parent) => ({ parent, child: parent.querySelector<HTMLElement>('.-follow') }))
+        .filter((p): p is { parent: HTMLElement; child: HTMLElement } => p.child !== null)
+        .map(({ parent, child }) => ({
+            parent,
+            child,
+            axisX: parent.hasAttribute('data-follow-axis-y') ? 0 : 1,
+            axisY: parent.hasAttribute('data-follow-axis-x') ? 0 : 1,
+            hover: parent.hasAttribute('data-follow-hover'),
+            hovered: false,
+            px: 0, py: 0, ex: 0, ey: 0, cx: 0, cy: 0, tx: 0, ty: 0,
+            tilt: parent.hasAttribute('data-follow-tilt') ? num(parent.dataset.followTilt ?? '', 10) : 0,
+            rx: 0, ry: 0, hw: 1, hh: 1,
+            lerp: num(parent.dataset.followLerp ?? '', LERP),
+            nudge: num(parent.dataset.followNudge ?? '', PARENT_NUDGE),
+            reach: num(parent.dataset.followReach ?? '', REACH),
+        }));
 
     if (!state.length) return () => {};
 
