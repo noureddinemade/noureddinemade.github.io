@@ -1,4 +1,4 @@
-import { onScroll, getScroll } from '$lib/script/core';
+import { onScroll, getScroll, onResize } from '$lib/script/core';
 import { onNavPhase, transitionSpeed } from '$lib/script/transition';
 
 export const footerInit = () => {
@@ -39,13 +39,13 @@ export const footerInit = () => {
         );
     };
 
-    const onResize = () => { measure(); update(); };
+    const refresh = () => { measure(); update(); };
 
     measure();
     update();
 
     const unScroll = onScroll(update);
-    window.addEventListener('resize', onResize);
+    const unResize = onResize(refresh);
 
     const offNav = onNavPhase((phase) => { if (phase === 'exit') reset(); });
 
@@ -57,8 +57,8 @@ export const footerInit = () => {
         destroy: () => {
             window.clearTimeout(resetTimer);
             unScroll();
+            unResize();
             offNav();
-            window.removeEventListener('resize', onResize);
             ro.disconnect();
         },
     };

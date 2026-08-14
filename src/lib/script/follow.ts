@@ -1,5 +1,5 @@
 //
-import { flags, onTick, onScroll, pointer, num } from '$lib/script/core';
+import { flags, onTick, onScroll, pointer, num, onResize } from '$lib/script/core';
 import type { FollowItem } from '$lib/script/types';
 
 //
@@ -57,8 +57,7 @@ export const followInit = (): (() => void) => {
 
     requestAnimationFrame(measure);
     cleanups.push(onScroll(measure));
-    window.addEventListener('resize', measure);
-    cleanups.push(() => window.removeEventListener('resize', measure));
+    cleanups.push(onResize(measure));
 
     cleanups.push(onTick(() => {
         state.forEach((s) => {
