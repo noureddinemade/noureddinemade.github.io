@@ -12,6 +12,7 @@ html {
     color: var(--body);
     background-color: var(--bg-dynamic);
     transition: background-color calc(var(--pg-transition-speed) / 1.5);
+    animation: freshOpen .2s ease 1;
 
 }
 

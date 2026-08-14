@@ -193,6 +193,11 @@
     }
 }
 
+@keyframes freshOpen {
+    from    { opacity: 0; }
+    to      { opacity: 1; }
+}
+
 /* Classes */
 .animation {
     --name: none;
@@ -249,15 +254,3 @@
 /* Page Transitions */
 main.-enter { animation: pageEnter calc(var(--pg-transition-speed)/1.5) ease 0s 1; }
 main.-exit { animation: pageExit calc(var(--pg-transition-speed)/1.5) ease 0s 1 forwards; }
-
-
-/* Accessibility */
-.stop-animations { animation: none !important; }
-
-@media (prefers-reduced-motion: reduce) {
-
-    *, *::before, *::after { animation: none !important; }
-    [data-marquee] { overflow-x: auto; }
-    [data-marquee-track], [data-enter] { animation: none; }
-
-}

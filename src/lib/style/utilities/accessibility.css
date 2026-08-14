@@ -1,0 +1,15 @@
+/* Accessibility */
+.stop-animations { animation: none; }
+
+@media (prefers-reduced-motion: reduce) {
+
+    *, *::before, *::after { 
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+        animation-delay: 0.01ms;
+        transition-duration: 0.01ms;
+    }
+
+    [data-marquee] { overflow-x: auto; }
+
+}

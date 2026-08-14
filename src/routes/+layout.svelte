@@ -6,8 +6,8 @@
     import { theme, spacing, typography, animation } from '$lib/style/variables';
     import { getMetaByPath, toCssVars } from '$lib/script/helpers';
     import { imgLoad } from '$lib/script/utils';
-    import { coreInit, resetScroll } from '$lib/script/core';
-    import { onNavPhase, setNavPhase, transitionSpeed } from '$lib/script/transition';
+    import { coreInit, resetScroll, flags } from '$lib/script/core';
+    import { setNavPhase, transitionSpeed } from '$lib/script/transition';
     import { cursorCleanup, cursorInit } from '$lib/script/cursor';
     import { footerInit } from '$lib/script/footer';
     import '$lib/style/main.css';
@@ -47,8 +47,11 @@
     });
 
     onNavigate(() => {
-        phase = '-exit';
         setNavPhase('exit');
+
+        if (flags.reduce) return () => setNavPhase('enter');
+
+        phase = '-exit';
 
         return new Promise((resolve) => {
             setTimeout(resolve, transitionSpeed);
