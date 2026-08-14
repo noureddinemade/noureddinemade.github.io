@@ -19,7 +19,7 @@ export const addLinkCursors = (wrapper: HTMLElement) => {
     wrapper.querySelectorAll('p').forEach(p => {
         p.querySelectorAll('a').forEach(a => {
             a.dataset.cursor = 'link';
-            a.dataset.aim = 'true';
+            a.dataset.cursorAim = 'true';
         });
     });
 }
@@ -62,6 +62,5 @@ export const caseStudyFormatter = () => {
     
     if (!main) return;
     
-    addLinkCursors(main);
     wrapBrackets(main);
 }

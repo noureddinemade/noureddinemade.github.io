@@ -3,7 +3,8 @@ import { flags, onTick, pointer, num } from '$lib/script/core';
 // module-level handles so cleanup can remove them
 let cursorEl: HTMLDivElement | null = null;
 let pointerOver: ((e: PointerEvent) => void) | null = null;
-let pointerLeave: (() => void) | null = null;
+let pointerLeave: ((e: PointerEvent) => void) | null = null;
+let onBlur: (() => void) | null = null;
 let untickCursor: (() => void) | null = null;
 let untickAttach: (() => void) | null = null;
 
@@ -21,6 +22,7 @@ export const cursorInit = () => {
 
     let currentX = pointer.x, currentY = pointer.y;
     let visible = false;
+    let withinWindow = true;
     let aimActive = true, aimTarget: HTMLElement | null = null;
     let targetAngle = 0, currentAngle = 0;
 
@@ -77,13 +79,14 @@ export const cursorInit = () => {
 
     // ---- one shared pointerover for both concerns ----
     pointerOver = (event: PointerEvent) => {
+        withinWindow = true;
         const t = event.target as HTMLElement;
 
         // cursor state + aim
         const tagged = t.closest<HTMLElement>('[data-cursor]');
         if (tagged) cursorEl!.dataset.state = tagged.dataset.cursor;
         else if (t.closest('a[disabled]')) cursorEl!.dataset.state = 'disabled';
-        else if (t.closest('a[href]')) cursorEl!.dataset.state = 'link';
+        else if (t.closest('a[href]') || t.closest('button')) cursorEl!.dataset.state = 'link';
         else delete cursorEl!.dataset.state;
 
         const aimEl = t.closest<HTMLElement>('a[href], [data-cursor-aim]');
@@ -101,22 +104,33 @@ export const cursorInit = () => {
         setCurrent(next, trigger ? trigger.dataset : ({} as DOMStringMap));
     };
 
-    pointerLeave = () => {
+    const hide = () => {
+        withinWindow = false;
         visible = false;
         cursorEl!.classList.remove('is-visible');
         currentTrigger = null;
         setCurrent(null, {} as DOMStringMap);
     };
 
+    // pointer left the window entirely (relatedTarget is null on window exit)
+    pointerLeave = (e: PointerEvent) => {
+        if (e.relatedTarget) return;
+        hide();
+    };
+
+    // window lost focus (tab-away, app-switch) — no pointer event fires for these
+    onBlur = hide;
+
     document.addEventListener('pointerover', pointerOver);
-    document.addEventListener('pointerleave', pointerLeave);
+    document.addEventListener('pointerout', pointerLeave);
+    window.addEventListener('blur', onBlur);
 
     // visibility follows core's pointer, but we still need a first-move reveal
     // handled inside the cursor tick below via `visible`.
 
     // ---- cursor tick ----
     untickCursor = onTick(() => {
-        if (!visible && (pointer.x || pointer.y)) {
+        if (withinWindow && !visible && (pointer.x || pointer.y)) {
             visible = true;
             cursorEl!.classList.add('is-visible');
         }
@@ -159,7 +173,8 @@ export const cursorInit = () => {
 export const cursorCleanup = () => {
     untickCursor?.(); untickAttach?.();
     if (pointerOver) document.removeEventListener('pointerover', pointerOver);
-    if (pointerLeave) document.removeEventListener('pointerleave', pointerLeave);
+    if (pointerLeave) document.removeEventListener('pointerout', pointerLeave);
+    if (onBlur) window.removeEventListener('blur', onBlur);
     cursorEl?.remove();
     document.documentElement.classList.remove('has-custom-cursor');
     cursorEl = null; pointerOver = pointerLeave = null;
