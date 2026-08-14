@@ -9,6 +9,7 @@ export const toggleInit = (): (() => void) => {
         if (!trigger || !targets.length) return;
 
         targets.forEach((target) => {
+            if (target.parentElement?.classList.contains('toggle-element')) return;
             const div = document.createElement('div');
             div.classList.add('toggle-element');
             target.replaceWith(div);
