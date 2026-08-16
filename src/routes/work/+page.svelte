@@ -17,7 +17,7 @@
 
 </script>
 
-<PageHeader props={{ "data-sticky":"true", "data-sticky-offset":"244", "content":{ "class":"spacing -mw-lg" } }}>
+<PageHeader props={{ "content":{ "class":"spacing -mw-lg" } }}>
     <h1 class="text -headline -sans -uppercase">
         Here&rsquo;s a curated selection of my work from the last twenty years.
     </h1>

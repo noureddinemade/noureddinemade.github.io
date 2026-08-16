@@ -7,7 +7,7 @@ export const capitalise = (str: string) => str ? str.charAt(0).toUpperCase() + s
 
 // Roles
 export const getRoleByID = (id: string): Role | false => roles[id] ? roles[id] : false;
-export const getRoleTagsByID = (id: string): string[] | false => roles[id] ? [roles[id].title, roles[id].company, roles[id].period, roles[id].location ] : false;
+export const getRoleTagsByID = (id: string): string[] => roles[id] ? [roles[id].title, roles[id].company, roles[id].period, roles[id].location ] : [];
 
 // Case studies
 const getCaseInDirection = (id: number, step: number) => {

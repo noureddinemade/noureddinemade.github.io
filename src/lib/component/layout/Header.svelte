@@ -46,7 +46,10 @@
         props={{ 
             "aria-label":"A timelapse of Noureddine through the years.",
             "class":"cursor-attach -noureddine",
-            "id":"noureddine"
+            "id":"noureddine",
+            "autoplay":true,
+            "loop":true,
+            "muted":true
     }}/>
     
     <span class="cursor-attach -always-was" id="naarm"></span>

@@ -49,7 +49,7 @@ export const cases: Case[] = [
     { 
         title:'Accessibility at Dubber', 
         desc:'', 
-        href:'/work/dubber/accessibility', 
+        href:'/work/dubber/accessibility/', 
         id:'dub',
         inNav: true,
         icon: '✺',
@@ -59,7 +59,7 @@ export const cases: Case[] = [
     { 
         title:'Creating an accessible, data focused design system', 
         desc:'A fully documented, accessible design system that cut custom code from ~85% to ~20% and changed how design and engineering worked together at Dubber.', 
-        href:'/work/dubber/design-system', 
+        href:'/work/dubber/design-system/', 
         id:'dub',
         inNav: true,
         icon: '❖',
@@ -69,7 +69,7 @@ export const cases: Case[] = [
     { 
         title:'Exploring extracted data as entities', 
         desc:'We took something as trivial as extracting keywords from a transcript and turned it into a way for users to find meaningful, contextual value inside their conversations.', 
-        href:'/work/dubber/extracted-data', 
+        href:'/work/dubber/extracted-data/', 
         id:'dub',
         inNav: true,
         icon: '⚃',
@@ -79,7 +79,7 @@ export const cases: Case[] = [
     { 
         title:'Building an internal tool that creates brand ready illustrations', 
         desc:'', 
-        href:'/work/dubber/illustration-tool', 
+        href:'/work/dubber/internal-tool/', 
         id:'dub',
         inNav: true,
         icon: '✄',
@@ -89,7 +89,7 @@ export const cases: Case[] = [
     { 
         title:'Built a task based internal system to manage patients and orders', 
         desc:'', 
-        href:'/work/simple-online-healthcare/admin-system', 
+        href:'/work/simple-online-healthcare/admin-system/', 
         id:'soh',
         inNav: true,
         icon: '✓',
@@ -99,7 +99,7 @@ export const cases: Case[] = [
     { 
         title:'Created the brand and app experience for a holistic weight care product', 
         desc:'', 
-        href:'/work/simple-online-healthcare/holistic-care', 
+        href:'/work/simple-online-healthcare/holistic-weight-care/', 
         id:'soh',
         inNav: true,
         icon: '',
@@ -109,7 +109,7 @@ export const cases: Case[] = [
     { 
         title:'Refreshed the brand for the digital pharmacy', 
         desc:'', 
-        href:'/work/simple-online-healthcare/brand-refresh', 
+        href:'/work/simple-online-healthcare/brand-refresh/', 
         id:'soh',
         inNav: true,
         icon: '',
@@ -119,7 +119,7 @@ export const cases: Case[] = [
     { 
         title:'Created the experience for the NHS prescriptions app', 
         desc:'', 
-        href:'/work/simple-online-healthcare/app-experience', 
+        href:'/work/simple-online-healthcare/app-experience/', 
         id:'soh',
         inNav: true,
         icon: '',
@@ -129,7 +129,7 @@ export const cases: Case[] = [
     { 
         title:'Designed the first version of the web experience', 
         desc:'', 
-        href:'/work/echo/web-app-v1', 
+        href:'/work/echo/web-app-v1/', 
         id:'echo',
         inNav: true,
         icon: '',
@@ -139,7 +139,7 @@ export const cases: Case[] = [
     { 
         title:'Designing a bunch of interesting stuff for a bunch of shitty people.', 
         desc:'', 
-        href:'/work/verve/various-projects', 
+        href:'/work/verve/various-projects/', 
         id:'ver',
         inNav: true,
         icon: '',
@@ -149,7 +149,7 @@ export const cases: Case[] = [
     { 
         title:'Led the discovery and designed the sales flow experience for new global markets', 
         desc:'', 
-        href:'/work/verve/various-projects#', 
+        href:'/work/verve/various-projects/#', 
         id:'ver',
         inNav: false,
         icon: '',
@@ -160,7 +160,7 @@ export const cases: Case[] = [
     { 
         title:'Designed new recruit pages that gave ambassadors more context and insights', 
         desc:'', 
-        href:'/work/verve/various-projects#', 
+        href:'/work/verve/various-projects/#', 
         id:'ver',
         inNav: false,
         icon: '',
@@ -170,7 +170,7 @@ export const cases: Case[] = [
     { 
         title:'Created and built a brand new iconography ecosystem', 
         desc:'', 
-        href:'/work/verve/various-projects#iconography', 
+        href:'/work/verve/various-projects/#iconography', 
         id:'ver',
         inNav: false,
         icon: '',
@@ -180,7 +180,7 @@ export const cases: Case[] = [
     { 
         title:'Designed the full experience for sporting events and travel', 
         desc:'', 
-        href:'/work/verve/various-projects#', 
+        href:'/work/verve/various-projects/#', 
         id:'ver',
         inNav: false,
         icon: '',
@@ -190,7 +190,7 @@ export const cases: Case[] = [
     { 
         title:'Designed and built a free communication tool for sufferers of chronic pain', 
         desc:'', 
-        href:'/work/archive/chronic-pain-communication-tool', 
+        href:'/work/archive/chronic-pain-communication-tool/', 
         id:'nm',
         inNav: true,
         icon: '',
@@ -200,7 +200,7 @@ export const cases: Case[] = [
     { 
         title:'A collection of some of my favourite branding bits and pieces (2015 - 2022)', 
         desc:'', 
-        href:'/work/archive/brand-15-22', 
+        href:'/work/archive/brand-15-22/', 
         id:'nm',
         inNav: true,
         icon: '',

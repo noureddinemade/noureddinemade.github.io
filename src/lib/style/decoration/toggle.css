@@ -1,5 +1,7 @@
 /* Toggle */
 
+[data-toggle] *.-off:not(button, .toggle-element) { opacity: 0; filter: blur(16px); transition-delay: 0s; height: 0; }
+
 .toggle-element {
 
     --speed: .3s;
@@ -25,8 +27,9 @@
         transition: opacity var(--speed) ease, filter var(--speed) ease;
         transition-delay: var(--speed);
         filter: none;
+        height: auto
 
         /* Variants */
-        &.-off {  opacity: 0; filter: blur(16px); transition-delay: 0s; }
+        /* &.-off {  opacity: 0; filter: blur(16px); transition-delay: 0s; } */
     }
 }
