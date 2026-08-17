@@ -1,38 +1,10 @@
 /* Layers */
-@layer reset, base, layout, components, page, decoration, utilities;
+@layer reset, base, layout, component, page, decoration, utility;
 
-/* Reset */
-@import "./core/reset.css"              layer(reset);
-
-/* Base */
-@import "./core/fonts.css"              layer(base);
-@import "./core/typography.css"         layer(base);
-@import "./core/image.css"              layer(base);
-@import "./core/video.css"              layer(base);
-@import "./base.css"                    layer(base);
-
-/* Layout */
-@import "./layout.css"                  layer(layout);
-@import "./layout/footer.css"           layer(layout);
-@import "./layout/logo.css"             layer(layout);
-@import "./layout/header.css"           layer(layout);
-@import "./layout/nav.css"              layer(layout);
-
-/* Components */
-@import "./components/block.css"        layer(components);
-@import "./components/button.css"       layer(components);
-@import "./components/list.css"         layer(components);
-
-/* Page Specific */
-@import "./page.css"                    layer(page);
-
-/* Decoration */
-@import "./decoration/animation.css"    layer(decoration);
-@import "./decoration/marks.css"        layer(decoration);
-@import "./decoration/effects.css"      layer(decoration);
-@import "./decoration/toggle.css"       layer(decoration);
-
-/* Utilities */
-@import "./utilities/helpers.css"       layer(utilities);
-@import "./utilities/cursor.css"        layer(utilities);
-@import "./utilities/accessibility.css" layer(utilities);
+@import "$lib/style/layer/reset.css"           layer(reset);
+@import "$lib/style/layer/base.css"            layer(base);
+@import "$lib/style/layer/layout.css"          layer(layout);
+@import "$lib/style/layer/component.css"       layer(component);
+@import "$lib/style/layer/page.css"            layer(page);
+@import "$lib/style/layer/decoration.css"      layer(decoration);
+@import "$lib/style/layer/utility.css"         layer(utility);

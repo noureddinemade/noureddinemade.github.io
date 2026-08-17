@@ -46,15 +46,15 @@
 
     const vidProps = $derived(
         props
-            ? { ...props, class: props.class ? `video-wrap ${props.class}` : 'video-wrap' }
-            : { class: 'video-wrap' }
+            ? { ...props, class: props.class ? `vid-wrap ${props.class}` : 'vid-wrap' }
+            : { class: 'vid-wrap' }
     );
     
 </script>
 
 <!-- <div {...vidProps} data-cursor=`playback${ playback && playback.a ? '-paused' : '-playing' }` data-video={vidID}> -->
 <div id={vidProps.id} class={vidProps.class} data-video={vidID}>
-<video 
+    <video 
         data-video={vidID}
         autoplay={ props && props.autoplay ? true : false }
         muted={ props && props.muted ? true : false }

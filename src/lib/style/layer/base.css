@@ -1,3 +1,9 @@
+/* Imports */
+@import "$lib/style/base/fonts.css";
+@import "$lib/style/base/typography.css";
+@import "$lib/style/base/list.css";
+
+/* Base */
 html {
 
     /* Background */

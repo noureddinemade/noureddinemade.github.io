@@ -11,7 +11,7 @@
 
 </script>
 
-<div class="item" id={id} data-toggle>
+<div class="item -role" id={id} data-toggle>
     <ul class="role-info">
         <li>{ role ? role.title : '' }</li>
         <li>{ role ? role.company : '' }</li>

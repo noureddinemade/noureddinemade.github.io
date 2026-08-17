@@ -1,0 +1,29 @@
+span.emoji {
+    position: relative;
+    display: inline-block;
+
+    /* States */
+    &:hover {
+        span.-text {
+            max-width: 144px;
+            margin-left: var(--scale-sm);
+            opacity: 1;
+        }
+    }
+
+    /* Pseudo */
+    &:before { content: attr(data-emoji) / ""; }
+    
+    /* Children */
+    span.-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 0;
+        margin-left: 0;
+        opacity: 0;
+        white-space: nowrap;
+        transition: opacity .2s ease, max-width .2s ease, margin-left .2s ease;
+    }
+
+}
