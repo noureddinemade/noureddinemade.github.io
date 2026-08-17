@@ -1,6 +1,7 @@
 <script>
+
     import { onMount } from "svelte";
-    import { toggleInit } from "$lib/script/toggle";
+    import { toggleInit } from "$lib/script/interaction";
 
     import Block from "$lib/component/layout/Block.svelte";
     import PageHeader from "$lib/component/layout/PageHeader.svelte";

@@ -1,5 +1,7 @@
 <script lang="ts">
+
     let { tags }: { tags: string[] } = $props();
+    
 </script>
 
 <ul class="tags">

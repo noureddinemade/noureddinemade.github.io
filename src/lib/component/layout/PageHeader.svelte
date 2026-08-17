@@ -1,5 +1,7 @@
 <script lang="ts">
+
     import type { PageHeaderProps } from "$lib/script/types";
+    
     import Block from "$lib/component/layout/Block.svelte";
     import Tags from "$lib/component/data/Tags.svelte";
 

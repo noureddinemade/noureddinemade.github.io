@@ -1,7 +1,9 @@
 <script lang="ts">
+    
     import { onMount } from "svelte";
     import { getRoleByID } from "$lib/script/helpers";
-    import { followInit } from "$lib/script/follow";
+    import { followInit } from "$lib/script/effect";
+
     import Image from "$lib/component/asset/Image.svelte";
 
     let { id }: { id: string; } = $props();

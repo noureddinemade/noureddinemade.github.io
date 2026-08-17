@@ -12,7 +12,7 @@ export const cursorInit = () => {
     if (!flags.enabled) return;
 
     // ---- shared cursor element (the cursor concern) ----
-    const LERP = 0.2, ROT_LERP = 0.2, DEAD_ZONE = 12;
+    const LERP = 0.4, ROT_LERP = 0.4, DEAD_ZONE = 12;
 
     cursorEl = document.createElement('div');
     cursorEl.className = 'cursor';

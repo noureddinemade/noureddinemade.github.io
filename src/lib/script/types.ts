@@ -120,3 +120,11 @@ export interface FollowItem {
     nudge: number;
     reach: number;
 }
+
+export interface ZoomItem {
+    wrapper: HTMLElement;
+    img: HTMLImageElement;
+    active: boolean;
+    ww: number; wh: number;
+    rangeX: number; rangeY: number;
+}

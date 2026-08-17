@@ -1,15 +1,18 @@
 <script lang="ts">
+
     import { browser } from '$app/environment';
     import { onMount, tick } from 'svelte';
     import { page } from '$app/state';
     import { onNavigate, afterNavigate } from '$app/navigation';
-    import { theme, spacing, typography, animation } from '$lib/style/variables';
+
     import { getMetaByPath, toCssVars } from '$lib/script/helpers';
     import { imgLoad } from '$lib/script/utils';
     import { coreInit, resetScroll, flags } from '$lib/script/core';
     import { setNavPhase, transitionSpeed } from '$lib/script/transition';
     import { cursorCleanup, cursorInit } from '$lib/script/cursor';
     import { footerInit } from '$lib/script/footer';
+    import { theme, spacing, typography, animation } from '$lib/style/variables';
+    
     import '$lib/style/main.css';
 
     import Header from '$lib/component/layout/Header.svelte';
@@ -78,7 +81,7 @@
     {@html `<style>${root}</style>`}
 </svelte:head>
 
-<Header current={current && current.id ? current.id : ''} />
+<Header current={current ? current : null} />
 <main class={`main${current ? ` -${current.id}` : ''} ${phase}`}>
 	{@render children()}
 </main>

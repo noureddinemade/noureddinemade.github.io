@@ -1,6 +1,8 @@
 <script lang="ts">
+
     import type { Role, Case, RoleProps } from "$lib/script/types";
     import { getCasesForRole, getRoleByID } from "$lib/script/helpers";
+    
     import Button from "$lib/component/action/Button.svelte";
 
     let { id, children }: RoleProps = $props();

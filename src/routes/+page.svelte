@@ -1,6 +1,8 @@
 <script lang="ts">
+
     import Block from "$lib/component/layout/Block.svelte";
     import Emoji from "$lib/component/asset/Emoji.svelte";
+
 </script>
 
 <Block props={{ "class":"home", "content":{ "class":"spacing -gap-xxl" } }}>

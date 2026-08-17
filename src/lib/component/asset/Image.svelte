@@ -1,4 +1,5 @@
 <script lang="ts">
+
     import type { HTMLAttributes, HTMLImgAttributes } from "svelte/elements";
     import type { ImageProps } from "$lib/script/types";
 
@@ -37,6 +38,7 @@
             ? { ...props, class: props.class ? `img-wrap ${props.class}` : 'img-wrap' }
             : { class: 'img-wrap' }
     );
+    
 </script>
 {#if type === 'svg'}
 {#if (parent)}

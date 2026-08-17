@@ -3,10 +3,9 @@
     // Modules
     import { onMount } from "svelte";
     import { page } from '$app/state';
-    import { toggleInit } from "$lib/script/toggle";
-    import { switchInit } from "$lib/script/switch";
     import { getMetaByPath, getRoleTagsByID } from "$lib/script/helpers";
     import { caseStudyFormatter } from "$lib/script/utils";
+    import { zoomInit, toggleInit, switchInit } from "$lib/script/interaction";
 
     // Components
     import Block from "$lib/component/layout/Block.svelte";
@@ -14,15 +13,6 @@
     import Button from "$lib/component/action/Button.svelte";
     import Image from "$lib/component/asset/Image.svelte";
     import Video from "$lib/component/asset/Video.svelte";
-
-    // Case study specific assets
-    import Token1 from "$lib/asset/work/dub/design-system/token-1-figma-raw.svg";
-    import Token2 from "$lib/asset/work/dub/design-system/token-2-figma-reference.svg";
-    import Token3 from "$lib/asset/work/dub/design-system/token-3-figma-contrast.svg";
-    import Token4 from "$lib/asset/work/dub/design-system/token-4-css-raw.svg";
-    import Token5 from "$lib/asset/work/dub/design-system/token-5-css-reference.svg";
-    import Token6 from "$lib/asset/work/dub/design-system/token-6-css-contrast.svg";
-    import Token7 from "$lib/asset/work/dub/design-system/token-7-css-usage.svg";
     
     // Get Case Study details
     const caseStudy = $derived(getMetaByPath(page.url.pathname));
@@ -33,6 +23,7 @@
         toggleInit();
         switchInit();
         caseStudyFormatter();
+        zoomInit();
     })
 
 </script>
@@ -130,6 +121,197 @@
             </p>
         </div>
     </div>
+</Block>
+
+<Block props={{ "class":"general" }}>
+    <h2 class="text -xxl -sans -bold -uppercase">Plugging away</h2>
+    <p class="text -xl">
+        Documenting components is a very time consuming task. Existing Figma plugins provided varied outputs so using them as a starting point meant we would still need to spend time combining and standardising. AI couldn&rsquo;t bridge that gap either and could only provide the same outputs. So I decided to build a dedicated Figma plugin specific to our workflows, components and design system.
+    </p>
+    <p class="text -lg">
+        I spent half a day working on the first version of the plugin. That first version automated all of the heavy lifting. It would take whatever components you selected and spit out a spec sheet. Figma&rsquo;s Dev mode covered a lot of the technical stuff, so the plugin didn&rsquo;t extensively cover those elements, instead focusing on the most important things. It provided a really clear and detailed anatomy of the component, listed all the dependencies (other components used in this component) and provided all of the relevant sections for that component. For example if a component had a hover interaction built into it, that interaction would be listed in the behaviour section. This meant that after running the plugin for a component, you would end up with a spec sheet pre-filled with everything that you needed to document it. All that was left up to the designer was to document the why, when, where and how in the relevant sections.
+    </p>
+    <div class="item spacing -m-t-lg -m-b-lg" data-toggle>
+        <Button 
+            props={{ 
+                "class":"-display-switch -off layout -a-s-start spacing -m-b-md colour -misc-accent-a-light", "data-toggle-trigger":"true", "data-cursor":"link", "data-cursor-aim":"true",
+                "label":{ "data-text":"Component Spec Sheet" } 
+            }}
+        />
+        <div class="item" data-toggle-element>
+            <Video 
+                vid="work/dub/design-system/ds-plugin.mp4"
+                props={{ 
+                    "aria-label":"The plugin in action. The user selects a component and runs the plugin, which generates the spec sheet.",
+                    "poster":"",
+                    "class":"border -rounded -r-md -s-base",
+                    "autoplay":true,
+                    "muted":true,
+                    "loop":true
+            }}/>
+        </div>
+        <div class="item -off spacing -gap-xl" data-toggle-element>
+            <div class="columns -two spacing -gap-xl">
+                <div class="item spacing -gap-md">
+                    <h3 class="text -xl -sans -bold -uppercase">Plugin Output</h3>
+                    <p class="text -lg -justify">
+                        In this example, the plugin was used on the <span class="text -mono -md -contrast mark -highlight colour -bg -bg-light-dark">button</span> component. It has prefilled every technical bit related to the ccomponent and has generated the relevant blocks for us to fill out the additional context.
+                    </p>
+                </div>
+                <div class="item spacing -gap-md">
+                    <h3 class="text -xl -sans -bold -uppercase">Final</h3>
+                    <p class="text -lg -justify">
+                        The final spec sheet now has all the additional context that the plugin had no way of knowing/extracting. Things like behaviour, usage and copywriting.
+                    </p>
+                </div>
+            </div>
+            <div class="columns -two spacing -gap-xl">
+                <div class="item">
+                    <Image src="work/dub/design-system/comp-before-01.png" alt="A component spec sheet generated by the plugin."  props={{ "class":"border -rounded -r-md -s-base" }}/>
+                </div>
+                <div class="item">
+                    <Image src="work/dub/design-system/comp-after-01.png" alt="A component spec sheet generated by the plugin."  props={{ "class":"border -rounded -r-md -s-base" }}/>
+                </div>
+            </div>
+            <div class="columns -two spacing -gap-xl">
+                <div class="item">
+                    <Image src="work/dub/design-system/comp-before-02.png" alt="A component spec sheet generated by the plugin."  props={{ "class":"border -rounded -r-md -s-base" }}/>
+                </div>
+                <div class="item">
+                    <Image src="work/dub/design-system/comp-after-02.png" alt="A component spec sheet generated by the plugin."  props={{ "class":"border -rounded -r-md -s-base" }}/>
+                </div>
+            </div>
+            <div class="columns -two spacing -gap-xl">
+                <div class="item">
+                    <Image src="work/dub/design-system/comp-before-03.png" alt="A component spec sheet generated by the plugin."  props={{ "class":"border -rounded -r-md -s-base" }}/>
+                </div>
+                <div class="item">
+                    <Image src="work/dub/design-system/comp-after-03.png" alt="A component spec sheet generated by the plugin."  props={{ "class":"border -rounded -r-md -s-base" }}/>
+                </div>
+            </div>
+            <div class="columns -two spacing -gap-xl">
+                <div class="item">
+                    <Image src="work/dub/design-system/comp-before-04.png" alt="A component spec sheet generated by the plugin."  props={{ "class":"border -rounded -r-md -s-base" }}/>
+                </div>
+                <div class="item">
+                    <Image src="work/dub/design-system/comp-after-04.png" alt="A component spec sheet generated by the plugin."  props={{ "class":"border -rounded -r-md -s-base" }}/>
+                </div>
+            </div>
+            <div class="columns -two spacing -gap-xl">
+                <div class="item">
+                    <Image src="work/dub/design-system/comp-before-05.png" alt="A component spec sheet generated by the plugin."  props={{ "class":"border -rounded -r-md -s-base" }}/>
+                </div>
+                <div class="item">
+                    <Image src="work/dub/design-system/comp-after-05.png" alt="A component spec sheet generated by the plugin."  props={{ "class":"border -rounded -r-md -s-base" }}/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="text -lg">
+        To ensure this plugin automation gave us the optimal output, I created a set of strict guidelines around the design and build of components in Figma, covering things like names for variants, boolean usage and specific interactions. The naming also reflected industry standards on the development side. This helped bridge the gap in handoff and the use of AI tools to build prototypes.
+    </p>
+    <Image src="work/dub/design-system/property-rules-annotated.png" alt="Annotated component property structure"  props={{ "class":"border -rounded -r-md -s-base colour -bg -bg-accent-c-light spacing  -mw-xxl -m-t-lg -m-b-lg -p-t-lg -p-b-lg -p-r-lg -p-l-lg" }} />
+</Block>
+
+<Block props={{ "class":"general" }}>
+    <h2 class="text -xxl -sans -bold -uppercase">Build Baby</h2>
+    <p class="text -xl">
+        Building the design system without disrupting the current work in place was the next challenge. From the design side of things, we didn&rsquo;t have to worry about core logic or any really impactful breaking changes, even when things broke, it was isolated in a design file. On the engineering side, this was something different. This was where our newly created and documented design system began to shine. I ran a kick off session with design and engineering to introduce the components and the documentation. Using the same method as before, I paired designers with engineers and asked them to spend time together over a few days finding components directly related to the work they were doing. Then we all got back together and assigned components/patterns to each initiative. 
+    </p>
+    <p class="text -xl">
+        Every time work was being done on a project, we&rsquo;d build a few components alongside it. That didn&rsquo;t mean that every single component would be applied immediately, it just meant the component would be built and ready for use. Then at every opportunity we had, we&rsquo;d start applying the components.
+    </p>
+    <div class="columns -two spacing -gap-lg -m-t-xl -m-b-xl">
+        <div class="item spacing -gap-xxl">
+            <Image alt="" src="work/dub/design-system/token-1-figma-raw.svg" props={{ "class":"sticky -top-xxl" }} />
+            <Image alt="" src="work/dub/design-system/token-2-figma-reference.svg" props={{ "class":"sticky -top-xxl" }} />
+            <Image alt="" src="work/dub/design-system/token-3-figma-contrast.svg" props={{ "class":"sticky -top-xxl" }} />
+            <Image alt="" src="work/dub/design-system/token-4-css-raw.svg" props={{ "class":"sticky -top-xxl" }} />
+            <Image alt="" src="work/dub/design-system/token-5-css-reference.svg" props={{ "class":"sticky -top-xxl" }} />
+            <Image alt="" src="work/dub/design-system/token-6-css-contrast.svg" props={{ "class":"sticky -top-xxl" }} />
+            <Image alt="" src="work/dub/design-system/token-7-css-usage.svg" props={{ "class":"sticky -top-xxl" }} />
+        </div>
+        <p class="text -lg -gap-lg sticky -top-xxl">
+            The first and most impactful thing we did was bring the tokens into the build. Bringing tokens in meant that the design and engineering team now had shared vocabulary when it came to fundamental things like sizing and colours. While this was not a component and the result was not visible, the outcome of this change substantially improved handover efficiency. A token used in the design system translates to a css variable. Same name, same value, same structure.
+        </p>
+    </div>
+    <p class="text -lg">
+        Of the projects we were working on at the time, three gave us opportunities to start using elements from the design system. <a href="/work/dubber/extracted-data" class="-on-light">Connections</a>, used components like labels and data (progress bar), migrating users from the old portal allowed us to focus on login flows and navigation, which used input, button and sidebar components, and an AI overhaul of data presentation focused on charts and graph components. All of these projects also allowed us to start using the design system tokens. Given that these projects covered different areas of the product, we could cover significant ground across the system simultaneously. Even if that meant that one flow used a new component while the other flow used an old component, this was not a dealbreaker for me. We would never have a chance to stop everything just so we could make sure that we fully implement the design system, so progress had to be brick by brick.
+    </p>
+    <div class="columns -two spacing -gap-lg -m-t-lg">
+        <div class="item spacing -gap-md sticky -top-xxl">
+            <h3 class="text -xl -sans -bold -uppercase">Naming our baby</h3>
+            <p class="text -lg -justify">
+                The design system was currently being built and we could already see improvements to our workflows and output, but from the org&rsquo;s perspective outside of a few updates about progress, there wasn&rsquo;t enough visibility about the design system. We were a few weeks away from releasing the first official version of the design system so I wanted to make sure the organisation understood the significance of what we were about to release. The problem was that it didn&rsquo;t have a name yet and referring to it as a design system was technical and cold. Along with my design team we had a very informal and fun session where we brainstormed potential names and ideas around it.
+            </p>
+            <p class="text -lg -justify">
+                We came up with some great names (including giving it a human name because we all thought that was dumb and funny) but we eventually landed on something that resonated with us, Switchboard. The design system is all about communication, it&rsquo;s all about making sure you end up in the right place with the right information and historically that&rsquo;s what switchboards were all about. Dubber is a conversation intelligence company. Recording calls, analysing their value, working with telephony technologies. A switchboard felt like the right fit.
+            </p>
+        </div>
+        <div class="item">
+            <Image src="work/dub/design-system/switchboard-vert.png" alt="The Switchboard logo on a dark blue background." props={{ "class":"border -rounded -r-md -s-base" }}/>
+        </div>
+    </div>
+</Block>
+
+<Block props={{ "class":"general" }}>
+    <h2 class="text -xxl -sans -bold -uppercase">Release</h2>
+    <p class="text -xl">
+        Switchboard 1.0 shipped. <span class="mark -highlight colour -bg -bg-accent-a-light text -contrast">The first version included tokens, patterns, base illustrations and iconography, guidelines for copy within the product and over 30 fully documented components</span> (not counting helper and internal components). Handover sessions were more efficient than ever, communication between design and engineering became smoother and <span class="mark -highlight colour -bg -bg-accent-e-base text -contrast">most importantly, custom code at the time of this release had gone from around 85% down to around 20%.</span> The product, design and engineering teams were thrilled about this monumental release. Given the size of the teams and our existing workload, this was one of the proudest moments of my time at Dubber.
+    </p>
+    <div class="item spacing -gap-lg -m-t-lg -m-b-lg -mw-xxl">
+        <div class="columns -two spacing -gap-lg">
+            <div class="item">
+                <Video 
+                    vid="work/dub/design-system/buttons.mp4"
+                    props={{ 
+                        "aria-label":"The plugin in action. The user selects a component and runs the plugin, which generates the spec sheet.",
+                        "poster":"",
+                        "class":"border -rounded -r-md -s-base",
+                        "autoplay":true, "muted":true, "loop":true
+                }}/>
+            </div>
+            <div class="item">
+                <Video 
+                    vid="work/dub/design-system/sentiment.mp4"
+                    props={{ 
+                        "aria-label":"The plugin in action. The user selects a component and runs the plugin, which generates the spec sheet.",
+                        "poster":"",
+                        "class":"border -rounded -r-md -s-base",
+                        "autoplay":true, "muted":true, "loop":true
+                }}/>
+            </div>
+        </div>
+        <div class="columns -two spacing -gap-lg">
+            <div class="item">
+                <Video 
+                    vid="work/dub/design-system/topics.mp4"
+                    props={{ 
+                        "aria-label":"The plugin in action. The user selects a component and runs the plugin, which generates the spec sheet.",
+                        "poster":"",
+                        "class":"border -rounded -r-md -s-base",
+                        "autoplay":true, "muted":true, "loop":true
+                }}/>
+            </div>
+            <div class="item">
+                <Video 
+                    vid="work/dub/design-system/tags.mp4"
+                    props={{ 
+                        "aria-label":"The plugin in action. The user selects a component and runs the plugin, which generates the spec sheet.",
+                        "poster":"",
+                        "class":"border -rounded -r-md -s-base",
+                        "autoplay":true, "muted":true, "loop":true
+                }}/>
+            </div>
+        </div>
+    </div>
+</Block>
+
+<Block props={{ "class":"general spacing -m-b-xxl", "content":{"class":"spacing -m-b-xl"} }}>
+    <h2 class="text -xxl -sans -bold -uppercase">The Future</h2>
+    <p class="text -xxl">
+        A design system is a continuous piece of work, so whenever we had an opportunity, we would build it out further. That work continued until the current version of 1.3.1. While Switchboard was being developed and shipped, the company&rsquo;s leadership changed drastically <span class="mark -em">&mdash;</span> and despite its success, I lost my entire design team and over 70% of the product team. I won&rsquo;t bore you with my opinion on Dubber&rsquo;s current leadership, this is just what happens when those in charge have a fundamental lack of understanding about how integral product and design are to the success of a product.
+    </p>
 </Block>
 
 <!-- Cursor Attachments -->

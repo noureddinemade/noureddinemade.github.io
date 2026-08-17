@@ -1,14 +1,21 @@
 <script lang="ts">
+
+    import type { Page, Case } from "$lib/script/types";
+
     import { onMount } from "svelte";
+    import { pages } from "$lib/data/glossary";
+    import { marqueeInit } from "$lib/script/effect";
+    
     import Nav from "$lib/component/layout/Nav.svelte";
     import Link from "$lib/component/action/Link.svelte";
     import Video from "$lib/component/asset/Video.svelte";
-    import { pages } from "$lib/data/glossary";
-    import { marqueeInit } from "$lib/script/marquee";
 
-    let { current }: { current: string; } = $props();
+    let { current }: { current: Page | Case | null } = $props();
+
+    const isCaseStudy = $derived(!!current && 'accent' in current);
 
     onMount(marqueeInit);
+    
 </script>
 
 <header class="global">
@@ -17,7 +24,9 @@
         <div class="block -noureddine" data-cursor-attach="#noureddine" data-cursor="noureddine" data-lerp={0.02}>
             <p>☻ The Online Portfolio <span class="text -italic -push">of</span> Noureddine Azhar</p>
         </div>
-        <Nav {current} />
+        {#if (!isCaseStudy)}
+            <Nav current={current && current.id ? current.id : ''} />
+        {/if}
         <div class="block -location" data-cursor="📍" data-cursor-attach="#naarm" data-lerp={0.02}>
             <p>Naarm <span class="text -italic">(Melbourne)</span></p>
         </div>

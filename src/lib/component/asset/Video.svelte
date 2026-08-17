@@ -1,4 +1,5 @@
 <script lang="ts">
+
     import type { VideoProps } from "$lib/script/types";
 
     let { vid, props }: VideoProps = $props();
@@ -48,6 +49,7 @@
             ? { ...props, class: props.class ? `video-wrap ${props.class}` : 'video-wrap' }
             : { class: 'video-wrap' }
     );
+    
 </script>
 
 <!-- <div {...vidProps} data-cursor=`playback${ playback && playback.a ? '-paused' : '-playing' }` data-video={vidID}> -->

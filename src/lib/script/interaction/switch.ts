@@ -20,10 +20,11 @@ export const switchInit = (): (() => void) => {
 
         if (!target) return;
 
-        switches.forEach(s => {
-            s.addEventListener('click', e => { clickSwitch(s.dataset.name, s, target) })
-            cleanups.push(() => s.removeEventListener('click', e => { clickSwitch(s.dataset.name, s, target) }));
-        })
+        switches.forEach((s) => {
+            const onClick = () => clickSwitch(s.dataset.name, s, target);
+            s.addEventListener('click', onClick);
+            cleanups.push(() => s.removeEventListener('click', onClick));
+        });
 
     })
 

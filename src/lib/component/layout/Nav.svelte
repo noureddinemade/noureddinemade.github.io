@@ -1,7 +1,8 @@
 <script lang="ts">
     
-    import Link from '$lib/component/action/Link.svelte';
     import { pages } from '$lib/data/glossary';
+    
+    import Link from '$lib/component/action/Link.svelte';
 
     let { current }: { current: string; } = $props();
 
