@@ -35,7 +35,7 @@
     {#if (cases && cases.length > 0)}
         <ol class="links -off" data-toggle-element>
             {#each cases as c}
-                <li><a href={c.href}>{c.title}</a></li>
+                <li><a href={c.href}>{@html c.title}</a></li>
             {/each}
         </ol>
     {/if}

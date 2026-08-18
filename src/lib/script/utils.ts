@@ -1,5 +1,4 @@
 //
-// import type {html}
 
 // Removes loading spinner from images once they've loaded
 export const imgLoad = () => {

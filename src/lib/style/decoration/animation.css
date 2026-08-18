@@ -1,36 +1,5 @@
 /* Animations */
 
-/* Keyframes */
-@keyframes showHide {
-    0%{
-        display: block;
-        visibility: visible;
-    }
-    24%{
-        display: block;
-        visibility: visible;
-    }
-    25% {
-        display: none;
-        visibility: hidden;
-    }
-    99% {
-        display: none;
-        visibility: hidden;
-    }
-    100% {
-        display: block;
-        visibility: visible;
-    }
-}
-
-@keyframes revealFooter {
-
-    from { translate: 0 80%; }
-    to { translate: 0 0; }
-
-}
-
 @keyframes logoMove { to { mask-position: calc(50% + 196px) 0; } }
 
 @keyframes eyeBlink {
@@ -66,15 +35,6 @@
 
 }
 
-@keyframes flagRotate {
-
-    0% { content: '🇮🇶'; }
-    30% { content: '🇲🇦'; }
-    60% { content: '🇾🇪'; }
-    80% { content: '🇦🇺'; }
-
-}
-
 @keyframes pencilDraw {
 
     0%      { rotate: 0deg; }
@@ -84,14 +44,6 @@
 }
 
 @keyframes shineReflection { to { translate: 100% 0; } }
-
-@keyframes emojiWave {
-
-    0%      { rotate: 15deg; translate: 5% 5%; }
-    50%     { rotate: 65deg; translate: -5% -5%; }
-    100%    { rotate: 15deg; translate: 5% 5%; }
-
-}
 
 @keyframes alarmClock {
 
@@ -106,14 +58,6 @@
     80%     { rotate: 5deg;     }
     90%     { rotate: -5deg;    }
     100%    { rotate: 0deg;     }
-
-}
-
-@keyframes zoomDolly {
-
-    0%      { scale: 1; }
-    50%     { scale: 1.1; }
-    100%    { scale: 1; }
 
 }
 
@@ -167,26 +111,9 @@
     
 }
 
-@keyframes pageEnter {
-
-    from { 
-        
-    }
-    to { 
-        
-    }
-}
-@keyframes pageExit {
-    from { 
-        opacity: 1;
-        filter: none;
-        translate: none;
-    }
-    to { 
-        opacity: var(--pg-transition-opacity);
-        filter: blur(var(--pg-transition-blur));
-        translate: var(--pg-transition-pos-x) var(--pg-transition-pos-y);
-    }
+@keyframes freshOpen {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Classes */

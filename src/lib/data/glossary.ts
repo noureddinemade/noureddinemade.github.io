@@ -49,7 +49,7 @@ export const cases: Case[] = [
     { 
         title:'Accessibility at Dubber', 
         desc:'', 
-        href:'/work/dubber/accessibility/', 
+        href:'/work/accessibility-at-dubber/', 
         company:'dub',
         id: 'accessibility',
         inNav: true,
@@ -58,9 +58,9 @@ export const cases: Case[] = [
         inList: true
     },
     { 
-        title:'Creating an accessible, data focused design system', 
+        title:'Creating Dubber&rsquo;s accessible, data focused design system', 
         desc:'A fully documented, accessible design system that cut custom code from ~85% to ~20% and changed how design and engineering worked together at Dubber.', 
-        href:'/work/dubber/design-system/', 
+        href:'/work/dubber-design-system/', 
         company:'dub',
         id: 'designSystem',
         inNav: true,
@@ -71,7 +71,7 @@ export const cases: Case[] = [
     { 
         title:'Exploring extracted data as entities', 
         desc:'We took something as trivial as extracting keywords from a transcript and turned it into a way for users to find meaningful, contextual value inside their conversations.', 
-        href:'/work/dubber/extracted-data/', 
+        href:'/work/exploring-extracted-data-at-dubber/', 
         company:'dub',
         id: 'extractedData',
         inNav: true,
@@ -82,7 +82,7 @@ export const cases: Case[] = [
     { 
         title:'Building an internal tool that creates brand ready illustrations', 
         desc:'', 
-        href:'/work/dubber/internal-tool/', 
+        href:'/work/internal-illustration-tool-for-dubber/', 
         company:'dub',
         id: 'internalTool',
         inNav: true,
@@ -93,7 +93,7 @@ export const cases: Case[] = [
     { 
         title:'Built a task based internal system to manage patients and orders', 
         desc:'', 
-        href:'/work/simple-online-healthcare/admin-system/', 
+        href:'/work/simple-admin-system/', 
         company:'soh',
         id: 'adminSystem',
         inNav: true,
@@ -104,7 +104,7 @@ export const cases: Case[] = [
     { 
         title:'Created the brand and app experience for a holistic weight care product', 
         desc:'', 
-        href:'/work/simple-online-healthcare/holistic-weight-care/', 
+        href:'/work/simple-holistic-weight-care/', 
         company:'soh',
         id: 'holisticWeightCare',
         inNav: true,
@@ -115,7 +115,7 @@ export const cases: Case[] = [
     { 
         title:'Refreshed the brand for the digital pharmacy', 
         desc:'', 
-        href:'/work/simple-online-healthcare/brand-refresh/', 
+        href:'/work/simple-brand-refresh/', 
         company:'soh',
         id: 'brandRefresh',
         inNav: true,
@@ -124,9 +124,9 @@ export const cases: Case[] = [
         inList: true
     },
     { 
-        title:'Created the experience for the NHS prescriptions app', 
+        title:'Created the experience for an NHS prescriptions app', 
         desc:'', 
-        href:'/work/simple-online-healthcare/app-experience/', 
+        href:'/work/simple-app-experience/', 
         company:'soh',
         id: 'appExperience',
         inNav: true,
@@ -135,9 +135,9 @@ export const cases: Case[] = [
         inList: true
     },
     { 
-        title:'Designed the first version of the web experience', 
+        title:'Designed Echo&rsquo;s first version of the web experience', 
         desc:'', 
-        href:'/work/echo/web-app-v1/', 
+        href:'/work/echo-web-app-v1/', 
         company:'echo',
         id: 'webAppV1',
         inNav: true,
@@ -148,7 +148,7 @@ export const cases: Case[] = [
     { 
         title:'Designing a bunch of interesting stuff for a bunch of shitty people.', 
         desc:'', 
-        href:'/work/verve/various-projects/', 
+        href:'/work/my-time-at-verve/', 
         company:'ver',
         id: 'variousProjects',
         inNav: true,
@@ -159,7 +159,7 @@ export const cases: Case[] = [
     { 
         title:'Led the discovery and designed the sales flow experience for new global markets', 
         desc:'', 
-        href:'/work/verve/various-projects/#global-markets', 
+        href:'/work/my-time-at-verve/#global-markets', 
         company:'ver',
         id: 'globalMarkets',
         inNav: false,
@@ -171,7 +171,7 @@ export const cases: Case[] = [
     { 
         title:'Designed new recruit pages that gave ambassadors more context and insights', 
         desc:'', 
-        href:'/work/verve/various-projects/#recruit-pages', 
+        href:'/work/my-time-at-verve/#recruit-pages', 
         company:'ver',
         id: 'recruitPages',
         inNav: false,
@@ -182,7 +182,7 @@ export const cases: Case[] = [
     { 
         title:'Created and built a brand new iconography ecosystem', 
         desc:'', 
-        href:'/work/verve/various-projects/#iconography', 
+        href:'/work/my-time-at-verve/#iconography', 
         company:'ver',
         id: 'iconography',
         inNav: false,
@@ -193,7 +193,7 @@ export const cases: Case[] = [
     { 
         title:'Designed the full experience for sporting events and travel', 
         desc:'', 
-        href:'/work/verve/various-projects/#sports-and-travel', 
+        href:'/work/my-time-at-verve/#sports-and-travel', 
         company:'ver',
         id: 'sportAndTravel',
         inNav: false,
@@ -204,7 +204,7 @@ export const cases: Case[] = [
     { 
         title:'Designed and built a free communication tool for sufferers of chronic pain', 
         desc:'', 
-        href:'/work/archive/chronic-pain-communication-tool/', 
+        href:'/work/chronic-pain-communication-tool/', 
         company:'nm',
         id: 'chronicPainCommunicationTool',
         inNav: true,
@@ -215,7 +215,7 @@ export const cases: Case[] = [
     { 
         title:'A collection of some of my favourite branding bits and pieces (2015 - 2022)', 
         desc:'', 
-        href:'/work/archive/brand-15-22/', 
+        href:'/work/branding-bits-15-22/', 
         company:'nm',
         id: 'brandingBits1522',
         inNav: true,

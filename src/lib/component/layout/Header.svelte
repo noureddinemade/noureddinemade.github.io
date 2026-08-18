@@ -35,7 +35,7 @@
             }} />
             <div class={`block colour -bg -bg-accent-${current.accent} text -contrast`} data-marquee >
                 <div class="-on" data-marquee-track use:transitionOn={(path) => getMetaByPath(path)?.title ?? ''}>
-                    <p>{current.icon} {current.title}</p>
+                    <p>{current.icon} {@html current.title}</p>
                 </div>
             </div>
             <SubNav current={currentCaseIndex} />

@@ -1,11 +1,6 @@
 <script lang="ts">
 
-    // Modules
-    import { onMount } from "svelte";
-    import { page } from '$app/state';
-    import { getMetaByPath, getRoleTagsByID } from "$lib/script/helpers";
-    import { caseStudyFormatter } from "$lib/script/utils";
-    import { zoomInit, toggleInit, switchInit } from "$lib/script/interaction";
+    import { caseStudySetup } from "$lib/script/caseStudy.svelte";
 
     // Components
     import Block from "$lib/component/layout/Block.svelte";
@@ -13,29 +8,21 @@
     import Button from "$lib/component/action/Button.svelte";
     import Image from "$lib/component/asset/Image.svelte";
     import Video from "$lib/component/asset/Video.svelte";
+
+    const cs = caseStudySetup();
     
-    // Get Case Study details
-    const caseStudy = $derived(getMetaByPath(page.url.pathname));
-    const tags = $derived.by(() => caseStudy ? getRoleTagsByID(caseStudy.id) : [] );
-
-    // Mount
-    onMount(() => {
-        toggleInit();
-        switchInit();
-        caseStudyFormatter();
-        zoomInit();
-    })
-
 </script>
 
-<PageHeader props={{ "tags":tags, "content":{"class":"spacing -mw-lg"}}}>
+<PageHeader props={{ "tags":cs.tags, "content":{"class":"spacing -mw-lg"}}}>
 
     <h1 class="text -headline -sans -uppercase">
-        {caseStudy?.title}
+        {@html cs.caseStudy?.title}
     </h1>
-    <p class="text -xxl">
-        {caseStudy?.desc}
-    </p>
+    {#if (cs.caseStudy && cs.caseStudy.desc)}
+        <p class="text -xxl">
+            {@html cs.caseStudy.desc}
+        </p>
+    {/if}
 
 </PageHeader>
 
@@ -114,7 +101,7 @@
         <Image alt="" src="work/dub/design-system/contribution.svg" props={{ "class":"svg-contribution" }}/>
         <div class="item spacing -gap-md">
             <p class="text -lg -justify">
-                The contribution process was framed around the idea that anyone in design or engineering could contribute to the design system. If you wanted to contribute, you would add it to the agenda of our weekly design review. In that design review you <span class="text -sans -md -uppercase -bold">explain</span> your reasoning behind this contribution, the team would then critique and <span class="text -sans -md -uppercase -bold">analyse</span> it. If this contribution made sense and was worth adding to the design system, you then get to <span class="text -sans -md -uppercase -bold">implement</span> it and <span class="text -sans -md -uppercase -bold">own</span> it.
+                The contribution process was framed around the idea that anyone in design or engineering could contribute to the design system. If you wanted to contribute, you would add it to the agenda of our weekly design review. In that design review you <span class="text -sans -md -uppercase -bold">explain</span> your reasoning behind this contribution, the team would then <span class="text -sans -md -uppercase -bold">critique</span> and analyse it. If this contribution made sense and was worth adding to the design system, you then get to <span class="text -sans -md -uppercase -bold">implement</span> it and <span class="text -sans -md -uppercase -bold">own</span> it.
             </p>
             <p class="text -lg">
                 Using this process ensured that everyone had true ownership over the design system. It also meant that <span class="mark -highlight colour -bg -bg-accent-e-base text -contrast">if you couldn&rsquo;t answer why, when, where and how to use a component, then it wasn&rsquo;t ready to add to the system.</span> Because this process was always going to happen while we were working on other business projects, it helped ensure that the team was building with purpose and only building the components we needed.
