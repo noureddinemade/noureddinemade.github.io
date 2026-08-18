@@ -12,41 +12,34 @@ const build = (marquee: HTMLElement) => {
 
     const speed = num(marquee.dataset.marqueeSpeed ?? '', SPEED);
 
-    // Cache the authored items so rebuilds (resize / font load) start clean.
-    if (!track.dataset.template) {
-        track.dataset.template = track.innerHTML;
-    }
-    track.innerHTML = track.dataset.template;
+    // Clear previously-generated clones (not the authored items Svelte owns).
+    track.querySelectorAll('[data-marquee-clone]').forEach((el) => el.remove());
 
-    const items = [...track.children].map((el) => el.cloneNode(true));
+    // Authored items = whatever Svelte currently rendered.
+    const items = [...track.children].map((el) => el.cloneNode(true) as HTMLElement);
     if (!items.length) return;
 
-    // Repeat the items until the run fills the container. The cap guards a
-    // zero-width container / empty items from looping forever. Fill copies are
-    // machine-made repetition, so they're hidden from assistive tech — the
-    // authored items (still in the track) read once, like an alt text.
     let guard = 0;
     while (track.scrollWidth < marquee.clientWidth && guard < MAX_FILL) {
         items.forEach((el) => {
             const clone = el.cloneNode(true) as HTMLElement;
             clone.setAttribute('aria-hidden', 'true');
+            clone.setAttribute('data-marquee-clone', '');
             track.appendChild(clone);
         });
         guard++;
     }
 
-    // Width of one run — measured before duplicating.
     const runWidth = track.scrollWidth;
 
-    // Duplicate the filled run once → two identical halves. Snapshot the
-    // current children first so the clones aren't themselves re-cloned.
     [...track.children].forEach((el) => {
+        // don't re-clone our own clones from this pass? — see note below
         const clone = el.cloneNode(true) as HTMLElement;
         clone.setAttribute('aria-hidden', 'true');
+        clone.setAttribute('data-marquee-clone', '');
         track.appendChild(clone);
     });
 
-    // Duration covers exactly one run → constant speed regardless of length.
     marquee.style.setProperty('--marquee-duration', `${(runWidth / speed).toFixed(3)}s`);
     marquee.classList.add('-ready');
 };

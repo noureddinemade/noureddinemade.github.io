@@ -21,7 +21,7 @@ export interface Role {
 
 // Case studies
 export interface Case extends Page {
-    // role: string;
+    company: string;
     icon: string;
     accent: string;
     inList: boolean;

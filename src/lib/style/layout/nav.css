@@ -6,7 +6,6 @@ nav.global {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* gap: var(--scale-xs); */
     pointer-events: auto;
 
     /* Children */

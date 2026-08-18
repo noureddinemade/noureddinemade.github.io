@@ -21,7 +21,7 @@
     if (browser) coreInit();
 
     let { children } = $props();
-    let phase = $state('');
+    let on = $state(true);   // main rests on; navigation toggles it
 
     const root = `:root{${
         toCssVars(theme) +
@@ -49,18 +49,18 @@
         };
     });
 
-    onNavigate(() => {
-        setNavPhase('exit');
+    onNavigate((navigation) => {
+        setNavPhase('exit', navigation.to?.url.pathname ?? null);
 
         if (flags.reduce) return () => setNavPhase('enter');
 
-        phase = '-exit';
+        on = false;
 
         return new Promise((resolve) => {
             setTimeout(resolve, transitionSpeed);
         }).then(() => {
             return () => {
-                phase = '-enter';
+                on = true;
                 setNavPhase('enter');
             };
         });
@@ -82,7 +82,7 @@
 </svelte:head>
 
 <Header current={current ? current : null} />
-<main class={`main${current ? ` -${current.id}` : ''} ${phase}`}>
+<main class={`main${current ? ` -${current.id}` : ''}${on ? ' -on' : ''}`}>
 	{@render children()}
 </main>
 {#if (showFooter)}<Footer />{/if}

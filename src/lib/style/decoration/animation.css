@@ -170,14 +170,10 @@
 @keyframes pageEnter {
 
     from { 
-        opacity: var(--pg-transition-opacity);
-        filter: blur(var(--pg-transition-blur));
-        translate: var(--pg-transition-pos-x) var(--pg-transition-pos-y);
+        
     }
     to { 
-        opacity: 1;
-        filter: none;
-        translate: none;
+        
     }
 }
 @keyframes pageExit {
@@ -191,11 +187,6 @@
         filter: blur(var(--pg-transition-blur));
         translate: var(--pg-transition-pos-x) var(--pg-transition-pos-y);
     }
-}
-
-@keyframes freshOpen {
-    from    { opacity: 0; }
-    to      { opacity: 1; }
 }
 
 /* Classes */
@@ -247,10 +238,21 @@
             white-space: nowrap;
             margin: 0 var(--marquee-item-gap) 0 0;
         }
+        
+        p { opacity: 0; transition: opacity calc(var(--pg-transition-speed) / 1.5) ease; }
     }
 
 }
 
-/* Page Transitions */
-main.-enter { animation: pageEnter calc(var(--pg-transition-speed)/1.5) ease 0s 1; }
-main.-exit { animation: pageExit calc(var(--pg-transition-speed)/1.5) ease 0s 1 forwards; }
+/* Transitions */
+main.-on {
+    opacity: 1;
+    filter: none;
+    translate: none;
+}
+
+header.global.-on div.group {
+    translate: 0 0;
+}
+
+[data-marquee-track].-on p { opacity: 1; }

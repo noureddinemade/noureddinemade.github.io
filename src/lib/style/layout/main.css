@@ -13,8 +13,14 @@ main {
     opacity: 1;
     filter: none;
     translate: none;
-    /* will-change: opacity, filter, translate, background-color; */
-    transition: background-color calc(var(--pg-transition-speed) / 1.5);
+    opacity: var(--pg-transition-opacity);
+    filter: blur(var(--pg-transition-blur));
+    translate: var(--pg-transition-pos-x) var(--pg-transition-pos-y);
+    transition: 
+        background-color calc(var(--pg-transition-speed) / 1.5) ease,
+        opacity calc(var(--pg-transition-speed) / 1.5) ease,
+        filter calc(var(--pg-transition-speed) / 1.5) ease,
+        translate calc(var(--pg-transition-speed) / 1.5) ease;
 
     /* Psuedo */
     &:after {

@@ -19,9 +19,13 @@ header.global {
         position: relative;
         display: flex;
         flex-direction: row;
-        justify-content:  space-evenly;
+        justify-content:  space-between;
         flex-wrap: wrap;
         padding: var(--scale-md);
+        transition: translate calc(var(--pg-transition-speed) / 1.5) ease;
+
+        &.-top { translate: 0 -100%; }
+        &.-bottom { translate: 0 100%; }
     }
     a, div.block {
         position: relative;
@@ -44,6 +48,7 @@ header.global {
     div.block {
         display: inline-block;
         background-color: var(--bg-colour, transparent);
+        transition: background-color calc(var(--pg-transition-speed) / 1.5) ease;
 
         /* Variants */
         &.-logo {

@@ -1,5 +1,5 @@
-import { roles, cases, pages } from '$lib/data/glossary';
 import type { Role, Page, Case, RawSwatch, ThemeSwatch, Fallback } from '$lib/script/types';
+import { roles, cases, pages } from '$lib/data/glossary';
 
 // General
 // Capitalise words
@@ -21,11 +21,13 @@ const getCaseInDirection = (id: number, step: number) => {
     return false;
 };
 
-export const getCasesForRole = (id: string): Case[] | undefined => cases.filter(c => c.id === id && c.inList);
+export const getCasesForRole = (id: string): Case[] | undefined => cases.filter(c => c.company === id && c.inList);
 export const getCaseByID = (id: number): Case | false => cases[id] ? cases[id] : false;
 export const caseAvailable = (id: string): boolean => cases.some(c => c.id === id && c.inNav);
 export const getNextCase = (id: number): Case | false => getCaseInDirection(id, 1);
 export const getPrevCase = (id: number): Case | false => getCaseInDirection(id, -1);
+export const getCaseIndex = (id: string): number => cases.findIndex(c => c.id === id);
+export const isCase = (p: Page | Case | null): p is Case => !!p && 'accent' in p;
 
 export const randomCaseStudy = (current: number) => {
 

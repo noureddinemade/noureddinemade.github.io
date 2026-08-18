@@ -85,7 +85,7 @@ export const cursorInit = () => {
         // cursor state + aim
         const tagged = t.closest<HTMLElement>('[data-cursor]');
         if (tagged) cursorEl!.dataset.state = tagged.dataset.cursor;
-        else if (t.closest('a[disabled]')) cursorEl!.dataset.state = 'disabled';
+        else if (t.closest('a[aria-disabled="true"]')) cursorEl!.dataset.state = 'disabled';
         else if (t.closest('a[href]') || t.closest('button')) cursorEl!.dataset.state = 'link';
         else delete cursorEl!.dataset.state;
 
