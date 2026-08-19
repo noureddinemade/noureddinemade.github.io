@@ -1,18 +1,18 @@
 <script lang="">
 
-    import { onMount } from "svelte";
-    import { toggleInit } from "$lib/script/interaction";
-
     import Block from "$lib/component/layout/Block.svelte";
     import PageHeader from "$lib/component/layout/PageHeader.svelte";
+    import Button from "$lib/component/action/Button.svelte";
     import WorkIndex from "$lib/component/layout/WorkIndex.svelte";
     import RoleIndex from "$lib/component/layout/RoleIndex.svelte";
+    import { transitionOn } from "$lib/script/transition";
     
-    const index = true;
-    
-    onMount(() => {
-        toggleInit();
-    });
+    let index = $state(false);
+
+    export const snapshot = {
+        capture: () => index,
+        restore: (value) => index = value,
+    };
 
 </script>
 
@@ -22,15 +22,20 @@
     </h1>
 </PageHeader>
 
-<Block props={{ "class":"work" }}>
+<div class={`btn-group -toggle${index ? ' -toggled' : ''}`} onclick={() => index = !index} onkeyup={() => index = !index} tabindex="0" role="button">
+    <Button props={{ "class":"-toggle", "label":{ "data-text":"Roles" } }} />
+    <Button props={{ "class":"-toggle", "label":{ "data-text":"Index" } }} />
+</div>
 
-    {#if (index)}
-        <WorkIndex />
-    {:else}
-        <RoleIndex />
-    {/if}
-
-</Block>
+{#key index}
+    <Block props={{ "class":"work -on" }} transition>
+        {#if index}
+            <WorkIndex />
+        {:else}
+            <RoleIndex />
+        {/if}
+    </Block>
+{/key}
 
 <!-- Floating Elements -->
 <span class="cursor-attach -tag" id="readCaseStudy">Read Case Study</span>

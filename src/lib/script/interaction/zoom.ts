@@ -15,7 +15,7 @@ export const zoomInit = (): (() => void) => {
             rangeX: 0, rangeY: 0,
         }));
 
-    let expandTag;
+    let expandTag: HTMLSpanElement | null = null;
 
     if (!state.length) { return () => {} }
     else {
@@ -49,8 +49,8 @@ export const zoomInit = (): (() => void) => {
     };
 
     const setActive = (s: ZoomItem, on: boolean) => {
-        expandTag.innerText = s.active ? 'Click to zoom in' : 'Click to zoom out';
         s.active = on;
+        expandTag.innerText = on ? 'Click to zoom out' : 'Click to zoom in';
         s.wrapper.classList.toggle('-zoomed', on);
     };
 
@@ -59,10 +59,7 @@ export const zoomInit = (): (() => void) => {
             if (!s.active) measure(s);
             setActive(s, !s.active);
         };
-        const onLeave = () => {
-            if (s.active) setActive(s, false);
-             expandTag.innerText = 'Click to zoom in';
-        };
+        const onLeave = () => { if (s.active) setActive(s, false) };
         s.wrapper.addEventListener('click', onClick);
         s.wrapper.addEventListener('pointerleave', onLeave);
         s.wrapper.dataset.cursor = '🔍';
@@ -93,5 +90,8 @@ export const zoomInit = (): (() => void) => {
         });
     }));
 
-    return () => cleanups.forEach((fn) => fn());
+    return () => {
+        cleanups.forEach((fn) => fn());
+        expandTag?.remove();
+    }
 };

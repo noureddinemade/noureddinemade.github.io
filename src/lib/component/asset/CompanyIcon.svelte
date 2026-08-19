@@ -13,7 +13,7 @@
     const parent = $derived({ "class":"company-icon", "data-cursor":"", "data-cursor-attach":`#${id}Name`, "data-follow-hover":"", "data-follow-reach":"50", "data-follow-nudge":"5", "data-follow-lerp":".2" });
     const imgProps = { "class":"-follow" };
 
-    onMount(() => followInit());
+    onMount(followInit());
 
 </script>
 

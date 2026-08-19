@@ -1,6 +1,9 @@
 <script lang="ts">
 
+    import { onMount } from "svelte";
+
     import { cases } from "$lib/data/glossary";
+    import { toggleInit } from "$lib/script/interaction";
 
     import Role from "../data/Role.svelte";
     import CompanyIcon from "../asset/CompanyIcon.svelte";
@@ -8,6 +11,8 @@
     import Emoji from "../asset/Emoji.svelte";
 
     const caseCursor = { "data-cursor":"", "data-cursor-attach":"#readCaseStudy" };
+
+    onMount(toggleInit);
 
 </script>
 

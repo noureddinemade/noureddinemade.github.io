@@ -183,3 +183,5 @@ header.global.-on div.group {
 }
 
 [data-marquee-track].-on p { opacity: 1; }
+
+section.work.-on div.content { opacity: 1; translate: 0 0; }
