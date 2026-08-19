@@ -108,8 +108,8 @@ export const cases: Case[] = [
         company:'soh',
         id: 'holisticWeightCare',
         inNav: true,
-        icon: '',
-        accent: '',
+        icon: '➹',
+        accent: 'e-base',
         inList: true
     },
     { 
@@ -119,8 +119,8 @@ export const cases: Case[] = [
         company:'soh',
         id: 'brandRefresh',
         inNav: true,
-        icon: '',
-        accent: '',
+        icon: '✚',
+        accent: 'c-dark',
         inList: true
     },
     { 
@@ -130,8 +130,8 @@ export const cases: Case[] = [
         company:'soh',
         id: 'appExperience',
         inNav: true,
-        icon: '',
-        accent: '',
+        icon: '❤︎',
+        accent: 'd-base',
         inList: true
     },
     { 
@@ -141,8 +141,8 @@ export const cases: Case[] = [
         company:'echo',
         id: 'webAppV1',
         inNav: true,
-        icon: '',
-        accent: '',
+        icon: '☑︎',
+        accent: 'f-base',
         inList: true
     },
     { 
@@ -152,8 +152,8 @@ export const cases: Case[] = [
         company:'ver',
         id: 'variousProjects',
         inNav: true,
-        icon: '',
-        accent: '',
+        icon: '✗',
+        accent: 'b-light',
         inList: false
     },
     { 
@@ -208,8 +208,8 @@ export const cases: Case[] = [
         company:'nm',
         id: 'chronicPainCommunicationTool',
         inNav: true,
-        icon: '',
-        accent: '',
+        icon: '▲',
+        accent: 'a-base',
         inList: true
     },
     { 
@@ -219,8 +219,8 @@ export const cases: Case[] = [
         company:'nm',
         id: 'brandingBits1522',
         inNav: true,
-        icon: '',
-        accent: '',
+        icon: '♞',
+        accent: 'd-dark',
         inList: true
     },
 ]

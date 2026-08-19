@@ -53,6 +53,7 @@ section {
         div.content {
             gap: var(--gap, var(--scale-xl));
             max-width: var(--mw-xl);
+            width: 100%;
 
             /* Children */
             div.item {
@@ -201,6 +202,9 @@ section {
     &.general {
 
         padding: var(--scale-lg) var(--scale-xl);
+
+        /* Psuedo */
+        &:last-of-type { margin-bottom: var(--scale-xxl); }
 
         /* Children */
         div.content { max-width: var(--mw-xl); }

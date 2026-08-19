@@ -21,7 +21,7 @@
     const image = $derived.by(() => {
         const path = `/src/lib/asset/${src}`;
         const pool = type === 'svg' ? svgs : images;
-        const raw = pool[path] ?? images['/src/lib/asset/general/unavailable.png'];
+        const raw = pool[path] ?? images['/src/lib/asset/general/blank.png'];
 
         if (type === 'svg' && props) {
             const attrs = Object.entries(props)
@@ -41,7 +41,7 @@
     
 </script>
 {#if type === 'svg'}
-{#if (parent)}
+    {#if (parent)}
         <span {...parent}>
             {@html image}
         </span>

@@ -16,6 +16,8 @@ header.global {
 
     /* Children */
     div.group {
+        --gradient-direction: 180deg;
+
         position: relative;
         display: flex;
         flex-direction: row;
@@ -23,9 +25,10 @@ header.global {
         flex-wrap: wrap;
         padding: var(--scale-md);
         transition: translate calc(var(--pg-transition-speed) / 1.5) ease;
+        background-image: linear-gradient(var(--gradient-direction), var(--bg-dynamic) 60%, transparent);
 
         &.-top { translate: 0 -100%; }
-        &.-bottom { translate: 0 100%; }
+        &.-bottom { --gradient-direction: 0deg; translate: 0 100%; }
     }
     a, div.block {
         position: relative;

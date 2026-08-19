@@ -123,7 +123,7 @@
 
 </Block>
 
-<Block props={{ "class":"general spacing -m-b-xxl", "content":{"class":"spacing -m-b-lg"}}}>
+<Block props={{ "class":"general" }}>
 
     <h2 class="text -xxl -sans -bold -uppercase">Fixing what matters</h2>
     <p class="text -xl">

@@ -1,6 +1,7 @@
 <script lang="ts">
 
     import { caseStudySetup } from "$lib/script/caseStudy.svelte";
+    import { cases } from "$lib/data/glossary";
 
     // Components
     import Block from "$lib/component/layout/Block.svelte";
@@ -8,6 +9,7 @@
     import Button from "$lib/component/action/Button.svelte";
     import Image from "$lib/component/asset/Image.svelte";
     import Video from "$lib/component/asset/Video.svelte";
+    import Link from "$lib/component/action/Link.svelte";
 
     const cs = caseStudySetup();
     
@@ -40,10 +42,10 @@
         </p>
     </div>
     <div class="columns -two spacing -gap-lg -m-t-lg -m-b-lg">
-        <div class="img-zoom border -r-sm -s-base spacing colour -bg -bg-light-dark" data-cursor="🔍" data-zoom="5" data-cursor-attach="#expand">
+        <div class="img-zoom border -r-sm -s-base spacing colour -bg -bg-light-dark" data-zoom="5">
             <Image src="work/dub/design-system/old-file-1.png" alt="A screenshot of Figma showing basic styles and components." />
         </div>
-        <div class="img-zoom border -r-sm -s-base spacing colour -bg -bg-light-dark" data-cursor="🔍" data-zoom="5" data-cursor-attach="#expand">
+        <div class="img-zoom border -r-sm -s-base spacing colour -bg -bg-light-dark" data-zoom="5">
             <Image src="work/dub/design-system/old-file-2.png" alt="A screenshot of Figma showing basic styles and components." />
         </div>
     </div>
@@ -65,7 +67,7 @@
     </p>
 
     <div class="item spacing -m-t-lg">
-        <div class="group -group-center spacing -gap-xs -mw-lg -p-t-xs -p-r-xs -p-b-xs -p-l-xs sticky -top-xl -z-high border -r-md -s-base colour -bg -bg-light-base layout -f-a-center" data-switch-control="layers">
+        <div class="group -group-center spacing -gap-xs -mw-lg -p-t-xs -p-r-xs -p-b-xs -p-l-xs sticky -top-xxl -z-high border -r-md -s-base colour -bg -bg-light-base layout -f-a-center" data-switch-control="layers">
             <p class="text -md -sans -uppercase -bold spacing -p-r-xs">Layers:</p>
             <Button 
                 props={{ 
@@ -223,7 +225,7 @@
         </p>
     </div>
     <p class="text -lg">
-        Of the projects we were working on at the time, three gave us opportunities to start using elements from the design system. <a href="/work/dubber/extracted-data" class="-on-light">Connections</a>, used components like labels and data (progress bar), migrating users from the old portal allowed us to focus on login flows and navigation, which used input, button and sidebar components, and an AI overhaul of data presentation focused on charts and graph components. All of these projects also allowed us to start using the design system tokens. Given that these projects covered different areas of the product, we could cover significant ground across the system simultaneously. Even if that meant that one flow used a new component while the other flow used an old component, this was not a dealbreaker for me. We would never have a chance to stop everything just so we could make sure that we fully implement the design system, so progress had to be brick by brick.
+        Of the projects we were working on at the time, three gave us opportunities to start using elements from the design system. <Link props={{ "href":cases[2].href, "label":{ "data-text":"Connections used components"} }}/> like labels and data (progress bar), migrating users from the old portal allowed us to focus on login flows and navigation, which used input, button and sidebar components, and an AI overhaul of data presentation focused on charts and graph components. All of these projects also allowed us to start using the design system tokens. Given that these projects covered different areas of the product, we could cover significant ground across the system simultaneously. Even if that meant that one flow used a new component while the other flow used an old component, this was not a dealbreaker for me. We would never have a chance to stop everything just so we could make sure that we fully implement the design system, so progress had to be brick by brick.
     </p>
     <div class="columns -two spacing -gap-lg -m-t-lg">
         <div class="item spacing -gap-md sticky -top-xxl">
@@ -294,7 +296,7 @@
     </div>
 </Block>
 
-<Block props={{ "class":"general spacing -m-b-xxl", "content":{"class":"spacing -m-b-xl"} }}>
+<Block props={{ "class":"general" }}>
     <h2 class="text -xxl -sans -bold -uppercase">The Future</h2>
     <p class="text -xxl">
         A design system is a continuous piece of work, so whenever we had an opportunity, we would build it out further. That work continued until the current version of 1.3.1. While Switchboard was being developed and shipped, the company&rsquo;s leadership changed drastically <span class="mark -em">&mdash;</span> and despite its success, I lost my entire design team and over 70% of the product team. I won&rsquo;t bore you with my opinion on Dubber&rsquo;s current leadership, this is just what happens when those in charge have a fundamental lack of understanding about how integral product and design are to the success of a product.
@@ -305,7 +307,6 @@
 <span class="cursor-attach -tooltip" id="problem">
     Without listening to every single recorded call, how can we help businesses extract value that helps them understand their business more deeply. Then, how do we present it back to them in a way that makes sense and allows them to make impactful data driven decisions based on context.
 </span>
-<span class="cursor-attach -tag" id="expand">Click to expand</span>
 <span class="cursor-attach -tag" id="l-c">Component</span>
 <span class="cursor-attach -tag" id="l-g">Group</span>
 <span class="cursor-attach -tag" id="l-f">Feature</span>

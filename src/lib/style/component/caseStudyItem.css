@@ -1,0 +1,22 @@
+ul.work-index {
+
+    width: 100%;
+    padding: 0;
+
+    /* Children */
+    li {
+        
+        a.link.-case-study-item {
+
+            /* Children */
+            span.label {
+
+                font-family: var(--ff-serif);
+                font-size: var(--fs-xl);
+
+            }
+
+        }
+    }
+
+}
