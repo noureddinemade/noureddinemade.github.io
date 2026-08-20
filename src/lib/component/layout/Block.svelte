@@ -1,11 +1,8 @@
 <script lang="ts">
 
     import type { BlockProps } from "$lib/script/types";
-    import type { FadeParams, TransitionConfig } from "svelte/transition";
-    import { fade, fly, slide, blur, scale, draw } from "svelte/transition";
-    import { transitionSpeed } from "$lib/script/transition";
-
-    let { props = {}, children, beforeContent, afterContent, transition = false }: BlockProps & { transition?: boolean } = $props();
+       
+    let { props = {}, children, beforeContent, afterContent, noContent }: BlockProps = $props();
 
     const { content, ...sectionProps } = $derived(props);
 
@@ -14,18 +11,16 @@
         class: content?.class ? `content ${content.class}` : 'content',
     });
 
-    const fadeIn = (node: Element, params?: FadeParams): TransitionConfig =>
-        transition ? blur(node, { duration: transitionSpeed, delay: transitionSpeed*1.5 }) : {};
-
-    const fadeOut = (node: Element, params?: FadeParams): TransitionConfig =>
-        transition ? blur(node, { duration: transitionSpeed }) : {};
-
 </script>
 
-<section {...sectionProps} in:fadeIn out:fadeOut>
+<section {...sectionProps}>
     {@render beforeContent?.()}
-    <div {...contentProps}>
+    {#if (!noContent)}
+        <div {...contentProps}>
+            {@render children?.()}
+        </div>
+    {:else}
         {@render children?.()}
-    </div>
+    {/if}
     {@render afterContent?.()}
 </section>

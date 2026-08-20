@@ -25,6 +25,7 @@ export interface Case extends Page {
     icon: string;
     accent: string;
     inList: boolean;
+    tags: string[];
 }
 
 // Colour Swatch
@@ -59,6 +60,7 @@ export interface BlockProps {
     };
     beforeContent?: Snippet;
     afterContent?: Snippet;
+    noContent?: boolean;
 }
 
 export interface PageHeaderProps {

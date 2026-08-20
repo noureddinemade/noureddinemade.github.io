@@ -172,6 +172,14 @@
 }
 
 /* Transitions */
+[data-transition] {
+    display: grid;
+    grid-template: 1fr / 1fr;
+}
+[data-transition] > * {
+    grid-row: 1;
+    grid-column: 1;
+}
 main.-on {
     opacity: 1;
     filter: none;
@@ -183,5 +191,3 @@ header.global.-on div.group {
 }
 
 [data-marquee-track].-on p { opacity: 1; }
-
-section.work.-on div.content { opacity: 1; translate: 0 0; }

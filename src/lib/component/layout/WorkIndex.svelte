@@ -10,6 +10,6 @@
 
 <ul class="work-index">
     {#each caseList as item}
-        <CaseStudyItem title={item.title} href={item.href} />
+        <CaseStudyItem caseStudy={item} />
     {/each}
 </ul>

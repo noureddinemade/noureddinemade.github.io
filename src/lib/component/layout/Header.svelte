@@ -23,7 +23,7 @@
     
 </script>
 
-<header class="global -on" {@attach transitionOn((path) => { const m = getMetaByPath(path); return m && isCase(m) ? 'case' : 'default'; })}>
+<header class="global -on" {@attach transitionOn((path: string) => { const m = getMetaByPath(path); return m && isCase(m) ? 'case' : 'default'; })}>
 
     {#if (current && isCase(current))}
 
@@ -34,7 +34,7 @@
                 "label": { 'data-text': 'Back to Work' }
             }} />
             <div class={`block colour -bg -bg-accent-${current.accent} text -contrast`} data-marquee >
-                <div class="-on" data-marquee-track {@attach transitionOn((path) => getMetaByPath(path)?.title ?? '')}>
+                <div class="-on" data-marquee-track {@attach transitionOn((path: string) => getMetaByPath(path)?.title ?? '')}>
                     <p>{current.icon} {@html current.title}</p>
                 </div>
             </div>

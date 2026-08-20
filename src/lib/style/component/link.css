@@ -38,5 +38,19 @@ a.link {
         mask-image: url($lib/asset/icon/arrow-up-01.svg);
         rotate: 45deg;
     }
+
+    &.-case-study-item {
+
+        display: block;
+
+        /* Children */
+        span.label {
+
+            font-family: var(--ff-serif);
+            font-size: var(--fs-xxl);
+
+        }
+
+    }
     
 }

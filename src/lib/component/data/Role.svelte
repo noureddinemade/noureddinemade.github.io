@@ -1,13 +1,18 @@
 <script lang="ts">
 
     import type { Role, Case, RoleProps } from "$lib/script/types";
+    
+    import { onMount } from "svelte";
     import { getCasesForRole, getRoleByID } from "$lib/script/helpers";
+    import { followInit } from "$lib/script/effect";
     
     import Button from "$lib/component/action/Button.svelte";
 
     let { id, children }: RoleProps = $props();
     const role: Role | false  = $derived(getRoleByID(id));
     const cases: Case[] | undefined = $derived(getCasesForRole(id));
+
+    onMount(followInit);
 
 </script>
 

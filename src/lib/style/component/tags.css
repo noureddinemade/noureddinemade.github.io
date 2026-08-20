@@ -1,0 +1,15 @@
+ul.tags {
+
+    width: auto;
+
+    /* Children */
+    li.tag {
+        display: inline-block;
+        padding: var(--scale-xs) var(--scale-sm);
+        font-family: var(--ff-serif);
+        font-size: var(--fs-md);
+        line-height: var(--fs-md);
+        border-radius: 44px;
+    }
+
+}

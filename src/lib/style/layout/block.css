@@ -54,9 +54,6 @@ section {
             gap: var(--gap, var(--scale-xl));
             max-width: var(--mw-xl);
             width: 100%;
-            opacity: 0;
-            translate: 0 0;
-            transition: opacity calc(var(--pg-transition-speed) / 1.5) ease, translate calc(var(--pg-transition-speed) / 1.5) ease;
 
             /* Children */
             div.item {

@@ -72,7 +72,69 @@ button.btn {
 
     }
 
+    &.-toggle {
+
+        z-index: 2;
+        width: var(--w);
+        height: var(--h);
+
+        /* Variants */
+        &.-on {
+            pointer-events: none;
+        }
+
+        /* Children */
+        span.label {
+            font-family: var(--ff-serif);
+            font-size: var(--fs-lg);
+        }
+
+    }
+
     /* Children */
-    span.label { z-index: 1; }
+    span.label { 
+        z-index: 1;
+        user-select: none;
+    }
+
+}
+
+/* Group */
+div.btn-group {
+
+    /* Variants */
+    &.-toggle {
+
+        --w: 124px;
+        --h: 64px;
+
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        padding: 0;
+        border-radius: var(--w);
+        background-color: var(--light-dark);
+
+        /* Toggled? */
+        &.-toggled:before { translate: 100% 0; }
+
+        /* Pseudo */
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            height: 100%;
+            width: var(--w);
+            border-radius: var(--w);
+            background-color: var(--light-light);
+            box-shadow: 0 0 44px rgba(var(--dark-raw), .1);
+            translate: 0 0;
+            transition: translate .2s ease-out;
+        }
+
+    }
 
 }

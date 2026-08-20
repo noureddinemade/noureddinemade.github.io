@@ -1,11 +1,12 @@
 <script lang="">
 
+    import { transition, toggleTransitionIn, toggleTransitionOut } from "$lib/script/transition.js";
+
     import Block from "$lib/component/layout/Block.svelte";
     import PageHeader from "$lib/component/layout/PageHeader.svelte";
     import Button from "$lib/component/action/Button.svelte";
     import WorkIndex from "$lib/component/layout/WorkIndex.svelte";
     import RoleIndex from "$lib/component/layout/RoleIndex.svelte";
-    import { transitionOn } from "$lib/script/transition";
     
     let index = $state(false);
 
@@ -16,26 +17,28 @@
 
 </script>
 
-<PageHeader props={{ "content":{ "class":"spacing -mw-lg" } }}>
+<PageHeader props={{ "class":"spacing -p-b-lg", "content":{ "class":"spacing -mw-lg" } }}>
     <h1 class="text -headline -sans -uppercase">
         Here&rsquo;s a curated selection of my work from the last twenty years.
     </h1>
 </PageHeader>
 
-<div class={`btn-group -toggle${index ? ' -toggled' : ''}`} onclick={() => index = !index} onkeyup={() => index = !index} tabindex="0" role="button">
-    <Button props={{ "class":"-toggle", "label":{ "data-text":"Roles" } }} />
-    <Button props={{ "class":"-toggle", "label":{ "data-text":"Index" } }} />
+<div class={`btn-group -toggle${index ? ' -toggled' : ''} spacing -m-t-sm -m-b-xl`}>
+    <Button props={{ "class":`-toggle ${index ? '' : '-on'}`, "label":{ "data-text":"Roles" }, onclick:() => index = false} } />
+    <Button props={{ "class":`-toggle ${index ? '-on' : ''}`, "label":{ "data-text":"Index" }, onclick:() => index = true} } />
 </div>
 
-{#key index}
-    <Block props={{ "class":"work -on" }} transition>
+<Block props={{ "class":"work -on" }} noContent={true}>
+    {#key index}
+    <div class="content" in:transition={toggleTransitionIn} out:transition={toggleTransitionOut}>
         {#if index}
             <WorkIndex />
         {:else}
             <RoleIndex />
         {/if}
-    </Block>
-{/key}
+    </div>
+    {/key}
+</Block>
 
 <!-- Floating Elements -->
 <span class="cursor-attach -tag" id="readCaseStudy">Read Case Study</span>

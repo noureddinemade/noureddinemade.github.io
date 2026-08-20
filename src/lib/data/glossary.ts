@@ -55,7 +55,8 @@ export const cases: Case[] = [
         inNav: true,
         icon: '✺',
         accent: 'd-light',
-        inList: true
+        inList: true,
+        tags: ['accessibility', 'inclusive design']
     },
     { 
         title:'Creating Dubber&rsquo;s accessible, data focused design system', 
@@ -66,7 +67,8 @@ export const cases: Case[] = [
         inNav: true,
         icon: '❖',
         accent: 'a-dark',
-        inList: true
+        inList: true,
+        tags: ['design systems', 'process heavy', 'documentaion']
     },
     { 
         title:'Exploring extracted data as entities', 
@@ -77,7 +79,8 @@ export const cases: Case[] = [
         inNav: true,
         icon: '⚃',
         accent: 'e-dark',
-        inList: true
+        inList: true,
+        tags: ['ai workflow', 'data exploration']
     },
     { 
         title:'Building an internal tool that creates brand ready illustrations', 
@@ -88,7 +91,8 @@ export const cases: Case[] = [
         inNav: true,
         icon: '✄',
         accent: 'f-dark',
-        inList: true
+        inList: true,
+        tags: ['shit leadership', 'internal systems']
     },
     { 
         title:'Built a task based internal system to manage patients and orders', 
@@ -99,7 +103,8 @@ export const cases: Case[] = [
         inNav: true,
         icon: '✓',
         accent: 'b-dark',
-        inList: true
+        inList: true,
+        tags: ['health tech', 'internal systems']
     },
     { 
         title:'Created the brand and app experience for a holistic weight care product', 
@@ -110,7 +115,8 @@ export const cases: Case[] = [
         inNav: true,
         icon: '➹',
         accent: 'e-base',
-        inList: true
+        inList: true,
+        tags: ['branding', 'health tech']
     },
     { 
         title:'Refreshed the brand for the digital pharmacy', 
@@ -121,7 +127,8 @@ export const cases: Case[] = [
         inNav: true,
         icon: '✚',
         accent: 'c-dark',
-        inList: true
+        inList: true,
+        tags: ['branding', 'health tech']
     },
     { 
         title:'Created the experience for an NHS prescriptions app', 
@@ -132,7 +139,8 @@ export const cases: Case[] = [
         inNav: true,
         icon: '❤︎',
         accent: 'd-base',
-        inList: true
+        inList: true,
+        tags: ['health tech', 'app experience']
     },
     { 
         title:'Designed Echo&rsquo;s first version of the web experience', 
@@ -143,7 +151,8 @@ export const cases: Case[] = [
         inNav: true,
         icon: '☑︎',
         accent: 'f-base',
-        inList: true
+        inList: true,
+        tags: ['health tech', 'web experience']
     },
     { 
         title:'Designing a bunch of interesting stuff for a bunch of shitty people.', 
@@ -154,7 +163,8 @@ export const cases: Case[] = [
         inNav: true,
         icon: '✗',
         accent: 'b-light',
-        inList: false
+        inList: false,
+        tags: ['shit leadership', 'various projects', 'experience design']
     },
     { 
         title:'Led the discovery and designed the sales flow experience for new global markets', 
@@ -165,7 +175,8 @@ export const cases: Case[] = [
         inNav: false,
         icon: '',
         accent: '',
-        inList: true
+        inList: true,
+        tags: ['shit leadership', 'sales flow', 'experience design']
         
     },
     { 
@@ -177,7 +188,8 @@ export const cases: Case[] = [
         inNav: false,
         icon: '',
         accent: '',
-        inList: true
+        inList: true,
+        tags: ['shit leadership', 'experience design']
     },
     { 
         title:'Created and built a brand new iconography ecosystem', 
@@ -188,7 +200,8 @@ export const cases: Case[] = [
         inNav: false,
         icon: '',
         accent: '',
-        inList: true
+        inList: true,
+        tags: ['shit leadership', 'iconography']
     },
     { 
         title:'Designed the full experience for sporting events and travel', 
@@ -199,7 +212,8 @@ export const cases: Case[] = [
         inNav: false,
         icon: '',
         accent: '',
-        inList: true
+        inList: true,
+        tags: ['shit leadership', 'experience design']
     },
     { 
         title:'Designed and built a free communication tool for sufferers of chronic pain', 
@@ -210,7 +224,8 @@ export const cases: Case[] = [
         inNav: true,
         icon: '▲',
         accent: 'a-base',
-        inList: true
+        inList: true,
+        tags: ['app design']
     },
     { 
         title:'A collection of some of my favourite branding bits and pieces (2015 - 2022)', 
@@ -221,7 +236,8 @@ export const cases: Case[] = [
         inNav: true,
         icon: '♞',
         accent: 'd-dark',
-        inList: true
+        inList: true,
+        tags: ['branding', 'logos']
     },
 ]
 
