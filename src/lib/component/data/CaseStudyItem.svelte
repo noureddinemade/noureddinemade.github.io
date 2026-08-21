@@ -11,12 +11,14 @@
     const href      = $derived(caseStudy.href);
     const title     = $derived(caseStudy.title);
     const tags      = $derived(caseStudy.tags);
-    const company   = $derived(caseStudy.company);
+    const icon      = $derived(caseStudy.icon);
+    const accent    = $derived(caseStudy.accent);
 
 
 </script>
 
-<li class="case-study-item">
-    <Link props={{ "href":href, "label":{ "data-text":title }, "class":"-case-study-item" }}/>
-    <Tags tags={tags} />
+<li class={`case-study-item colour -hover -hover-accent-${accent}`}>
+    <Link props={{ "href":href, "label":{ "data-text":title }, "class":"-case-study-item text -hover" }}/>
+    <Tags tags={tags} bg="accent-c-base" />
+    <span class="icon">{icon}</span>
 </li>

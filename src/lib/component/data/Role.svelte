@@ -28,7 +28,7 @@
                         "class":"-display-switch -sm -off colour -misc-accent-c-base",
                         "data-cursor":"👀",
                         "data-toggle-trigger":"true",
-                        "label":{ "data-text": `Case studies (${cases.length})`, "class":"text -sans -uppercase -base" }
+                        "label":{ "data-text": `Show Case studies (${cases.length})`, "class":"text -sans -uppercase -base" }
                     }}
                 />
             </li>

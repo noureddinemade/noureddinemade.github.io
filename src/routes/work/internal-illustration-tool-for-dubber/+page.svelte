@@ -58,19 +58,27 @@
         For the shapes we had five in total {#each array as i}<Image src={`work/dub/internal-tool/shape-${i}.svg`} alt="shape" props={{ "class":"inline-icon -md" }} />{/each}
         each representing an aspect of the product: Recording, Cloud, Conversations, Trends and Insights. We weren&rsquo;t strict about usage though, they were brand shapes and we used them where it made sense. The masks were broken into quadrants: top left, top right, bottom left, bottom right which varied from shape to shape {#each array as i}<Image src={`work/dub/internal-tool/mask-${i}.svg`} alt="mask" props={{ "class":"inline-icon -md" }} />{/each} Twenty-five components so far.
     </p>
-    <div class="item spacing -m-t-lg -m-b-xl" data-toggle>
+    <div class="item spacing -m-t-lg -m-b-xl" data-tabs="The structure of an illustration">
 
-        <Button 
-            props={{ 
-                "class":"-display-switch -off layout -a-s-start spacing -m-b-xs colour -misc-accent-a-light", "data-toggle-trigger":"true", "data-cursor":"link", "data-cursor-aim":"true",
-                "label":{ "data-text":"How it works" } 
-            }}
-        />
+        <div class="btn-group -tabs">
+            <Button 
+                props={{ 
+                    "class":"-tab", "data-tab-trigger":"breakdown", "data-cursor":"link", "data-cursor-aim":"true",
+                    "label":{ "data-text":"Illustration breakdown" } 
+                }}
+            />
+            <Button 
+                props={{ 
+                    "class":"-tab -off", "data-tab-trigger":"video", "data-cursor":"link", "data-cursor-aim":"true",
+                    "label":{ "data-text":"Putting it together" } 
+                }}
+            />
+        </div>
 
-        <div class="item" data-toggle-element>
+        <div class="item" data-tab-target="breakdown">
             <Image src="work/dub/internal-tool/illustration-breakdown.png" alt="An example illustration broken up into the 3 core components."  props={{ "class":"border -rounded -r-md -s-base" }}/>
         </div>
-        <div class="item -off" data-toggle-element>
+        <div class="item -off" data-tab-target="video">
             <Video 
                 vid="work/dub/internal-tool/illustration-breakdown.mp4"
                 props={{ 

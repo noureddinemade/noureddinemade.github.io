@@ -120,14 +120,22 @@
     <p class="text -lg">
         I spent half a day working on the first version of the plugin. That first version automated all of the heavy lifting. It would take whatever components you selected and spit out a spec sheet. Figma&rsquo;s Dev mode covered a lot of the technical stuff, so the plugin didn&rsquo;t extensively cover those elements, instead focusing on the most important things. It provided a really clear and detailed anatomy of the component, listed all the dependencies (other components used in this component) and provided all of the relevant sections for that component. For example if a component had a hover interaction built into it, that interaction would be listed in the behaviour section. This meant that after running the plugin for a component, you would end up with a spec sheet pre-filled with everything that you needed to document it. All that was left up to the designer was to document the why, when, where and how in the relevant sections.
     </p>
-    <div class="item spacing -m-t-lg -m-b-lg" data-toggle>
-        <Button 
-            props={{ 
-                "class":"-display-switch -off layout -a-s-start spacing -m-b-md colour -misc-accent-a-light", "data-toggle-trigger":"true", "data-cursor":"link", "data-cursor-aim":"true",
-                "label":{ "data-text":"Component Spec Sheet" } 
-            }}
-        />
-        <div class="item" data-toggle-element>
+    <div class="item spacing -m-t-lg -m-b-lg" data-tabs="Documentation Plugin">
+        <div class="btn-group -tabs">
+            <Button 
+                props={{ 
+                    "class":"-tab", "data-tab-trigger":"plugin-video", "data-cursor":"link", "data-cursor-aim":"true",
+                    "label":{ "data-text":"The plugin in action" } 
+                }}
+            />
+            <Button 
+                props={{ 
+                    "class":"-tab -off", "data-tab-trigger":"spec-sheets", "data-cursor":"link", "data-cursor-aim":"true",
+                    "label":{ "data-text":"Component spec sheets in detail" } 
+                }}
+            />
+        </div>
+        <div class="item" data-tab-target="plugin-video">
             <Video 
                 vid="work/dub/design-system/ds-plugin.mp4"
                 props={{ 
@@ -139,7 +147,7 @@
                     "loop":true
             }}/>
         </div>
-        <div class="item -off spacing -gap-xl" data-toggle-element>
+        <div class="item -off spacing -gap-xl" data-tab-target="spec-sheets">
             <div class="columns -two spacing -gap-xl">
                 <div class="item spacing -gap-md">
                     <h3 class="text -xl -sans -bold -uppercase">Plugin Output</h3>

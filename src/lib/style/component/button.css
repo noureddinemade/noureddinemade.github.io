@@ -91,6 +91,28 @@ button.btn {
 
     }
 
+    &.-tab {
+
+        padding: var(--scale-sm) var(--scale-md);
+        border-radius: var(--scale-sm) var(--scale-sm) 0 0;
+        background-color: var(--light-dark);
+        pointer-events: none;
+        transition: background-color .2s ease, color .2s ease;
+
+        &.-off { 
+            background-color: transparent;
+            pointer-events: auto;
+            color: var(--accent-c-base)
+        }
+
+        /* Children */
+        span.label {
+            font-family: var(--ff-sans);
+            font-size: var(--fs-md);
+        }
+
+    }
+
     /* Children */
     span.label { 
         z-index: 1;
@@ -123,10 +145,10 @@ div.btn-group {
         &:before {
             content: '';
             position: absolute;
-            top: 0;
+            top: -4px;
             left: 0;
             z-index: 1;
-            height: 100%;
+            height: calc(100% + 8px);
             width: var(--w);
             border-radius: var(--w);
             background-color: var(--light-light);
@@ -135,6 +157,14 @@ div.btn-group {
             transition: translate .2s ease-out;
         }
 
+    }
+
+    &.-tabs {
+
+        display: flex;
+        margin-bottom: var(--scale-md);
+        border-bottom: 1px solid var(--light-dark);
+    
     }
 
 }

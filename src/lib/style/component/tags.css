@@ -1,15 +1,22 @@
 ul.tags {
 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
     width: auto;
+    opacity: 1;
+    translate: 0 0;
+    transition: translate .2s ease, opacity .2s ease;
 
     /* Children */
     li.tag {
         display: inline-block;
         padding: var(--scale-xs) var(--scale-sm);
-        font-family: var(--ff-serif);
-        font-size: var(--fs-md);
+        font-family: var(--ff-sans);
+        font-size: var(--fs-sm);
         line-height: var(--fs-md);
         border-radius: 44px;
+        border: 2px solid var(--colour);
     }
 
 }

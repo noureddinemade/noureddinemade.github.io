@@ -41,16 +41,22 @@ a.link {
 
     &.-case-study-item {
 
+        --link: var(--dark-base)
+
         display: block;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: var(--scale-lg);
+        text-decoration: none;
+
+        /* States */
+        &:hover { background-color: var(--hover-colour); }; 
 
         /* Children */
-        span.label {
-
-            font-family: var(--ff-serif);
-            font-size: var(--fs-xxl);
-
-        }
-
     }
     
 }

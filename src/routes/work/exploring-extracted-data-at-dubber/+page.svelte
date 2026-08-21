@@ -51,14 +51,22 @@
     <p class="text -lg">
         Using real sample data provided by the AI team, I built a fully functional prototype. This prototype provided users with a simple interface that showed all the predefined topics of a Moment, and allowed them to click on these topics and see the related entities. It also let them filter the entities using basic text input.
     </p>
-    <div class="item spacing -m-t-lg" data-toggle>
-        <Button 
-            props={{ 
-                "class":"-display-switch -off layout -a-s-start spacing -m-b-md colour -misc-accent-a-light", "data-toggle-trigger":"true", "data-cursor":"link", "data-cursor-aim":"true",
-                "label":{ "data-text":"Live prototype" }
-            }}
-        />
-        <div class="item" data-toggle-element>
+    <div class="item spacing -m-t-lg" data-tabs="Entities Prototype">
+        <div class="btn-group -tabs">
+            <Button 
+                props={{ 
+                    "class":"-tab", "data-tab-trigger":"prototype-video", "data-cursor":"link", "data-cursor-aim":"true",
+                    "label":{ "data-text":"Prototype Video" } 
+                }}
+            />
+            <Button 
+                props={{ 
+                    "class":"-tab -off", "data-tab-trigger":"live-prototype", "data-cursor":"link", "data-cursor-aim":"true",
+                    "label":{ "data-text":"Live Prototype" } 
+                }}
+            />
+        </div>
+        <div class="item" data-tab-target="prototype-video">
             <Video 
                 vid="work/dub/connections/prototype.mp4"
                 props={{ 
@@ -68,7 +76,7 @@
                     "autoplay":true, "muted":true, "loop":true
             }}/>
         </div>
-        <div class="codepen-wrapper border -r-md -s-base -off" data-toggle-element data-cursor="">
+        <div class="codepen-wrapper border -r-md -s-base -off" data-tab-target="live-prototype" data-cursor="">
             <p class="codepen" data-height="800" data-pen-title="connections-proto" data-slug-hash="rNgGoyz" data-user="noureddinemade" data-token="71f2b1bc897be01db6ffd4fd701b83f1" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
             <span>See the Pen <a href="https://codepen.io/noureddinemade/pen/rNgGoyz/71f2b1bc897be01db6ffd4fd701b83f1">
             connections-proto</a> by Noureddine Azhar (<a href="https://codepen.io/noureddinemade">@noureddinemade</a>)

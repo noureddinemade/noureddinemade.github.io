@@ -2,7 +2,7 @@
 import { onMount } from 'svelte';
 import { page } from '$app/state';
 import { getMetaByPath, getRoleTagsByID } from '$lib/script/helpers';
-import { zoomInit, toggleInit, switchInit, vidControlInit } from '$lib/script/interaction';
+import { zoomInit, toggleInit, switchInit, vidControlInit, tabsInit } from '$lib/script/interaction';
 import { caseStudyFormatter } from '$lib/script/utils';
 
 // Setup each case study page
@@ -13,6 +13,7 @@ export const caseStudySetup = () => {
     onMount(() => {
         const cleanups = [
             toggleInit(),
+            tabsInit(),
             switchInit(),
             zoomInit(),
             vidControlInit(),

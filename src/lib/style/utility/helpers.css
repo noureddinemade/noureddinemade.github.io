@@ -68,33 +68,33 @@
     /* Hover */
     &.-hover {
 
-        &:hover { background-color: var(--hover-colour, transparent); }
+        &:hover { background-color: var(--link-bg, transparent); }
 
        /* Colours */
-        &.-hover-accent-a-base    { --hover-colour: var(--accent-a-base);     }
-        &.-hover-accent-a-light   { --hover-colour: var(--accent-a-light);    }
-        &.-hover-accent-a-dark    { --hover-colour: var(--accent-a-dark);     }
-        &.-hover-accent-b-light   { --hover-colour: var(--accent-b-light);    }
-        &.-hover-accent-b-base    { --hover-colour: var(--accent-b-base);     }
-        &.-hover-accent-b-dark    { --hover-colour: var(--accent-b-dark);     }
-        &.-hover-accent-c-light   { --hover-colour: var(--accent-c-light);    }
-        &.-hover-accent-c-base    { --hover-colour: var(--accent-c-base);     }
-        &.-hover-accent-c-dark    { --hover-colour: var(--accent-c-dark);     }
-        &.-hover-accent-d-light   { --hover-colour: var(--accent-d-light);    }
-        &.-hover-accent-d-base    { --hover-colour: var(--accent-d-base);     }
-        &.-hover-accent-d-dark    { --hover-colour: var(--accent-d-dark);     }
-        &.-hover-accent-e-light   { --hover-colour: var(--accent-e-light);    }
-        &.-hover-accent-e-base    { --hover-colour: var(--accent-e-base);     }
-        &.-hover-accent-e-dark    { --hover-colour: var(--accent-e-dark);     }
-        &.-hover-accent-f-light   { --hover-colour: var(--accent-f-light);    }
-        &.-hover-accent-f-base    { --hover-colour: var(--accent-f-base);     }
-        &.-hover-accent-f-dark    { --hover-colour: var(--accent-f-dark);     }
-        &.-hover-dark-light       { --hover-colour: var(--dark-light);        }
-        &.-hover-dark-base        { --hover-colour: var(--dark-base);         }
-        &.-hover-dark-dark        { --hover-colour: var(--dark-dark);         }
-        &.-hover-light-light      { --hover-colour: var(--light-light);       }
-        &.-hover-light-base       { --hover-colour: var(--light-base);        }
-        &.-hover-light-dark       { --hover-colour: var(--light-dark);        } 
+        &.-hover-accent-a-base    { --hover-colour: var(--accent-a-base);    --link-bg: var(--accent-a-base);   --text-contrast: var(--dark-base);   }
+        &.-hover-accent-a-light   { --hover-colour: var(--accent-a-light);   --link-bg: var(--accent-a-light);  --text-contrast: var(--dark-base);   }
+        &.-hover-accent-a-dark    { --hover-colour: var(--accent-a-dark);    --link-bg: var(--accent-a-dark);   --text-contrast: var(--light-base);  }
+        &.-hover-accent-b-light   { --hover-colour: var(--accent-b-light);   --link-bg: var(--accent-b-light);  --text-contrast: var(--dark-base);   }
+        &.-hover-accent-b-base    { --hover-colour: var(--accent-b-base);    --link-bg: var(--accent-b-base);   --text-contrast: var(--dark-base);   }
+        &.-hover-accent-b-dark    { --hover-colour: var(--accent-b-dark);    --link-bg: var(--accent-b-dark);   --text-contrast: var(--light-base);  }
+        &.-hover-accent-c-light   { --hover-colour: var(--accent-c-light);   --link-bg: var(--accent-c-light);  --text-contrast: var(--dark-base);   }
+        &.-hover-accent-c-base    { --hover-colour: var(--accent-c-base);    --link-bg: var(--accent-c-base);   --text-contrast: var(--light-base);  }
+        &.-hover-accent-c-dark    { --hover-colour: var(--accent-c-dark);    --link-bg: var(--accent-c-dark);   --text-contrast: var(--light-base);  }
+        &.-hover-accent-d-light   { --hover-colour: var(--accent-d-light);   --link-bg: var(--accent-d-light);  --text-contrast: var(--dark-base);   }
+        &.-hover-accent-d-base    { --hover-colour: var(--accent-d-base);    --link-bg: var(--accent-d-base);   --text-contrast: var(--dark-base);   }
+        &.-hover-accent-d-dark    { --hover-colour: var(--accent-d-dark);    --link-bg: var(--accent-d-dark);   --text-contrast: var(--dark-base);   }
+        &.-hover-accent-e-light   { --hover-colour: var(--accent-e-light);   --link-bg: var(--accent-e-light);  --text-contrast: var(--dark-base);   }
+        &.-hover-accent-e-base    { --hover-colour: var(--accent-e-base);    --link-bg: var(--accent-e-base);   --text-contrast: var(--dark-base);   }
+        &.-hover-accent-e-dark    { --hover-colour: var(--accent-e-dark);    --link-bg: var(--accent-e-dark);   --text-contrast: var(--dark-base);   }
+        &.-hover-accent-f-light   { --hover-colour: var(--accent-f-light);   --link-bg: var(--accent-f-light);  --text-contrast: var(--dark-base);   }
+        &.-hover-accent-f-base    { --hover-colour: var(--accent-f-base);    --link-bg: var(--accent-f-base);   --text-contrast: var(--dark-base);   }
+        &.-hover-accent-f-dark    { --hover-colour: var(--accent-f-dark);    --link-bg: var(--accent-f-dark);   --text-contrast: var(--dark-base);   }
+        &.-hover-dark-light       { --hover-colour: var(--dark-light);       --link-bg: var(--dark-light);      --text-contrast: var(--light-base);  }
+        &.-hover-dark-base        { --hover-colour: var(--dark-base);        --link-bg: var(--dark-base);       --text-contrast: var(--light-base);  }
+        &.-hover-dark-dark        { --hover-colour: var(--dark-dark);        --link-bg: var(--dark-dark);       --text-contrast: var(--light-base);  }
+        &.-hover-light-light      { --hover-colour: var(--light-light);      --link-bg: var(--light-light);     --text-contrast: var(--dark-base);   }
+        &.-hover-light-base       { --hover-colour: var(--light-base);       --link-bg: var(--light-base);      --text-contrast: var(--dark-base);   }
+        &.-hover-light-dark       { --hover-colour: var(--light-dark);       --link-bg: var(--light-dark);      --text-contrast: var(--dark-base);   }  
     }
     /* Text */
     &.-text { 
@@ -219,6 +219,8 @@
     &.-push         { padding-right: 4px; }
     /* Colours */
     &.-contrast     { --link: var(--text-contrast, currentColor); color: var(--link); }
+    &.-hover:hover  { --link: var(--text-contrast, currentColor); color: var(--link); }
+
 
 }
 

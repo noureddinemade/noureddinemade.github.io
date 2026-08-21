@@ -33,3 +33,10 @@
         /* &.-off {  opacity: 0; filter: blur(16px); transition-delay: 0s; } */
     }
 }
+
+/* Tabs */
+[data-tab-target] {
+  transition: opacity 200ms ease, display 200ms allow-discrete;
+  @starting-style { opacity: 0; }
+}
+[data-tab-target].-off { opacity: 0; display: none; }

@@ -149,7 +149,7 @@ export const cases: Case[] = [
         company:'echo',
         id: 'webAppV1',
         inNav: true,
-        icon: '☑︎',
+        icon: '✎',
         accent: 'f-base',
         inList: true,
         tags: ['health tech', 'web experience']
@@ -162,7 +162,7 @@ export const cases: Case[] = [
         id: 'variousProjects',
         inNav: true,
         icon: '✗',
-        accent: 'b-light',
+        accent: 'c-base',
         inList: false,
         tags: ['shit leadership', 'various projects', 'experience design']
     },
@@ -173,8 +173,8 @@ export const cases: Case[] = [
         company:'ver',
         id: 'globalMarkets',
         inNav: false,
-        icon: '',
-        accent: '',
+        icon: '⚑',
+        accent: 'c-base',
         inList: true,
         tags: ['shit leadership', 'sales flow', 'experience design']
         
@@ -186,8 +186,8 @@ export const cases: Case[] = [
         company:'ver',
         id: 'recruitPages',
         inNav: false,
-        icon: '',
-        accent: '',
+        icon: '☀︎',
+        accent: 'c-base',
         inList: true,
         tags: ['shit leadership', 'experience design']
     },
@@ -198,8 +198,8 @@ export const cases: Case[] = [
         company:'ver',
         id: 'iconography',
         inNav: false,
-        icon: '',
-        accent: '',
+        icon: '◎',
+        accent: 'c-base',
         inList: true,
         tags: ['shit leadership', 'iconography']
     },
@@ -210,8 +210,8 @@ export const cases: Case[] = [
         company:'ver',
         id: 'sportAndTravel',
         inNav: false,
-        icon: '',
-        accent: '',
+        icon: '✈︎',
+        accent: 'c-base',
         inList: true,
         tags: ['shit leadership', 'experience design']
     },
@@ -222,7 +222,7 @@ export const cases: Case[] = [
         company:'nm',
         id: 'chronicPainCommunicationTool',
         inNav: true,
-        icon: '▲',
+        icon: '◼︎',
         accent: 'a-base',
         inList: true,
         tags: ['app design']
@@ -234,7 +234,7 @@ export const cases: Case[] = [
         company:'nm',
         id: 'brandingBits1522',
         inNav: true,
-        icon: '♞',
+        icon: '♠︎',
         accent: 'd-dark',
         inList: true,
         tags: ['branding', 'logos']

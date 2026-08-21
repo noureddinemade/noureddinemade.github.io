@@ -4,6 +4,7 @@ import { roles, cases, pages } from '$lib/data/glossary';
 // General
 // Capitalise words
 export const capitalise = (str: string) => str ? str.charAt(0).toUpperCase() + str.slice(1) : '';
+export const randomise = (array: any[]) => array[Math.floor(Math.random() * array.length)];
 
 // Roles
 export const getRoleByID = (id: string): Role | false => roles[id] ? roles[id] : false;
@@ -35,7 +36,7 @@ export const randomCaseStudy = (current: number) => {
 
     if (pool.length === 0) return false;
 
-    return pool[Math.floor(Math.random() * pool.length)];
+    return randomise(pool);
     
 };
 
@@ -149,4 +150,16 @@ export function toCssVars(obj: Object, prefix = '-') {
         }
     }
     return out;
+}
+
+export function randomAccent(exclude?: string) {
+
+    const shade: string[] = randomise(['light','base','dark']);
+    let accent: any = ['a','b','c','d','e','f'];
+        accent = exclude ? randomise(accent.filter((a: string) => a === exclude)) : randomise(accent);
+
+    // Get random shade
+
+    return `accent-${accent}-${shade}`;
+
 }
