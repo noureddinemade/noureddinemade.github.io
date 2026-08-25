@@ -36,7 +36,7 @@ header.global {
         border-radius: var(--scale-xxl);
         pointer-events: auto;
         overflow: hidden;
-        max-width: 50%;
+        /* max-width: 50%; */
 
         /* Children */
         p, span.label {
@@ -48,6 +48,7 @@ header.global {
         }
     }
     a { text-decoration: none; }
+    
     div.block {
         display: inline-block;
         background-color: var(--bg-colour, transparent);
@@ -81,6 +82,8 @@ header.global {
         &.-noureddine   { --bg-colour: var(--accent-e-base); }
         &.-location     { --bg-colour: var(--accent-d-base); }
         &.-services     { --bg-colour: var(--accent-f-dark); }
+        
+        &[data-marquee] { max-width: var(--mw-md); }
         
     }
 

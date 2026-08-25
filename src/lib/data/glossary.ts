@@ -112,10 +112,10 @@ export const cases: Case[] = [
         href:'/work/simple-holistic-weight-care/', 
         company:'soh',
         id: 'holisticWeightCare',
-        inNav: true,
+        inNav: false,
         icon: '➹',
         accent: 'e-base',
-        inList: true,
+        inList: false,
         tags: ['branding', 'health tech']
     },
     { 
