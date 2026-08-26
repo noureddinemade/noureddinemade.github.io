@@ -1,3 +1,4 @@
 @import "$lib/style/utility/helpers.css";
 @import "$lib/style/utility/cursor.css";
 @import "$lib/style/utility/accessibility.css";
+@import "$lib/style/utility/responsive.css";

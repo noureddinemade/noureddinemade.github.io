@@ -18,8 +18,6 @@ ul, ol {
         justify-content: left;
         padding-bottom: 4px;
         border-bottom: 1px solid var(--ri-colour);
-        font-family: var(--ff-sans);
-        font-weight: var(--fw-medium);
 
         /* Children */
         li {
@@ -32,7 +30,7 @@ ul, ol {
             transition: color .2s ease, border-bottom .2s ease;
 
             /* Pseudo */
-            &:after { content: '❋'; }
+            &:after { content: '●'; }
             &:nth-child(3):after, &:nth-child(4):after { content: ''; }
             
             &:nth-child(4) { margin-left: auto; }
@@ -46,8 +44,6 @@ ul, ol {
 
         flex-direction: column;
         gap: var(--gap, var(--scale-sm));
-        font-size: var(--fs-xl);
-        font-family: var(--ff-serif);
 
         /* Children */
         li {
@@ -89,8 +85,6 @@ ul, ol {
             justify-content: center;
             align-items: center;
             gap: var(--scale-xs);
-            font-family: var(--ff-sans);
-            font-weight: var(--fw-medium);
 
             /* Pseudo */
             &:before {

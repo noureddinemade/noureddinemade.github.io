@@ -1,5 +1,5 @@
 import type { ThemeSwatches, RawSwatches, Fallback } from "$lib/script/types";
-import { generateTheme, fallback } from "$lib/script/helpers";
+import { generateTheme, fallback, fluid, fluidClamp } from "$lib/script/helpers";
 
 // Functions
 
@@ -25,12 +25,12 @@ const raw: RawSwatches = {
 // Spacing
 // Scale
 const scale: Record<string, string> = {
-    xs: '8px',
-    sm: '16px',
-    md: '24px',
-    lg: '40px',
-    xl: '80px',
-    xxl: '144px' 
+    xs:  '0.5rem',   // 8px
+    sm:  '1rem',     // 16px
+    md:  '1.5rem',   // 24px
+    lg:  '2.5rem',   // 40px
+    xl:  '5rem',     // 80px
+    xxl: '9rem'      // 144px
 };
 // Max Width
 const mw: Record<string, string> = {
@@ -63,15 +63,18 @@ const preset: Record<string, string> = {
 const base: number  = 1;
 const ratio: number = 1.25;
 
-const n: Record<string, number> = { sm: base / ratio, base, md: base * ratio };
+const n: Record<string, number> = {};
+n.sm       = base / ratio;
+n.base     = base;
+n.md       = base * ratio;
 n.lg       = n.md * ratio;
 n.xl       = n.lg * ratio;
 n.xxl      = n.xl * ratio;
 n.xxxl     = n.xxl * ratio;
-n.headline = n.lg * (ratio * 2); 
+n.headline = n.lg * (ratio * 2);
 
 const fs = Object.fromEntries(
-    Object.entries(n).map(([k, v]) => [k, v + 'rem'])
+    Object.entries(n).map(([k, v]) => [k, fluidClamp(`${v / ratio}rem`, `${v}rem`)])
 );
 
 // Line Height

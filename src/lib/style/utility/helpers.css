@@ -199,7 +199,10 @@
     &.-xxl          { font-size: var(--fs-xxl); }
     &.-xxxl         { font-size: var(--fs-xxxl); }
     &.-huge         { font-size: var(--fs-headline); }
-    &.-headline     { font-size: var(--fs-headline); line-height: var(--lh-headline); }
+    &.-headline     { 
+        font-size: clamp(var(--fs-lg), 10vw, var(--fs-headline)); 
+        line-height: var(--lh-headline); 
+    }
     /* Family */
     &.-serif        { font-family: var(--ff-serif); font-weight: var(--fw-regular); }
     &.-sans         { font-family: var(--ff-sans); }

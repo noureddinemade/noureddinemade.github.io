@@ -44,7 +44,7 @@ export interface ThemeSwatch {
 // CSS
 export interface Fallback {
     fallback: string;
-    value: string;
+    value: string | object;
 }
 
 // Collections

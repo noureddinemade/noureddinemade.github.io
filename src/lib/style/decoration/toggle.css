@@ -9,7 +9,7 @@
     display: grid;
     grid-template-rows: 1fr;
     width: 100%;
-    transition: margin-bottom var(--speed) ease;
+    transition: margin-bottom var(--speed) ease, grid-template-rows var(--speed) ease;
     transition-delay: 0s;
 
     /* Pseudo */
@@ -29,14 +29,15 @@
         filter: none;
         height: auto
 
-        /* Variants */
-        /* &.-off {  opacity: 0; filter: blur(16px); transition-delay: 0s; } */
     }
 }
 
 /* Tabs */
 [data-tab-target] {
-  transition: opacity 200ms ease, display 200ms allow-discrete;
-  @starting-style { opacity: 0; }
+    transition: opacity 200ms ease, display 200ms allow-discrete;
+    
+    @starting-style { opacity: 0; }
+
+    &.-off { opacity: 0; display: none; }
+
 }
-[data-tab-target].-off { opacity: 0; display: none; }

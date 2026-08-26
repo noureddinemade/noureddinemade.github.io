@@ -6,6 +6,9 @@ import { roles, cases, pages } from '$lib/data/glossary';
 export const capitalise = (str: string) => str ? str.charAt(0).toUpperCase() + str.slice(1) : '';
 export const randomise = (array: any[]) => array[Math.floor(Math.random() * array.length)];
 
+// Round Number
+export const round = (v: number, n = 4) => parseFloat(v.toFixed(n));
+
 // Roles
 export const getRoleByID = (id: string): Role | false => roles[id] ? roles[id] : false;
 export const getRoleTagsByID = (id: string): string[] => roles[id] ? [roles[id].title, roles[id].company, roles[id].period, roles[id].location ] : [];
@@ -129,30 +132,58 @@ export const generateTheme = (colour: RawSwatch) => {
 }
 
 // CSS
-export const fallback = (varName: string, value: string): Fallback => ({ fallback: varName, value });
+export const fluid = (min: string, preferred: string, max: string) => ({ clamp: { min, preferred, max } });
+export const fallback = (name: string, value: string | ReturnType<typeof fluid>): Fallback => ({ fallback: name, value });
+export const camelToKebab = (str: string) => ( str.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase() );
 
-export function camelToKebab(str: string) {
-    return str.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+export const fluidClamp = (min: string, max: string, minVw = 320, maxVw = 1440) => {
+    const base = 16;
+    const minRem = parseFloat(min);
+    const maxRem = parseFloat(max);
+
+    const minPx = minRem * base;
+    const maxPx = maxRem * base;
+
+    const slope = (maxPx - minPx) / (maxVw - minVw); // px per px
+    const vw = round(slope * 100);                   // vw coefficient
+    const interceptRem = round((minPx - slope * minVw) / base);
+
+    const preferred = `calc(${interceptRem}rem + ${vw}vw)`;
+
+    return { clamp: { min, preferred, max } };
 }
 
-export function toCssVars(obj: Object, prefix = '-') {
+// Resolves a value that may be a plain string or a fluid object → CSS string
+const resolveValue = (value: any): string => {
+    if (value && typeof value === 'object' && 'clamp' in value) {
+        const { min, preferred, max } = value.clamp;
+        return `clamp(${min},${preferred},${max})`;
+    }
+    return String(value);
+}
+
+export const toCssVars = (obj: Object, prefix = '-') => {
+
     let out = '';
     for (const [key, value] of Object.entries(obj)) {
         const name = `${prefix}-${camelToKebab(key)}`;
         if (value && typeof value === 'object' && typeof value.rgb === 'string') {
-            out += `${name}:${value.rgb};`;          // colour leaf → use rgb
+            out += `${name}:${value.rgb};`;                                  // colour leaf
+        } else if (value && typeof value === 'object' && 'clamp' in value) {
+            out += `${name}:${resolveValue(value)};`;                        // fluid leaf → clamp()
         } else if (value && typeof value === 'object' && 'fallback' in value) {
-            out += `${name}:var(${value.fallback},${value.value});`;
+            out += `${name}:var(${value.fallback},${resolveValue(value.value)});`; // var(), fluid-aware
         } else if (typeof value === 'string' || typeof value === 'number') {
-            out += `${name}:${value};`;              // already valid CSS
+            out += `${name}:${value};`;
         } else if (value && typeof value === 'object') {
-            out += toCssVars(value, name);           // recurse
+            out += toCssVars(value, name);                                   // recurse
         }
     }
     return out;
+
 }
 
-export function randomAccent(exclude?: string) {
+export const randomAccent = (exclude?: string) => {
 
     const shade: string[] = randomise(['light','base','dark']);
     let accent: any = ['a','b','c','d','e','f'];

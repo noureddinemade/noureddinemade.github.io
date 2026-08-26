@@ -1,3 +1,46 @@
 div.item.-role {
+
+    --gap-item: var(--scale-md);
+    height: var(--height, auto);
+    transition: height .2s ease;
+
+    /* Children */
+    p {
+
+        z-index: 1;
+
+        /* Children */
+        a {
+
+            --link: var(--dark-base);
+            --link-bg: transparent;
+            --link-underline-size: 4px;
+
+            counter-increment: footnotes;
+            text-decoration-color: var(--link-underline);
+            
+            /* Psuedo */
+            &:nth-of-type(6n+1) { --link-underline: var(--accent-a-base); --fn-bg: var(--accent-a-base); --fn-text: var(--light-base); }
+            &:nth-of-type(6n+2) { --link-underline: var(--accent-b-base); --fn-bg: var(--accent-b-base); --fn-text: var(--light-base); }
+            &:nth-of-type(6n+3) { --link-underline: var(--accent-c-base); --fn-bg: var(--accent-c-base); --fn-text: var(--light-base); }
+            &:nth-of-type(6n+4) { --link-underline: var(--accent-d-base); --fn-bg: var(--accent-d-base); --fn-text: var(--dark-base); }
+            &:nth-of-type(6n+5) { --link-underline: var(--accent-e-base); --fn-bg: var(--accent-e-base); --fn-text: var(--dark-base); }
+            &:nth-of-type(6n+6) { --link-underline: var(--accent-f-dark); --fn-bg: var(--accent-f-dark); --fn-text: var(--dark-base); }
+
+            /* States */
+            &:hover {
+
+                /* Psuedo */
+                &:nth-of-type(6n+1) { --link-bg: var(--accent-a-base); --link: var(--light-base); }
+                &:nth-of-type(6n+2) { --link-bg: var(--accent-b-base); --link: var(--light-base); }
+                &:nth-of-type(6n+3) { --link-bg: var(--accent-c-base); --link: var(--light-base); }
+                &:nth-of-type(6n+4) { --link-bg: var(--accent-d-base); }
+                &:nth-of-type(6n+5) { --link-bg: var(--accent-e-base); }
+                &:nth-of-type(6n+6) { --link-bg: var(--accent-f-dark); }
+
+            }
+        }
+
+    }
     
 }
