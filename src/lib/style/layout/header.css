@@ -30,13 +30,12 @@ header.global {
         &.-top { translate: 0 -100%; }
         &.-bottom { --gradient-direction: 0deg; translate: 0 100%; }
     }
-    a, div.block {
+    a, div.block, button {
         position: relative;
         padding: var(--scale-xs) var(--scale-md);
         border-radius: var(--scale-xxl);
         pointer-events: auto;
         overflow: hidden;
-        /* max-width: 50%; */
 
         /* Children */
         p, span.label {

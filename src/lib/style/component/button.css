@@ -113,6 +113,13 @@ button.btn {
 
     }
 
+    &.-main-menu {
+        display: none;
+        width: 100%;
+        margin-top: auto;
+        background-color: var(--accent-a-light);
+    }
+
     /* Children */
     span.label { 
         z-index: 1;

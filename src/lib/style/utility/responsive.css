@@ -1,0 +1,26 @@
+@media screen and (max-width: 980px) {
+
+    header {
+
+        padding: var(--scale-md);
+        
+        /* Children */
+        div.group { 
+            /* display: none; */
+
+            /* Children */
+            a, div.block {
+                width: 100%;
+                max-width: none;
+            }
+
+            div.block {
+                
+            }
+        }
+        
+        button { display: block; }
+
+    }
+    
+}

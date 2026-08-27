@@ -11,6 +11,7 @@
     import SubNav from "$lib/component/layout/SubNav.svelte";
     import Link from "$lib/component/action/Link.svelte";
     import Video from "$lib/component/asset/Video.svelte";
+    import Button from "$lib/component//action/Button.svelte";
 
     let { current }: { current: Page | Case | null } = $props();
 
@@ -71,6 +72,8 @@
         </div>
 
     {/if}
+
+    <Button props={{ "class":"-main-menu", "id":"menuToggle", "label":{"data-text":"Menu"} }}/>
 
     <!-- Floating Elements -->
     <Video 

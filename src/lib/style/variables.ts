@@ -24,14 +24,24 @@ const raw: RawSwatches = {
 
 // Spacing
 // Scale
-const scale: Record<string, string> = {
-    xs:  '0.5rem',   // 8px
-    sm:  '1rem',     // 16px
-    md:  '1.5rem',   // 24px
-    lg:  '2.5rem',   // 40px
-    xl:  '5rem',     // 80px
-    xxl: '9rem'      // 144px
+const baseScale: Record<string, string> = {
+    xs:   '0.5rem',   // 8px
+    sm:   '1rem',     // 16px
+    md:   '1.5rem',   // 24px
+    lg:   '2.5rem',   // 40px
+    xl:   '5rem',     // 80px
+    xxl:  '9rem'     // 144px
 };
+
+const scale: Record<string, string | ReturnType<typeof fluidClamp>> = {
+    xs:   baseScale.xs,
+    sm:   fluidClamp(baseScale.xs, baseScale.sm),
+    md:   fluidClamp(baseScale.sm, baseScale.md),
+    lg:   fluidClamp(baseScale.md, baseScale.lg),
+    xl:   fluidClamp(baseScale.md, baseScale.xl),
+    xxl:  fluidClamp(baseScale.md, baseScale.xxl)
+};
+
 // Max Width
 const mw: Record<string, string> = {
     xs: '320px',

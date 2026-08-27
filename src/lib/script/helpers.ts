@@ -133,7 +133,7 @@ export const generateTheme = (colour: RawSwatch) => {
 
 // CSS
 export const fluid = (min: string, preferred: string, max: string) => ({ clamp: { min, preferred, max } });
-export const fallback = (name: string, value: string | ReturnType<typeof fluid>): Fallback => ({ fallback: name, value });
+export const fallback = (name: string, value: string | ReturnType<typeof fluid> | ReturnType<typeof fluidClamp>): Fallback => ({ fallback: name, value });
 export const camelToKebab = (str: string) => ( str.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase() );
 
 export const fluidClamp = (min: string, max: string, minVw = 320, maxVw = 1440) => {
