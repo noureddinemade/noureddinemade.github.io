@@ -46,7 +46,16 @@ header.global {
             text-align: center;
         }
     }
-    a { text-decoration: none; }
+    a { 
+        --link: var(--light-light);
+        --link-bg: var(--accent-b-dark);
+
+        text-decoration: none;
+        text-align: center;
+
+        /* States */
+        &:hover { --link-bg: var(--accent-b-base) }
+    }
     
     div.block {
         display: inline-block;

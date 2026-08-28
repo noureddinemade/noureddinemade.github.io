@@ -17,6 +17,8 @@
 
     const currentCaseIndex = $derived(current && isCase(current) ? getCaseIndex(current.id) : 0);
 
+    let menu = $state(false);
+
     $effect(() => {
         current;                          // depend on current — re-run when it changes
         tick().then(marqueeInit);         // rebuild after the DOM swap settles
@@ -24,11 +26,11 @@
     
 </script>
 
-<header class="global -on" {@attach transitionOn((path: string) => { const m = getMetaByPath(path); return m && isCase(m) ? 'case' : 'default'; })}>
+<header class={`global -on${menu ? ' -menu-open' : ''}`} {@attach transitionOn((path: string) => { const m = getMetaByPath(path); return m && isCase(m) ? 'case' : 'default'; })}>
 
     {#if (current && isCase(current))}
 
-        <div class="group -top">
+        <div class="group -top -single">
             <Link props={{
                 "href": '/work/',
                 "class": '-prev colour -bg -bg-accent-c-base -hover -hover-accent-c-dark text -contrast',
@@ -46,16 +48,17 @@
         
         <div class="group -top">
             <div class="block -noureddine" data-cursor-attach="#noureddine" data-cursor="noureddine" data-lerp={0.02}>
-                <p>☻ The Online Portfolio <span class="text -italic -push">of</span> Noureddine Azhar</p>
+                <p class="hide-on-mobile">☻ The Online Portfolio <span class="text -italic -push">of</span> Noureddine Azhar</p>
+                <p class="show-on-mobile">Noureddine Azhar</p>
             </div>
             <Nav current={current ? current.id : ''} />
-            <div class="block -location" data-cursor="📍" data-cursor-attach="#naarm" data-lerp={0.02}>
+            <div class="block -location hide-on-mobile" data-cursor="📍" data-cursor-attach="#naarm" data-lerp={0.02}>
                 <p>Naarm <span class="text -italic">(Melbourne)</span></p>
             </div>
-            <div class="block -logo" data-cursor="💰" aria-hidden="true"><div class="logo"></div><p>نورالدين</p></div>
+            <div class="block -logo hide-on-mobile" data-cursor="💰" aria-hidden="true"><div class="logo"></div><p>نورالدين</p></div>
         </div>
 
-        <div class="group -bottom">
+        <div class="group -bottom hide-on-mobile">
             <div class="block -services" data-cursor="design">
                 <p>Product, Digital <span class="text -italic -push">and</span> Brand ✎</p>
             </div>
@@ -65,15 +68,14 @@
                 </div>
             </div>
             <Link props={{
-                "href": 'fitcheck',
-                "class": 'colour -bg -bg-accent-b-dark -hover -hover-accent-b-base text -contrast',
-                "label": { 'data-text': 'Are we a good fit?' }
+                "href": "fitcheck",
+                "label": { "data-text": "Are we a good fit?" }
             }} />
         </div>
 
     {/if}
 
-    <Button props={{ "class":"-main-menu", "id":"menuToggle", "label":{"data-text":"Menu"} }}/>
+    <Button props={{ "class":"-main-menu", "id":"menuToggle", "label":{"data-text":menu ? 'Close' : 'Menu'}, onclick:() => menu = !menu }}/>
 
     <!-- Floating Elements -->
     <Video 

@@ -14,6 +14,7 @@ nav.global {
         --link: var(--dark-dark);
         --link-bg: var(--accent-a-light);
 
+        text-align: center;
         text-decoration: none;
         transition: rotate .5s ease, background-color .3s ease, translate .3s ease, opacity .3s ease;
 
