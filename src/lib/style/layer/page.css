@@ -1,9 +1,8 @@
 /* Page specific overrides */
 html {
     
-    &:has(body main.-about) { --bg-dynamic: var(--accent-d-light); }
-    
     &:has(body main.-home) {}
+    &:has(body main.-about) {}
     &:has(body main.-work) {}
     &:has(body main.-journal) {}
     &:has(body main.-fitcheck) {}

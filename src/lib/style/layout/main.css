@@ -7,7 +7,6 @@ main {
     gap: 0;
     align-items: center;
     width: 100%;
-    margin-bottom: var(--preset-footer-height);
     box-sizing: border-box;
     background-color: var(--bg-dynamic);
     opacity: 1;
@@ -22,23 +21,10 @@ main {
         filter calc(var(--pg-transition-speed) / 1.5) ease,
         translate calc(var(--pg-transition-speed) / 1.5) ease;
 
-    /* Psuedo */
-    &:after {
-        content: '';
-        position: absolute;
-        bottom: calc(-1 * var(--preset-footer-height));
-        width: 100%;
-        height: var(--preset-footer-height);
-        background-color: var(--bg-dynamic);
-    }
-
     /* Variants */
     &.-home {
         min-height: 100vh;
         margin-bottom: 0;
-
-        /* Pseudo */
-        &:after { display: none; }
     }
     
 }

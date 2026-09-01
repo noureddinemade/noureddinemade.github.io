@@ -53,7 +53,7 @@ button.btn {
             justify-content: flex-end;
             align-items: center;
             border-radius: var(--w);
-            border: 1px solid var(--light-dark);
+            border: 1px solid var(--dark-dark);
             background-color: var(--colour);
             transition: background-color .2s ease-out;
         }
@@ -96,11 +96,13 @@ button.btn {
         padding: var(--scale-sm) var(--scale-md);
         border-radius: var(--scale-sm) var(--scale-sm) 0 0;
         background-color: var(--light-dark);
+        border: 2px solid var(--dark-dark);
         pointer-events: none;
-        transition: background-color .2s ease, color .2s ease;
+        transition: background-color .2s ease, color .2s ease, border .2s ease;
 
         &.-off { 
             background-color: transparent;
+            border: 2px solid transparent;
             pointer-events: auto;
             color: var(--accent-c-base)
         }
@@ -159,6 +161,7 @@ div.btn-group {
             width: var(--w);
             border-radius: var(--w);
             background-color: var(--light-light);
+            border: 2px solid var(--dark-dark);
             box-shadow: 0 0 44px rgba(var(--dark-raw), .1);
             translate: 0 0;
             transition: translate .2s ease-out;

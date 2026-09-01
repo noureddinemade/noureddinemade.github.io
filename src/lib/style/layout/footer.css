@@ -1,23 +1,15 @@
 /* Footer */
 
 footer.global {
-    --frame: 80px;
-    --bg-colour: var(--accent-c-base);
 
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 101;
+    position: relative;
+    z-index: 3;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: var(--preset-footer-height);
     background-color: transparent;
     pointer-events: none;
-
-    /* Variants */
-    &.-exit div.item { transition: translate calc(var(--pg-transition-speed) / 1.5) ease; }
 
     /* Children */
     div.item {
@@ -25,31 +17,15 @@ footer.global {
         z-index: 2;
         display: flex;
         flex-direction: column;
-        gap: var(--gap, var(--scale-xs));
+        gap: var(--scale-xs);
         align-items: center;
         justify-content: center;
         height: 100%;
         width: 100%;
-        padding: var(--scale-md);
-        translate: 0 calc((1 - var(--footer-reveal, 0)) * 700px);
-        color: var(--light-light);
+        max-width: var(--mw-sm);
+        margin-bottom: calc(var(--scale-xxl) * 1.2);
         background-color: var(--bg-colour);
         pointer-events: auto;
-
-        &:after {
-            content: '';
-            position: absolute;
-            top: calc(-.9 * var(--frame));
-            z-index: 3;
-            width: 100%;
-            height: var(--frame);
-            rotate: 180deg;
-            background-color: var(--bg-colour);
-            mask-image: url($lib/asset/frames/frame-end.svg);
-            mask-repeat: no-repeat;
-            mask-size: 100% 100%;
-            mask-position: center;
-        }
 
         /* Children */
         svg.svg-img {
@@ -58,8 +34,12 @@ footer.global {
             height: auto;
             
             /* Children */
-            path { fill: var(--light-light); }
+            path { fill: var(--accent-c-base); }
 
+        }
+
+        [data-marquee] {
+            width: 100%;
         }
     }
 

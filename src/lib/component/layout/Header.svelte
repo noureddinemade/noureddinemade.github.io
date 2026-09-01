@@ -47,22 +47,22 @@
     {:else}    
         
         <div class="group -top">
-            <div class="block -noureddine" data-cursor-attach="#noureddine" data-cursor="noureddine" data-lerp={0.02}>
+            <div class="block -noureddine" data-cursor-attach="#noureddine" data-cursor="🌞" data-lerp={0.02}>
                 <p class="hide-on-mobile">☻ The Online Portfolio <span class="text -italic -push">of</span> Noureddine Azhar</p>
                 <p class="show-on-mobile">Noureddine Azhar</p>
             </div>
-            <Nav current={current ? current.id : ''} />
-            <div class="block -location hide-on-mobile" data-cursor="📍" data-cursor-attach="#naarm" data-lerp={0.02}>
+            <!-- <div class="block -location hide-on-mobile" data-cursor="📍" data-cursor-attach="#naarm" data-lerp={0.02}>
                 <p>Naarm <span class="text -italic">(Melbourne)</span></p>
             </div>
-            <div class="block -logo hide-on-mobile" data-cursor="💰" aria-hidden="true"><div class="logo"></div><p>نورالدين</p></div>
+            <div class="block -logo hide-on-mobile" data-cursor="💰" aria-hidden="true"><div class="logo"></div><p>نورالدين</p></div> -->
         </div>
 
         <div class="group -bottom hide-on-mobile">
-            <div class="block -services" data-cursor="design">
+            <!-- <div class="block -services" data-cursor="design">
                 <p>Product, Digital <span class="text -italic -push">and</span> Brand ✎</p>
-            </div>
-            <div class="block colour -bg -bg-accent-a-dark text -contrast" data-marquee>
+            </div> -->
+            <Nav current={current ? current.id : ''} />
+            <!-- <div class="block colour -bg -bg-accent-a-dark text -contrast" data-marquee>
                 <div class="-on" data-marquee-track>
                     <p>Currently open to working on new things 💈</p>
                 </div>
@@ -70,7 +70,7 @@
             <Link props={{
                 "href": "fitcheck",
                 "label": { "data-text": "Are we a good fit?" }
-            }} />
+            }} /> -->
         </div>
 
     {/if}
@@ -89,6 +89,6 @@
             "muted":true
     }}/>
     
-    <span class="cursor-attach -always-was" id="naarm"></span>
+    <!-- <span class="cursor-attach -always-was" id="naarm"></span> -->
 
 </header>

@@ -19,6 +19,7 @@ ul.work-index {
         max-width: var(--mw-md);
         padding: var(--scale-lg);
         background-color: var(--light-light);
+        border: 2px solid var(--dark-dark);
         border-radius: var(--scale-lg);
         overflow: hidden;
         font-family: var(--ff-serif);

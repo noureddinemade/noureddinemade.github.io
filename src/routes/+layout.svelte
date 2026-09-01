@@ -31,22 +31,12 @@
     }}`;
 
     const current = $derived(getMetaByPath(page.url.pathname));
-    const showFooter = $derived(!!current && current.id !== 'home');
 
     let footer: ReturnType<typeof footerInit> = null;
 
     onMount(() => {
         cursorInit();
         return cursorCleanup;
-    });
-
-    $effect(() => {
-        if (!showFooter) return;
-        footer = footerInit();
-        return () => {
-            footer?.destroy();
-            footer = null;
-        };
     });
 
     onNavigate((navigation) => {
@@ -70,7 +60,6 @@
         imgLoad();
         resetScroll();
         await tick();
-        requestAnimationFrame(() => footer?.remeasure());
     });
 </script>
 
@@ -84,5 +73,5 @@
 <Header current={current ? current : null} />
 <main class={`main${current ? ` -${current.id}` : ''}${on ? ' -on' : ''}`}>
 	{@render children()}
+    <Footer />
 </main>
-{#if (showFooter)}<Footer />{/if}
