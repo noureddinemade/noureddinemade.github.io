@@ -3,8 +3,10 @@
     import type { Page, Case } from "$lib/script/types";
 
     import { tick } from "svelte";
-    import { marqueeInit } from "$lib/script/effect";
+    import { onNavigate } from "$app/navigation";
+    
     import { getCaseIndex, isCase, getMetaByPath } from "$lib/script/helpers";
+    import { marqueeInit } from "$lib/script/effect";
     import { transitionOn } from "$lib/script/transition";
     
     import Nav from "$lib/component/layout/Nav.svelte";
@@ -19,6 +21,11 @@
 
     let menu = $state(false);
 
+    onNavigate(() => new Promise((resolve) => {
+        menu = false;
+        resolve();
+    }));
+    
     $effect(() => {
         current;                          // depend on current — re-run when it changes
         tick().then(marqueeInit);         // rebuild after the DOM swap settles
@@ -47,30 +54,31 @@
     {:else}    
         
         <div class="group -top">
+            <div class="block -location" data-cursor="📍" data-cursor-attach="#naarm" data-lerp={0.02}>
+                <p>Naarm <span class="text -italic">(Melbourne)</span></p>
+            </div>
+            <div class="block -logo" data-cursor="💰" aria-hidden="true"><div class="logo"></div><p>نورالدين</p></div>
             <div class="block -noureddine" data-cursor-attach="#noureddine" data-cursor="🌞" data-lerp={0.02}>
                 <p class="hide-on-mobile">☻ The Online Portfolio <span class="text -italic -push">of</span> Noureddine Azhar</p>
                 <p class="show-on-mobile">Noureddine Azhar</p>
             </div>
-            <!-- <div class="block -location hide-on-mobile" data-cursor="📍" data-cursor-attach="#naarm" data-lerp={0.02}>
-                <p>Naarm <span class="text -italic">(Melbourne)</span></p>
+            <div class="block -services" data-cursor="design">
+                <p>Product, Digital <span class="text -italic -push">and</span> Brand ✎</p>
             </div>
-            <div class="block -logo hide-on-mobile" data-cursor="💰" aria-hidden="true"><div class="logo"></div><p>نورالدين</p></div> -->
         </div>
 
-        <div class="group -bottom hide-on-mobile">
-            <!-- <div class="block -services" data-cursor="design">
-                <p>Product, Digital <span class="text -italic -push">and</span> Brand ✎</p>
-            </div> -->
-            <Nav current={current ? current.id : ''} />
-            <!-- <div class="block colour -bg -bg-accent-a-dark text -contrast" data-marquee>
+        <div class="group -bottom">
+            
+            <div class="block colour -bg -bg-accent-a-dark text -contrast" data-marquee>
                 <div class="-on" data-marquee-track>
                     <p>Currently open to working on new things 💈</p>
                 </div>
             </div>
+            <Nav current={current ? current.id : ''} />
             <Link props={{
                 "href": "fitcheck",
                 "label": { "data-text": "Are we a good fit?" }
-            }} /> -->
+            }} />
         </div>
 
     {/if}
@@ -89,6 +97,6 @@
             "muted":true
     }}/>
     
-    <!-- <span class="cursor-attach -always-was" id="naarm"></span> -->
+    <span class="cursor-attach -always-was" id="naarm"></span>
 
 </header>

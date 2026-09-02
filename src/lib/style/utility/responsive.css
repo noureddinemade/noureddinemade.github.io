@@ -4,27 +4,43 @@
 
     header.global {
 
+        top: auto;
+        bottom: var(--scale-sm);
+        left: var(--scale-sm);
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        width: calc(100vw - calc(var(--scale-sm) * 2));
+        /* height: calc(100vh - calc(var(--scale-sm) * 2)); */
+        height: 100px;
         padding: var(--scale-md);
         gap: var(--scale-md);
+        border: 2px solid var(--dark-dark);
+        border-radius: var(--scale-sm);
+        background-color: var(--light-base);
+        overflow: hidden;
+        transition: height .2s ease;
         
         /* Children */
-        div.group { 
-            padding: 0;
+        div.group {
+            flex-direction: column;
             gap: var(--scale-md);gap: var(--scale-md);
-            background-image: none;
+            border: 0;
+            background-color: transparent;
+            flex-shrink: 0;
             
 
             /* Children */
             a, div.block, nav.global {
                 width: 100%;
                 max-width: none;
+                flex-shrink: 0;
             }
         }
 
-        nav.global, div.group.-single {
+        /* nav.global, div.group.-single {
             display: none;
             visibility: hidden;
-        }
+        } */
 
         nav.global {
             flex-direction: column;
@@ -34,7 +50,7 @@
         /* Menu Open */
         &.-menu-open {
 
-            background-color: var(--light-light);
+            height: calc(100vh - calc(var(--scale-sm) * 2));
 
             /* Children */
             nav.global, div.group.-single {

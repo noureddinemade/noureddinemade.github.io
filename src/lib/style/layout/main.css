@@ -20,11 +20,5 @@ main {
         opacity calc(var(--pg-transition-speed) / 1.5) ease,
         filter calc(var(--pg-transition-speed) / 1.5) ease,
         translate calc(var(--pg-transition-speed) / 1.5) ease;
-
-    /* Variants */
-    &.-home {
-        min-height: 100vh;
-        margin-bottom: 0;
-    }
     
 }

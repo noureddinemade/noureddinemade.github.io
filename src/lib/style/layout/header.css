@@ -7,6 +7,7 @@ header.global {
     left: 0;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: var(--scale-xs);
@@ -22,15 +23,16 @@ header.global {
         display: flex;
         flex-direction: row;
         justify-content:  space-between;
-        flex-wrap: wrap;
+        gap: var(--scale-sm);
         padding: var(--scale-sm);
+        width: 100%;
         border-radius: var(--scale-xxl);
         background-color: var(--bg-dynamic);
         border: 2px solid var(--dark-dark);
         transition: translate calc(var(--pg-transition-speed) / 1.5) ease;
 
-        &.-top { translate: 0 -200%; }
-        &.-bottom { translate: 0 200%; }
+        &.-top { translate: 0 -150%; }
+        &.-bottom { translate: 0 150%; }
     }
     a, div.block, button {
         position: relative;
@@ -39,6 +41,7 @@ header.global {
         border: 2px solid var(--dark-dark);
         pointer-events: auto;
         overflow: hidden;
+        
 
         /* Children */
         p, span.label {
@@ -51,7 +54,7 @@ header.global {
     }
     a { 
         --link: var(--light-light);
-        --link-bg: var(--accent-c-dark);
+        --link-bg: var(--accent-b-dark);
 
         text-decoration: none;
         text-align: center;

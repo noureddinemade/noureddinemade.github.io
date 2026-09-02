@@ -12,20 +12,20 @@ nav.global {
     /* Children */
     a {
 
-        --link: var(--dark-dark);
-        --link-bg: var(--accent-a-light);
+        --link: var(--light-light);
+        --link-bg: var(--accent-c-base);
 
         text-align: center;
         text-decoration: none;
         transition: rotate .5s ease, background-color .3s ease, translate .3s ease, opacity .3s ease;
 
         /* States */
-        &:hover { --link-bg: var(--accent-a-base); }
+        &:hover { --link-bg: var(--accent-c-dark); }
 
         /* Variants */
         &.-current {
             --link: var(--light-base);
-            --link-bg: var(--accent-a-dark);
+            --link-bg: var(--accent-c-dark);
 
             pointer-events: none;
         }

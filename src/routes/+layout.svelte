@@ -10,7 +10,6 @@
     import { coreInit, resetScroll, flags } from '$lib/script/core';
     import { setNavPhase, transitionSpeed } from '$lib/script/transition';
     import { cursorCleanup, cursorInit } from '$lib/script/cursor';
-    import { footerInit } from '$lib/script/footer';
     import { theme, spacing, typography, animation } from '$lib/style/variables';
     
     import '$lib/style/main.css';
@@ -31,8 +30,6 @@
     }}`;
 
     const current = $derived(getMetaByPath(page.url.pathname));
-
-    let footer: ReturnType<typeof footerInit> = null;
 
     onMount(() => {
         cursorInit();
@@ -73,5 +70,5 @@
 <Header current={current ? current : null} />
 <main class={`main${current ? ` -${current.id}` : ''}${on ? ' -on' : ''}`}>
 	{@render children()}
-    <Footer />
 </main>
+{#if (current && current.id !== 'home')}<Footer />{/if}
