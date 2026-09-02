@@ -11,7 +11,7 @@ header.global {
     align-items: center;
     justify-content: space-between;
     gap: var(--scale-xs);
-    padding: var(--scale-md) 0;
+    padding: var(--scale-md);
     width: 100vw;
     height: 100vh;
     pointer-events: none;
