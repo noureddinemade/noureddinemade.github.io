@@ -77,6 +77,7 @@
             <Nav current={current ? current.id : ''} />
             <Link props={{
                 "href": "fitcheck",
+                "class": "-fitcheck",
                 "label": { "data-text": "Are we a good fit?" }
             }} />
         </div>

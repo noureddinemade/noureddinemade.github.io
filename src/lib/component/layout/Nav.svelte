@@ -13,7 +13,7 @@
         {@const isCurrent = page.id === current}
         <Link props={{
             href: page.href || undefined,
-            class: isCurrent ? '-current' : undefined,
+            class:`${isCurrent ? '-current ' : ''}-nav` ,
             'aria-current': isCurrent ? 'page' : undefined,
             label: { 'data-text': page.title }
         }} />

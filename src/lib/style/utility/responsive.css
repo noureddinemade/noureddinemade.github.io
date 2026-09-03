@@ -1,6 +1,8 @@
 .show-on-mobile { display: none; }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 820px) {
+
+    html { font-size: 12px; }
 
     header.global {
 
@@ -11,7 +13,7 @@
         flex-wrap: nowrap;
         width: calc(100vw - calc(var(--scale-sm) * 2));
         /* height: calc(100vh - calc(var(--scale-sm) * 2)); */
-        height: 100px;
+        height: 90px;
         padding: var(--scale-md);
         gap: var(--scale-md);
         border: 2px solid var(--dark-dark);

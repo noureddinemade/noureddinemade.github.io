@@ -11,16 +11,20 @@
     import { setNavPhase, transitionSpeed } from '$lib/script/transition';
     import { cursorCleanup, cursorInit } from '$lib/script/cursor';
     import { theme, spacing, typography, animation } from '$lib/style/variables';
-    
-    import '$lib/style/main.css';
 
     import Header from '$lib/component/layout/Header.svelte';
     import Footer from '$lib/component/layout/Footer.svelte';
+    import Light from '$lib/version/Light.svelte';
+    
+    import '$lib/style/main.css';
 
-    if (browser) coreInit();
+    const mq = browser ? window.matchMedia('(min-width: 820px)') : null;
 
     let { children } = $props();
-    let on = $state(true);   // main rests on; navigation toggles it
+    let on = $state(true);
+    let isWide = $state(mq?.matches ?? false);
+
+    if (browser) coreInit();
 
     const root = `:root{${
         toCssVars(theme) +
@@ -58,6 +62,15 @@
         resetScroll();
         await tick();
     });
+    
+    $effect(() => {
+        if (!mq) return;
+        const update = () => (isWide = mq.matches);
+        update();
+        mq.addEventListener('change', update);
+        return () => mq.removeEventListener('change', update);
+    });
+
 </script>
 
 
@@ -69,6 +82,10 @@
 
 <Header current={current ? current : null} />
 <main class={`main${current ? ` -${current.id}` : ''}${on ? ' -on' : ''}`}>
-	{@render children()}
+    {#if (isWide)}
+        {@render children()}
+    {:else}
+        <Light />
+    {/if}
 </main>
 {#if (current && current.id !== 'home')}<Footer />{/if}

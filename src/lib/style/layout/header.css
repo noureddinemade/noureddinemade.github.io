@@ -22,7 +22,7 @@ header.global {
         position: relative;
         display: flex;
         flex-direction: row;
-        justify-content:  space-between;
+        justify-content: space-between;
         gap: var(--scale-sm);
         padding: var(--scale-sm);
         width: 100%;
@@ -59,14 +59,18 @@ header.global {
         text-decoration: none;
         text-align: center;
 
+        /* Variants */
+        &.-fitcheck { min-width: 280px; }
+
         /* States */
-        &:hover { --link-bg: var(--accent-b-base) }
+        &:hover { --link-bg: var(--accent-b-base); }
     }
     
     div.block {
-        display: inline-block;
         background-color: var(--bg-colour, transparent);
         transition: background-color calc(var(--pg-transition-speed) / 1.5) ease;
+
+        /* States */
 
         /* Variants */
         &.-logo {
@@ -93,9 +97,9 @@ header.global {
             }
         }
         
-        &.-noureddine   { --bg-colour: var(--accent-e-base); }
-        &.-location     { --bg-colour: var(--accent-d-base); }
-        &.-services     { --bg-colour: var(--accent-f-dark); }
+        &.-noureddine   { --bg-colour: var(--accent-e-base); display: flex; &:hover { justify-content: flex-end; } }
+        &.-location     { --bg-colour: var(--accent-d-base); display: flex; &:hover { justify-content: flex-end; } }
+        &.-services     { --bg-colour: var(--accent-f-dark); display: flex; &:hover { justify-content: flex-end; } }
         
         &[data-marquee] { max-width: var(--mw-md); }
         
