@@ -42,12 +42,8 @@
         </p>
     </div>
     <div class="columns -two spacing -gap-lg -m-t-lg -m-b-lg">
-        <div class="img-zoom border -r-sm -s-base spacing colour -bg -bg-light-dark" data-zoom="5">
-            <Image src="work/dub/design-system/old-file-1.png" alt="A screenshot of Figma showing basic styles and components." />
-        </div>
-        <div class="img-zoom border -r-sm -s-base spacing colour -bg -bg-light-dark" data-zoom="5">
-            <Image src="work/dub/design-system/old-file-2.png" alt="A screenshot of Figma showing basic styles and components." />
-        </div>
+        <Image src="work/dub/design-system/old-file-1.png" alt="A screenshot of Figma showing basic styles and components." parent={{ "class":"img-zoom border -r-sm -s-base spacing colour -bg -bg-light-dark", "data-zoom":5 }} />
+        <Image src="work/dub/design-system/old-file-2.png" alt="A screenshot of Figma showing basic styles and components." parent={{ "class":"img-zoom border -r-sm -s-base spacing colour -bg -bg-light-dark", "data-zoom":5 }} />
     </div>
     <p class="text -xxl spacing -mw-xl">
         <span class="mark -highlight colour -bg -bg-accent-b-dark text -contrast">Fundamentals are what make a design system valuable. The most in depth component libraries in the world don&rsquo;t mean anything if your teams don&rsquo;t know how to use them.</span>

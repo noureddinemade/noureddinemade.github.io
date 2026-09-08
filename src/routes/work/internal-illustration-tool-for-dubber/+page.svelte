@@ -93,9 +93,7 @@
     <p class="text -xxl">
         The foreground objects were the core of it. Mostly realistic, some abstract, all 3D rendered, all in black and white so the background colour could do its thing. After breaking these down we had 430 foreground object components in total. Around 80 unique objects, each with at least two variations.
     </p>
-    <div class="img-zoom border -r-sm -s-base colour -bg -bg-light-light spacing -mw-xxl -m-t-lg" data-zoom="5">
-        <Image src="work/dub/internal-tool/objects.png" alt="The majority of the 3D objects shown in a grid"/>
-    </div>
+    <Image src="work/dub/internal-tool/objects.png" alt="The majority of the 3D objects shown in a grid" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light spacing -mw-xxl -m-t-lg", "data-zoom":4 }}/>
 </Block>
 
 <Block props={{ "class":"general" }}>

@@ -37,7 +37,7 @@
 
     {#if (current && isCase(current))}
 
-        <div class="group -top -single">
+        <div class="group -bottom -single">
             <Link props={{
                 "href": '/work/',
                 "class": '-prev colour -bg -bg-accent-c-base -hover -hover-accent-c-dark text -contrast',

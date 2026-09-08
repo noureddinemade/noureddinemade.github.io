@@ -31,8 +31,8 @@ header.global {
         border: 2px solid var(--dark-dark);
         transition: translate calc(var(--pg-transition-speed) / 1.5) ease;
 
-        &.-top { translate: 0 -150%; }
-        &.-bottom { translate: 0 150%; }
+        &.-top { translate: 0 -150%; margin-bottom: auto; }
+        &.-bottom { translate: 0 150%; margin-top: auto; }
     }
     a, div.block, button {
         position: relative;

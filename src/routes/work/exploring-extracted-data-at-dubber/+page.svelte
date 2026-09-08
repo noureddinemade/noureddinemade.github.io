@@ -117,9 +117,7 @@
     <p class="text -xl">
         Some names that were suggested and rejected by the framework were: Cue (easily confused with queue), Thread (too close to message threads, a concept that already existed in the product) and Tie (just sounded awful in usage). But we did find a winner, <span class="text -sans -uppercase -bold">Connection</span>. It worked not just because it was easy to use within the product but because it described this feature very clearly, a connection between topic and value.
     </p>
-    <div class="img-zoom border -r-sm -s-base spacing -m-t-lg colour -bg -bg-light-light" data-zoom="3">
-        <Image src="work/dub/connections/naming.png" alt="A board that shows the process of the naming framework applied to Entities." props={{ "class":"spacing -p-t-xl -p-b-xl -p-l-xl -p-r-xl" }} />
-    </div>
+    <Image src="work/dub/connections/naming.png" alt="A board that shows the process of the naming framework applied to Entities." props={{ "class":"spacing -p-t-xl -p-b-xl -p-l-xl -p-r-xl" }} parent={{ "class":"img-zoom border -r-sm -s-base spacing -m-t-lg colour -bg -bg-light-light", "data-zoom":3 }} />
 </Block>
 
 <Block props={{ "class":"general" }}>

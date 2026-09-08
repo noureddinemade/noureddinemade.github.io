@@ -55,9 +55,9 @@
     </figure>
 {:else}
     {#if (parent)}
-        <span {...parent}>
+        <div {...parent}>
             <img src={image} {alt} {...(props as HTMLImgAttributes)} />
-        </span>
+        </div>
     {:else}
         <img src={image} {alt} {...(props as HTMLImgAttributes)} />
     {/if}

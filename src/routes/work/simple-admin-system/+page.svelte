@@ -49,10 +49,12 @@
     <p class="text -xl">
         We were in the lucky position of having access to 100% of the people who'd actually use the product. Before planning anything, I wanted to map out the full journey of an order from start to finish, so I spent a few days talking to at least two people in each department.
     </p>
-    <p class="text -lg">
+    <Image src="work/soh/admin-system/001-full-business-flow.png" alt="Full business flow" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl -m-t-lg -p-xl", "data-zoom":3 }}/>
+    <Image src="work/soh/admin-system/001-status-map.png" alt="Full business flow" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl -m-t-lg -m-b-lg -p-xl", "data-zoom":3 }}/>
+    <p class="text -xl">
         Alongside that, I sent a short survey to everyone who used the existing tool.
     </p>
-    <p class="text -lg">
+    <p class="text -xl">
         Then I ran a workshop with the co-founders and the team leads across the operational teams (pharmacy, clinical, support, warehouse). The point of it was to define the MVP, the key problems, and the metrics we'd use to measure whether our solutions actually worked.
     </p>
 </Block>
