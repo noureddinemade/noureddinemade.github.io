@@ -53,6 +53,32 @@ div.profile-photo-wrap {
     
 }
 
+div.img-slider {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    /* gap: var(--scale-xl); */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior:auto;
+    user-select: none;
+
+    /* Dragging */
+    &.-dragging { scroll-snap-type: none; }
+
+    /* Children */
+    img {
+
+        scroll-snap-align: center;
+        pointer-events: none;
+
+    }
+
+}
+
 /* Figure */
 figure.img-wrap {
 

@@ -257,6 +257,6 @@
     &.-r-xs { border-radius: var(--scale-xs); } &.-r-sm { border-radius: var(--scale-sm); } &.-r-md { border-radius: var(--scale-md); }
 
     /* Stroke */
-    &.-s-none { border: none; } &.-s-base { border: 1px solid var(--dark-base); } &.-s-thick { border: 2px solid var(--dark-base); }
+    &.-s-none { border: none; } &.-s-base { border: 2px solid var(--dark-base); } &.-s-thick { border: 3px solid var(--dark-base); }
 
 }

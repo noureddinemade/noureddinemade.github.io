@@ -130,3 +130,11 @@ export interface ZoomItem {
     ww: number; wh: number;
     rangeX: number; rangeY: number;
 }
+
+export interface DragItem {
+    container: HTMLElement;
+    pressed: boolean;
+    dragged: boolean;
+    startX: number;
+    startScroll: number;
+}
