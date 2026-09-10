@@ -60,7 +60,7 @@ div.img-slider {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-start;
-    /* gap: var(--scale-xl); */
+    gap: var(--scale-xl);
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior:auto;
@@ -72,6 +72,8 @@ div.img-slider {
     /* Children */
     img {
 
+        padding: var(--scale-md);
+        max-height: 800px;
         scroll-snap-align: center;
         pointer-events: none;
 

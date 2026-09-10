@@ -6,7 +6,23 @@ ul, ol {
     width: 100%;
 
     /* Variants */
-    &.role-info, &.links, &.fit-check { display: flex; }
+    &.role-info, &.links, &.fit-check, &.base { display: flex; }
+
+    &.base {
+        flex-direction: column;
+        gap: var(--scale-xs);
+
+        /* Children */
+        li {
+            /* Pseudo */
+            &:before {
+                content: '✺';
+                display: inline-block;
+                margin-right: var(--scale-sm);
+                color: var(--accent-a-dark);
+            }
+        }
+    }
 
     &.role-info {
 

@@ -88,7 +88,7 @@
         <Image src="work/soh/admin-system/005-final-design-patient-view-3.png" alt="<REPLACE>"/>
         <Image src="work/soh/admin-system/005-final-design-task-view.png" alt="<REPLACE>"/>
         <Image src="work/soh/admin-system/006-final-design-task-ftc.png" alt="<REPLACE>"/>
-        <Image src="work/soh/admin-system/006-final-design-task-gp-chase.png" alt="<REPLACE>"/>
+        <Image src="work/soh/admin-system/006-final-design-task-gpchase.png" alt="<REPLACE>"/>
         <Image src="work/soh/admin-system/006-final-design-task-nomination.png" alt="<REPLACE>"/>
         <Image src="work/soh/admin-system/006-final-design-task-to-be-shipped.png" alt="<REPLACE>"/>
     </div>
