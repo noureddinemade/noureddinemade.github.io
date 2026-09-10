@@ -128,6 +128,7 @@ section {
     div.columns {
 
         --_col-gap: var(--gap, 0);
+        --_col-num: 1;
 
         position: relative;
         display: flex;
@@ -137,11 +138,16 @@ section {
         width: 100%;
 
         /* Columns */
-        &.-two { > * { flex: 1 1 max(20rem, calc(50% - var(--_col-gap) / 2)); }}
-        &.-three { > * { flex: 1 1 max(20rem, calc(33% - calc(var(--_col-gap) / 3))); }}
+        &.-two      { --_col-num: 2; }
+        &.-three    { --_col-num: 3; }
+        &.-four     { --_col-num: 4; }
+        &.-five     { --_col-num: 5; }
 
         /* Children */
-        > * { align-self: flex-start; }
+        > * {
+            flex: 1 1 max(10rem, calc((100% - (var(--_col-num) - 1) * var(--_col-gap)) / var(--_col-num)));
+            align-self: flex-start;
+        }
 
     }
 

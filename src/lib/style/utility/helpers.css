@@ -4,6 +4,7 @@
 .spacing {
     
     /* Max Width */
+    &.-mw-none { max-width: none; }
     &.-mw-xs { max-width: var(--mw-xs); }
     &.-mw-sm { max-width: var(--mw-sm); }
     &.-mw-md { max-width: var(--mw-md); }
