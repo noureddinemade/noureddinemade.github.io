@@ -142,6 +142,9 @@ section {
         &.-three    { --_col-num: 3; }
         &.-four     { --_col-num: 4; }
         &.-five     { --_col-num: 5; }
+        &.-six      { --_col-num: 6; }
+        &.-seven    { --_col-num: 7; }
+        &.-eight    { --_col-num: 8; }
 
         /* Children */
         > * {

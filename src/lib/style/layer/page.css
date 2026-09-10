@@ -6,6 +6,5 @@ html {
     &:has(body main.-work) {}
     &:has(body main.-journal) {}
     &:has(body main.-fitcheck) {}
-    
 
 }

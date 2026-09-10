@@ -9,12 +9,13 @@
     import Image from "$lib/component/asset/Image.svelte";
 
     const cs = caseStudySetup();
+    let dark = $state(false);
     
 </script>
 
 <PageHeader props={{ "tags":cs.tags, "content":{"class":"spacing -mw-lg"}}}>
 
-    <h1 class="text -headline -sans -uppercase">
+    <h1 class={"text -headline -sans -uppercase"}>
         {@html cs.caseStudy?.title}
     </h1>
     {#if (cs.caseStudy && cs.caseStudy.desc)}
@@ -25,20 +26,13 @@
 
 </PageHeader>
 
-<Block props={{ "class":"general colour -bg -bg-light-light", "content":{"class":"spacing -mw-none"} }}>
+<Block props={{ "class":"general", "content":{"class":"spacing -mw-xl"} }}>
 
-    <div class="columns -five spacing -gap-xs">
-        <Image src="work/nm/branding-bits-15-22/branding-001.svg" alt="<REPLACE>" />
-        <Image src="work/nm/branding-bits-15-22/branding-002.svg" alt="<REPLACE>" />
-        <Image src="work/nm/branding-bits-15-22/branding-003.svg" alt="<REPLACE>" />
-        <Image src="work/nm/branding-bits-15-22/branding-004.svg" alt="<REPLACE>" />
-        <Image src="work/nm/branding-bits-15-22/branding-005.svg" alt="<REPLACE>" />
-        <Image src="work/nm/branding-bits-15-22/branding-006.svg" alt="<REPLACE>" />
-        <Image src="work/nm/branding-bits-15-22/branding-007.svg" alt="<REPLACE>" />
-        <Image src="work/nm/branding-bits-15-22/branding-008.svg" alt="<REPLACE>" />
-        <Image src="work/nm/branding-bits-15-22/branding-009.svg" alt="<REPLACE>" />
-        <Image src="work/nm/branding-bits-15-22/branding-010.svg" alt="<REPLACE>" />
+    <div class="columns -six spacing -gap-md">
 
+        {#each Array.from({ length: 24 }) as _, i}
+            <Image src={`work/nm/branding-bits-15-22/branding-0${i+1}.svg`} alt="" props={{ "class": dark ? 'colour -fill -fill-light-dark' : ''}} />
+        {/each}
     </div>
 
 
