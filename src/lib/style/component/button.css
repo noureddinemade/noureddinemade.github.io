@@ -124,6 +124,19 @@ button.btn {
         border: 2px solid var(--dark-dark);
     }
 
+    &.-theme-item {
+        --s: 32px;
+
+        width: var(--s);
+        height: var(--s);
+        border-radius: var(--s);
+        transition: scale .2s ease;
+        
+        /* States */
+        &:hover { scale: 1.1; }
+        &.-selected { outline: 2px solid var(--dark-base); outline-offset: 4px; }
+    }
+
     /* Children */
     span.label { 
         z-index: 1;

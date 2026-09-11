@@ -37,5 +37,5 @@
 </Role>
 
 <Role id="nm">
-    Freelance, contract and consultation work across product, digital and brand. Designed digital experiences and campaigns for worldwide clients <CompanyIcon id="umg"/> <CompanyIcon id="nis"/> <CompanyIcon id="toy"/> <CompanyIcon id="bmw"/> <CompanyIcon id="vw"/> <CompanyIcon id="ww"/> <CompanyIcon id="dj"/> <CompanyIcon id="nzab"/>. Ran research and usability testing for a building-material marketplace, built the kiosk experience for diabetes tools with CDM London, and designed and built a <Link props={{ "href":cases[14].href, "label":{"data-text":"free communication tool for people living with chronic pain"}, ...caseCursor }} /> with NPS MedicineWise.
+    Freelance, contract and consultation work across product, digital and brand. Designed digital experiences and campaigns for worldwide clients <CompanyIcon id="umg"/> <CompanyIcon id="nis"/> <CompanyIcon id="toy"/> <CompanyIcon id="bmw"/> <CompanyIcon id="vw"/> <CompanyIcon id="ww"/> <CompanyIcon id="dj"/> <CompanyIcon id="nzab"/>. Ran research and usability testing for a building-material marketplace, built the kiosk experience for diabetes tools with CDM London, and designed and built a free communication tool for people living with chronic pain with NPS MedicineWise.
 </Role>

@@ -5,9 +5,7 @@
     // Components
     import Block from "$lib/component/layout/Block.svelte";
     import PageHeader from "$lib/component/layout/PageHeader.svelte";
-    import Button from "$lib/component/action/Button.svelte";
     import Image from "$lib/component/asset/Image.svelte";
-    import Video from "$lib/component/asset/Video.svelte";
     import Link from "$lib/component/action/Link.svelte";
 
     const cs = caseStudySetup();
@@ -80,7 +78,7 @@
     </div>
 </Block>
 
-<Block props={{ "class":"general" }}>
+<Block props={{ "class":"general", "id":"recruit-pages" }}>
     <h2 class="text -xl -sans -bold -uppercase">Making recruit pages more helpful</h2>
     <p class="text -xl">
         Clients recruit ambassadors using a recruit page for a specific festival or campaign. The old pages didn&rsquo;t explain much. They had a brief, vague overview of everything and they gave the client very little room to customise for their brand.

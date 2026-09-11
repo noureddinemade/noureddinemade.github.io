@@ -221,10 +221,10 @@ export const cases: Case[] = [
         href:'/work/chronic-pain-communication-tool/', 
         company:'nm',
         id: 'chronicPainCommunicationTool',
-        inNav: true,
+        inNav: false,
         icon: '◼︎',
         accent: 'a-base',
-        inList: true,
+        inList: false,
         tags: ['app design']
     },
     { 
