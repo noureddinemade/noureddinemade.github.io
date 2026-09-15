@@ -5,8 +5,8 @@
     import Block from "$lib/component/layout/Block.svelte";
     import PageHeader from "$lib/component/layout/PageHeader.svelte";
     import Button from "$lib/component/action/Button.svelte";
-    import WorkIndex from "$lib/component/layout/WorkIndex.svelte";
-    import RoleIndex from "$lib/component/layout/RoleIndex.svelte";
+    import WorkIndex from "$lib/component/layout/ViewCases.svelte";
+    import RoleIndex from "$lib/component/layout/ViewRoles.svelte";
     
     let index = $state(false);
 
