@@ -1,0 +1,26 @@
+div.cta {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--scale-md);
+    padding: var(--scale-xl);
+    margin-bottom: var(--scale-xl);
+    max-width: var(--mw-lg);
+    width: 100%;
+    align-self: center;
+    border-radius: var(--scale-xl);
+    border: 2px solid var(--dark-dark);
+    text-align: center;
+    background-color: var(--accent-f-base);
+
+    /* Children */
+    div.item.-check {
+        flex-direction: row;
+        width: auto;
+    }
+
+    p { color: var(--dark-dark); }
+
+}

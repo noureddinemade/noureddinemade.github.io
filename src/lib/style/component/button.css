@@ -137,6 +137,50 @@ button.btn {
         &.-selected { outline: 2px solid var(--dark-base); outline-offset: 4px; }
     }
 
+    &.-checkbox {
+
+        display: block;
+        position: relative;
+        width: var(--s);
+        height: var(--s);
+        background-color: var(--light-light);
+        border: 2px solid var(--dark-dark);
+        border-radius: var(--scale-xs);
+        transition: scale .2s ease, background-color .1s ease;
+
+        /* Pseudo */
+        &:before {
+            content: '✓';
+            display: block;
+            scale: 0;
+            opacity: 0;
+            color: var(--light-light);
+            transition: scale .1s ease, opacity .1s ease;
+        }
+
+        /* Variants */
+        &.-sm { --s: 16px; } &.-md { --s: 24px; } &.-lg { --s: 32px; } &.-xl { --s: 44px; }
+
+        /* States */
+        &.-checked {
+
+            background-color: var(--accent-c-base);
+
+            /* Pseudo */
+            &:before {
+                scale: 1.5;
+                opacity: 1;
+            }
+
+        }
+
+        &:hover { scale: 1.05; }
+
+        /* Children */
+        span.label { display: none; }
+
+    }
+
     /* Children */
     span.label { 
         z-index: 1;

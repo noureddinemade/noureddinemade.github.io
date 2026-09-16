@@ -15,25 +15,27 @@
     import Header from '$lib/component/layout/Header.svelte';
     import Footer from '$lib/component/layout/Footer.svelte';
     import Light from '$lib/version/Light.svelte';
+    import CTA from '$lib/component/layout/CTA.svelte';
     
     import '$lib/style/main.css';
 
     const mq = browser ? window.matchMedia('(min-width: 820px)') : null;
-
+    
     let { children } = $props();
     let on = $state(true);
     let isWide = $state(mq?.matches ?? false);
-
+    
     if (browser) coreInit();
-
+    
     const root = `:root{${
         toCssVars(theme) +
         toCssVars(spacing) +
         toCssVars(typography) +
         toCssVars(animation)
     }}`;
-
+    
     const current = $derived(getMetaByPath(page.url.pathname));
+    const cta = $derived(current && !['home','journal','about'].includes(current.id) ? true : false);
 
     onMount(() => {
         cursorInit();
@@ -87,5 +89,7 @@
     {:else}
         <Light />
     {/if}
+
+    {#if (cta)}<CTA />{/if}
 </main>
 {#if (current && current.id !== 'home')}<Footer />{/if}

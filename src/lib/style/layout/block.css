@@ -32,7 +32,7 @@ section {
 
     &.page-header {
 
-        margin-top: 0;
+        margin-top: var(--scale-xl);
         margin-bottom: 0;
         transition: padding .2s ease;
 
@@ -83,9 +83,6 @@ section {
     &.general {
 
         padding: var(--scale-lg) var(--scale-xl);
-
-        /* Psuedo */
-        &:last-of-type { margin-bottom: var(--scale-xxl); }
 
         /* Children */
         div.content { max-width: var(--mw-xl); }
