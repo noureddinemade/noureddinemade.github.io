@@ -6,18 +6,21 @@ import { generateTheme, fallback, fluid, fluidClamp } from "$lib/script/helpers"
 // Raw Colours
 const raw: RawSwatches = {
     accentA: { hex: '#2f9315', rgb: [47,147,21]},
-//  accentA: { hex: '#577c1c', rgb: [87,124,28]},
-    accentB: { hex: '#c40b0b', rgb: [196,11,11]},
-//  accentB: { hex: '#0029d6', rgb: [0,41,214]},
-    accentC: { hex: '#005fbf', rgb: [0,95,191]},
-//  accentC: { hex: '#8425c1', rgb: [132,37,193]},
-    accentD: { hex: '#ff7d0b', rgb: [255,125,11]},
-//  accentD: { hex: '#ff5fbb', rgb: [255,95,187]},
+    accentB: { hex: '#d12c07', rgb: [209,44,7]},
+    accentC: { hex: '#0029d6', rgb: [0,41,214]},
+    accentD: { hex: '#ff6700', rgb: [255,103,0]},
     accentE: { hex: '#ffd900', rgb: [255,217,0]},
-//  accentE: { hex: '#d12c07', rgb: [209,44,7]},
-    accentF: { hex: '#ffa8d2', rgb: [255,168,210]},
-//  accentF: { hex: '#ffd900', rgb: [255,217,0]},
-//  accentG: { hex: '#ff6700', rgb: [255,103,0]},
+    accentF: { hex: '#ff5fbb', rgb: [255,95,187]},
+    accentG: { hex: '#8425c1', rgb: [132,37,193]},
+    
+    // Alt pallette
+    // accentA: { hex: '#577c1c', rgb: [87,124,28]},
+    // accentB: { hex: '#c40b0b', rgb: [196,11,11]},
+    // accentC: { hex: '#005fbf', rgb: [0,95,191]},
+    // accentD: { hex: '#ff7d0b', rgb: [255,125,11]},
+    // accentE: { hex: '#ffd900', rgb: [255,217,0]},
+    // accentF: { hex: '#ffa8d2', rgb: [255,168,210]},
+
     dark: { hex: '#121212', rgb: [18,18,18]},
     light: { hex: '#e7e7e7', rgb: [231,231,231]}
 }
@@ -131,6 +134,7 @@ export const theme: ThemeSwatches = {
     accentD: generateTheme(raw.accentD),
     accentE: generateTheme(raw.accentE),
     accentF: generateTheme(raw.accentF),
+    accentG: generateTheme(raw.accentG),
     dark: generateTheme(raw.dark),
     light: generateTheme(raw.light),
     

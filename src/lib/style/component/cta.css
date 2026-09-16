@@ -5,15 +5,15 @@ div.cta {
     align-items: center;
     justify-content: center;
     gap: var(--scale-md);
-    padding: var(--scale-xl);
+    padding: var(--scale-lg);
     margin-bottom: var(--scale-xl);
-    max-width: var(--mw-lg);
+    max-width: var(--mw-md);
     width: 100%;
     align-self: center;
     border-radius: var(--scale-xl);
     border: 2px solid var(--dark-dark);
     text-align: center;
-    background-color: var(--accent-f-base);
+    background-color: var(--accent-g-dark);
 
     /* Children */
     div.item.-check {
@@ -21,6 +21,7 @@ div.cta {
         width: auto;
     }
 
-    p { color: var(--dark-dark); }
+    p { color: var(--light-light); }
+    a { --link: var(--accent-e-light); }
 
 }

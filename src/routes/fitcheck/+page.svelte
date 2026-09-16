@@ -7,7 +7,6 @@
     import Button from "$lib/component/action/Button.svelte";
     import ViewYou from "$lib/component/layout/ViewYou.svelte";
     import ViewMe from "$lib/component/layout/ViewMe.svelte";
-    import CTA from "$lib/component/layout/CTA.svelte";
 
     let you = $state(false);
 
@@ -21,10 +20,6 @@
 
 
 <Block props={{ "class":"work -on" }} noContent={true}>
-    
-    <p class="text -xxl spacing -mw-lg">
-        I&rsquo;m interested in working on things that make a positive impact with decent people who aren&rsquo;t dickheads <span class="mark -em">&mdash;</span> if that sounds good, let&rsquo;s have a chat.
-    </p>
     
     <div class={`btn-group -toggle${you ? ' -toggled' : ''} spacing -m-t-sm -m-b-lg`}>
         <Button props={{ "class":`-toggle ${you ? '' : '-on'}`, "label":{ "data-text":"Me" }, onclick:() => you = false} } />

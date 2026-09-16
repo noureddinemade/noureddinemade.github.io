@@ -71,35 +71,9 @@ header.global {
         transition: background-color calc(var(--pg-transition-speed) / 1.5) ease;
 
         /* States */
-
-        /* Variants */
-        &.-logo {
-            --bg-colour: var(--accent-c-base);
-
-            /* States */
-            &:hover div.logo { animation-play-state: running; }
-
-            /* Children */
-            p { opacity: 0; }
-            div.logo {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 90%;
-                background-color: var(--light-base);
-                mask-image: url($lib/asset/brand/logo-g.svg);
-                mask-repeat: repeat-x;
-                mask-size: auto 100%;
-                mask-position: 50% center;
-                animation: logoMove 5s linear infinite;
-                animation-play-state: paused;
-            }
-        }
-        
         &.-noureddine   { --bg-colour: var(--accent-e-base); display: flex; &:hover { justify-content: flex-end; } }
-        &.-location     { --bg-colour: var(--accent-d-base); display: flex; &:hover { justify-content: flex-end; } }
-        &.-services     { --bg-colour: var(--accent-f-dark); display: flex; &:hover { justify-content: flex-end; } }
+        &.-location     { --bg-colour: var(--accent-d-light); display: flex; &:hover { justify-content: flex-end; } }
+        &.-services     { --bg-colour: var(--accent-f-light); display: flex; &:hover { justify-content: flex-end; } }
         
         &[data-marquee] { max-width: var(--mw-md); }
         

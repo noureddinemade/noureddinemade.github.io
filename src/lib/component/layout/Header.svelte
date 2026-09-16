@@ -14,6 +14,7 @@
     import Link from "$lib/component/action/Link.svelte";
     import Video from "$lib/component/asset/Video.svelte";
     import Button from "$lib/component//action/Button.svelte";
+    import Logo from "../asset/Logo.svelte";
 
     let { current }: { current: Page | Case | null } = $props();
 
@@ -57,7 +58,7 @@
             <div class="block -location" data-cursor="📍" data-cursor-attach="#naarm" data-lerp={0.02}>
                 <p>Naarm <span class="text -italic">(Melbourne)</span></p>
             </div>
-            <div class="block -logo" data-cursor="💰" aria-hidden="true"><div class="logo"></div><p>نورالدين</p></div>
+            <Logo />
             <div class="block -noureddine" data-cursor-attach="#noureddine" data-cursor="🌞" data-lerp={0.02}>
                 <p class="hide-on-mobile">☻ The Online Portfolio <span class="text -italic -push">of</span> Noureddine Azhar</p>
                 <p class="show-on-mobile">Noureddine Azhar</p>
@@ -75,11 +76,11 @@
                 </div>
             </div>
             <Nav current={current ? current.id : ''} />
-            <Link props={{
+            <!-- <Link props={{
                 "href": "/fitcheck",
                 "class": "-fitcheck",
                 "label": { "data-text": "Are we a good fit?" }
-            }} />
+            }} /> -->
         </div>
 
     {/if}

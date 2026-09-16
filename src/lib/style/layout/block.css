@@ -89,6 +89,21 @@ section {
 
     }
 
+    &.lite {
+
+        padding: var(--scale-lg);
+        justify-content: flex-start;
+        min-height: 80vh;
+
+        /* Children */
+        div.content {
+            align-items: center;
+            text-align: center;
+            gap: var(--scale-xl);
+        }
+
+    }
+
     /* Children */
     div.content {
 

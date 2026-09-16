@@ -2,71 +2,16 @@
 
 @media screen and (max-width: 820px) {
 
-    html { font-size: 12px; }
-
-    header.global {
-
-        top: auto;
-        bottom: var(--scale-sm);
-        left: var(--scale-sm);
-        justify-content: flex-end;
-        flex-wrap: nowrap;
-        width: calc(100vw - calc(var(--scale-sm) * 2));
-        /* height: calc(100vh - calc(var(--scale-sm) * 2)); */
-        height: 90px;
-        padding: var(--scale-md);
-        gap: var(--scale-md);
-        border: 2px solid var(--dark-dark);
-        border-radius: var(--scale-sm);
-        background-color: var(--light-base);
-        overflow: hidden;
-        transition: height .2s ease;
-        
-        /* Children */
-        div.group {
-            flex-direction: column;
-            gap: var(--scale-md);gap: var(--scale-md);
-            border: 0;
-            background-color: transparent;
-            flex-shrink: 0;
-            
-
-            /* Children */
-            a, div.block, nav.global {
-                width: 100%;
-                max-width: none;
-                flex-shrink: 0;
-            }
-        }
-
-        /* nav.global, div.group.-single {
-            display: none;
-            visibility: hidden;
-        } */
-
-        nav.global {
-            flex-direction: column;
-            gap: var(--scale-md);
-        }
-
-        /* Menu Open */
-        &.-menu-open {
-
-            height: calc(100vh - calc(var(--scale-sm) * 2));
-
-            /* Children */
-            nav.global, div.group.-single {
-                display: flex;
-                visibility: visible;
-            }
-
-        }
-        
-        button { display: block; }
-
-    }
+    html { font-size: 14px; }
 
     .hide-on-mobile { display: none; visibility: hidden; }
     .show-on-mobile { display: block; visibility: visible; }
+
+    footer.global {
+
+        /* Children */
+        [data-marquee] { width: 80%; }
+
+    }
     
 }

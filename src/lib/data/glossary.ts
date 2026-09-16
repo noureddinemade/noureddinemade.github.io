@@ -268,14 +268,14 @@ export const pages: Page[] = [
         desc:'', 
         href:'/journal/',
         id:'journal',
-        inNav: true
+        inNav: false
     },
     { 
-        title:'Fitcheck', 
+        title:'Are we a good fit?', 
         desc:'', 
         href:'/fitcheck/',
         id:'fitcheck',
-        inNav: false
+        inNav: true
     }
 ]
 

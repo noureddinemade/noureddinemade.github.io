@@ -60,6 +60,9 @@
         &.-bg-accent-f-light   { --bg-colour: var(--accent-f-light);    --text-contrast: var(--dark-base);    }
         &.-bg-accent-f-base    { --bg-colour: var(--accent-f-base);     --text-contrast: var(--dark-base);    }
         &.-bg-accent-f-dark    { --bg-colour: var(--accent-f-dark);     --text-contrast: var(--dark-base);    }
+        &.-bg-accent-g-light   { --bg-colour: var(--accent-g-light);    --text-contrast: var(--dark-base);    }
+        &.-bg-accent-g-base    { --bg-colour: var(--accent-g-base);     --text-contrast: var(--dark-base);    }
+        &.-bg-accent-g-dark    { --bg-colour: var(--accent-g-dark);     --text-contrast: var(--dark-base);    }
         &.-bg-dark-light       { --bg-colour: var(--dark-light);        --text-contrast: var(--light-base);   }
         &.-bg-dark-base        { --bg-colour: var(--dark-base);         --text-contrast: var(--light-base);   }
         &.-bg-dark-dark        { --bg-colour: var(--dark-dark);         --text-contrast: var(--light-base);   }
@@ -91,6 +94,9 @@
         &.-hover-accent-f-light   { --hover-colour: var(--accent-f-light);   --link-bg: var(--accent-f-light);  --text-contrast: var(--dark-base);   }
         &.-hover-accent-f-base    { --hover-colour: var(--accent-f-base);    --link-bg: var(--accent-f-base);   --text-contrast: var(--dark-base);   }
         &.-hover-accent-f-dark    { --hover-colour: var(--accent-f-dark);    --link-bg: var(--accent-f-dark);   --text-contrast: var(--dark-base);   }
+        &.-bg-accent-g-light      { --hover-colour: var(--accent-g-light);   --link-bg: var(--accent-g-light);  --text-contrast: var(--dark-base);   }
+        &.-bg-accent-g-base       { --hover-colour: var(--accent-g-base);    --link-bg: var(--accent-g-base);   --text-contrast: var(--dark-base);   }
+        &.-bg-accent-g-dark       { --hover-colour: var(--accent-g-dark);    --link-bg: var(--accent-g-dark);   --text-contrast: var(--dark-base);   }
         &.-hover-dark-light       { --hover-colour: var(--dark-light);       --link-bg: var(--dark-light);      --text-contrast: var(--light-base);  }
         &.-hover-dark-base        { --hover-colour: var(--dark-base);        --link-bg: var(--dark-base);       --text-contrast: var(--light-base);  }
         &.-hover-dark-dark        { --hover-colour: var(--dark-dark);        --link-bg: var(--dark-dark);       --text-contrast: var(--light-base);  }
@@ -122,6 +128,9 @@
         &.-text-accent-f-light   { --text-colour: var(--accent-f-light);    }
         &.-text-accent-f-base    { --text-colour: var(--accent-f-base);     }
         &.-text-accent-f-dark    { --text-colour: var(--accent-f-dark);     }
+        &.-text-accent-g-light   { --text-colour: var(--accent-g-light);    }
+        &.-text-accent-g-base    { --text-colour: var(--accent-g-base);     }
+        &.-text-accent-g-dark    { --text-colour: var(--accent-g-dark);     }
         &.-text-dark-light       { --text-colour: var(--dark-light);        }
         &.-text-dark-base        { --text-colour: var(--dark-base);         }
         &.-text-dark-dark        { --text-colour: var(--dark-dark);         }
@@ -151,6 +160,9 @@
         &.-fill-accent-f-light   { --fill-colour: var(--accent-f-light);      }
         &.-fill-accent-f-base    { --fill-colour: var(--accent-f-base);       }
         &.-fill-accent-f-dark    { --fill-colour: var(--accent-f-dark);       }
+        &.-fill-accent-g-light   { --fill-colour: var(--accent-g-light);      }
+        &.-fill-accent-g-base    { --fill-colour: var(--accent-g-base);       }
+        &.-fill-accent-g-dark    { --fill-colour: var(--accent-g-dark);       }
         &.-fill-dark-light       { --fill-colour: var(--dark-light);          }
         &.-fill-dark-base        { --fill-colour: var(--dark-base);           }
         &.-fill-dark-dark        { --fill-colour: var(--dark-dark);           }
@@ -180,6 +192,9 @@
     &.-misc-accent-f-light   { --colour: var(--accent-f-light);  }
     &.-misc-accent-f-base    { --colour: var(--accent-f-base);   }
     &.-misc-accent-f-dark    { --colour: var(--accent-f-dark);   }
+    &.-misc-accent-g-light   { --colour: var(--accent-g-light);  }
+    &.-misc-accent-g-base    { --colour: var(--accent-g-base);   }
+    &.-misc-accent-g-dark    { --colour: var(--accent-g-dark);   }
     &.-misc-dark-light       { --colour: var(--dark-light);      }
     &.-misc-dark-base        { --colour: var(--dark-base);       }
     &.-misc-dark-dark        { --colour: var(--dark-dark);       }

@@ -25,7 +25,7 @@ nav.global {
         /* Variants */
         &.-current {
             --link: var(--light-base);
-            --link-bg: var(--accent-c-dark);
+            --link-bg: var(--accent-g-dark);
 
             pointer-events: none;
         }

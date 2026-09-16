@@ -1,52 +1,50 @@
 /* Logo */
 
-div.logo-wrap {
-
-    position: fixed;
-    display: none;
-    z-index: 0;
-    top: 0;
-    width: 100%;
-    height: 380px;
+div.logo-wrapper {
+    
+    position: relative;
+    padding: var(--scale-xs) var(--scale-md);
+    border-radius: var(--scale-xxl);
+    border: 2px solid var(--dark-dark);
+    pointer-events: auto;
     overflow: hidden;
-    mask-image: url($lib/asset/bg/square-01.svg);
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: 110% 110%;
-    transition: width .3s ease, height .3s ease, translate .3s ease, mask-size .3s ease;
+    background-color: var(--accent-c-base);
+
+    /* States */
+    &:hover div.logo { animation-play-state: running; }
+
+    /* Variants */
+    &.-lite {
+        height: 63.75px;
+        width: 138.156px;
+
+        /* Children */
+        div.logo { animation-play-state: running; }
+    }
 
     /* Children */
+    p {
+        white-space: nowrap;
+        font-size: var(--fs-xl);
+        font-family: var(--ff-serif);
+        border-radius: var(--scale-xxl);
+        text-align: center;
+        opacity: 0;
+    }
+
     div.logo {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, var(--accent-c-base), var(--accent-b-base));
+        height: 90%;
+        background-color: var(--light-base);
         mask-image: url($lib/asset/brand/logo-g.svg);
         mask-repeat: repeat-x;
         mask-size: auto 100%;
         mask-position: 50% center;
-        translate: 0 0;
-        transition: background .3s ease, height .3s ease;
-    }
-
-}
-
-header.global.-sticky ~ div.logo-wrap {
-
-    z-index: 4;
-    width: 144px;
-    height: 64px;
-    background-color: var(--accent-c-base);
-    mask-size: 100% 100%;
-    translate: 0 var(--scale-lg);
-
-    /* Children */
-    div.logo {
-        height: 90%;
-        background: var(--light-base);
         animation: logoMove 5s linear infinite;
+        animation-play-state: paused;
     }
 
 }

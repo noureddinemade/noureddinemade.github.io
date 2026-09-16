@@ -14,19 +14,21 @@
 
     import Header from '$lib/component/layout/Header.svelte';
     import Footer from '$lib/component/layout/Footer.svelte';
-    import Light from '$lib/version/Light.svelte';
+    import Lite from '$lib/version/Lite.svelte';
     import CTA from '$lib/component/layout/CTA.svelte';
     
     import '$lib/style/main.css';
 
+    if (browser) coreInit();
+    
     const mq = browser ? window.matchMedia('(min-width: 820px)') : null;
     
     let { children } = $props();
     let on = $state(true);
-    let isWide = $state(mq?.matches ?? false);
+    let full = $state(mq?.matches ?? false);
     
-    if (browser) coreInit();
     
+    // Generate CSS variables
     const root = `:root{${
         toCssVars(theme) +
         toCssVars(spacing) +
@@ -34,7 +36,9 @@
         toCssVars(animation)
     }}`;
     
+    // Get current page
     const current = $derived(getMetaByPath(page.url.pathname));
+    // Toggle CTA visibility based on page
     const cta = $derived(current && !['home','journal','about'].includes(current.id) ? true : false);
 
     onMount(() => {
@@ -67,7 +71,7 @@
     
     $effect(() => {
         if (!mq) return;
-        const update = () => (isWide = mq.matches);
+        const update = () => (full = mq.matches);
         update();
         mq.addEventListener('change', update);
         return () => mq.removeEventListener('change', update);
@@ -82,14 +86,17 @@
     {@html `<style>${root}</style>`}
 </svelte:head>
 
-<Header current={current ? current : null} />
-<main class={`main${current ? ` -${current.id}` : ''}${on ? ' -on' : ''}`}>
-    {#if (isWide)}
-        {@render children()}
-    {:else}
-        <Light />
-    {/if}
+<!-- Hide header if in Lite mode -->
+{#if (full)} <Header current={current ? current : null} /> {/if}
 
-    {#if (cta)}<CTA />{/if}
+<main class={`main${current ? ` -${current.id}` : ''}${on ? ' -on' : ''}`}>
+    {#if (full)}
+        {@render children()}
+        {#if (cta)}<CTA />{/if}
+    {:else}
+        <Lite />
+    {/if}
+    
+    <!-- Footer only displays if not on the home page or if in Lite mode -->
+    {#if (current && current.id !== 'home' || !full)} <Footer /> {/if}
 </main>
-{#if (current && current.id !== 'home')}<Footer />{/if}
