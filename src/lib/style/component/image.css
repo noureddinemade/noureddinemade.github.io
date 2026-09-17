@@ -201,40 +201,7 @@ svg {
 
     &.svg-roadmap {
 
-        /* Variants */
-        &.-nt #line { fill: var(--accent-a-base); }
-        &.-mt #line { fill: var(--accent-b-base); }
-        &.-lt #line { fill: var(--accent-c-base); }
-
-        /* Children */
-        g { position: relative; transform-box: fill-box; }
-        #research, #minor, #major {
-
-            /* States */
-            &:hover { [data-name="item"] { opacity: .3; } }
-
-            /* Children */
-            [data-name="item"] {
-
-                transition: scale .2s ease, opacity .2s ease;
-
-                > path { fill: var(--light-dark); filter: drop-shadow(0 2px 8px rgba(var(--dark-raw), .1)); }
-                g > path { fill: var(--dark-dark); }
-
-                /* States */
-                &:hover {
-
-                    opacity: 1;
-                    scale: 1.1;
-
-                }
-            }
-            [data-name="label"] {
-                > path { fill: var(--dark-dark); filter: drop-shadow(0 2px 8px rgba(var(--dark-raw), .1)); }
-                g > path { fill: var(--light-light); }
-            }
-
-        }
+        
 
     }
 

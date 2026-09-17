@@ -32,7 +32,7 @@
     
     <Image src="work/dub/accessibility/wcag-map.svg" alt="" props={{ "class":"svg-wcag-map" }} parent={ {"class":"border -rounded -r-md -s-base colour -bg -bg-light-dark spacing -m-t-lg"} }/>
     <p class="text -xxl spacing -mw-xl">
-        <span class="mark -highlight colour -bg -bg-accent-f-base text -contrast">
+        <span class="mark -highlight colour -bg -bg-accent-f-light text -contrast">
             I ran the audits using <span class="text -sans -xl -bold -uppercase">WAVE</span>, <span class="text -sans -xl -bold -uppercase">axe Accessibility Checker</span>, and <span class="text -sans -xl -bold -uppercase">Pa11y</span>, but these were just automations and tools that could only ever capture surface-level problems.
         </span>
     </p>
@@ -80,23 +80,29 @@
 
 </Block>
 
-<Block props={{ "class":"image-slider", "draggable":"true", "content": { "class":"spacing -mw-xxl -p-l-xxl -p-r-xxl" } }}>
+<Block props={{ "class":"general" }}>
 
-    <Image src="work/dub/accessibility/near-term.svg" alt="" props={{ "class":"svg-roadmap -nt spacing -m-l-xxl", "height":"920px" }}/>
-    <Image src="work/dub/accessibility/mid-term.svg" alt="" props={{ "class":"svg-roadmap -mt", "height":"920px" }}/>
-    <Image src="work/dub/accessibility/long-term.svg" alt="" props={{ "class":"svg-roadmap -lt spacing -m-r-xxl", "height":"920px" }}/>
+    <div class="columns -two spacing -gap-md">
 
-    <ul class="key">
-        <li class="colour -misc-accent-a-base">Near-term</li>
-        <li class="colour -misc-accent-b-base">Mid-term</li>
-        <li class="colour -misc-accent-c-base">Long-term</li>
-    </ul>
-    <ul class="key spacing -m-t-md -m-b-lg">
-        <li data-number="1️⃣">Perceivable <span class="text -sm -subtle">(Hover)</span></li>
-        <li data-number="2️⃣">Operable <span class="text -sm -subtle">(Hover)</span></li>
-        <li data-number="3️⃣">Understandable <span class="text -sm -subtle">(Hover)</span></li>
-        <li data-number="4️⃣">Robust <span class="text -sm -subtle">(Hover)</span></li>
-    </ul>
+        <div class="item sticky -top-xxl">
+
+            <ul class="key">
+                <li class="colour -misc-accent-a-base text -serif -lg">Research</li>
+                <li class="colour -misc-accent-b-base text -serif -lg">Minor</li>
+                <li class="colour -misc-accent-c-base text -serif -lg">Major</li>
+            </ul>
+            <ul class="key spacing">
+                <li data-number="1">Perceivable</li>
+                <li data-number="2">Operable</li>
+                <li data-number="3">Understandable</li>
+                <li data-number="4">Robust</li>
+            </ul>
+
+        </div>
+
+        <Image src="work/dub/accessibility/roadmap.svg" alt="" props={{ "class":"svg-roadmap" }}/>
+
+    </div>
 
 </Block>
 
@@ -105,7 +111,7 @@
     <h2 class="text -xxl -sans -bold -uppercase">Design System Integration</h2>
     <div class="columns -two spacing -gap-lg">
         <p class="text -lg -justify">
-            I also ensured that accessibility checks were embedded directly into Switchboard (our design system) <a href="/work/dubber/design-system">while we were building it out</a>. Making sure that accessibility became part of the process and not just something we sprinkle on top. This process ensured <span class="mark -highlight colour -bg -bg-accent-f-base text -contrast">when we design and build, we would do it with WCAG compliance in mind.</span>
+            I also ensured that accessibility checks were embedded directly into Switchboard (our design system) <a href="/work/dubber/design-system">while we were building it out</a>. Making sure that accessibility became part of the process and not just something we sprinkle on top. This process ensured <span class="mark -highlight colour -bg -bg-accent-f-light text -contrast">when we design and build, we would do it with WCAG compliance in mind.</span>
         </p>
         <p class="text -lg -justify">
             With each product initiative/feature, we tackled a few accessibility issues and gaps that were directly related to the components and flows that were being built.
