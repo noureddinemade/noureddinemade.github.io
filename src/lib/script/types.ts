@@ -65,8 +65,8 @@ export interface BlockProps {
 
 export interface PageHeaderProps {
     props?: HTMLAttributes<HTMLElement> & { 
-        tags?: string[];
-        content?:HTMLAttributes<HTMLElement>; 
+        caseStudy?: Case;
+        content?:HTMLAttributes<HTMLElement>;
     };
     children: Snippet;
 }

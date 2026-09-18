@@ -7,7 +7,7 @@
 
     let { props={}, children }: PageHeaderProps = $props();
 
-    const { tags, content, ...block } = $derived(props);
+    const { caseStudy, content, ...block } = $derived(props);
 
     const blockProps = $derived({
         ...block,
@@ -18,5 +18,5 @@
 
 <Block props={{ "content":{...content}, ...blockProps }}>
     {@render children?.()}
-    {#if (tags && tags.length > 0)}<Tags {tags} />{/if}
+    {#if (caseStudy && caseStudy.tags.length > 0)}<Tags tags={caseStudy.tags} bg={`accent-${caseStudy.accent}`} />{/if}
 </Block>

@@ -12,7 +12,7 @@
     
 </script>
 
-<PageHeader props={{ "tags":cs.tags, "content":{"class":"spacing -mw-lg"}}}>
+<PageHeader props={{ "caseStudy": cs.caseStudy, "content":{"class":"spacing -mw-lg"}}}>
 
     <h1 class="text -headline -sans -uppercase">
         {@html cs.caseStudy?.title}

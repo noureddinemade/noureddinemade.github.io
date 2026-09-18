@@ -1,15 +1,23 @@
 <script lang="ts">
 
     import Link from "$lib/component/action/Link.svelte";
+    import Button from "$lib/component/action/Button.svelte";
+
+    let ready = $state(false);
 
 </script>
 
-<div class="cta">
+<div class={`cta${ready ? ' -ready' : ''}`}>
 
-    <p class="text -serif -xl -regular">
-        If you like what <Link props={{ "href":"/work", "label":{"data-text":"my process and what I can do"} }}/>, and you can <Link props={{ "href":"/fitcheck", "label":{"data-text":"offer what I&rsquo;m looking for"} }}/>, I think we might be a good fit. 
+    <p class="text -serif -xl -regular -push">
+        Ready to get in touch?
     </p>
 
-    <Link props={{ "class":"-mail text -serif -xl -regular", "href":"mailto:me@noureddine.biz", "label":{"data-text":"me@noureddine.biz"} }}/>
+    <Button props={{ "class":`-choice${ready ? ' -selected' : ''}`, "label":{"data-text":"Yes"}, onclick:() => ready = true }}/>
+    <Link props={{ "href":"/fitcheck", "class":"-choice", "label":{"data-text":"No"}, onclick:() => ready = false }}/>
+
+    <div class={`contact${ready ? ' -on' : ''}`}>
+        <Link props={{ "class":"-mail text -serif -xl -regular", "href":"mailto:me@noureddine.biz", "label":{"data-text":"me@noureddine.biz"} }}/>
+    </div>
 
 </div>

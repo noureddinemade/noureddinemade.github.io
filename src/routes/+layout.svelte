@@ -19,14 +19,13 @@
     
     import '$lib/style/main.css';
 
-    if (browser) coreInit();
-    
     const mq = browser ? window.matchMedia('(min-width: 820px)') : null;
     
     let { children } = $props();
     let on = $state(true);
-    let full = $state(mq?.matches ?? false);
+    let full = $state(mq?.matches ?? true);
     
+    if (browser) coreInit();
     
     // Generate CSS variables
     const root = `:root{${

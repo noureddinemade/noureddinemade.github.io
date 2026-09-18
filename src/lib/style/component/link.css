@@ -58,5 +58,24 @@ a.link {
 
         /* Children */
     }
+
+    &.-choice {
+
+        --link: var(--dark-dark);
+
+        font-size: var(--fs-md);
+        font-family: var(--ff-sans);
+        font-weight: var(--fw-regular);
+        background-color: var(--light-light);
+        padding: var(--scale-xs) var(--scale-sm);
+        border-radius: var(--scale-md);
+        border: 2px solid var(--dark-dark);
+        transition: scale .2s ease;
+        text-decoration: none;
+
+        /* States */
+        &:hover { scale: 1.05; }
+
+    }
     
 }

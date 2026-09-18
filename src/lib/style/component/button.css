@@ -181,6 +181,23 @@ button.btn {
 
     }
 
+    &.-choice {
+
+        font-size: var(--fs-md);
+        font-family: var(--ff-sans);
+        font-weight: var(--fw-regular);
+        background-color: var(--light-light);
+        padding: var(--scale-xs) var(--scale-sm);
+        border-radius: var(--scale-md);
+        border: 2px solid var(--dark-dark);
+        transition: scale .2s ease;
+
+        /* States */
+        &:hover { scale: 1.05; }
+        &.-selected { background-color: var(--accent-a-light); }
+
+    }
+
     /* Children */
     span.label { 
         z-index: 1;
