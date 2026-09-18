@@ -202,6 +202,23 @@ svg {
     &.svg-roadmap {
 
         
+        /* Children */
+        
+        g[data-item] {
+            position: relative;
+            transform-box: fill-box;
+            transition: scale .2s ease, translate .2s ease;
+
+            /* State */
+            &:hover { scale: 1.02; translate: -5% 0; }
+            
+            /* Variants */
+            &[data-item="research"] > rect { fill: var(--accent-a-light); }
+            &[data-item="minor"] > rect { fill: var(--accent-e-base); }
+            &[data-item="major"] > rect { fill: var(--accent-d-light); }
+            
+        }
+
 
     }
 

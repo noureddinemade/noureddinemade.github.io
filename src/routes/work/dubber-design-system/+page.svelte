@@ -31,7 +31,7 @@
 <Block props={{ "class":"general" }}>
     <h2 class="text -xxl -sans -bold -uppercase">The Full Story</h2>
     <p class="text -xl">
-    Joining Dubber as the head of product design meant that I had become responsible for a design system that consisted of a few basic styles and components, housed in an undocumented Figma file. Around <span class="text -sans -bold">85%</span> of what was being built by the engineering team <span class="mark -highlight colour -bg -bg-accent-f-base">was custom code</span>, built in isolation while working on specific features for the product.
+    Joining Dubber as the head of product design meant that I had become responsible for a design system that consisted of a few basic styles and components, housed in an undocumented Figma file. Around <span class="text -sans -bold">85%</span> of what was being built by the engineering team <span class="mark -highlight colour -bg -bg-accent-f-light">was custom code</span>, built in isolation while working on specific features for the product.
     </p>
     <div class="columns -two spacing -gap-lg">
         <p class="text -lg -justify">
@@ -203,7 +203,7 @@
     <p class="text -lg">
         To ensure this plugin automation gave us the optimal output, I created a set of strict guidelines around the design and build of components in Figma, covering things like names for variants, boolean usage and specific interactions. The naming also reflected industry standards on the development side. This helped bridge the gap in handoff and the use of AI tools to build prototypes.
     </p>
-    <Image src="work/dub/design-system/property-rules-annotated.png" alt="Annotated component property structure"  props={{ "class":"border -rounded -r-md -s-base colour -bg -bg-accent-c-light spacing  -mw-xxl -m-t-lg -m-b-lg -p-t-lg -p-b-lg -p-r-lg -p-l-lg" }} />
+    <Image src="work/dub/design-system/property-rules-annotated.png" alt="Annotated component property structure"  props={{ "class":"border -rounded -r-md -s-base colour -bg -bg-accent-d-light spacing  -mw-xxl -m-t-lg -m-b-lg -p-t-lg -p-b-lg -p-r-lg -p-l-lg" }} />
 </Block>
 
 <Block props={{ "class":"general" }}>

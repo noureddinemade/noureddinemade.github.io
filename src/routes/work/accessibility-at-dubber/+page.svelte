@@ -87,9 +87,9 @@
         <div class="item sticky -top-xxl">
 
             <ul class="key">
-                <li class="colour -misc-accent-a-base text -serif -lg">Research</li>
-                <li class="colour -misc-accent-b-base text -serif -lg">Minor</li>
-                <li class="colour -misc-accent-c-base text -serif -lg">Major</li>
+                <li class="colour -misc-accent-a-light text -serif -lg">Research</li>
+                <li class="colour -misc-accent-e-base text -serif -lg">Minor</li>
+                <li class="colour -misc-accent-d-light text -serif -lg">Major</li>
             </ul>
             <ul class="key spacing">
                 <li data-number="1">Perceivable</li>

@@ -88,7 +88,7 @@ ul, ol {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
         gap: var(--gap, var(--scale-md));
         margin: 0 auto;
@@ -100,7 +100,7 @@ ul, ol {
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: var(--scale-xs);
+            gap: var(--scale-sm);
 
             /* Pseudo */
             &:before {
@@ -112,10 +112,13 @@ ul, ol {
                 width: var(--s);
                 height: var(--s);
                 border-radius: var(--s);
-                background-color: var(--colour);
+                background-color: var(--colour, var(--dark-dark));
+                color: var(--light-light);
                 text-align: center;
-                font-size: var(--fs-lg);
-                line-height: var(--s);
+                font-family: var(--ff-sans);
+                font-weight: var(--fw-bold);
+                line-height: calc(var(--s) / 1.2);
+                border: 2px solid var(--dark-dark);
             }
 
         }
