@@ -111,7 +111,7 @@
     <h2 class="text -xxl -sans -bold -uppercase">Design System Integration</h2>
     <div class="columns -two spacing -gap-lg">
         <p class="text -lg -justify">
-            I also ensured that accessibility checks were embedded directly into Switchboard (our design system) <a href="/work/dubber/design-system">while we were building it out</a>. Making sure that accessibility became part of the process and not just something we sprinkle on top. This process ensured <span class="mark -highlight colour -bg -bg-accent-f-light text -contrast">when we design and build, we would do it with WCAG compliance in mind.</span>
+            I also ensured that accessibility checks were embedded directly into Switchboard (our design system) <a href="/work/dubber-design-system">while we were building it out</a>. Making sure that accessibility became part of the process and not just something we sprinkle on top. This process ensured <span class="mark -highlight colour -bg -bg-accent-f-light text -contrast">when we design and build, we would do it with WCAG compliance in mind.</span>
         </p>
         <p class="text -lg -justify">
             With each product initiative/feature, we tackled a few accessibility issues and gaps that were directly related to the components and flows that were being built.

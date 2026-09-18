@@ -130,7 +130,7 @@
 <Block props={{ "class":"general" }}>
     <h2 class="text -xl -sans -bold -uppercase">Wrapping it up</h2>
     <p class="text -xl">
-        The final design for Connections used Switchboard, Dubber&rsquo;s design system that the product design team I led <Link props={{ "href":cases[2].href, "label":{ "data-text":"built from the ground up"} }}/>. Helping users dig deeper and find out more was critical, so I redesigned the block by decoupling it from topics. This allowed users to start at Connection and (via a click interaction) see a full breakdown, essentially flipping the concept that was tested.
+        The final design for Connections used Switchboard, Dubber&rsquo;s design system that the product design team I led <Link props={{ "href":cases[1].href, "label":{ "data-text":"built from the ground up"} }}/>. Helping users dig deeper and find out more was critical, so I redesigned the block by decoupling it from topics. This allowed users to start at Connection and (via a click interaction) see a full breakdown, essentially flipping the concept that was tested.
     </p>
     <Video 
         vid="work/dub/connections/final.mp4"

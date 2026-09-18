@@ -7,7 +7,6 @@
     import Button from "$lib/component/action/Button.svelte";
     import WorkIndex from "$lib/component/layout/ViewCases.svelte";
     import RoleIndex from "$lib/component/layout/ViewRoles.svelte";
-    import CTA from "$lib/component/layout/CTA.svelte";
     
     let index = $state(false);
 
