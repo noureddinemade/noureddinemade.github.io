@@ -7,6 +7,7 @@
     import PageHeader from "$lib/component/layout/PageHeader.svelte";
     import Image from "$lib/component/asset/Image.svelte";
     import Video from "$lib/component/asset/Video.svelte";
+    import Slider from "$lib/component/asset/Slider.svelte";
 
     const cs = caseStudySetup();
     
@@ -40,7 +41,7 @@
     <p class="text -xl">
         The goal was a better experience for the NHS product, plus a patient area that could serve all areas of the business, not just the NHS. We decided the MVP would focus on the main NHS flows: sign up, add medication and request medication.
     </p>
-    <Image src="work/soh/app-experience/001-coreflows.png" alt="<REPLACE>" props={{ "class":"border -r-sm -s-base colour -bg -bg-light-light spacing -m-t-lg -p-xl" }}/>
+    <Image src="work/soh/app-experience/001-coreflows.png" alt="Rough outline of included flows" props={{ "class":"border -r-sm -s-base colour -bg -bg-light-light spacing -m-t-lg -p-xl" }}/>
 </Block>
 
 <Block props={{ "class":"general" }}>
@@ -62,25 +63,25 @@
         Starting with the app played to something we already wanted: a mobile-first approach. Over 70% of our patients accessed the web app on a mobile, so apart from a few mobile-only features and specifics, we could reuse most of the components designed for mobile on the web app too.
     </p>
     <div class="columns -two spacing -m-t-lg -m-b-lg -gap-md">
-        <Image src="work/soh/app-experience/002-wireframes-1.png" alt="<REPLACE>" parent={{}} props={{ "class":"border -r-sm -s-base colour -bg -bg-light-dark spacing" }}/>
-        <Image src="work/soh/app-experience/002-wireframes-2.png" alt="<REPLACE>" parent={{}} props={{ "class":"border -r-sm -s-base colour -bg -bg-light-dark spacing" }}/>
-        <Image src="work/soh/app-experience/002-wireframes-3.png" alt="<REPLACE>" parent={{}} props={{ "class":"border -r-sm -s-base colour -bg -bg-light-dark spacing" }}/>
-        <Image src="work/soh/app-experience/002-wireframes-4.png" alt="<REPLACE>" parent={{}} props={{ "class":"border -r-sm -s-base colour -bg -bg-light-dark spacing" }}/>
+        <Image src="work/soh/app-experience/002-wireframes-1.png" alt="Rough wireframe sketches" parent={{}} props={{ "class":"border -r-sm -s-base colour -bg -bg-light-dark spacing" }}/>
+        <Image src="work/soh/app-experience/002-wireframes-2.png" alt="Rough wireframe sketches" parent={{}} props={{ "class":"border -r-sm -s-base colour -bg -bg-light-dark spacing" }}/>
+        <Image src="work/soh/app-experience/002-wireframes-3.png" alt="Rough wireframe sketches" parent={{}} props={{ "class":"border -r-sm -s-base colour -bg -bg-light-dark spacing" }}/>
+        <Image src="work/soh/app-experience/002-wireframes-4.png" alt="Rough wireframe sketches" parent={{}} props={{ "class":"border -r-sm -s-base colour -bg -bg-light-dark spacing" }}/>
     </div>
     <p class="text -lg">
         I built a basic wireframe and prototype for the core flows to test the concept of reducing the key pieces of information. After several usability tests and user interviews, it was clear the concept landed. The amount of information the patient provided was the same, but placing it across different areas of the main flows made it feel quicker and less of a commitment up front.
     </p>
-    <div class="img-slider border -r-sm -s-base colour -bg -bg-light-dark spacing -p-sm -m-t-lg -m-b-lg" data-draggable data-cursor="🤚🏽">
-        <Image src="work/soh/app-experience/003-wireframe-1.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/003-wireframe-2.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/003-wireframe-3.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/003-wireframe-4.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/003-wireframe-5.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/003-wireframe-6.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/003-wireframe-7.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/003-wireframe-8.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/003-wireframe-9.png" alt="<REPLACE>"/>
-    </div>
+    <Slider bg="light-dark">
+        <Image src="work/soh/app-experience/003-wireframe-1.png" alt="Block wireframes of the app" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/003-wireframe-2.png" alt="Block wireframes of the app" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/003-wireframe-3.png" alt="Block wireframes of the app" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/003-wireframe-4.png" alt="Block wireframes of the app" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/003-wireframe-5.png" alt="Block wireframes of the app" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/003-wireframe-6.png" alt="Block wireframes of the app" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/003-wireframe-7.png" alt="Block wireframes of the app" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/003-wireframe-8.png" alt="Block wireframes of the app" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/003-wireframe-9.png" alt="Block wireframes of the app" parent={{ "class":"slide" }}/>
+    </Slider>
 </Block>
 
 <Block props={{ "class":"general" }}>
@@ -88,38 +89,38 @@
     <p class="text -xl">
         With the concepts finalised, it was time to start on the final designs. I wanted to keep the app as clean and minimal as possible.
     </p>
-    <div class="img-slider border -r-sm -s-base colour -bg -bg-accent-d-light spacing -p-sm -m-t-lg -m-b-lg" data-draggable data-cursor="🤚🏽">
-        <Image src="work/soh/app-experience/004-final-1.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-2.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-3.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-4.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-5.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-6.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-7.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-8.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-9.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-10.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-11.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-12.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-13.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-14.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-15.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-16.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-17.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-18.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-19.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-20.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-21.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-22.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-23.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-24.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-25.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-26.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-27.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-28.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-29.png" alt="<REPLACE>"/>
-        <Image src="work/soh/app-experience/004-final-30.png" alt="<REPLACE>"/>
-    </div>
+    <Slider bg="accent-d-light">
+        <Image src="work/soh/app-experience/004-final-1.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-2.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-3.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-4.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-5.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-6.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-7.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-8.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-9.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-10.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-11.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-12.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-13.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-14.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-15.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-16.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-17.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-18.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-19.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-20.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-21.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-22.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-23.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-24.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-25.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-26.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-27.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-28.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-29.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+        <Image src="work/soh/app-experience/004-final-30.png" alt="Final app designs" parent={{ "class":"slide" }}/>
+    </Slider>
     <p class="text -xl">
         I also wanted to make sure it didn&rsquo;t look designed for one specific audience. Our product was for anyone on repeat prescriptions <span class="mark -em">&mdash;</span> so the design had to cater to everyone.
     </p>

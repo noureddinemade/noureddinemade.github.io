@@ -138,3 +138,13 @@ export interface DragItem {
     startX: number;
     startScroll: number;
 }
+
+export interface SliderItem {
+    slider: HTMLElement;
+    track: HTMLElement;
+    slides: HTMLElement[];
+    dots: HTMLButtonElement[];
+    prev: HTMLButtonElement;
+    next: HTMLButtonElement;
+    current: number;
+}

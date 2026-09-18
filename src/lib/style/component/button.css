@@ -198,6 +198,68 @@ button.btn {
 
     }
 
+    &.-slider-control {
+
+        --s: 24px;
+
+        position: relative;
+        border: 2px solid var(--dark-dark);
+        border-radius: var(--s);
+
+        /* States */
+        &:disabled {
+            
+            opacity: .3;
+            filter: grayscale(1);
+
+        }
+        
+
+        &.-prev, &.-next {
+
+            --bg: var(--light-light);
+
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--scale-xs);
+            background-color: var(--bg);
+
+            /* Pseudo */
+            &:before {
+                --bg: var(--accent-c-base);
+
+                content: '';
+                width: var(--s);
+                height: var(--s);
+                mask-repeat: no-repeat;
+                mask-position: center;
+                mask-size: 100% 100%;
+                background-color: var(--bg);
+            }
+
+        }
+
+        &.-prev:before { mask-image: url(../../asset/icon/arrow-left-01.svg); }
+        &.-next:before { mask-image: url(../../asset/icon/arrow-right-02.svg); }
+
+        /* Dots */
+        &.-dot {
+
+            --bg: var(--light-light);
+
+            width: var(--s);
+            height: var(--s);
+            background-color: var(--bg);
+
+            /* Current */
+            &.-current { --bg: var(--accent-c-base); }
+
+        }
+
+    }
+
     /* Children */
     span.label { 
         z-index: 1;

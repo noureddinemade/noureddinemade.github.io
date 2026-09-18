@@ -7,6 +7,7 @@
     import PageHeader from "$lib/component/layout/PageHeader.svelte";
     import Image from "$lib/component/asset/Image.svelte";
     import Link from "$lib/component/action/Link.svelte";
+    import Slider from "$lib/component/asset/Slider.svelte";
 
     const cs = caseStudySetup();
     
@@ -47,8 +48,8 @@
         Verve&rsquo;s product was built specifically for the UK. One of my first projects after joining was getting it ready for our European expansion <span class="mark -em">&mdash;</span> Germany, France and the Netherlands. That came down to two main areas: the sales flow and localising the entire product.
     </p>
     <div class="columns -two spacing -gap-lg -m-t-lg -m-b-lg">
-        <Image src="work/verve/global-markets/001-drafts-1.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl", "data-zoom":3 }}/>
-        <Image src="work/verve/global-markets/001-drafts-2.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl", "data-zoom":3 }}/>
+        <Image src="work/verve/global-markets/001-drafts-1.png" alt="Sketches from a brainstorming session" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl", "data-zoom":3 }}/>
+        <Image src="work/verve/global-markets/001-drafts-2.png" alt="Sketches from a brainstorming session" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl", "data-zoom":3 }}/>
     </div>
     <p class="text -lg">
         The sales flow needed rethinking for two reasons. The most important was that it had to comply with strict anti-spam laws, specifically in Germany. The second was that it was outdated for our target audience. Localisation was critical for launch, not just translation, but address formats, currencies and payment methods.
@@ -56,14 +57,14 @@
     <p class="text -lg">
         The project ran over four months. It involved more than 30 user interviews across multiple countries, four major iterations on the flow (plus plenty of minor ones), working with three different translation agencies to find the right fit, a stack of usability tests, and a few legal meetings to make sure we weren&rsquo;t breaking those anti-spam laws.
     </p>
-    <div class="img-slider border -r-sm -s-base colour -bg -bg-accent-c-light spacing -p-xl -m-t-lg -m-b-lg" data-draggable data-cursor="🤚🏽">
-        <Image src="work/verve/global-markets/003-final-1.png" alt="<REPLACE>"/>
-        <Image src="work/verve/global-markets/003-final-2.png" alt="<REPLACE>"/>
-        <Image src="work/verve/global-markets/003-final-3.png" alt="<REPLACE>"/>
-        <Image src="work/verve/global-markets/003-final-4.png" alt="<REPLACE>"/>
-        <Image src="work/verve/global-markets/003-final-5.png" alt="<REPLACE>"/>
-        <Image src="work/verve/global-markets/003-final-6.png" alt="<REPLACE>"/>
-    </div>
+    <Slider bg="accent-b-light">
+        <Image src="work/verve/global-markets/003-final-1.png" alt="Final mobile screen for ticket flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/global-markets/003-final-2.png" alt="Final mobile screen for ticket flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/global-markets/003-final-3.png" alt="Final mobile screen for ticket flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/global-markets/003-final-4.png" alt="Final mobile screen for ticket flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/global-markets/003-final-5.png" alt="Final mobile screen for ticket flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/global-markets/003-final-6.png" alt="Final mobile screen for ticket flow" parent={{ "class":"slide" }}/>
+    </Slider>
 </Block>
 
 <Block props={{ "class":"general", "id":"iconography" }}>
@@ -73,8 +74,8 @@
     </p>
     <Link props={{ "class":"-external layout -a-s-start", "label":{"data-text":"View some of the icons", "class":"text -serif -xl"}, "href":"https://codepen.io/noureddinemade/full/mBWyxz", "data-window":true }}/>
     <div class="columns -two spacing -gap-lg -m-t-lg -m-b-lg">
-        <Image src="work/verve/iconography/001-guidelines.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl", "data-zoom":3 }}/>
-        <Image src="work/verve/iconography/002-final-2.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl", "data-zoom":3 }}/>
+        <Image src="work/verve/iconography/001-guidelines.png" alt="Iconography guidelines" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl", "data-zoom":3 }}/>
+        <Image src="work/verve/iconography/002-final-2.png" alt="Responsive icon examples" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl", "data-zoom":3 }}/>
     </div>
 </Block>
 
@@ -84,8 +85,8 @@
         Clients recruit ambassadors using a recruit page for a specific festival or campaign. The old pages didn&rsquo;t explain much. They had a brief, vague overview of everything and they gave the client very little room to customise for their brand.
     </p>
     <div class="columns -two spacing -gap-lg -m-t-lg -m-b-lg">
-        <Image src="work/verve/recruit-pages/001-drafts.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl", "data-zoom":3 }}/>
-        <Image src="work/verve/recruit-pages/002-wireframes.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl", "data-zoom":3 }}/>
+        <Image src="work/verve/recruit-pages/001-drafts.png" alt="Rough wireframe sketch of a recruit page" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl", "data-zoom":3 }}/>
+        <Image src="work/verve/recruit-pages/002-wireframes.png" alt="Wireframes of variations of a recruit page" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl", "data-zoom":3 }}/>
     </div>
     <p class="text -lg">
         After a lot of user interviews with potential ambassadors across Europe, North America, Australia and New Zealand, we found the most critical things they wanted to know before signing up: how it all works, what they could earn, and what being an ambassador was actually like.
@@ -93,13 +94,13 @@
     <p class="text -lg">
         Work on this feature ran for three months. Two of those I spent based in Australia, running 20 user interviews with potential ambassadors. Working remotely 10 hours ahead was a real challenge. I was completely isolated from my team, and it was also bloody hot.
     </p>
-    <div class="img-slider border -r-sm -s-base colour -bg -bg-accent-f-light spacing -p-md -m-t-lg -m-b-lg" data-draggable data-cursor="🤚🏽">
-        <Image src="work/verve/recruit-pages/003-final-1.png" alt="<REPLACE>"/>
-        <Image src="work/verve/recruit-pages/003-final-2.png" alt="<REPLACE>"/>
-        <Image src="work/verve/recruit-pages/003-final-3.png" alt="<REPLACE>"/>
-        <Image src="work/verve/recruit-pages/003-final-4.png" alt="<REPLACE>"/>
-        <Image src="work/verve/recruit-pages/003-final-5.png" alt="<REPLACE>"/>
-    </div>
+    <Slider bg="accent-f-light">
+        <Image src="work/verve/recruit-pages/003-final-1.png" alt="Final desktop designs for recruit pages - A demo brand sample"/>
+        <Image src="work/verve/recruit-pages/003-final-2.png" alt="Final desktop designs for recruit pages - Using Bestival branding"/>
+        <Image src="work/verve/recruit-pages/003-final-3.png" alt="Final desktop designs for recruit pages - Using Aston Villa branding"/>
+        <Image src="work/verve/recruit-pages/003-final-4.png" alt="Final desktop designs for recruit pages - Using Countdown branding"/>
+        <Image src="work/verve/recruit-pages/003-final-5.png" alt="Final desktop designs for recruit pages - Using Circuit of the Americas branding"/>
+    </Slider>
 </Block>
 
 <Block props={{ "class":"general", "id":"sports-and-travel" }}>
@@ -111,44 +112,45 @@
         We kicked off with two full-day workshops. We spoke with several experts at Ticketek (our ticketing partner at the time) and ran user interviews with current ambassadors, who&rsquo;d been vocal about how frustrating it was trying to sell to groups for festivals.
     </p>
     <div class="columns -three spacing -gap-xs -m-t-lg -m-b-lg">
-        <Image src="work/verve/sports-and-travel/001-journey-1.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light", "data-zoom":2 }}/>
-        <Image src="work/verve/sports-and-travel/001-journey-2.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light", "data-zoom":2 }}/>
-        <Image src="work/verve/sports-and-travel/001-journey-3.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light", "data-zoom":2 }}/>
-        <Image src="work/verve/sports-and-travel/001-journey-4.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light", "data-zoom":2 }}/>
-        <Image src="work/verve/sports-and-travel/001-journey-5.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light", "data-zoom":2 }}/>
-        <Image src="work/verve/sports-and-travel/001-journey-6.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light", "data-zoom":2 }}/>
-        <Image src="work/verve/sports-and-travel/001-journey-7.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light", "data-zoom":2 }}/>
-        <Image src="work/verve/sports-and-travel/001-journey-8.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light", "data-zoom":2 }}/>
-        <Image src="work/verve/sports-and-travel/001-journey-9.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light", "data-zoom":2 }}/>
+        <Image src="work/verve/sports-and-travel/001-journey-1.png" alt="Simplified journey map - festival flow" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light", "data-zoom":2 }}/>
+        <Image src="work/verve/sports-and-travel/001-journey-2.png" alt="Simplified journey map - sport flow variation 1" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light", "data-zoom":2 }}/>
+        <Image src="work/verve/sports-and-travel/001-journey-3.png" alt="Simplified journey map - sport flow variation 2" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light", "data-zoom":2 }}/>
+        <Image src="work/verve/sports-and-travel/001-journey-4.png" alt="Simplified journey map - sport flow variation 3" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light", "data-zoom":2 }}/>
+        <Image src="work/verve/sports-and-travel/001-journey-5.png" alt="Simplified journey map - touring flow variation 1" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light", "data-zoom":2 }}/>
+        <Image src="work/verve/sports-and-travel/001-journey-6.png" alt="Simplified journey map - touring flow variation 2" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light", "data-zoom":2 }}/>
+        <Image src="work/verve/sports-and-travel/001-journey-7.png" alt="Simplified journey map - travel flow variation 1" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light", "data-zoom":2 }}/>
+        <Image src="work/verve/sports-and-travel/001-journey-8.png" alt="Simplified journey map - travel flow variation 2" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light", "data-zoom":2 }}/>
+        <Image src="work/verve/sports-and-travel/001-journey-9.png" alt="Simplified journey map - venue flow" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light", "data-zoom":2 }}/>
     </div>
     <p class="text -lg">
         From there I put together some basic flows showing the core differences between our existing product and how the new features would change it. Then some very crude mock-ups and prototypes, and a few usability testing sessions with existing ambassadors. I got to the final designs, and we were starting to pitch to several US-based companies and sporting franchises.
     </p>
-    <div class="img-slider border -r-sm -s-base colour -bg -bg-accent-a-light spacing -p-md -m-t-lg -m-b-lg" data-draggable data-cursor="🤚🏽">
-        <Image src="work/verve/sports-and-travel/003-final-1.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-2.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-3.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-4.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-5.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-6.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-7.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-8.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-9.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-10.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-11.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-12.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-13.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-14.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-15.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-16.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-17.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-18.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-19.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-20.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-21.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-23.png" alt="<REPLACE>"/>
-        <Image src="work/verve/sports-and-travel/003-final-24.png" alt="<REPLACE>"/>
-    </div>
+    <Slider bg="accent-a-light">
+        <Image src="work/verve/sports-and-travel/003-final-1.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-2.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-3.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-4.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-5.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-6.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-7.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-8.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-9.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-10.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-11.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-12.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-13.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-14.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-15.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-16.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-17.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-18.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-19.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-20.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-21.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-23.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+        <Image src="work/verve/sports-and-travel/003-final-24.png" alt="Final mobile screen - Sports Flow" parent={{ "class":"slide" }}/>
+    </Slider>
+    
 </Block>
 
 <Block props={{ "class":"general" }}>

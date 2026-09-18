@@ -9,7 +9,7 @@ div.cta {
     justify-content: center;
     gap: var(--scale-xs);
     padding: var(--scale-md) var(--scale-lg);
-    margin-bottom: var(--scale-xl);
+    margin: var(--scale-xl) 0;
     align-self: center;
     border-radius: var(--scale-xl);
     border: 2px solid var(--dark-dark);

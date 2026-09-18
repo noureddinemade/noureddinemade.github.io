@@ -55,29 +55,72 @@ div.profile-photo-wrap {
 
 div.img-slider {
 
+    position: relative;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    gap: var(--scale-xl);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior:auto;
-    user-select: none;
-
-    /* Dragging */
-    &.-dragging { scroll-snap-type: none; }
+    gap: var(--scale-md);
+    padding: var(--scale-md) 0;
+    margin: var(--scale-lg) 0;
+    border: 2px solid var(--dark-dark);
+    border-radius: var(--scale-md);
+    container-type: inline-size;
 
     /* Children */
-    img {
+    div.slides {
 
-        padding: var(--scale-md);
-        max-height: 800px;
-        scroll-snap-align: center;
-        pointer-events: none;
+        display: flex;
+        align-items: center;
+        gap: 3cqw;
+        padding: var(--scale-sm) 17.5cqw;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        /* Children */
+        div.slide {
+            flex: 0 0 35cqw;
+            aspect-ratio: 3 / 4;
+            display: grid;
+            place-items: center;
+
+            /* Children */
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+
+        }
+
+        img {
+            flex: 0 0 auto;
+            object-fit: contain;
+        }
 
     }
+
+    div.controls {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--scale-sm);
+
+        /* Children */
+        div.dots {
+
+            display: flex;
+            gap: var(--scale-xs);
+    
+        }
+
+    }
+
+
 
 }
 

@@ -7,6 +7,7 @@
     import PageHeader from "$lib/component/layout/PageHeader.svelte";
     import Image from "$lib/component/asset/Image.svelte";
     import Video from "$lib/component/asset/Video.svelte";
+    import Slider from "$lib/component/asset/Slider.svelte";
 
     const cs = caseStudySetup();
     
@@ -48,8 +49,8 @@
     <p class="text -xl">
         We were in the lucky position of having access to 100% of the people who&rsquo;d actually use the product. Before planning anything, I wanted to map out the full journey of an order from start to finish, so I spent a few days talking to at least two people in each department.
     </p>
-    <Image src="work/soh/admin-system/001-full-business-flow.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl -m-t-lg -p-xl", "data-zoom":3 }}/>
-    <Image src="work/soh/admin-system/001-status-map.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl -m-t-lg -m-b-lg -p-xl", "data-zoom":3 }}/>
+    <Image src="work/soh/admin-system/001-full-business-flow.png" alt="Miro board of all documented business processes" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl -m-t-lg -p-xl", "data-zoom":3 }}/>
+    <Image src="work/soh/admin-system/001-status-map.png" alt="Miro board of order status and task flow" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl -m-t-lg -m-b-lg -p-xl", "data-zoom":3 }}/>
     <p class="text -xl">
         Alongside that, I sent a short survey to everyone who used the existing tool.
     </p>
@@ -64,10 +65,10 @@
         Unlike a regular ecommerce order, a patient&rsquo;s NHS order can&rsquo;t just go from the warehouse to the back of a truck. We were dealing with medication and regulatory pharmacy requirements, so a fully automated system was never on the table. The flow of an NHS order became the thing we used to map out the core tasks for the MVP, and to work out what could and couldn&rsquo;t be automated.
     </p>
     <div class="columns -two spacing -m-t-lg -m-b-lg -gap-md">
-        <Image src="work/soh/admin-system/004-task-automation-map-gpchase.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -p-sm", "data-zoom":4 }}/>
-        <Image src="work/soh/admin-system/004-task-responses-order-view.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -p-sm", "data-zoom":4 }}/>
-        <Image src="work/soh/admin-system/004-task-responses-patient-view.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -p-sm", "data-zoom":4 }}/>
-        <Image src="work/soh/admin-system/004-task-automation-map.png" alt="<REPLACE>" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -p-sm", "data-zoom":4 }}/>
+        <Image src="work/soh/admin-system/004-task-automation-map-gpchase.png" alt="Miro board of the GP follow up task" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -p-sm", "data-zoom":4 }}/>
+        <Image src="work/soh/admin-system/004-task-responses-order-view.png" alt="Miro board of response options available on the order view" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -p-sm", "data-zoom":4 }}/>
+        <Image src="work/soh/admin-system/004-task-responses-patient-view.png" alt="Miro board of response options available on the patient view" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -p-sm", "data-zoom":4 }}/>
+        <Image src="work/soh/admin-system/004-task-automation-map.png" alt="Miro board of automation mapping" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -p-sm", "data-zoom":4 }}/>
     </div>
     <p class="text -xl">
         I ran multiple sessions, each with different members from different internal teams. Before each one I&rsquo;d send rough wireframes and concepts to look through, then walk everyone through the ideas during the session and get their feedback on both the existing product and the new concepts.
@@ -79,19 +80,19 @@
     <p class="text -xxl">
         I always knew the UI was going to be plain (in the best way possible). Nothing flash, no reinventing the wheel <span class="mark -em">&mdash;</span> it just had to work. Then we hit the first major milestone: the MVP designs were ready. We had a simple click-through prototype that had been passed around for a week, and so far, it had landed pretty well (people just got it).
     </p>
-    <div class="img-slider border -r-sm -s-base colour -bg -bg-accent-f-light spacing -p-xl -m-t-lg -m-b-lg" data-draggable data-cursor="🤚🏽">
-        <Image src="work/soh/admin-system/005-final-design-order-list.png" alt="<REPLACE>"/>
-        <Image src="work/soh/admin-system/005-final-design-order-view.png" alt="<REPLACE>"/>
-        <Image src="work/soh/admin-system/005-final-design-patient-list.png" alt="<REPLACE>"/>
-        <Image src="work/soh/admin-system/005-final-design-patient-view-1.png" alt="<REPLACE>"/>
-        <Image src="work/soh/admin-system/005-final-design-patient-view-2.png" alt="<REPLACE>"/>
-        <Image src="work/soh/admin-system/005-final-design-patient-view-3.png" alt="<REPLACE>"/>
-        <Image src="work/soh/admin-system/005-final-design-task-view.png" alt="<REPLACE>"/>
-        <Image src="work/soh/admin-system/006-final-design-task-ftc.png" alt="<REPLACE>"/>
-        <Image src="work/soh/admin-system/006-final-design-task-gpchase.png" alt="<REPLACE>"/>
-        <Image src="work/soh/admin-system/006-final-design-task-nomination.png" alt="<REPLACE>"/>
-        <Image src="work/soh/admin-system/006-final-design-task-to-be-shipped.png" alt="<REPLACE>"/>
-    </div>
+    <Slider bg="accent-d-light">
+        <Image src="work/soh/admin-system/005-final-design-order-list.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/005-final-design-order-view.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/005-final-design-patient-list.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/005-final-design-patient-view-1.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/005-final-design-patient-view-2.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/005-final-design-patient-view-3.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/005-final-design-task-view.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/006-final-design-task-ftc.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/006-final-design-task-gpchase.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/006-final-design-task-nomination.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/006-final-design-task-to-be-shipped.png" alt="Final desktop designs"/>
+    </Slider>
 </Block>
 
 <Block props={{ "class":"general" }}>
