@@ -13,3 +13,32 @@
     [data-marquee] { overflow-x: auto; }
 
 }
+
+button, a {
+
+    &:focus-visible { 
+        outline: 4px solid var(--accent-c-base);
+        outline-offset: 2px;
+        box-shadow: 0 0 16px var(--accent-c-base);
+    }
+
+}
+
+a.link.-case-study-item:focus-visible {
+    --link: var(--text-contrast, currentColor);
+    background-color: var(--hover-colour);
+}
+
+ul.work-index > li.case-study-item:has(a.link:focus-visible) {
+    ul.tags { translate: 0 -100%; opacity: 0; }
+    &:before, span.icon { translate: 0 0; opacity: 1; }
+}
+
+div.item.-role p a:focus-visible {
+    &:nth-of-type(6n+1) { --link-bg: var(--accent-a-base); --link: var(--light-base); }
+    &:nth-of-type(6n+2) { --link-bg: var(--accent-b-base); --link: var(--light-base); }
+    &:nth-of-type(6n+3) { --link-bg: var(--accent-c-base); --link: var(--light-base); }
+    &:nth-of-type(6n+4) { --link-bg: var(--accent-d-base); }
+    &:nth-of-type(6n+5) { --link-bg: var(--accent-e-base); }
+    &:nth-of-type(6n+6) { --link-bg: var(--accent-f-dark); }
+}

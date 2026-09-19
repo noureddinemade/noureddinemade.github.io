@@ -41,7 +41,7 @@ a.link {
 
     &.-case-study-item {
 
-        --link: var(--dark-base)
+        --link: var(--dark-base);
 
         display: block;
         position: absolute;

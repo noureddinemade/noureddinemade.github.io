@@ -8,4 +8,3 @@ p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
 p { text-wrap: pretty; }
 h1, h2, h3, h4, h5, h6 { text-wrap: balance; padding: 0; margin: 0; }
 #root, #__next { isolation: isolate; }
-:focus-visible { outline: 2px solid var(--accent-b-base); outline-offset: 2px; }
