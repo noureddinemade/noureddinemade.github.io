@@ -8,6 +8,12 @@ export interface Page {
     href: string;
     id: string;
     inNav: boolean;
+    type: string;
+    company?: string;
+    icon?: string;
+    accent?: string;
+    inList?: boolean;
+    tags?: string[];
 }
 
 // Work Roles
@@ -17,15 +23,6 @@ export interface Role {
     company: string;
     period: string;
     location: string;
-}
-
-// Case studies
-export interface Case extends Page {
-    company: string;
-    icon: string;
-    accent: string;
-    inList: boolean;
-    tags: string[];
 }
 
 // Colour Swatch
@@ -65,7 +62,7 @@ export interface BlockProps {
 
 export interface PageHeaderProps {
     props?: HTMLAttributes<HTMLElement> & { 
-        caseStudy?: Case;
+        caseStudy?: Page;
         content?:HTMLAttributes<HTMLElement>;
     };
     children: Snippet;

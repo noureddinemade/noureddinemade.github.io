@@ -5,7 +5,7 @@
     import { page } from '$app/state';
     import { onNavigate, afterNavigate } from '$app/navigation';
 
-    import { getMetaByPath, toCssVars } from '$lib/script/helpers';
+    import { getMetaByPath, toCssVars, generateMeta } from '$lib/script/helpers';
     import { imgLoad } from '$lib/script/utils';
     import { coreInit, resetScroll, flags } from '$lib/script/core';
     import { setNavPhase, transitionSpeed } from '$lib/script/transition';
@@ -39,6 +39,8 @@
     const current = $derived(getMetaByPath(page.url.pathname));
     // Toggle CTA visibility based on page
     const cta = $derived(current && !['home','journal','about'].includes(current.id) ? true : false);
+    // Metadata
+    const meta = $derived(generateMeta(current));
 
     onMount(() => {
         cursorInit();
@@ -80,8 +82,14 @@
 
 
 <svelte:head>
-    <title>{current && current.title ? current.title : ''}</title>
-    <meta name="description" content={current?.desc} />
+    <title>{meta.title}</title>
+    <meta name="description" content={meta.desc} />
+    <meta property="og:title" content={meta.title} />
+    <meta property="og:description" content={meta.desc} />
+    <meta property="og:image" content={meta.img} />
+    <meta property="og:url" content={meta.href} />
+    <meta property="og:type" content="website" />
+    {#if (!meta.published)}<meta name="robots" content="noindex, follow" />{/if}
     {@html `<style>${root}</style>`}
 </svelte:head>
 

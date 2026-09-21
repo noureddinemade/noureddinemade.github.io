@@ -165,3 +165,7 @@
         That&rsquo;s a lot of different problems in a short stretch: new markets, a fresh icon system, a recruitment rebuild, and two new product lines. I&rsquo;m proud of the range of it. I just wish it had happened somewhere that didn&rsquo;t treat people the way they did. Good work, wrong place. Given everything in that intro, leaving wasn&rsquo;t a hard decision.
     </p>
 </Block>
+
+<!-- Cursor Attachments -->
+<span class="cursor-attach -tag" id="next">Next Slide</span>
+<span class="cursor-attach -tag" id="prev">Previous Slide</span>

@@ -1,10 +1,23 @@
-import type { Role, Page, Case, RawSwatch, ThemeSwatch, Fallback } from '$lib/script/types';
+import type { Role, Page, RawSwatch, ThemeSwatch, Fallback } from '$lib/script/types';
 import { roles, cases, pages } from '$lib/data/glossary';
 
 // General
 // Capitalise words
 export const capitalise = (str: string) => str ? str.charAt(0).toUpperCase() + str.slice(1) : '';
 export const randomise = (array: any[]) => array[Math.floor(Math.random() * array.length)];
+
+// Meta
+export const generateMeta = (current: Page) => {
+
+    const title = `The Online Portfolio of Noureddine Azhar - ${current.title.replaceAll('&rsquo;', "'")}`;
+    const desc = current.desc.replaceAll('&rsquo;', "'");
+    const img = `https://noureddine.biz/asset/meta/${isCase(current) ? current.company+current.id : current.id }.png`;
+    const href = `https://noureddine.biz${current.href}`;
+    const published = current.inNav;
+
+    return { title, desc, img, href, published };
+
+}
 
 // Round Number
 export const round = (v: number, n = 4) => parseFloat(v.toFixed(n));
@@ -25,13 +38,13 @@ const getCaseInDirection = (id: number, step: number) => {
     return false;
 };
 
-export const getCasesForRole = (id: string): Case[] | undefined => cases.filter(c => c.company === id && c.inList);
-export const getCaseByID = (id: number): Case | false => cases[id] ? cases[id] : false;
+export const getCasesForRole = (id: string): Page[] | undefined => cases.filter(c => c.company === id && c.inList);
+export const getCaseByID = (id: number): Page | false => cases[id] ? cases[id] : false;
 export const caseAvailable = (id: string): boolean => cases.some(c => c.id === id && c.inNav);
-export const getNextCase = (id: number): Case | false => getCaseInDirection(id, 1);
-export const getPrevCase = (id: number): Case | false => getCaseInDirection(id, -1);
+export const getNextCase = (id: number): Page | false => getCaseInDirection(id, 1);
+export const getPrevCase = (id: number): Page | false => getCaseInDirection(id, -1);
 export const getCaseIndex = (id: string): number => cases.findIndex(c => c.id === id);
-export const isCase = (p: Page | Case | null): p is Case => !!p && 'accent' in p;
+export const isCase = (p: Page | null) => p && p.type === 'case' ? true : false;
 
 export const randomCaseStudy = (current: number) => {
 
@@ -45,7 +58,7 @@ export const randomCaseStudy = (current: number) => {
 
 // Pages
 export const getPageByID = (id: string): Page | undefined => pages.find(p => p.id === id);
-export const getMetaByPath = (path: string): Page | Case | undefined => [...pages, ...cases].find(r => r.href === path);
+export const getMetaByPath = (path: string): Page | undefined => [...pages, ...cases].find(r => r.href === path);
 
 // Theme
 export const adjustColour = (colour:string | number[], amount: number) => {

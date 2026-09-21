@@ -65,6 +65,7 @@ div.img-slider {
     border: 2px solid var(--dark-dark);
     border-radius: var(--scale-md);
     container-type: inline-size;
+    overflow: hidden;
 
     /* Children */
     div.slides {
@@ -103,20 +104,11 @@ div.img-slider {
 
     }
 
-    div.controls {
+    div.dots {
 
         display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: var(--scale-sm);
-
-        /* Children */
-        div.dots {
-
-            display: flex;
-            gap: var(--scale-xs);
-    
-        }
+        flex-direction: row;
+        gap: var(--scale-xs);
 
     }
 

@@ -13,18 +13,19 @@ export const sliderInit = (slider: HTMLElement): (() => void) => {
     track.className = 'slides';
     slides.forEach((slide) => track.append(slide));
 
-    const controls = document.createElement('div');
-    controls.className = 'controls';
-
     const prev = document.createElement('button');
     prev.type = 'button';
     prev.className = 'btn -slider-control -prev';
     prev.setAttribute('aria-label', 'Previous slide');
+    prev.setAttribute('data-cursor', '👈🏽');
+    prev.setAttribute('data-cursor-attach', '#prev');
 
     const next = document.createElement('button');
     next.type = 'button';
     next.className = 'btn -slider-control -next';
     next.setAttribute('aria-label', 'Next slide');
+    next.setAttribute('data-cursor', '👉🏽');
+    next.setAttribute('data-cursor-attach', '#next');
 
     const dotsWrap = document.createElement('div');
     dotsWrap.className = 'dots';
@@ -34,12 +35,12 @@ export const sliderInit = (slider: HTMLElement): (() => void) => {
         dot.type = 'button';
         dot.className = 'btn -slider-control -dot';
         dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+        dot.setAttribute('data-cursor-aim', 'true');
         dotsWrap.append(dot);
         return dot;
     });
 
-    controls.append(prev, dotsWrap, next);
-    slider.append(track, controls);
+    slider.append(track, prev, next, dotsWrap);
 
     let current = 0;
 
@@ -105,7 +106,6 @@ export const sliderInit = (slider: HTMLElement): (() => void) => {
         // Restore original markup: slides back on the frame, generated chrome gone.
         slides.forEach((slide) => slider.append(slide));
         track.remove();
-        controls.remove();
     };
 };
 

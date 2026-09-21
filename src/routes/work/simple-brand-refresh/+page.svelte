@@ -130,3 +130,7 @@
         <Image src="work/soh/brand-refresh/004-final-logo-biz-cards.png" alt="Final logo demonstration - Business Cards"/>
     </Slider>
 </Block>
+
+<!-- Cursor Attachments -->
+<span class="cursor-attach -tag" id="next">Next Slide</span>
+<span class="cursor-attach -tag" id="prev">Previous Slide</span>

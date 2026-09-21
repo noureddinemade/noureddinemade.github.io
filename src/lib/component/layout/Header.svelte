@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import type { Page, Case } from "$lib/script/types";
+    import type { Page } from "$lib/script/types";
 
     import { tick } from "svelte";
     import { onNavigate } from "$app/navigation";
@@ -16,7 +16,7 @@
     import Button from "$lib/component//action/Button.svelte";
     import Logo from "../asset/Logo.svelte";
 
-    let { current }: { current: Page | Case | null } = $props();
+    let { current }: { current: Page | null } = $props();
 
     const currentCaseIndex = $derived(current && isCase(current) ? getCaseIndex(current.id) : 0);
 

@@ -143,3 +143,7 @@
         We hit a point on the front end where there was nothing more we could do until the new backend was finished. So I shifted focus to projects that didn&rsquo;t rely on engineers, since their efforts were now entirely on the backend system.
     </p>
 </Block>
+
+<!-- Cursor Attachments -->
+<span class="cursor-attach -tag" id="next">Next Slide</span>
+<span class="cursor-attach -tag" id="prev">Previous Slide</span>

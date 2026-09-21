@@ -110,3 +110,7 @@
         After three months of further design revisions and development, the MVP was built: the three main flows plus a basic settings area. Since then, more features have been added. Features like: additional patients per account for carers and family members, and IM1 integration, which allows direct communication with the GP surgery.
     </p>
 </Block>
+
+<!-- Cursor Attachments -->
+<span class="cursor-attach -tag" id="next">Next Slide</span>
+<span class="cursor-attach -tag" id="prev">Previous Slide</span>

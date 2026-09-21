@@ -125,3 +125,7 @@
         Over the following weeks we released more tasks into the light version until it included all we needed for version 1. When the teams compared it to the old tool, the problem that had dominated the early stages of the project (not being able to find what you were looking for) was pretty much gone.
     </p>
 </Block>
+
+<!-- Cursor Attachments -->
+<span class="cursor-attach -tag" id="next">Next Slide</span>
+<span class="cursor-attach -tag" id="prev">Previous Slide</span>

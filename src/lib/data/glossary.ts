@@ -1,4 +1,4 @@
-import type { Roles, Page, Case } from '$lib/script/types';
+import type { Roles, Page } from '$lib/script/types';
 
 export const roles: Roles = {
     dub:   {
@@ -45,10 +45,10 @@ export const roles: Roles = {
     }
 };
 
-export const cases: Case[] = [
+export const cases: Page[] = [
     { 
-        title:'Accessibility at Dubber', 
-        desc:'', 
+        title:'Accessibility at Dubber.', 
+        desc:'The platform was failing at accessibility and an audit caught the obvious failures. The people who actually rely on assistive tech showed us the ones that mattered.', 
         href:'/work/accessibility-at-dubber/', 
         company:'dub',
         id: 'accessibility',
@@ -56,10 +56,11 @@ export const cases: Case[] = [
         icon: '✺',
         accent: 'd-light',
         inList: true,
-        tags: ['accessibility', 'inclusive design']
+        tags: ['accessibility', 'inclusive design'],
+        type: 'case'
     },
     { 
-        title:'Creating Dubber&rsquo;s accessible, data focused design system', 
+        title:'Creating Dubber&rsquo;s accessible, data focused design system.', 
         desc:'A fully documented, accessible design system that cut custom code from ~85% to ~20% and changed how design and engineering worked together at Dubber.', 
         href:'/work/dubber-design-system/', 
         company:'dub',
@@ -68,10 +69,11 @@ export const cases: Case[] = [
         icon: '❖',
         accent: 'a-dark',
         inList: true,
-        tags: ['design systems', 'process heavy', 'documentaion']
+        tags: ['design systems', 'process heavy', 'documentaion'],
+        type: 'case'
     },
     { 
-        title:'Exploring extracted data as entities', 
+        title:'Exploring extracted data as entities.', 
         desc:'We took something as trivial as extracting keywords from a transcript and turned it into a way for users to find meaningful, contextual value inside their conversations.', 
         href:'/work/exploring-extracted-data-at-dubber/', 
         company:'dub',
@@ -80,11 +82,12 @@ export const cases: Case[] = [
         icon: '⚃',
         accent: 'e-dark',
         inList: true,
-        tags: ['ai workflow', 'data exploration']
+        tags: ['ai workflow', 'data exploration'],
+        type: 'case'
     },
     { 
-        title:'Building an internal tool that creates brand ready illustrations', 
-        desc:'', 
+        title:'Building an internal tool that creates brand ready illustrations.', 
+        desc:'A study in how to try and maintain quality output while bad leadership actively works against you.', 
         href:'/work/internal-illustration-tool-for-dubber/', 
         company:'dub',
         id: 'internalTool',
@@ -92,11 +95,12 @@ export const cases: Case[] = [
         icon: '✄',
         accent: 'f-dark',
         inList: true,
-        tags: ['shit leadership', 'internal systems']
+        tags: ['shit leadership', 'internal systems'],
+        type: 'case'
     },
     { 
-        title:'Built a task based internal system to manage patients and orders', 
-        desc:'', 
+        title:'Built a task based internal system to manage patients and orders.', 
+        desc:'The old tool was not made to scale, so we rebuilt it around the tasks people perform and automations to help it grow.', 
         href:'/work/simple-admin-system/', 
         company:'soh',
         id: 'adminSystem',
@@ -104,10 +108,11 @@ export const cases: Case[] = [
         icon: '✓',
         accent: 'b-dark',
         inList: true,
-        tags: ['health tech', 'internal systems']
+        tags: ['health tech', 'internal systems'],
+        type: 'case'
     },
     { 
-        title:'Created the brand and app experience for a holistic weight care product', 
+        title:'Created the brand and app experience for a holistic weight care product.', 
         desc:'', 
         href:'/work/simple-holistic-weight-care/', 
         company:'soh',
@@ -116,11 +121,12 @@ export const cases: Case[] = [
         icon: '➹',
         accent: 'e-base',
         inList: false,
-        tags: ['branding', 'health tech']
+        tags: ['branding', 'health tech'],
+        type: 'case'
     },
     { 
-        title:'Refreshed the brand for the digital pharmacy', 
-        desc:'', 
+        title:'Refreshed the brand for the digital pharmacy.', 
+        desc:'The old brand was a mess of inconsistent variations. The refresh gave it one clear, consistent story.', 
         href:'/work/simple-brand-refresh/', 
         company:'soh',
         id: 'brandRefresh',
@@ -128,11 +134,12 @@ export const cases: Case[] = [
         icon: '✚',
         accent: 'c-dark',
         inList: true,
-        tags: ['branding', 'health tech']
+        tags: ['branding', 'health tech'],
+        type: 'case'
     },
     { 
-        title:'Created the experience for an NHS prescriptions app', 
-        desc:'', 
+        title:'Created the experience for an NHS prescriptions app.', 
+        desc:'Half the UK is on repeat prescriptions and a third forget to reorder. Of course we can solve this with an app.', 
         href:'/work/simple-app-experience/', 
         company:'soh',
         id: 'appExperience',
@@ -140,23 +147,25 @@ export const cases: Case[] = [
         icon: '❤︎',
         accent: 'd-base',
         inList: true,
-        tags: ['health tech', 'app experience']
+        tags: ['health tech', 'app experience'],
+        type: 'case'
     },
     { 
-        title:'Designed Echo&rsquo;s first version of the web experience', 
-        desc:'', 
+        title:'Designed Echo&rsquo;s first version of the web experience.', 
+        desc:'Echo had only ever existed as an app. This was the first time patients could get in any other way.', 
         href:'/work/echo-web-app-v1/', 
         company:'echo',
         id: 'webAppV1',
         inNav: true,
         icon: '✎',
-        accent: 'f-base',
+        accent: 'a-light',
         inList: true,
-        tags: ['health tech', 'web experience']
+        tags: ['health tech', 'web experience'],
+        type: 'case'
     },
     { 
         title:'Designing a bunch of interesting stuff for a bunch of shitty people.', 
-        desc:'', 
+        desc:'A strange stint at a company run by awful people. But at least I got some interesting work for my portfolio.', 
         href:'/work/my-time-at-verve/', 
         company:'ver',
         id: 'variousProjects',
@@ -164,7 +173,8 @@ export const cases: Case[] = [
         icon: '✗',
         accent: 'c-base',
         inList: false,
-        tags: ['shit leadership', 'various projects', 'experience design']
+        tags: ['shit leadership', 'various projects', 'experience design'],
+        type: 'case'
     },
     { 
         title:'Led the discovery and designed the sales flow experience for new global markets', 
@@ -176,11 +186,12 @@ export const cases: Case[] = [
         icon: '⚑',
         accent: 'c-base',
         inList: true,
-        tags: ['shit leadership', 'sales flow', 'experience design']
+        tags: ['shit leadership', 'sales flow', 'experience design'],
+        type: 'case'
         
     },
     { 
-        title:'Designed new recruit pages that gave ambassadors more context and insights', 
+        title:'Designed new recruit pages that gave ambassadors more context and insights.', 
         desc:'', 
         href:'/work/my-time-at-verve/#recruit-pages', 
         company:'ver',
@@ -189,10 +200,11 @@ export const cases: Case[] = [
         icon: '☀︎',
         accent: 'c-base',
         inList: true,
-        tags: ['shit leadership', 'experience design']
+        tags: ['shit leadership', 'experience design'],
+        type: 'case'
     },
     { 
-        title:'Created and built a brand new iconography ecosystem', 
+        title:'Created and built a brand new iconography ecosystem.', 
         desc:'', 
         href:'/work/my-time-at-verve/#iconography', 
         company:'ver',
@@ -201,10 +213,11 @@ export const cases: Case[] = [
         icon: '◎',
         accent: 'c-base',
         inList: true,
-        tags: ['shit leadership', 'iconography']
+        tags: ['shit leadership', 'iconography'],
+        type: 'case'
     },
     { 
-        title:'Designed the full experience for sporting events and travel', 
+        title:'Designed the full experience for sporting events and travel.', 
         desc:'', 
         href:'/work/my-time-at-verve/#sports-and-travel', 
         company:'ver',
@@ -213,10 +226,11 @@ export const cases: Case[] = [
         icon: '✈︎',
         accent: 'c-base',
         inList: true,
-        tags: ['shit leadership', 'experience design']
+        tags: ['shit leadership', 'experience design'],
+        type: 'case'
     },
     { 
-        title:'Designed and built a free communication tool for sufferers of chronic pain', 
+        title:'Designed and built a free communication tool for sufferers of chronic pain.', 
         desc:'', 
         href:'/work/chronic-pain-communication-tool/', 
         company:'nm',
@@ -225,10 +239,11 @@ export const cases: Case[] = [
         icon: '◼︎',
         accent: 'a-base',
         inList: false,
-        tags: ['app design']
+        tags: ['app design'],
+        type: 'case'
     },
     { 
-        title:'A collection of some of my favourite branding bits and pieces (2015 - 2022)', 
+        title:'A collection of some of my favourite branding bits and pieces (2015 - 2022).', 
         desc:'', 
         href:'/work/branding-bits-15-22/', 
         company:'nm',
@@ -237,7 +252,8 @@ export const cases: Case[] = [
         icon: '♠︎',
         accent: 'd-dark',
         inList: true,
-        tags: ['branding', 'logos']
+        tags: ['branding', 'logos'],
+        type: 'case'
     },
 ]
 
@@ -247,35 +263,40 @@ export const pages: Page[] = [
         desc:'The online portfolio of Noureddine Azhar.', 
         href:'/', 
         id:'home',
-        inNav: true
+        inNav: true,
+        type: 'page'
     },
     { 
         title:'Work', 
         desc:'', 
         href:'/work/',
         id:'work',
-        inNav: true
+        inNav: true,
+        type: 'page'
     },
     { 
         title:'About', 
         desc:'', 
         href:'/about/',
         id:'about',
-        inNav: true
+        inNav: true,
+        type: 'page'
     },
     { 
         title:'Journal', 
         desc:'', 
         href:'/journal/',
         id:'journal',
-        inNav: false
+        inNav: false,
+        type: 'page'
     },
     { 
         title:'Are we a good fit?', 
         desc:'', 
         href:'/fitcheck/',
         id:'fitcheck',
-        inNav: true
+        inNav: true,
+        type: 'page'
     }
 ]
 
