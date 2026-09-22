@@ -9,7 +9,7 @@ export const randomise = (array: any[]) => array[Math.floor(Math.random() * arra
 // Meta
 export const generateMeta = (current: Page) => {
 
-    const title = `The Online Portfolio of Noureddine Azhar - ${current.title.replaceAll('&rsquo;', "'")}`;
+    const title = current.title.replaceAll('&rsquo;', "'");
     const desc = current.desc.replaceAll('&rsquo;', "'");
     const img = `https://noureddine.biz/asset/meta/${isCase(current) ? current.company+current.id : current.id }.png`;
     const href = `https://noureddine.biz${current.href}`;

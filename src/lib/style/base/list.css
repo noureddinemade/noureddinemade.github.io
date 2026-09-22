@@ -5,6 +5,50 @@ ul, ol {
     padding: 0;
     width: 100%;
 
+    &.colours {
+        margin: 25% auto;
+        padding: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            width: 40px;
+            height: 40px;
+
+            &:nth-child(1) { background-color: var(--accent-a-dark); }
+            &:nth-child(2) { background-color: var(--accent-a-base); }
+            &:nth-child(3) { background-color: var(--accent-a-light); }
+            &:nth-child(4) { background-color: var(--accent-b-dark); }
+            &:nth-child(5) { background-color: var(--accent-b-base); }
+            &:nth-child(6) { background-color: var(--accent-b-light); }
+            &:nth-child(7) { background-color: var(--accent-c-dark); }
+            &:nth-child(8) { background-color: var(--accent-c-base); }
+            &:nth-child(9) { background-color: var(--accent-c-light); }
+            &:nth-child(10) { background-color: var(--accent-d-dark); }
+            &:nth-child(11) { background-color: var(--accent-d-base); }
+            &:nth-child(12) { background-color: var(--accent-d-light); }
+            &:nth-child(13) { background-color: var(--accent-e-dark); }
+            &:nth-child(14) { background-color: var(--accent-e-base); }
+            &:nth-child(15) { background-color: var(--accent-e-light); }
+            &:nth-child(16) { background-color: var(--accent-f-dark); }
+            &:nth-child(17) { background-color: var(--accent-f-base); }
+            &:nth-child(18) { background-color: var(--accent-f-light); }
+            &:nth-child(19) { background-color: var(--accent-g-dark); }
+            &:nth-child(20) { background-color: var(--accent-g-base); }
+            &:nth-child(21) { background-color: var(--accent-g-light); }
+            &:nth-child(22) { background-color: var(--dark-dark); }
+            &:nth-child(23) { background-color: var(--dark-base); }
+            &:nth-child(24) { background-color: var(--dark-light); }
+            &:nth-child(25) { background-color: var(--light-dark); }
+            &:nth-child(26) { background-color: var(--light-base); }
+            &:nth-child(27) { background-color: var(--light-light); }
+            
+        }
+    }
+
     /* Variants */
     &.role-info, &.links, &.fit-check, &.base { display: flex; }
 

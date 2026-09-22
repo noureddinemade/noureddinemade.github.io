@@ -40,7 +40,7 @@
     // Toggle CTA visibility based on page
     const cta = $derived(current && !['home','journal','about'].includes(current.id) ? true : false);
     // Metadata
-    const meta = $derived(generateMeta(current));
+    const meta = $derived(current ? generateMeta(current) : { title:'', desc:'', img:'', href:'', published:false });
 
     onMount(() => {
         cursorInit();
@@ -82,7 +82,7 @@
 
 
 <svelte:head>
-    <title>{meta.title}</title>
+    <title>The Online Portfolio of Noureddine Azhar - {meta.title}</title>
     <meta name="description" content={meta.desc} />
     <meta property="og:title" content={meta.title} />
     <meta property="og:description" content={meta.desc} />

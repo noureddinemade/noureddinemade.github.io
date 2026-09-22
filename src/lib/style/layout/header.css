@@ -4,7 +4,7 @@ header.global {
     position: fixed;
     z-index: 100;
     top: 0;
-    left: 0;
+    left: 50%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -13,8 +13,10 @@ header.global {
     gap: var(--scale-xs);
     padding: var(--scale-md);
     width: 100vw;
+    max-width: var(--mw-xxl);
     height: 100vh;
     pointer-events: none;
+    translate: -50% 0;
 
     /* Children */
     div.group {

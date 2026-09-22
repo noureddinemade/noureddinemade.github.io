@@ -12,7 +12,7 @@
     
 </script>
 
-<button {...buttonAttrs}>
+<button {...buttonAttrs} data-cursor-aim=true>
     <span {...labelAttrs}>
         {@html labelAttrs['data-text']}
     </span>

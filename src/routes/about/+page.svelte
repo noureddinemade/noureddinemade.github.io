@@ -31,7 +31,7 @@
             <Image src="icon/star-01.svg" alt="" props={{"class":"florish -about colour -fill -fill-accent-a-light", "role":"presentation", "data-sticky-rotate": "250"}}/>
         </div>
         <div class="profile-photo-wrap" data-cursor="👋🏽" data-cursor-attach="#hello" data-follow data-folow-axis-x data-follow-reach="0" data-follow-nudge="2" data-follow-tilt="5" data-follow-axis-x>
-            <div class="-fg" data-follow data-follow-reach="0" data-follow-lerp=".05" data-follow-nudge="30">
+            <div class="-fg" data-follow data-follow-reach="0" data-follow-lerp=".05" data-follow-nudge="30" data-follow-axis-x>
                 <Image src="photo/profile-fg@2x.png" alt="A film photograph of Noureddine from the waste up smiling while standing outdoors wearing a black beanie and a red rain coat." props={{"class":"-follow"}}/>
             </div>
             <Image src="photo/profile-bg@2x.png" alt="A film photograph of Noureddine from the waste up smiling while standing outdoors wearing a black beanie and a red rain coat." props={{"class":"-bg"}}/>
