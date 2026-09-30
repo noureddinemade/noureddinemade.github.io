@@ -86,7 +86,7 @@
                 }}
             />
         </div>
-    <Image src="work/dub/design-system/layers.svg" alt="" props={{ "class":"svg-layers colour -bg -bg-light-dark border -rounded -r-md -s-base", "data-switch-target":"layers" }}/>
+    <Image src="work/dub/design-system/layers.svg" alt="" props={{ "class":"svg-layers colour -bg -bg-light-dark border -rounded -r-md -s-base", "data-switch-target":"layers", "role":"presentation" }}/>
     </div>
 </Block>
 
@@ -96,7 +96,7 @@
         With the core structure in a good place, my next challenge was the processes of the design system. Much like the structure, these needed to be tailored to not just the problem but also our team. I focused on the processes around contribution first, because these would be critical in how we build the components in the design system.
     </p>
     <div class="columns -two spacing -gap-xl">
-        <Image alt="" src="work/dub/design-system/contribution.svg" props={{ "class":"svg-contribution" }}/>
+        <Image alt="" src="work/dub/design-system/contribution.svg" props={{ "class":"svg-contribution", "role":"presentation" }}/>
         <div class="item spacing -gap-md">
             <p class="text -lg -justify">
                 The contribution process was framed around the idea that anyone in design or engineering could contribute to the design system. If you wanted to contribute, you would add it to the agenda of our weekly design review. In that design review you <span class="text -sans -md -uppercase -bold">explain</span> your reasoning behind this contribution, the team would then <span class="text -sans -md -uppercase -bold">critique</span> and analyse it. If this contribution made sense and was worth adding to the design system, you then get to <span class="text -sans -md -uppercase -bold">implement</span> it and <span class="text -sans -md -uppercase -bold">own</span> it.
@@ -216,13 +216,13 @@
     </p>
     <div class="columns -two spacing -gap-lg -m-t-xl -m-b-xl">
         <div class="item spacing -gap-xxl">
-            <Image alt="" src="work/dub/design-system/token-1-figma-raw.svg" props={{ "class":"sticky -top-xxl" }} />
-            <Image alt="" src="work/dub/design-system/token-2-figma-reference.svg" props={{ "class":"sticky -top-xxl" }} />
-            <Image alt="" src="work/dub/design-system/token-3-figma-contrast.svg" props={{ "class":"sticky -top-xxl" }} />
-            <Image alt="" src="work/dub/design-system/token-4-css-raw.svg" props={{ "class":"sticky -top-xxl" }} />
-            <Image alt="" src="work/dub/design-system/token-5-css-reference.svg" props={{ "class":"sticky -top-xxl" }} />
-            <Image alt="" src="work/dub/design-system/token-6-css-contrast.svg" props={{ "class":"sticky -top-xxl" }} />
-            <Image alt="" src="work/dub/design-system/token-7-css-usage.svg" props={{ "class":"sticky -top-xxl" }} />
+            <Image alt="" src="work/dub/design-system/token-1-figma-raw.svg" props={{ "class":"sticky -top-xxl", "role":"presentation" }} />
+            <Image alt="" src="work/dub/design-system/token-2-figma-reference.svg" props={{ "class":"sticky -top-xxl", "role":"presentation" }} />
+            <Image alt="" src="work/dub/design-system/token-3-figma-contrast.svg" props={{ "class":"sticky -top-xxl", "role":"presentation" }} />
+            <Image alt="" src="work/dub/design-system/token-4-css-raw.svg" props={{ "class":"sticky -top-xxl", "role":"presentation" }} />
+            <Image alt="" src="work/dub/design-system/token-5-css-reference.svg" props={{ "class":"sticky -top-xxl", "role":"presentation" }} />
+            <Image alt="" src="work/dub/design-system/token-6-css-contrast.svg" props={{ "class":"sticky -top-xxl", "role":"presentation" }} />
+            <Image alt="" src="work/dub/design-system/token-7-css-usage.svg" props={{ "class":"sticky -top-xxl", "role":"presentation" }} />
         </div>
         <p class="text -lg -gap-lg sticky -top-xxl">
             The first and most impactful thing we did was bring the tokens into the build. Bringing tokens in meant that the design and engineering team now had shared vocabulary when it came to fundamental things like sizing and colours. While this was not a component and the result was not visible, the outcome of this change substantially improved handover efficiency. A token used in the design system translates to a css variable. Same name, same value, same structure.

@@ -50,7 +50,8 @@
                     <Button 
                         props={{ 
                             "class":`-theme-item colour -bg -bg-${t.fill} ${theme === `-bg-${t.bg} -fill-${t.fill}` ? '-selected' : ''}`, "data-name":"component", "data-cursor":"link", "data-cursor-aim":"true", "label":{ "data-text":"" },
-                            "onclick": () => theme = `-bg-${t.bg} -fill-${t.fill}`
+                            "onclick": () => theme = `-bg-${t.bg} -fill-${t.fill}`,
+                            "aria-label":"Change colour"
                         }}
                     />
                 {/each}
@@ -60,7 +61,7 @@
         <div class="columns -four spacing -gap-md">
             {#each Array.from({ length: 24 }) as _, i}
                 <Image src={`work/nm/branding-bits-15-22/branding-0${i+1}.svg`} alt="" 
-                    props={{ "class":`border -r-md -s-base colour -bg -fill ${theme}` }}
+                    props={{ "class":`border -r-md -s-base colour -bg -fill ${theme}`, "role":"presentation" }}
                 />
             {/each}
         </div>

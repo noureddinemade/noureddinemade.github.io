@@ -55,8 +55,8 @@
         Taking our existing illustration library and breaking it down into individual components was the first step. Components that could then be shuffled and repurposed into new-ish illustrations. Each illustration was made up of three critical parts: a background shape, a foreground object and a mask (using the same shape as the background) that gave each illustration its personality and depth.
     </p>
     <p class="text -xl -justify">
-        For the shapes we had five in total {#each array as i}<Image src={`work/dub/internal-tool/shape-${i}.svg`} alt="shape" props={{ "class":"inline-icon -md" }} />{/each}
-        each representing an aspect of the product: Recording, Cloud, Conversations, Trends and Insights. We weren&rsquo;t strict about usage though, they were brand shapes and we used them where it made sense. The masks were broken into quadrants: top left, top right, bottom left, bottom right which varied from shape to shape {#each array as i}<Image src={`work/dub/internal-tool/mask-${i}.svg`} alt="mask" props={{ "class":"inline-icon -md" }} />{/each} Twenty-five components so far.
+        For the shapes we had five in total {#each array as i}<Image src={`work/dub/internal-tool/shape-${i}.svg`} alt="shape" props={{ "class":"inline-icon -md", "role":"presentation" }} />{/each}
+        each representing an aspect of the product: Recording, Cloud, Conversations, Trends and Insights. We weren&rsquo;t strict about usage though, they were brand shapes and we used them where it made sense. The masks were broken into quadrants: top left, top right, bottom left, bottom right which varied from shape to shape {#each array as i}<Image src={`work/dub/internal-tool/mask-${i}.svg`} alt="mask" props={{ "class":"inline-icon -md", "role":"presentation" }} />{/each} Twenty-five components so far.
     </p>
     <div class="item spacing -m-t-lg -m-b-xl" data-tabs="The structure of an illustration">
 

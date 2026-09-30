@@ -19,7 +19,7 @@
 
 <PageHeader props={{ "class":"spacing -p-b-lg", "content":{ "class":"spacing -mw-lg" } }}>
     <h1 class="text -headline -sans -uppercase">
-        Here&rsquo;s a curated selection of my work from the last twenty years.
+        A curated selection of roles &amp; work from the last twenty years.
     </h1>
 </PageHeader>
 

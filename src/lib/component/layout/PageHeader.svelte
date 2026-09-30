@@ -18,5 +18,5 @@
 
 <Block props={{ "content":{...content}, ...blockProps }}>
     {@render children?.()}
-    {#if (caseStudy && caseStudy.tags.length > 0)}<Tags tags={caseStudy.tags} bg={`accent-${caseStudy.accent}`} />{/if}
+    {#if (caseStudy && caseStudy.tags && caseStudy.tags.length > 0)}<Tags tags={caseStudy.tags} bg={`accent-${caseStudy.accent}`} />{/if}
 </Block>

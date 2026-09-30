@@ -3,7 +3,7 @@
     import Link from "$lib/component/action/Link.svelte";
     import Button from "$lib/component/action/Button.svelte";
 
-    let ready = $state(false);
+    let ready = $state('');
 
 </script>
 
@@ -14,17 +14,17 @@
             Ready to get in touch?
         </p>
     
-        <Button props={{ "class":`-choice${ready ? ' -selected' : ''}`, "label":{"data-text":"Yes"}, onclick:() => ready = true }}/>
-        <Button props={{ "class":`-choice${!ready ? ' -selected' : ''}`, "label":{"data-text":"No"}, onclick:() => ready = false }}/>
+        <Button props={{ "class":`-choice${ready === 'y' ? ' -selected' : ''}`, "label":{"data-text":"Yes"}, onclick:() => ready = 'y' }}/>
+        <Button props={{ "class":`-choice${ready === 'n' ? ' -selected' : ''}`, "label":{"data-text":"No"}, onclick:() => ready = 'n' }}/>
     </div>
 
-    {#if (ready)}
+    {#if (ready === 'y')}
 
         <div class="contact">
             <Link props={{ "class":"-mail text -serif -xl -regular", "href":"mailto:me@noureddine.biz", "label":{"data-text":"me@noureddine.biz"} }}/>
         </div>
 
-    {:else}
+    {:else if (ready === 'n')}
 
         <div class="contact">
             <p class="text -serif -xl -regular">

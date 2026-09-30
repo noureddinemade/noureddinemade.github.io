@@ -70,7 +70,7 @@ ul, ol {
 
     &.role-info {
 
-        --ri-colour: rgba(var(--dark-raw), .5);
+        --ri-colour: rgba(var(--dark-raw), .7);
 
         flex-direction: row;
         gap: var(--gap, var(--scale-sm));

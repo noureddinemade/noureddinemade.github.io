@@ -1,6 +1,6 @@
 import { flags, onTick, pointer, num } from '$lib/script/core';
 
-// module-level handles so cleanup can remove them
+// Module-level handles so cleanup can remove them
 let cursorEl: HTMLDivElement | null = null;
 let pointerOver: ((e: PointerEvent) => void) | null = null;
 let pointerLeave: ((e: PointerEvent) => void) | null = null;
@@ -11,7 +11,7 @@ let untickAttach: (() => void) | null = null;
 export const cursorInit = () => {
     if (!flags.enabled) return;
 
-    // ---- shared cursor element (the cursor concern) ----
+    // Shared cursor stuff
     const LERP = 0.4, ROT_LERP = 0.1, DEAD_ZONE = 12;
 
     cursorEl = document.createElement('div');
@@ -26,7 +26,7 @@ export const cursorInit = () => {
     let aimActive = true, aimTarget: HTMLElement | null = null;
     let targetAngle = 0, currentAngle = 0;
 
-    // ---- attach concern state ----
+    //
     const A_LERP = 0.2, OFFSET_X = 8, OFFSET_Y = 8;
 
     let currentTrigger: HTMLElement | null = null;
@@ -77,7 +77,7 @@ export const cursorInit = () => {
         videos.forEach((v) => v?.play().catch(() => {}));
     };
 
-    // ---- one shared pointerover for both concerns ----
+    // Shared point over stuff
     pointerOver = (event: PointerEvent) => {
         withinWindow = true;
         const t = event.target as HTMLElement;
@@ -118,17 +118,16 @@ export const cursorInit = () => {
         hide();
     };
 
-    // window lost focus (tab-away, app-switch) — no pointer event fires for these
+    // window lost focus (tab-away, app-switch) = no pointer event fires
     onBlur = hide;
 
     document.addEventListener('pointerover', pointerOver);
     document.addEventListener('pointerout', pointerLeave);
     window.addEventListener('blur', onBlur);
 
-    // visibility follows core's pointer, but we still need a first-move reveal
-    // handled inside the cursor tick below via `visible`.
+    // visibility follows core's pointer, but we still need a first-move reveal handled inside the cursor tick below via `visible`.
 
-    // ---- cursor tick ----
+    // cursor tick
     untickCursor = onTick(() => {
         if (withinWindow && !visible && (pointer.x || pointer.y)) {
             visible = true;
@@ -157,7 +156,7 @@ export const cursorInit = () => {
         cursorEl!.style.setProperty('--cur-rot', `${currentAngle.toFixed(2)}deg`);
     });
 
-    // ---- attach tick ----
+    // attach tick
     untickAttach = onTick(() => {
         if (!currentItem) return;
         fx[0] += ((pointer.x + offsetX) - fx[0]) * aLerp;

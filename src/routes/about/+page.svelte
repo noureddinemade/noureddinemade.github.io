@@ -5,6 +5,8 @@
     import Block from "$lib/component/layout/Block.svelte";
     import PageHeader from "$lib/component/layout/PageHeader.svelte";
     import Image from "$lib/component/asset/Image.svelte";
+    import Tags from "$lib/component/data/Tags.svelte";
+    import Link from "$lib/component/action/Link.svelte";
 
     onMount(() => followInit());
 
@@ -37,6 +39,35 @@
             <Image src="photo/profile-bg@2x.png" alt="A film photograph of Noureddine from the waste up smiling while standing outdoors wearing a black beanie and a red rain coat." props={{"class":"-bg"}}/>
         </div>
     </div>
+</Block>
+
+<Block props={{ "class":"general spacing -m-b-xxl", "content": { "class":"spacing -mw-xl" } }}>
+
+    <div class="columns -two spacing -gap-xl -m-b-xl">
+        <h2 class="text -xl -sans -uppercase">
+            What can I help with?
+        </h2>
+        <Tags tags={['End-to-end Design', 'Zero-to-one Design', 'Design Systems', 'Design Strategy and Leadership', 'Product Focused Branding']} bg='dark-dark -bg -bg-accent-c-dark -text -text-light-light text -xl -serif -regular'/>
+    </div>
+    <div class="columns -two spacing -gap-xl -m-b-xl">
+        <h2 class="text -xl -sans -uppercase">
+            Want to work together?
+        </h2>
+        <p class="text -xl -serif -regular">
+            I&rsquo;m currently <span class="mark -outline -e colour -fill -fill-accent-a-base">open to work</span> but before you reach out, please check to make sure that <Link props={{ "href":"/fitcheck/", "label":{"data-text":"we&rsquo;re a good fit"} }} />.
+        </p>
+    </div>
+    <div class="columns -two spacing -gap-xl">
+        <h2 class="text -xl -sans -uppercase">
+            About this website
+        </h2>
+        <p class="text -lg -serif -regular">
+            Built with <Link props={{ "class":"-external", "href":"https://svelte.dev/docs/kit/introduction", "data-window":"true", "label":{"data-text":"SvelteKit"} }}/>. 
+            Text is set in <Link props={{ "class":"-external", "href":"https://www.issamtype.com/product/mirety-a-nostalgic-editorial-serif-family/", "data-window":"true", "label":{"data-text":"Mirety"} }}/> and <Link props={{ "class":"-external", "href":"https://www.estudiocalderon.com/typefaces/ocelot/", "data-window":"true", "label":{"data-text":"Ocelot"} }}/>. Every single part of this portfolio was designed and built by hand with <span class="mark -highlight colour -bg -bg-accent-e-base"> zero AI used</span>, because I shouldn&rsquo;t need to destroy the world just to tell you how good of a designer I am.
+        </p>
+    </div>
+
+
 </Block>
 
 <span class="cursor-attach -tag" id="hello">Hello!</span>

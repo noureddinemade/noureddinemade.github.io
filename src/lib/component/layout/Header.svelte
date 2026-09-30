@@ -28,8 +28,8 @@
     }));
     
     $effect(() => {
-        current;                          // depend on current — re-run when it changes
-        tick().then(marqueeInit);         // rebuild after the DOM swap settles
+        current;
+        tick().then(marqueeInit);
     });
     
 </script>
@@ -70,17 +70,12 @@
 
         <div class="group -bottom">
             
-            <div class="block colour -bg -bg-accent-a-dark text -contrast" data-marquee>
+            <div class="block colour -bg -bg-accent-a-dark text -contrast" data-marquee data-cursor="🟢">
                 <div class="-on" data-marquee-track>
                     <p>Currently open to working on new things 💈</p>
                 </div>
             </div>
             <Nav current={current ? current.id : ''} />
-            <!-- <Link props={{
-                "href": "/fitcheck",
-                "class": "-fitcheck",
-                "label": { "data-text": "Are we a good fit?" }
-            }} /> -->
         </div>
 
     {/if}

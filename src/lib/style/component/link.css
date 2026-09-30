@@ -6,7 +6,8 @@ a.link {
         filter: grayscale(100);
     }
     /* Variants */
-    &.-next, &.-prev, &.-external {
+    &.-next, &.-prev {
+        position: relative;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -20,7 +21,7 @@ a.link {
             mask-size: 100% 100%;
             mask-position: center;
             mask-repeat: no-repeat;
-            transition: background-color .2s ease; 
+            transition: background-color .2s ease;
         }
     }
 
@@ -33,10 +34,7 @@ a.link {
         mask-image: url($lib/asset/icon/arrow-left-01.svg);
     }
 
-    &.-external:before {
-        content: '';
-        mask-image: url($lib/asset/icon/arrow-up-01.svg);
-        rotate: 45deg;
+    &.-external:after {
     }
 
     &.-case-study-item {

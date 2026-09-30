@@ -16,7 +16,7 @@ const resizeSubscribers = new Set<() => void>();
 
 export const pointer = { x: 0, y: 0 };
 
-// native-scroll fallback state (only used when Lenis isn't running)
+// Native scroll fallback state
 let lastNativeY = 0;
 let nativeVelocity = 0;
 let scrollScheduled = false;
@@ -30,7 +30,7 @@ const notifyScroll = () => {
     for (const fn of scrollSubscribers) fn();
 };
 
-// shared debounced resize — one listener fans out to all subscribers
+// Shared debounced resize — one listener fans out to all subscribers
 let resizeTimer = 0;
 const RESIZE_DEBOUNCE = 150;
 

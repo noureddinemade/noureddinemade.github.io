@@ -1,14 +1,9 @@
 import { flags } from '$lib/script/core';
 
-// Per-element: builds and tears down one slider. Use via the `slider` action
-// (below) so each <Slider> component owns its own instance — never scans the
-// document, so any number of sliders coexist without rebuilding each other.
 export const sliderInit = (slider: HTMLElement): (() => void) => {
     const slides = [...slider.children] as HTMLElement[];
     if (!slides.length) return () => {};
 
-    // Move the slides into a generated .slides track (the scroller) so the
-    // controls can sit in the non-scrolling frame around it.
     const track = document.createElement('div');
     track.className = 'slides';
     slides.forEach((slide) => track.append(slide));
@@ -61,7 +56,7 @@ export const sliderInit = (slider: HTMLElement): (() => void) => {
         const slide = slides[i];
         const behavior: ScrollBehavior = flags.reduce ? 'auto' : 'smooth';
 
-        // Centre the slide inside the track — contained, so no ancestor scrolls.
+        // Centre the slide inside the track
         const trackRect = track.getBoundingClientRect();
         const slideRect = slide.getBoundingClientRect();
         const delta = (slideRect.left - trackRect.left) - (track.clientWidth - slide.clientWidth) / 2;
@@ -80,7 +75,7 @@ export const sliderInit = (slider: HTMLElement): (() => void) => {
         return { dot, onDot };
     });
 
-    // Sync active state to the most visible slide — covers dots, arrows and swipe.
+    // Sync active state to the most visible slide
     const ratios = new Map<Element, number>();
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((e) => ratios.set(e.target, e.intersectionRatio));

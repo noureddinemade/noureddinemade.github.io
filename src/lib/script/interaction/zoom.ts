@@ -32,9 +32,6 @@ export const zoomInit = (): (() => void) => {
 
     const cleanups: (() => void)[] = [];
 
-    // Read geometry at activation — the image is loaded and laid out by then.
-    // data-zoom optionally carries a scale multiplier; absent, the image goes
-    // to its natural size. --zoom-scale is what the CSS grows to.
     const measure = (s: ZoomItem) => {
         const r = s.wrapper.getBoundingClientRect();
         s.ww = r.width || 1;
@@ -76,8 +73,6 @@ export const zoomInit = (): (() => void) => {
             let tx = 0, ty = 0;
 
             if (s.active) {
-                // Fresh rect so it tracks scroll. Cursor fraction across the
-                // window → pan: cursor left shows the image's left edge.
                 const r = s.wrapper.getBoundingClientRect();
                 const fx = Math.min(1, Math.max(0, (pointer.x - r.left) / s.ww));
                 const fy = Math.min(1, Math.max(0, (pointer.y - r.top) / s.wh));

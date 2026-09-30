@@ -1,5 +1,5 @@
 import type { TransitionConfig } from 'svelte/transition';
-import { cubicInOut, circInOut } from 'svelte/easing';
+import { cubicInOut } from 'svelte/easing';
 import { animation } from '$lib/style/variables';
 
 // Page transition coordinator
@@ -19,9 +19,7 @@ export const setNavPhase = (phase: NavPhase, to: string | null = null) => {
     for (const fn of subscribers) fn(phase, to);
 };
 
-// Toggle -on off then back on when the element "changes".
-//   • function arg → navigation mode: resolver(path) defines change; driven by nav phases.
-//   • other arg    → change mode: cycles whenever the value changes.
+// Toggle -on off then back on when the element "changes"
 type Resolver = (path: string) => unknown;
 
 export const transitionOn = (arg: Resolver | unknown) => (node: HTMLElement) => {

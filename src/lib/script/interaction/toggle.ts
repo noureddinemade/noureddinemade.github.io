@@ -82,11 +82,11 @@ export const tabsInit = (): (() => void) => {
             panel.setAttribute('role', 'tabpanel');
             panel.setAttribute('aria-labelledby', trigger.id);
 
-            // Let keyboard users focus panels that hold no focusable content.
+            // Let keyboard users focus panels that hold no focusable content
             if (!panel.hasAttribute('tabindex')) panel.tabIndex = 0;
         });
 
-        // Active tab is the first with a visible panel, else the first tab.
+        // Active tab is the first with a visible panel, else the first tab
         const initial = tabs.find(({ panel }) => !panel.classList.contains('-off')) ?? tabs[0];
 
         // Single source of truth for selection state.
@@ -94,7 +94,7 @@ export const tabsInit = (): (() => void) => {
             tabs.forEach((tab) => {
                 const active = tab === next;
                 tab.trigger.setAttribute('aria-selected', String(active));
-                tab.trigger.tabIndex = active ? 0 : -1; // roving tabindex
+                tab.trigger.tabIndex = active ? 0 : -1;
                 tab.trigger.classList.toggle('-off', !active);
                 tab.panel.classList.toggle('-off', !active);
                 if (!active) pauseMedia(tab.panel);

@@ -30,7 +30,7 @@
         We were working on migrating from a legacy platform so I decided to run an accessibility audit to see what we could bring along without having to redesign a bunch of stuff when we didn&rsquo;t need to. Unfortunately, the results of that audit were very poor. <span class="mark -highlight colour -bg -bg-accent-e-base text -contrast">Heaps of failures across WCAG 2.1 success criteria.</span> Really basic stuff like contrast ratios (1.4.3, 1.4.11), keyboard navigation (2.1.1, 2.1.2), form inputs missing programmatic identification (1.3.5, 3.3.1) and focus states (2.4.7) for the majority of components. These weren&rsquo;t edge cases, they were fundamental barriers that made the platform severely inaccessible.
     </p>
     
-    <Image src="work/dub/accessibility/wcag-map.svg" alt="" props={{ "class":"svg-wcag-map" }} parent={ {"class":"border -rounded -r-md -s-base colour -bg -bg-light-dark spacing -m-t-lg"} }/>
+    <Image src="work/dub/accessibility/wcag-map.svg" alt="" props={{ "class":"svg-wcag-map", "role":"presentation" }} parent={ {"class":"border -rounded -r-md -s-base colour -bg -bg-light-dark spacing -m-t-lg"} }/>
     <p class="text -xxl spacing -mw-xl">
         <span class="mark -highlight colour -bg -bg-accent-f-light text -contrast">
             I ran the audits using <span class="text -sans -xl -bold -uppercase">WAVE</span>, <span class="text -sans -xl -bold -uppercase">axe Accessibility Checker</span>, and <span class="text -sans -xl -bold -uppercase">Pa11y</span>, but these were just automations and tools that could only ever capture surface-level problems.
@@ -100,7 +100,7 @@
 
         </div>
 
-        <Image src="work/dub/accessibility/roadmap.svg" alt="" props={{ "class":"svg-roadmap" }}/>
+        <Image src="work/dub/accessibility/roadmap.svg" alt="" props={{ "class":"svg-roadmap", "role":"presentation" }}/>
 
     </div>
 
