@@ -18,6 +18,7 @@ div.item.-role {
 
             counter-increment: footnotes;
             text-decoration-color: var(--link-underline);
+            transition: background-color .2s ease, color .2s ease, border-radius .1s ease;
             
             /* Psuedo */
             &:nth-of-type(6n+1) { --link-underline: var(--accent-a-base); --fn-bg: var(--accent-a-base); --fn-text: var(--light-base); }
@@ -29,6 +30,10 @@ div.item.-role {
 
             /* States */
             &:hover {
+
+                outline: 3px solid var(--dark-dark);
+                border-radius: 44px;
+                text-decoration: none;
 
                 /* Psuedo */
                 &:nth-of-type(6n+1) { --link-bg: var(--accent-a-base); --link: var(--light-base); }

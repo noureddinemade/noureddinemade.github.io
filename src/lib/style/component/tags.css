@@ -8,6 +8,9 @@ ul.tags {
     translate: 0 0;
     transition: translate .2s ease, opacity .2s ease;
 
+    /* Alignment */
+    &.-center { justify-content: center; }
+
     /* Children */
     li.tag {
         display: inline-block;

@@ -91,11 +91,11 @@
                 <li class="colour -misc-accent-e-base text -serif -lg">Minor</li>
                 <li class="colour -misc-accent-d-light text -serif -lg">Major</li>
             </ul>
-            <ul class="key spacing">
-                <li data-number="1">Perceivable</li>
-                <li data-number="2">Operable</li>
-                <li data-number="3">Understandable</li>
-                <li data-number="4">Robust</li>
+            <ul class="key">
+                <li class="text -serif -md" data-number="1">Perceivable</li>
+                <li class="text -serif -md" data-number="2">Operable</li>
+                <li class="text -serif -md" data-number="3">Understandable</li>
+                <li class="text -serif -md" data-number="4">Robust</li>
             </ul>
 
         </div>

@@ -47,26 +47,25 @@
         <h2 class="text -xl -sans -uppercase">
             What can I help with?
         </h2>
-        <Tags tags={['End-to-end Design', 'Zero-to-one Design', 'Design Systems', 'Design Strategy and Leadership', 'Product Focused Branding']} bg='dark-dark -bg -bg-accent-c-dark -text -text-light-light text -xl -serif -regular'/>
+        <Tags tags={['End-to-end Design', 'Zero-to-one Design', 'Design Systems', 'Design Strategy and Leadership', 'Product Focused Branding']} bg='dark-dark -bg -bg-accent-d-light -text -text-dark-dark text -xl -serif -regular'/>
     </div>
     <div class="columns -two spacing -gap-xl -m-b-xl">
         <h2 class="text -xl -sans -uppercase">
             Want to work together?
         </h2>
         <p class="text -xl -serif -regular">
-            I&rsquo;m currently <span class="mark -outline -e colour -fill -fill-accent-a-base">open to work</span> but before you reach out, please check to make sure that <Link props={{ "href":"/fitcheck/", "label":{"data-text":"we&rsquo;re a good fit"} }} />.
+            I&rsquo;m currently <span class="mark -underline -b colour -fill -fill-accent-a-base">open to work</span> but before you reach out, please check to make sure that <Link props={{ "href":"/fitcheck/", "label":{"data-text":"we&rsquo;re a good fit"} }} />.
         </p>
     </div>
     <div class="columns -two spacing -gap-xl">
         <h2 class="text -xl -sans -uppercase">
             About this website
         </h2>
-        <p class="text -lg -serif -regular">
+        <p class="text -xl -serif -regular">
             Built with <Link props={{ "class":"-external", "href":"https://svelte.dev/docs/kit/introduction", "data-window":"true", "label":{"data-text":"SvelteKit"} }}/>. 
-            Text is set in <Link props={{ "class":"-external", "href":"https://www.issamtype.com/product/mirety-a-nostalgic-editorial-serif-family/", "data-window":"true", "label":{"data-text":"Mirety"} }}/> and <Link props={{ "class":"-external", "href":"https://www.estudiocalderon.com/typefaces/ocelot/", "data-window":"true", "label":{"data-text":"Ocelot"} }}/>. Every single part of this portfolio was designed and built by hand with <span class="mark -highlight colour -bg -bg-accent-e-base"> zero AI used</span>, because I shouldn&rsquo;t need to destroy the world just to tell you how good of a designer I am.
+            Text is set in <Link props={{ "class":"-external", "href":"https://www.issamtype.com/product/mirety-a-nostalgic-editorial-serif-family/", "data-window":"true", "label":{"data-text":"Mirety"} }}/> and <Link props={{ "class":"-external text -sans -uppercase -bold -lg", "href":"https://www.estudiocalderon.com/typefaces/ocelot/", "data-window":"true", "label":{"data-text":"Ocelot"} }}/>. Every single part of this portfolio was designed and built by hand with <span class="mark -highlight colour -bg -bg-accent-e-base"> zero AI used</span> <span class="mark -em">&mdash;</span> why destroy the world just to show you I&rsquo;m a good designer.
         </p>
     </div>
-
 
 </Block>
 

@@ -99,7 +99,7 @@
 <Block props={{ "class":"general" }}>
     <h2 class="text -xl -sans -bold -uppercase">Building</h2>
     <p class="text -xl">
-        Building was actually the easiest part. My philosophy with internal tools is simple: <span class="mark -highlight colour -bg -bg-accent-e-base">if it&rsquo;s not dealing with sensitive data or interact with live production code, it doesn&rsquo;t need to be precious.</span> It was a quick build in React that utilised SVGs for shapes and masks so that it could handle lossless adjustments.
+        Building was actually the easiest part. My philosophy with internal tools is simple: <span class="mark -highlight colour -bg -bg-accent-e-base">if it&rsquo;s not dealing with sensitive data or interacting with live production code, it doesn&rsquo;t need to be precious.</span> It was a quick build in React that utilised SVGs for shapes and masks so that it could handle lossless adjustments.
     </p>
     <p class="text -lg">
         What the user ends up being able to do is select a background, pick a colour from our brand palette, select one of the 430 objects available and then play around with the size, rotation and mask. Then when they&rsquo;re happy with it, they export the high quality PNG. The only process that doesn&rsquo;t live in the tool is that after an illustration is made, it gets added to the library manually and documented in a spreadsheet.
@@ -133,7 +133,7 @@
     <h2 class="text -xl -sans -bold -uppercase">Same shit, different day.</h2>
     <div class="columns -two spacing -gap-xxl">
         <p class="text -xxl">
-            While this didn&rsquo;t fix all of our problems, it helped us keep things afloat while we hoped things would return to normal and that the functions we lost would be restored. <span class="mark -highlight colour -bg -bg-accent-d-light text -contrast" data-cursor="🤡">Spoiler, that did not happen.</span>
+            While this didn&rsquo;t fix all of our problems, it helped us keep things afloat while we hoped things would return to normal and that the functions we lost would be restored <span class="mark -em">&mdash;</span> <span class="mark -highlight colour -bg -bg-accent-d-light text -contrast" data-cursor="🤡">that never happened.</span>
         </p>
         <div class="item"></div>
     </div>

@@ -11,5 +11,5 @@
     <h2 class="text -sans -uppercase -bold -xl">
         Areas I&rsquo;d love to explore:
     </h2>
-    <Tags tags={['Education', 'Healthcare', 'Zero AI Products']} bg='accent-a-dark -text -text-accent-a-dark text -lg -serif -regular'/>
+    <Tags align="center" tags={['Education', 'Healthcare', 'Zero AI Products']} bg='accent-a-dark -text -text-accent-a-dark text -lg -serif -regular'/>
 </div>

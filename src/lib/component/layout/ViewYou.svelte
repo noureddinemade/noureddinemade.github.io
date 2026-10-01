@@ -12,5 +12,5 @@
     <h2 class="text -sans -uppercase -bold -xl">
         I&rsquo;m not interested in:
     </h2>
-    <Tags tags={['Generative AI', 'Gambling', 'Crypto', 'Finance', 'Evil Shit']} bg='accent-b-dark -text -text-accent-b-dark text -lg -serif -regular'/>
+    <Tags align="center" tags={['Generative AI', 'Gambling', 'Crypto', 'Finance', 'Evil Shit']} bg='accent-b-dark -text -text-accent-b-dark text -lg -serif -regular'/>
 </div>

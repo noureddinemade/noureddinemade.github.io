@@ -84,19 +84,19 @@
 <Block props={{ "class":"general" }}>
     <h2 class="text -xl -sans -bold -uppercase">Colouring in a pharmacy</h2>
     <p class="text -xl">
-        We wanted to stay close to the existing palette so the transition from old brand to new was as smooth as possible. I modernised the core blue and expanded the shades and tints to give us more to work with. This was our Simple Blue.
+        We wanted to stay close to the existing palette so the transition from old brand to new was as smooth as possible. I modernised the core blue and expanded the shades and tints to give us more to work with. This was <span class="text -sans -lg -uppercase -bold">Simple Blue</span>.
     </p>
     <p class="text -lg">
         I added a secondary purple (Simple Purple) and a tertiary yellow (Simple Yellow), giving us three brand colours in total. Expanding the palette gave us an extra layer to communicate with. We could use colour to emphasise things without them getting confused with links or primary actions.
     </p>
     <Image src="work/soh/brand-refresh/005-colours.png" alt="Colour palette" props={{ "class":"spacing -m-t-lg -m-b-lg" }}/>
-    <p class="text -lg">
+    <p class="text -xl">
         There was also a set of three UI colours:
     </p>
-    <ul class="base text -lg -serif">
-        <li>Neutral black with a hint of Simple Blue for text, content and general backgrounds.</li>
-        <li>Positive green for all the happy outcomes in the UI.</li>
-        <li>Danger red for all the negative or high-risk situations in the UI.</li>
+    <ul class="base text -xl -serif">
+        <li><span class="text -sans -lg -uppercase -bold">Neutral black</span> with a hint of <span class="text -sans -lg -uppercase -bold">Simple Blue</span> for text, content and general backgrounds.</li>
+        <li><span class="text -sans -lg -uppercase -bold">Positive green</span> for all the happy outcomes in the UI.</li>
+        <li><span class="text -sans -lg -uppercase -bold">Danger red</span> for all the negative or high-risk situations in the UI.</li>
     </ul>
 </Block>
 
