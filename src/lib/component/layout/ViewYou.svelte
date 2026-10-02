@@ -4,7 +4,7 @@
 
 </script>
 
- <p class="text -xl">
+ <p class="text -xl -center">
     You offer: <span class="text -sans -uppercase -lg -bold">ownership</span> and creative freedom to solve problems, <span class="text -sans -uppercase -lg -bold">flexibility</span> to deliver good work, not sit in an office from 9 to 5, a <span class="text -sans -uppercase -lg -bold">diverse</span> environment <span class="text -italic -push -subtle">(which includes leadership)</span>, and a <span class="text -sans -uppercase -lg -bold">competitive</span> salary.
 </p>
 

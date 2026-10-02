@@ -4,7 +4,7 @@
 
 </script>
 
-<p class="text -xl">
+<p class="text -xl -center">
     I bring: <span class="text -sans -uppercase -lg -bold">hands-on</span> design leadership, <span class="text -sans -uppercase -lg -bold">honesty</span> that&rsquo;s direct and respectful, deliberate <span class="text -sans -uppercase -lg -bold">collaboration</span> that centres the people it&rsquo;s for, and <span class="text -sans -uppercase -lg -bold">two decades</span> of multidisciplinary design experience.
 </p>
 <div class="item layout -f-a-center spacing -gap-sm">

@@ -224,7 +224,7 @@
             <Image alt="" src="work/dub/design-system/token-6-css-contrast.svg" props={{ "class":"sticky -top-xxl", "role":"presentation" }} />
             <Image alt="" src="work/dub/design-system/token-7-css-usage.svg" props={{ "class":"sticky -top-xxl", "role":"presentation" }} />
         </div>
-        <p class="text -lg -gap-lg sticky -top-xxl">
+        <p class="text -xl -gap-lg sticky -top-xxl">
             The first and most impactful thing we did was bring the tokens into the build. Bringing tokens in meant that the design and engineering team now had shared vocabulary when it came to fundamental things like sizing and colours. While this was not a component and the result was not visible, the outcome of this change substantially improved handover efficiency. A token used in the design system translates to a css variable. Same name, same value, same structure.
         </p>
     </div>

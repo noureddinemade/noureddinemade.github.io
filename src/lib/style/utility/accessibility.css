@@ -39,9 +39,6 @@ ul.work-index > li.case-study-item:has(a.link:focus-visible) {
 }
 
 div.item.-role p a:focus-visible {
-    outline: 3px solid var(--dark-dark);
-    border-radius: 44px;
-    text-decoration: none;
 
     &:nth-of-type(6n+1) { --link-bg: var(--accent-a-base); --link: var(--light-base); }
     &:nth-of-type(6n+2) { --link-bg: var(--accent-b-base); --link: var(--light-base); }
