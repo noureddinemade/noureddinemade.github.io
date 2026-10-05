@@ -82,7 +82,7 @@
 
 
 <svelte:head>
-    <title>The Online Portfolio of Noureddine Azhar - {meta.title}</title>
+    <title>{meta.title}</title>
     <meta name="description" content={meta.desc} />
     <meta property="og:title" content={meta.title} />
     <meta property="og:description" content={meta.desc} />

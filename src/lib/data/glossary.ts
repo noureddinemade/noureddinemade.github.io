@@ -260,15 +260,15 @@ export const cases: Page[] = [
 export const pages: Page[] = [
     { 
         title:'Home', 
-        desc:'The online portfolio of Noureddine Azhar.', 
-        href:'/', 
+        desc:"Hello internet friends, I'm Noureddine — a (hands-on) design leader with two decades of multidisciplinary design experience who enjoys working on useful things, with decent people.", 
+        href:'/',
         id:'home',
         inNav: true,
         type: 'page'
     },
     { 
         title:'Work', 
-        desc:'', 
+        desc:'A curated selection of roles & work from the last twenty years.', 
         href:'/work/',
         id:'work',
         inNav: true,
@@ -276,7 +276,7 @@ export const pages: Page[] = [
     },
     { 
         title:'About', 
-        desc:'', 
+        desc:"Nice to meet you,I'm Noureddine.", 
         href:'/about/',
         id:'about',
         inNav: true,
@@ -292,7 +292,7 @@ export const pages: Page[] = [
     },
     { 
         title:'Are we a good fit?', 
-        desc:'', 
+        desc:"I'm currently open to work but before you reach out, please check to make sure that we're a good fit.", 
         href:'/fitcheck/',
         id:'fitcheck',
         inNav: true,
