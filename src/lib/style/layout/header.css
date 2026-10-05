@@ -1,0 +1,84 @@
+/* Header */
+header.global {
+
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--scale-xs);
+    padding: var(--scale-md);
+    width: 100vw;
+    max-width: var(--mw-xxl);
+    height: 100vh;
+    pointer-events: none;
+    translate: -50% 0;
+
+    /* Children */
+    div.group {
+
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: var(--scale-sm);
+        padding: var(--scale-sm);
+        width: 100%;
+        border-radius: var(--scale-xxl);
+        background-color: var(--bg-dynamic);
+        border: 2px solid var(--dark-dark);
+        transition: translate calc(var(--pg-transition-speed) / 1.5) ease;
+
+        &.-top { translate: 0 -150%; margin-bottom: auto; }
+        &.-bottom { translate: 0 150%; margin-top: auto; }
+    }
+    a, div.block, button {
+        position: relative;
+        padding: var(--scale-xs) var(--scale-md);
+        border-radius: var(--scale-xxl);
+        border: 2px solid var(--dark-dark);
+        pointer-events: auto;
+        overflow: hidden;
+        
+
+        /* Children */
+        p, span.label {
+            white-space: nowrap;
+            font-size: var(--fs-xl);
+            font-family: var(--ff-serif);
+            border-radius: var(--scale-xxl);
+            text-align: center;
+        }
+    }
+    a { 
+        --link: var(--light-light);
+        --link-bg: var(--accent-b-dark);
+
+        text-decoration: none;
+        text-align: center;
+
+        /* Variants */
+        &.-fitcheck { min-width: 280px; }
+
+        /* States */
+        &:hover { --link-bg: var(--accent-b-base); }
+    }
+    
+    div.block {
+        background-color: var(--bg-colour, transparent);
+        transition: background-color calc(var(--pg-transition-speed) / 1.5) ease;
+
+        /* States */
+        &.-noureddine   { --bg-colour: var(--accent-e-base); display: flex; &:hover { justify-content: flex-end; } }
+        &.-location     { --bg-colour: var(--accent-d-light); display: flex; &:hover { justify-content: flex-end; } }
+        &.-services     { --bg-colour: var(--accent-f-light); display: flex; &:hover { justify-content: flex-end; } }
+        
+        &[data-marquee] { max-width: var(--mw-md); }
+        
+    }
+
+}

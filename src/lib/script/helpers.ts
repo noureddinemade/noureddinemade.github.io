@@ -1,0 +1,209 @@
+import type { Role, Page, RawSwatch, ThemeSwatch, Fallback } from '$lib/script/types';
+import { roles, cases, pages } from '$lib/data/glossary';
+
+// General
+// Capitalise words
+export const capitalise = (str: string) => str ? str.charAt(0).toUpperCase() + str.slice(1) : '';
+export const randomise = (array: any[]) => array[Math.floor(Math.random() * array.length)];
+
+// Meta
+export const generateMeta = (current: Page) => {
+
+    const title = current.title.replaceAll('&rsquo;', "'");
+    const desc = current.desc.replaceAll('&rsquo;', "'");
+    const img = `https://noureddine.biz/asset/meta/${isCase(current) ? current.company+current.id : current.id }.png`;
+    const href = `https://noureddine.biz${current.href}`;
+    const published = current.inNav;
+
+    return { title, desc, img, href, published };
+
+}
+
+// Round Number
+export const round = (v: number, n = 4) => parseFloat(v.toFixed(n));
+
+// Roles
+export const getRoleByID = (id: string): Role | false => roles[id] ? roles[id] : false;
+export const getRoleTagsByID = (id: string): string[] => roles[id] ? [roles[id].title, roles[id].company, roles[id].period, roles[id].location ] : [];
+
+// Case studies
+const getCaseInDirection = (id: number, step: number) => {
+    let i = id + step;
+
+    while (i >= 0 && i < cases.length) {
+        if (cases[i].inNav) return cases[i];
+        i += step;
+    }
+
+    return false;
+};
+
+export const getCasesForRole = (id: string): Page[] | undefined => cases.filter(c => c.company === id && c.inList);
+export const getCaseByID = (id: number): Page | false => cases[id] ? cases[id] : false;
+export const caseAvailable = (id: string): boolean => cases.some(c => c.id === id && c.inNav);
+export const getNextCase = (id: number): Page | false => getCaseInDirection(id, 1);
+export const getPrevCase = (id: number): Page | false => getCaseInDirection(id, -1);
+export const getCaseIndex = (id: string): number => cases.findIndex(c => c.id === id);
+export const isCase = (p: Page | null) => p && p.type === 'case' ? true : false;
+
+export const randomCaseStudy = (current: number) => {
+
+    const pool = cases.filter((c, i) => c.inList && i !== current);
+
+    if (pool.length === 0) return false;
+
+    return randomise(pool);
+    
+};
+
+// Pages
+export const getPageByID = (id: string): Page | undefined => pages.find(p => p.id === id);
+export const getMetaByPath = (path: string): Page | undefined => [...pages, ...cases].find(r => r.href === path);
+
+// Theme
+export const adjustColour = (colour:string | number[], amount: number) => {
+    
+    // Parse input to r, g, b (0-255)
+    let r, g, b;
+
+    if (Array.isArray(colour)) { [r, g, b] = colour; } 
+
+    else { 
+        
+        let hex = colour.replace('#', '');
+        
+        if (hex.length === 3) hex = hex.split('').map(c => c + c).join('');
+            r = parseInt(hex.slice(0, 2), 16);
+            g = parseInt(hex.slice(2, 4), 16);
+            b = parseInt(hex.slice(4, 6), 16);
+    }
+
+    // RGB -> HSL
+    r /= 255; g /= 255; b /= 255;
+    const max = Math.max(r, g, b), min = Math.min(r, g, b);
+    let h = 0, s = 0;
+    const l = (max + min) / 2;
+
+    if (max !== min) {
+
+        const d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+        switch (max) {
+            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+            case g: h = (b - r) / d + 2; break;
+            case b: h = (r - g) / d + 4; break;
+        }
+
+        h /= 6;
+
+    }
+
+    // Adjust lightness (additive, clamped 0-1)
+    const nl = Math.min(1, Math.max(0, l + amount / 100));
+
+    // HSL -> RGB
+    let nr, ng, nb;
+    
+    if (s === 0) {
+        nr = ng = nb = nl;
+    } else {
+        const hue2rgb = (p: number, q: number, t: number) => {
+            if (t < 0) t += 1;
+            if (t > 1) t -= 1;
+            if (t < 1 / 6) return p + (q - p) * 6 * t;
+            if (t < 1 / 2) return q;
+            if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+            return p;
+        };
+        
+        const q = nl < 0.5 ? nl * (1 + s) : nl + s - nl * s;
+        const p = 2 * nl - q;
+        nr = hue2rgb(p, q, h + 1 / 3);
+        ng = hue2rgb(p, q, h);
+        nb = hue2rgb(p, q, h - 1 / 3);
+
+    }
+
+    const R = Math.round(nr * 255), G = Math.round(ng * 255), B = Math.round(nb * 255);
+    const toHex = (v: number) => v.toString(16).padStart(2, '0');
+
+    return {
+        hex: `#${toHex(R)}${toHex(G)}${toHex(B)}`,
+        rgb: `rgb(${R},${G},${B})`,
+    };
+}
+
+export const generateTheme = (colour: RawSwatch) => {
+
+    const base  = { hex: colour.hex, rgb: `rgb(${colour.rgb[0]},${colour.rgb[1]},${colour.rgb[2]})` };
+    const dark  = adjustColour(colour.rgb, -10);
+    const light = adjustColour(colour.rgb, 10);
+    const raw   = `${colour.rgb[0]},${colour.rgb[1]},${colour.rgb[2]}`;
+
+    return { base, dark, light, raw } as ThemeSwatch;
+
+}
+
+// CSS
+export const fluid = (min: string, preferred: string, max: string) => ({ clamp: { min, preferred, max } });
+export const fallback = (name: string, value: string | ReturnType<typeof fluid> | ReturnType<typeof fluidClamp>): Fallback => ({ fallback: name, value });
+export const camelToKebab = (str: string) => ( str.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase() );
+
+export const fluidClamp = (min: string, max: string, minVw = 320, maxVw = 1440) => {
+    const base = 16;
+    const minRem = parseFloat(min);
+    const maxRem = parseFloat(max);
+
+    const minPx = minRem * base;
+    const maxPx = maxRem * base;
+
+    const slope = (maxPx - minPx) / (maxVw - minVw); // px per px
+    const vw = round(slope * 100);                   // vw coefficient
+    const interceptRem = round((minPx - slope * minVw) / base);
+
+    const preferred = `calc(${interceptRem}rem + ${vw}vw)`;
+
+    return { clamp: { min, preferred, max } };
+}
+
+// Resolves a value that may be a plain string or a fluid object → CSS string
+const resolveValue = (value: any): string => {
+    if (value && typeof value === 'object' && 'clamp' in value) {
+        const { min, preferred, max } = value.clamp;
+        return `clamp(${min},${preferred},${max})`;
+    }
+    return String(value);
+}
+
+export const toCssVars = (obj: Object, prefix = '-') => {
+
+    let out = '';
+    for (const [key, value] of Object.entries(obj)) {
+        const name = `${prefix}-${camelToKebab(key)}`;
+        if (value && typeof value === 'object' && typeof value.rgb === 'string') {
+            out += `${name}:${value.rgb};`;                                  // colour leaf
+        } else if (value && typeof value === 'object' && 'clamp' in value) {
+            out += `${name}:${resolveValue(value)};`;                        // fluid leaf → clamp()
+        } else if (value && typeof value === 'object' && 'fallback' in value) {
+            out += `${name}:var(${value.fallback},${resolveValue(value.value)});`; // var(), fluid-aware
+        } else if (typeof value === 'string' || typeof value === 'number') {
+            out += `${name}:${value};`;
+        } else if (value && typeof value === 'object') {
+            out += toCssVars(value, name);                                   // recurse
+        }
+    }
+    return out;
+
+}
+
+export const randomAccent = (exclude?: string) => {
+
+    const shade: string[] = randomise(['light','base','dark']);
+    let accent: any = ['a','b','c','d','e','f'];
+        accent = exclude ? randomise(accent.filter((a: string) => a === exclude)) : randomise(accent);
+
+    // Get random shade
+
+    return `accent-${accent}-${shade}`;
+
+}

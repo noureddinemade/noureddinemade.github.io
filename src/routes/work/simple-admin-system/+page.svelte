@@ -1,0 +1,131 @@
+<script lang="ts">
+
+    import { caseStudySetup } from "$lib/script/caseStudy.svelte";
+
+    // Components
+    import Block from "$lib/component/layout/Block.svelte";
+    import PageHeader from "$lib/component/layout/PageHeader.svelte";
+    import Image from "$lib/component/asset/Image.svelte";
+    import Video from "$lib/component/asset/Video.svelte";
+    import Slider from "$lib/component/asset/Slider.svelte";
+
+    const cs = caseStudySetup();
+    
+</script>
+
+<PageHeader props={{ "caseStudy": cs.caseStudy, "content":{"class":"spacing -mw-lg"}}}>
+
+    <h1 class="text -headline -sans -uppercase">
+        {@html cs.caseStudy?.title}
+    </h1>
+    {#if (cs.caseStudy && cs.caseStudy.desc)}
+        <p class="text -xxl">
+            {@html cs.caseStudy.desc}
+        </p>
+    {/if}
+
+</PageHeader>
+
+<Block props={{ "class":"general" }}>
+    <p class="text -xxl">
+        Simple Online Pharmacy started in 2015 selling over-the-counter treatments across the UK, then grew into private online GP clinics and NHS prescriptions. These days more than 1,000 patients a day rely on it to get their medication safely and on time. None of that works without the tools running behind it <span class="mark -em">&mdash;</span> and the ones they had couldn&rsquo;t keep up.
+    </p>
+</Block>
+
+<Block props={{ "class":"general" }}>
+    <h2 class="text -xl -sans -bold -uppercase">The Goal</h2>
+    <div class="columns -two spacing -gap-lg">
+        <p class="text -lg -justify">
+            The goal was a new internal tool for the pharmacy, clinical and support teams to manage patients and orders. It needed to be simple: easy to understand, easy to onboard new staff onto, while still handling complex tasks and automating the manual work wherever possible.
+        </p>
+        <p class="text -lg -justify">
+            The existing tool couldn&rsquo;t scale with the business. It wasn&rsquo;t user-friendly, which made onboarding hard, and it was full of manual tasks that were either unnecessary or easy to automate. As we were the ones getting medication to people, even one error was too many.
+        </p>
+    </div>
+</Block>
+
+<Block props={{ "class":"general" }}>
+    <h2 class="text -xl -sans -bold -uppercase">Getting right into it</h2>
+    <p class="text -xl">
+        We were in the lucky position of having access to 100% of the people who&rsquo;d actually use the product. Before planning anything, I wanted to map out the full journey of an order from start to finish, so I spent a few days talking to at least two people in each department.
+    </p>
+    <Image src="work/soh/admin-system/001-full-business-flow.png" alt="Miro board of all documented business processes" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl -m-t-lg -p-xl", "data-zoom":3 }}/>
+    <Image src="work/soh/admin-system/001-status-map.png" alt="Miro board of order status and task flow" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -mw-xxl -m-t-lg -m-b-lg -p-xl", "data-zoom":3 }}/>
+    <p class="text -xl">
+        Alongside that, I sent a short survey to everyone who used the existing tool.
+    </p>
+    <p class="text -xl">
+        Then I ran a workshop with the co-founders and the team leads across the operational teams (pharmacy, clinical, support, warehouse). The point of it was to define the MVP, the key problems, and the metrics we&rsquo;d use to measure whether our solutions actually worked.
+    </p>
+</Block>
+
+<Block props={{ "class":"general" }}>
+    <h2 class="text -xl -sans -bold -uppercase">Concepts &amp; drafts</h2>
+    <p class="text -xl">
+        Unlike a regular ecommerce order, a patient&rsquo;s NHS order can&rsquo;t just go from the warehouse to the back of a truck. We were dealing with medication and regulatory pharmacy requirements, so a fully automated system was never on the table. The flow of an NHS order became the thing we used to map out the core tasks for the MVP, and to work out what could and couldn&rsquo;t be automated.
+    </p>
+    <div class="columns -two spacing -m-t-lg -m-b-lg -gap-md">
+        <Image src="work/soh/admin-system/004-task-automation-map-gpchase.png" alt="Miro board of the GP follow up task" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -p-sm", "data-zoom":4 }}/>
+        <Image src="work/soh/admin-system/004-task-responses-order-view.png" alt="Miro board of response options available on the order view" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -p-sm", "data-zoom":4 }}/>
+        <Image src="work/soh/admin-system/004-task-responses-patient-view.png" alt="Miro board of response options available on the patient view" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -p-sm", "data-zoom":4 }}/>
+        <Image src="work/soh/admin-system/004-task-automation-map.png" alt="Miro board of automation mapping" parent={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark spacing -p-sm", "data-zoom":4 }}/>
+    </div>
+    <p class="text -xl">
+        I ran multiple sessions, each with different members from different internal teams. Before each one I&rsquo;d send rough wireframes and concepts to look through, then walk everyone through the ideas during the session and get their feedback on both the existing product and the new concepts.
+    </p>
+</Block>
+
+<Block props={{ "class":"general" }}>
+    <h2 class="text -xl -sans -bold -uppercase">Designing the interface</h2>
+    <p class="text -xxl">
+        I always knew the UI was going to be plain (in the best way possible). Nothing flash, no reinventing the wheel <span class="mark -em">&mdash;</span> it just had to work. Then we hit the first major milestone: the MVP designs were ready. We had a simple click-through prototype that had been passed around for a week, and so far, it had landed pretty well (people just got it).
+    </p>
+    <Slider bg="accent-d-light">
+        <Image src="work/soh/admin-system/005-final-design-order-list.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/005-final-design-order-view.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/005-final-design-patient-list.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/005-final-design-patient-view-1.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/005-final-design-patient-view-2.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/005-final-design-patient-view-3.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/005-final-design-task-view.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/006-final-design-task-ftc.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/006-final-design-task-gpchase.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/006-final-design-task-nomination.png" alt="Final desktop designs"/>
+        <Image src="work/soh/admin-system/006-final-design-task-to-be-shipped.png" alt="Final desktop designs"/>
+    </Slider>
+</Block>
+
+<Block props={{ "class":"general" }}>
+    <h2 class="text -xl -sans -bold -uppercase">Building it out</h2>
+    <p class="text -xl">
+        As the tool was being built, we tested it continuously. We&rsquo;d get members of the internal teams to run specific tasks like searching for an order or a patient, and then tell us how it felt now that they were working with something real, not a basic click-through prototype.
+    </p>
+    <p class="text -lg">
+        We released a light version first, with two minor tasks: nominations and first time calls, and basic patient and order views. The point was to get real usage data and start measuring the difference between the old tool and the new one.
+    </p>
+    <Video 
+        vid="work/soh/admin-system/admin-ftc.mp4"
+        props={{ 
+            "aria-label":"Using the system to perform a first time call task",
+            "poster":"",
+            "class":"border -rounded -r-md -s-base spacing -m-t-lg",
+            "autoplay":true, "muted":true, "loop":true
+    }}/>
+</Block>
+
+<Block props={{ "class":"general" }}>
+    <h2 class="text -xl -sans -bold -uppercase">The Payoff</h2>
+    <p class="text -xxl">
+        The nominations task saw a massive improvement. On the old system, a patient care member could get through around 27 nominations an hour. <span class="mark -highlight colour -bg -bg-accent-a-dark text -contrast">Using the new task based system, that jumped to close to 70</span> <span class="mark -em">&mdash;</span> mostly down to bulk copy-and-paste actions.
+    </p>
+    <p class="text -xl">
+        First-time calls were a different story. Depending on the length of the call, a patient care member could make around 12 an hour, and the new system didn&rsquo;t move that number much. What it did do was give the team a checklist of the information they needed to cover, a way to reschedule calls so there was no manual follow-up, and an automated email to the patient with dynamic content based on which items got checked off.
+    </p>
+    <p class="text -xl">
+        Over the following weeks we released more tasks into the light version until it included all we needed for version 1. When the teams compared it to the old tool, the problem that had dominated the early stages of the project (not being able to find what you were looking for) was pretty much gone.
+    </p>
+</Block>
+
+<!-- Cursor Attachments -->
+<span class="cursor-attach -tag" id="next">Next Slide</span>
+<span class="cursor-attach -tag" id="prev">Previous Slide</span>

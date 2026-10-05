@@ -1,0 +1,43 @@
+/* Toggle */
+
+[data-toggle] *.-off:not(button, .toggle-element) { opacity: 0; filter: blur(16px); transition-delay: 0s; height: 0; }
+
+.toggle-element {
+
+    --speed: .3s;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 100%;
+    transition: margin-bottom var(--speed) ease, grid-template-rows var(--speed) ease;
+    transition-delay: 0s;
+
+    /* Pseudo */
+    &:has(.-off) {
+        grid-template-rows: 0fr;
+        margin-bottom: calc(-1 * var(--gap-item));
+        transition-delay: var(--speed);
+    }
+
+    /* Children */
+    > * {
+        min-height: 0;
+        overflow: hidden;
+        opacity: 1;
+        transition: opacity var(--speed) ease, filter var(--speed) ease;
+        transition-delay: var(--speed);
+        filter: none;
+        height: auto
+
+    }
+}
+
+/* Tabs */
+[data-tab-target] {
+    transition: opacity 200ms ease, display 200ms allow-discrete;
+    
+    @starting-style { opacity: 0; }
+
+    &.-off { opacity: 0; display: none; }
+
+}

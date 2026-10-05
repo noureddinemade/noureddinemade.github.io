@@ -1,0 +1,10 @@
+/* Layers */
+@layer reset, base, layout, component, page, decoration, utility;
+
+@import "$lib/style/layer/reset.css"           layer(reset);
+@import "$lib/style/layer/base.css"            layer(base);
+@import "$lib/style/layer/layout.css"          layer(layout);
+@import "$lib/style/layer/component.css"       layer(component);
+@import "$lib/style/layer/page.css"            layer(page);
+@import "$lib/style/layer/decoration.css"      layer(decoration);
+@import "$lib/style/layer/utility.css"         layer(utility);

@@ -1,0 +1,17 @@
+.show-on-mobile { display: none; }
+
+@media screen and (max-width: 820px) {
+
+    html { font-size: 14px; }
+
+    .hide-on-mobile { display: none; visibility: hidden; }
+    .show-on-mobile { display: block; visibility: visible; }
+
+    footer.global {
+
+        /* Children */
+        [data-marquee] { width: 80%; }
+
+    }
+    
+}

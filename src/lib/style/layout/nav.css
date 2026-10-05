@@ -1,0 +1,41 @@
+/* Nav */
+nav.global {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--scale-sm);
+    pointer-events: auto;
+
+    /* Children */
+    a {
+
+        --link: var(--light-light);
+        --link-bg: var(--accent-c-base);
+
+        text-align: center;
+        text-decoration: none;
+        transition: rotate .5s ease, background-color .3s ease, translate .3s ease, opacity .3s ease;
+
+        /* States */
+        &:hover { --link-bg: var(--accent-c-dark); }
+
+        /* Variants */
+        &.-current {
+            --link: var(--dark-base);
+            --link-bg: transparent;
+
+            pointer-events: none;
+        }
+
+        /* Children */
+        p {
+            font-size: var(--fs-xl);
+            font-family: var(--ff-serif);
+            border-radius: var(--scale-xxl);
+        }
+
+    }
+}

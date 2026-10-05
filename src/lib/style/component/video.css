@@ -1,0 +1,11 @@
+div.vid-wrap {
+    
+    position: relative;
+    overflow: hidden;
+
+    /* Video */
+    video {
+        
+    }
+
+}

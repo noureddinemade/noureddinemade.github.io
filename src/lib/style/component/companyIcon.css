@@ -1,0 +1,42 @@
+span.company-icon {
+    --size: 36px;
+    
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+
+    width: var(--size);
+    height: var(--size);
+    border-radius: var(--scale-xs);
+    box-shadow: 4px 8px 8px rgba(var(--dark-raw), .1);
+    overflow: hidden;
+
+    /* Pseudo */
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent 10%, rgba(var(--light-raw), .3) 60%, transparent 90%);
+        translate: -100% 0;
+        pointer-events: none;
+    }
+
+    /* States */
+    &:hover:before { animation: shineReflection 1s ease 1; }
+
+    /* Variants */
+    &.-landscape {
+        width: auto;
+    }
+
+    /* Children */
+    svg {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+}

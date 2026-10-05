@@ -1,0 +1,44 @@
+/* Imports */
+@import "$lib/style/base/fonts.css";
+@import "$lib/style/base/typography.css";
+@import "$lib/style/base/list.css";
+
+/* Base */
+html {
+
+    /* Background */
+    --bg-static: var(--light-base);
+    --bg-dynamic: var(--light-base);
+    --body: var(--dark-base);
+
+    font-size: 16px;
+    line-height: var(--lh-base);
+    letter-spacing: var(--ls-base);
+    text-rendering: optimizeLegibility;
+    color: var(--body);
+    background-color: var(--bg-dynamic);
+    transition: background-color calc(var(--pg-transition-speed) / 1.5);
+    opacity: 0;
+    animation: freshOpen 1s ease .5s 1 forwards;
+
+}
+
+::selection {
+    background-color: var(--dark-light);
+    color: var(--light-base);
+}
+
+/* For Firefox compatibility */
+::-moz-selection {
+    background-color: var(--dark-base);
+    color: var(--light-base);
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body { height: auto; }
+
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: clip; }
+.lenis.lenis-smooth iframe { pointer-events: none; }

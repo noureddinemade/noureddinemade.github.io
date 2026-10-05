@@ -1,0 +1,79 @@
+a.link {
+
+    
+    /* States */
+    &[aria-disabled="true"] {
+        filter: grayscale(100);
+    }
+    /* Variants */
+    &.-next, &.-prev {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--scale-xs);
+
+        /* Psuedo */
+        &:before, &:after {
+            width: 32px;
+            height: 32px;
+            background-color: var(--link);
+            mask-size: 100% 100%;
+            mask-position: center;
+            mask-repeat: no-repeat;
+            transition: background-color .2s ease;
+        }
+    }
+
+    &.-next:after {
+        content: '';
+        mask-image: url($lib/asset/icon/arrow-right-02.svg);
+    }
+    &.-prev:before {
+        content: '';
+        mask-image: url($lib/asset/icon/arrow-left-01.svg);
+    }
+
+    &.-external:after {
+    }
+
+    &.-case-study-item {
+
+        --link: var(--dark-base);
+
+        display: block;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: var(--scale-lg);
+        text-decoration: none;
+
+        /* States */
+        &:hover { background-color: var(--hover-colour); }; 
+
+        /* Children */
+    }
+
+    &.-choice {
+
+        --link: var(--dark-dark);
+
+        font-size: var(--fs-md);
+        font-family: var(--ff-sans);
+        font-weight: var(--fw-regular);
+        background-color: var(--light-light);
+        padding: var(--scale-xs) var(--scale-sm);
+        border-radius: var(--scale-md);
+        border: 2px solid var(--dark-dark);
+        transition: scale .2s ease;
+        text-decoration: none;
+
+        /* States */
+        &:hover { scale: 1.05; }
+
+    }
+    
+}

@@ -1,0 +1,24 @@
+main {
+
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--bg-dynamic);
+    opacity: 1;
+    filter: none;
+    translate: none;
+    opacity: var(--pg-transition-opacity);
+    filter: blur(var(--pg-transition-blur));
+    translate: var(--pg-transition-pos-x) var(--pg-transition-pos-y);
+    transition: 
+        background-color calc(var(--pg-transition-speed) / 1.5) ease,
+        opacity calc(var(--pg-transition-speed) / 1.5) ease,
+        filter calc(var(--pg-transition-speed) / 1.5) ease,
+        translate calc(var(--pg-transition-speed) / 1.5) ease;
+    
+}

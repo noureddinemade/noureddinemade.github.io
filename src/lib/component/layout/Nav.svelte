@@ -1,0 +1,21 @@
+<script lang="ts">
+    
+    import { pages } from '$lib/data/glossary';
+    
+    import Link from '$lib/component/action/Link.svelte';
+
+    let { current }: { current: string; } = $props();
+
+</script>
+
+<nav class="global">
+    {#each pages.filter(page => page.inNav) as page}
+        {@const isCurrent = page.id === current}
+        <Link props={{
+            href: page.href || undefined,
+            class:`${isCurrent ? '-current ' : ''}-nav` ,
+            'aria-current': isCurrent ? 'page' : undefined,
+            label: { 'data-text': page.title }
+        }} />
+    {/each}
+</nav>
