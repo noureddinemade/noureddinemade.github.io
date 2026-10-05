@@ -12,7 +12,7 @@
     
 </script>
 
-<PageHeader props={{ "caseStudy": cs.caseStudy, "content":{"class":"spacing -mw-lg"}}}>
+<PageHeader props={{ "caseStudy": cs.caseStudy }}>
 
     <h1 class="text -headline -sans -uppercase">
         {@html cs.caseStudy?.title}
@@ -40,7 +40,7 @@
         Then we ran some basic initial user interviews to find out whether our planning was on the right track. One of the strongest themes to come out of them was concern over patients just getting whatever medication they wanted.
     </p>
     <p class="text -lg -justify">
-        In reality this couldn&rsquo;t happen becausae everything is checked with the patient&rsquo;s GP surgery. However, it raised an interesting point about presenting the product so people clearly understood we weren&rsquo;t handing out access to anything and everything.
+        In reality this couldn&rsquo;t happen because everything is checked with the patient&rsquo;s GP surgery. However, it raised an interesting point about presenting the product so people clearly understood we weren&rsquo;t handing out access to anything and everything.
     </p>
 </Block>
 
@@ -107,7 +107,7 @@
 <Block props={{ "class":"general" }}>
     <h2 class="text -xl -sans -bold -uppercase">Conclusion</h2>
     <p class="text -xxl">
-        After three months of further design revisions and development, the MVP was built: the three main flows plus a basic settings area. Since then, more features have been added. Features like: additional patients per account for carers and family members, and IM1 integration, which allows direct communication with the GP surgery.
+        After three months of further design revisions and development, the MVP was built: the three main flows plus a basic settings area. Since then, more features have been added. Features like additional patients per account for carers and family members, and IM1 integration, which allows direct communication with the GP surgery.
     </p>
 </Block>
 

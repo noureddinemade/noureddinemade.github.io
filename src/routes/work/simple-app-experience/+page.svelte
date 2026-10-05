@@ -13,7 +13,7 @@
     
 </script>
 
-<PageHeader props={{ "caseStudy": cs.caseStudy, "content":{"class":"spacing -mw-lg"}}}>
+<PageHeader props={{ "caseStudy": cs.caseStudy }}>
 
     <h1 class="text -headline -sans -uppercase">
         {@html cs.caseStudy?.title}
@@ -114,7 +114,7 @@
     <h2 class="text -xl -sans -bold -uppercase">Conclusion</h2>
     <div class="columns -two spacing -gap-xl">
         <p class="text -xl -justify">
-            Now for the sad part. After the app was designed and a lot of progress had been made on the front end, problems on the back end brought development to a halt. For a range of reasons (including the old backend system not being able to handle many of the new system&rsquo;s requirements), we couldn&rsquo;t carry on.
+            Now for the sad part. After the app was designed and a lot of progress had been made on the front end, problems on the backend brought development to a halt. For a range of reasons (including the old backend system not being able to handle many of the new system&rsquo;s requirements), we couldn&rsquo;t carry on.
         </p>
         <p class="text -xl -justify">
             We hit a point on the front end where there was nothing more we could do until the new backend was finished. So I shifted focus to projects that didn&rsquo;t rely on engineers, since their efforts were now entirely on the backend system.

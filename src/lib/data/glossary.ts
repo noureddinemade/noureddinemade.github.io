@@ -47,7 +47,7 @@ export const roles: Roles = {
 
 export const cases: Page[] = [
     { 
-        title:'Accessibility at Dubber.', 
+        title:'Making Dubber&rsquo;s products more accessible.', 
         desc:'The platform was failing at accessibility and an audit caught the obvious failures. The people who actually rely on assistive tech showed us the ones that mattered.', 
         href:'/work/accessibility-at-dubber/', 
         company:'dub',

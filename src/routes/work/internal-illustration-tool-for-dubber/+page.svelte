@@ -15,7 +15,7 @@
     
 </script>
 
-<PageHeader props={{ "caseStudy": cs.caseStudy, "content":{"class":"spacing -mw-lg"}}}>
+<PageHeader props={{ "caseStudy": cs.caseStudy }}>
 
     <h1 class="text -headline -sans -uppercase">
         {@html cs.caseStudy?.title}
@@ -34,7 +34,7 @@
     </p>
     <div class="columns -two spacing -gap-lg">
         <p class="text -lg -justify">
-            We were losing people fast, resources were being cut and the overall leadership (almost exclusively the CEO) really sucked. Somehow, we were still expected to maintain the quantity and quality of the output. <span class="mark -highlight colour -bg -bg-accent-e-base text -contrast">In the first round of layoffs, I lost my entire design team and three product people.</span> These were were people who were incredible at their jobs and added an immense amount of quality, knowledge and depth to the company. 
+            We were losing people fast, resources were being cut and the overall leadership (almost exclusively the CEO) really sucked. Somehow, we were still expected to maintain the quantity and quality of the output. <span class="mark -highlight colour -bg -bg-accent-e-base text -contrast">In the first round of layoffs, I lost my entire design team and three product people.</span> These were people who were incredible at their jobs and added an immense amount of quality, knowledge and depth to the company. 
         </p>
         <p class="text -lg -justify">
             Those losses meant that the product marketing function at Dubber essentially no longer existed. It&rsquo;s not like it wasn&rsquo;t important, it was absolutely critical to how we interacted with partners and resellers. The expertise required to do it just vanished overnight. And with it, so did our ability to produce the illustrations that were a big part of our product and brand.
@@ -45,7 +45,7 @@
 <Block props={{ "class":"general" }}>
     <h2 class="text -xl -sans -bold -uppercase">What are we meant to do?</h2>
     <p class="text -xl">
-        I couldn&rsquo;t fix every aspect of the product marketing function, but when it came to illustrations, I had a solution that would help us maintain a small aspect of that quality <span class="mark -em">&mdash;</span> an internal tool that would give the wider product team a way of putting together new illustrations from existing components when needed. The only catch was: <span class="mark -highlight colour -bg -bg-accent-b-dark text -contrast">it needed to be built and released internally, very quickly, and without disrupting the enormous amount of existing work.</span>
+        I couldn&rsquo;t fix every aspect of the product marketing function, but when it came to illustrations, I had a solution that would help us maintain a small aspect of that quality <span class="mark -em">&mdash;</span> an internal tool that would give the wider product team a way of putting together new illustrations from existing components when needed. The only catch was: <span class="mark -highlight colour -bg -bg-accent-b-dark text -contrast">it needed to be built very quickly and without disrupting the enormous amount of existing work.</span>
     </p>
 </Block>
 
@@ -56,7 +56,7 @@
     </p>
     <p class="text -xl -justify">
         For the shapes we had five in total {#each array as i}<Image src={`work/dub/internal-tool/shape-${i}.svg`} alt="shape" props={{ "class":"inline-icon -md", "role":"presentation" }} />{/each}
-        each representing an aspect of the product: Recording, Cloud, Conversations, Trends and Insights. We weren&rsquo;t strict about usage though, they were brand shapes and we used them where it made sense. The masks were broken into quadrants: top left, top right, bottom left, bottom right which varied from shape to shape {#each array as i}<Image src={`work/dub/internal-tool/mask-${i}.svg`} alt="mask" props={{ "class":"inline-icon -md", "role":"presentation" }} />{/each} Twenty-five components so far.
+        each representing an aspect of the product: Recording, Cloud, Conversations, Trends and Insights. We weren&rsquo;t strict about usage though, they were brand shapes and we used them where it made sense. The masks were broken into quadrants: top left, top right, bottom left, bottom right which varied from shape to shape. Twenty-five components so far.
     </p>
     <div class="item spacing -m-t-lg -m-b-xl" data-tabs="The structure of an illustration">
 
@@ -102,7 +102,7 @@
         Building was actually the easiest part. My philosophy with internal tools is simple: <span class="mark -highlight colour -bg -bg-accent-e-base">if it&rsquo;s not dealing with sensitive data or interacting with live production code, it doesn&rsquo;t need to be precious.</span> It was a quick build in React that utilised SVGs for shapes and masks so that it could handle lossless adjustments.
     </p>
     <p class="text -lg">
-        What the user ends up being able to do is select a background, pick a colour from our brand palette, select one of the 430 objects available and then play around with the size, rotation and mask. Then when they&rsquo;re happy with it, they export the high quality PNG. The only process that doesn&rsquo;t live in the tool is that after an illustration is made, it gets added to the library manually and documented in a spreadsheet.
+        What the user ends up being able to do is select a background, pick a colour from our brand palette, select one of the 430 objects available and then play around with the size, rotation and mask. Then when they&rsquo;re happy with it, they export the high-quality PNG. The only process that doesn&rsquo;t live in the tool is that after an illustration is made, it gets added to the library manually and documented in a spreadsheet.
     </p>
     <Link props={{ "href":"https://noureddine.biz/dub-illustration-maker", "label":{"data-text":"Use the tool", "class":"text -serif -xl"}, "class":"-external layout -a-s-start", "data-window":"true" }}/>
     <Video 
@@ -114,7 +114,7 @@
         }}
     />
     <p class="text -xl">
-        Despite this tool not being built perfectly, I still made sure it could handle additions or updates in the future. Adding new shapes and colours were basic code additions, just a few extra lines here and there. Adding new foreground objects was just a matter of dropping the image into the directory and it would automatically populate in the tool.
+        Despite this tool not being built perfectly, I still made sure it could handle additions or updates in the future. Adding new shapes and colours was basic code additions, just a few extra lines here and there. Adding new foreground objects was just a matter of dropping the image into the directory and it would automatically populate in the tool.
     </p>
     <div class="columns -three spacing -gap-md -m-t-md -m-b-xl">
         <div class="item">
@@ -130,7 +130,7 @@
 </Block>
 
 <Block props={{ "class":"general" }}>
-    <h2 class="text -xl -sans -bold -uppercase">Same shit, different day.</h2>
+    <h2 class="text -xl -sans -bold -uppercase">Same shit, different day</h2>
     <div class="columns -two spacing -gap-xxl">
         <p class="text -xxl">
             While this didn&rsquo;t fix all of our problems, it helped us keep things afloat while we hoped things would return to normal and that the functions we lost would be restored <span class="mark -em">&mdash;</span> <span class="mark -highlight colour -bg -bg-accent-d-light text -contrast" data-cursor="🤡">that never happened.</span>

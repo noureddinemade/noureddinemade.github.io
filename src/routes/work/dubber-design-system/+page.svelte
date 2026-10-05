@@ -15,7 +15,7 @@
     
 </script>
 
-<PageHeader props={{ "caseStudy": cs.caseStudy, "content":{"class":"spacing -mw-lg"}}}>
+<PageHeader props={{ "caseStudy": cs.caseStudy }}>
 
     <h1 class="text -headline -sans -uppercase">
         {@html cs.caseStudy?.title}
@@ -46,12 +46,12 @@
         <Image src="work/dub/design-system/old-file-2.png" alt="A screenshot of Figma showing basic styles and components." parent={{ "class":"img-zoom border -r-sm -s-base spacing colour -bg -bg-light-dark", "data-zoom":5 }} />
     </div>
     <p class="text -xxl spacing -mw-xl">
-        <span class="mark -highlight colour -bg -bg-accent-b-dark text -contrast">Fundamentals are what make a design system valuable. The most in depth component libraries in the world don&rsquo;t mean anything if your teams don&rsquo;t know how to use them.</span>
+        <span class="mark -highlight colour -bg -bg-accent-b-dark text -contrast">Fundamentals are what make a design system valuable. The most in-depth component libraries in the world don&rsquo;t mean anything if your teams don&rsquo;t know how to use them.</span>
     </p>
 </Block>
 
 <Block props={{ "class":"general" }}>
-    <h2 class="text -xxl -sans -bold -uppercase">Four Layer dip</h2>
+    <h2 class="text -xxl -sans -bold -uppercase">Four-layer dip</h2>
     <p class="text -xl">
         The structure of the design system was tailored to the product. Not how the product is in its current form, but the <span class="mark -underline -d colour -fill -fill-accent-b-base" data-cursor="❓" data-cursor-attach="#problem">problem</span> that the product was solving. This was a key distinction because the point of the system was that it would scale and grow with the business. It consisted of 4 layers: components, groups, features and views. Views allow the user to get all the context they need and perform whatever tasks needed to complete their objective. Each view is made up of features, groups and components. Each feature allows a user to perform a single task. To do this, the groups within that feature give the user the context they need to perform that task.
     </p>
@@ -99,7 +99,7 @@
         <Image alt="" src="work/dub/design-system/contribution.svg" props={{ "class":"svg-contribution", "role":"presentation" }}/>
         <div class="item spacing -gap-md">
             <p class="text -lg -justify">
-                The contribution process was framed around the idea that anyone in design or engineering could contribute to the design system. If you wanted to contribute, you would add it to the agenda of our weekly design review. In that design review you <span class="text -sans -md -uppercase -bold">explain</span> your reasoning behind this contribution, the team would then <span class="text -sans -md -uppercase -bold">critique</span> and analyse it. If this contribution made sense and was worth adding to the design system, you then get to <span class="text -sans -md -uppercase -bold">implement</span> it and <span class="text -sans -md -uppercase -bold">own</span> it.
+                The contribution process was framed around the idea that anyone in design or engineering could contribute to the design system. If you wanted to contribute, you would add it to the agenda of our weekly design review. In that design review you <span class="text -sans -md -uppercase -bold">explain</span> your reasoning behind this contribution, the team then <span class="text -sans -md -uppercase -bold">critiques</span> and analyses it. If this contribution made sense and was worth adding to the design system, you then get to <span class="text -sans -md -uppercase -bold">implement</span> it and <span class="text -sans -md -uppercase -bold">own</span> it.
             </p>
             <p class="text -lg">
                 Using this process ensured that everyone had true ownership over the design system. It also meant that <span class="mark -highlight colour -bg -bg-accent-e-base text -contrast">if you couldn&rsquo;t answer why, when, where and how to use a component, then it wasn&rsquo;t ready to add to the system.</span> Because this process was always going to happen while we were working on other business projects, it helped ensure that the team was building with purpose and only building the components we needed.
@@ -114,7 +114,7 @@
         Documenting components is a very time consuming task. Existing Figma plugins provided varied outputs so using them as a starting point meant we would still need to spend time combining and standardising. AI couldn&rsquo;t bridge that gap either and could only provide the same outputs. So I decided to build a dedicated Figma plugin specific to our workflows, components and design system.
     </p>
     <p class="text -lg">
-        I spent half a day working on the first version of the plugin. That first version automated all of the heavy lifting. It would take whatever components you selected and spit out a spec sheet. Figma&rsquo;s Dev mode covered a lot of the technical stuff, so the plugin didn&rsquo;t extensively cover those elements, instead focusing on the most important things. It provided a really clear and detailed anatomy of the component, listed all the dependencies (other components used in this component) and provided all of the relevant sections for that component. For example if a component had a hover interaction built into it, that interaction would be listed in the behaviour section. This meant that after running the plugin for a component, you would end up with a spec sheet pre-filled with everything that you needed to document it. All that was left up to the designer was to document the why, when, where and how in the relevant sections.
+        I spent half a day working on the first version of the plugin. That first version automated all of the heavy lifting. It would take whatever components you selected and spit out a spec sheet. Figma&rsquo;s Dev Mode covered a lot of the technical stuff, so the plugin didn&rsquo;t extensively cover those elements, instead focusing on the most important things. It provided a really clear and detailed anatomy of the component, listed all the dependencies (other components used in this component) and provided all of the relevant sections for that component. For example, if a component had a hover interaction built into it, that interaction would be listed in the behaviour section. This meant that after running the plugin for a component, you would end up with a spec sheet pre-filled with everything that you needed to document it. All that was left up to the designer was to document the why, when, where and how in the relevant sections.
     </p>
     <div class="item spacing -m-t-lg -m-b-lg" data-tabs="Documentation Plugin">
         <div class="btn-group -tabs">
@@ -209,7 +209,7 @@
 <Block props={{ "class":"general" }}>
     <h2 class="text -xxl -sans -bold -uppercase">Build Baby</h2>
     <p class="text -xl">
-        Building the design system without disrupting the current work in place was the next challenge. From the design side of things, we didn&rsquo;t have to worry about core logic or any really impactful breaking changes, even when things broke, it was isolated in a design file. On the engineering side, this was something different. This was where our newly created and documented design system began to shine. I ran a kick off session with design and engineering to introduce the components and the documentation. Using the same method as before, I paired designers with engineers and asked them to spend time together over a few days finding components directly related to the work they were doing. Then we all got back together and assigned components/patterns to each initiative. 
+        Building the design system without disrupting the current work in place was the next challenge. From the design side of things, we didn&rsquo;t have to worry about core logic or any really impactful breaking changes, even if things broke, they were isolated in a design file. On the engineering side, this was something different. This was where our newly created and documented design system began to shine. I ran a kick off session with design and engineering to introduce the components and the documentation. Using the same method as before, I paired designers with engineers and asked them to spend time together over a few days finding components directly related to the work they were doing. Then we all got back together and assigned components/patterns to each initiative. 
     </p>
     <p class="text -xl">
         Every time work was being done on a project, we&rsquo;d build a few components alongside it. That didn&rsquo;t mean that every single component would be applied immediately, it just meant the component would be built and ready for use. Then at every opportunity we had, we&rsquo;d start applying the components.
@@ -225,11 +225,11 @@
             <Image alt="" src="work/dub/design-system/token-7-css-usage.svg" props={{ "class":"sticky -top-xxl", "role":"presentation" }} />
         </div>
         <p class="text -xl -gap-lg sticky -top-xxl">
-            The first and most impactful thing we did was bring the tokens into the build. Bringing tokens in meant that the design and engineering team now had shared vocabulary when it came to fundamental things like sizing and colours. While this was not a component and the result was not visible, the outcome of this change substantially improved handover efficiency. A token used in the design system translates to a css variable. Same name, same value, same structure.
+            The first and most impactful thing we did was bring the tokens into the build. Bringing tokens in meant that the design and engineering teams now had a shared vocabulary when it came to fundamental things like sizing and colours. While this was not a component and the result was not visible, the outcome of this change substantially improved handover efficiency. A token used in the design system translates to a CSS variable. Same name, same value, same structure.
         </p>
     </div>
     <p class="text -lg">
-        Of the projects we were working on at the time, three gave us opportunities to start using elements from the design system. <Link props={{ "href":cases[2].href, "label":{ "data-text":"Connections used components"} }}/> like labels and data (progress bar), migrating users from the old portal allowed us to focus on login flows and navigation, which used input, button and sidebar components, and an AI overhaul of data presentation focused on charts and graph components. All of these projects also allowed us to start using the design system tokens. Given that these projects covered different areas of the product, we could cover significant ground across the system simultaneously. Even if that meant that one flow used a new component while the other flow used an old component, this was not a dealbreaker for me. We would never have a chance to stop everything just so we could make sure that we fully implement the design system, so progress had to be brick by brick.
+        Of the projects we were working on at the time, three gave us opportunities to start using elements from the design system. <Link props={{ "href":cases[2].href, "label":{ "data-text":"Connections used components"} }}/> like labels and data (progress bar), migrating users from the old portal allowed us to focus on login flows and navigation, which used input, button and sidebar components, and an AI overhaul of data presentation focused on charts and graph components. All of these projects also allowed us to start using the design system tokens. Given that these projects covered different areas of the product, we could cover significant ground across the system simultaneously. Even if that meant that one flow used a new component while the other flow used an old component, this was not a dealbreaker for me. We would never have a chance to stop everything just so we could make sure that we fully implemented the design system, so progress had to be brick by brick.
     </p>
     <div class="columns -two spacing -gap-lg -m-t-lg">
         <div class="item spacing -gap-md sticky -top-xxl">

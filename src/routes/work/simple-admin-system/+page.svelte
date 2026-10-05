@@ -13,7 +13,7 @@
     
 </script>
 
-<PageHeader props={{ "caseStudy": cs.caseStudy, "content":{"class":"spacing -mw-lg"}}}>
+<PageHeader props={{ "caseStudy": cs.caseStudy }}>
 
     <h1 class="text -headline -sans -uppercase">
         {@html cs.caseStudy?.title}
@@ -101,12 +101,12 @@
         As the tool was being built, we tested it continuously. We&rsquo;d get members of the internal teams to run specific tasks like searching for an order or a patient, and then tell us how it felt now that they were working with something real, not a basic click-through prototype.
     </p>
     <p class="text -lg">
-        We released a light version first, with two minor tasks: nominations and first time calls, and basic patient and order views. The point was to get real usage data and start measuring the difference between the old tool and the new one.
+        We released a light version first, with two minor tasks: nominations and first-time-calls, and basic patient and order views. The point was to get real usage data and start measuring the difference between the old tool and the new one.
     </p>
     <Video 
         vid="work/soh/admin-system/admin-ftc.mp4"
         props={{ 
-            "aria-label":"Using the system to perform a first time call task",
+            "aria-label":"Using the system to perform a first-time-call task",
             "poster":"",
             "class":"border -rounded -r-md -s-base spacing -m-t-lg",
             "autoplay":true, "muted":true, "loop":true
@@ -116,7 +116,7 @@
 <Block props={{ "class":"general" }}>
     <h2 class="text -xl -sans -bold -uppercase">The Payoff</h2>
     <p class="text -xxl">
-        The nominations task saw a massive improvement. On the old system, a patient care member could get through around 27 nominations an hour. <span class="mark -highlight colour -bg -bg-accent-a-dark text -contrast">Using the new task based system, that jumped to close to 70</span> <span class="mark -em">&mdash;</span> mostly down to bulk copy-and-paste actions.
+        The nominations task saw a massive improvement. On the old system, a patient care member could get through around 27 nominations an hour. <span class="mark -highlight colour -bg -bg-accent-a-dark text -contrast">Using the new task-based system, that jumped to close to 70</span> <span class="mark -em">&mdash;</span> mostly down to bulk copy-and-paste actions.
     </p>
     <p class="text -xl">
         First-time calls were a different story. Depending on the length of the call, a patient care member could make around 12 an hour, and the new system didn&rsquo;t move that number much. What it did do was give the team a checklist of the information they needed to cover, a way to reschedule calls so there was no manual follow-up, and an automated email to the patient with dynamic content based on which items got checked off.

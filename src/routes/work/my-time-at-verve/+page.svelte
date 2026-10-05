@@ -13,7 +13,7 @@
     
 </script>
 
-<PageHeader props={{ "caseStudy": cs.caseStudy, "content":{"class":"spacing -mw-lg"}}}>
+<PageHeader props={{ "caseStudy": cs.caseStudy }}>
 
     <h1 class="text -headline -sans -uppercase">
         {@html cs.caseStudy?.title}
@@ -33,7 +33,7 @@
     </p>
     <div class="columns -two spacing -gap-xl">
         <p class="text -xl -justify">
-            After several months there, I noticed a few incidents of racism. I reported them to both the Head of People and the CEO, both of whom assured me it would be investigated. That was the catalyst for everything that followed, including the company trying to illegally deport me during my visa process.
+            After several months there, I noticed a few incidents of racism. I reported them to both the Head of People and the CEO, both of whom assured me there would be an investigation. That was the catalyst for everything that followed, including the company trying to illegally deport me during my visa process.
         </p>
         <p class="text -xl -justify">
             Despite all of that, I got to work with a group of wonderful people in the product and tech teams, and we worked on genuinely interesting stuff. So here&rsquo;s what I got up to while I was there.

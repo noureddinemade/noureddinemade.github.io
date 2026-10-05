@@ -12,7 +12,7 @@
     
 </script>
 
-<PageHeader props={{ "caseStudy": cs.caseStudy, "content":{"class":"spacing -mw-lg"}}}>
+<PageHeader props={{ "caseStudy": cs.caseStudy }}>
 
     <h1 class="text -headline -sans -uppercase">
         {@html cs.caseStudy?.title}
@@ -76,7 +76,7 @@
         I played around with a lot of concepts before settling on a direction. I knew the wordmark was always going to be limited by the length of the name, so the priority went on the mark.
     </p>
     <p class="text -lg">
-        The mark is built from eight leaf-inspired shapes looped in a circle, connecting in the middle. It represents the relationship the brand wants with our patients, across every part of the business. From the tech team building the products to the pharmacy team dispensing medication, we&rsquo;re always around to make sure they get the best care.
+        The mark is built from eight leaf-inspired shapes looped in a circle, connecting in the middle. It represents the relationship the brand wants with its patients, across every part of the business. From the tech team building the products to the pharmacy team dispensing medication, we&rsquo;re always around to make sure they get the best care.
     </p>
     <Image src="work/soh/brand-refresh/004-final-logo-full.png" alt="Final design for logo utilising the leaf concept" desc="The leaf came from a simple instinct: the natural, nurturing shape resonated with me as something that matched the company&rsquo;s personality." props={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-light spacing -p-md -m-t-lg"}}/>
 </Block>
@@ -103,10 +103,10 @@
 <Block props={{ "class":"general" }}>
     <h2 class="text -xl -sans -bold -uppercase">Typography</h2>
     <p class="text -xl">
-        One of the biggest requirements from the business was that the typography had to be available in every piece of software we use. That was a problem with the previous brand <span class="mark -em">&mdash;</span> there was no defined font, so teams used whatever they wanted.
+        One of the biggest requirements from the business was that the typography had to be available in every piece of software we used. That was a problem with the previous brand <span class="mark -em">&mdash;</span> there was no defined font, so teams used whatever they wanted.
     </p>
     <p class="text -lg">
-        In the end we went with two simple Google fonts: Karla for the main brand and Roboto for everything else. This meant every department could access the font on the tools they actually used. From the management team in Google Docs all the way to the warehouse team printing shipping labels.
+        In the end we went with two simple Google Fonts: Karla for the main brand and Roboto for everything else. This meant every department could access the fonts on the tools they actually used. From the management team in Google Docs all the way to the warehouse team printing shipping labels.
     </p>
     <div class="columns -two spacing -m-t-lg -m-b-lg -gap-md">
         <Image src="work/soh/brand-refresh/006-typography-3.png" alt="Typograhy sample iamge" parent={{}} props={{ "class":"img-zoom border -r-sm -s-base colour -bg -bg-light-dark" }}/>

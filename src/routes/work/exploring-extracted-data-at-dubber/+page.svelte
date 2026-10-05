@@ -15,7 +15,7 @@
     
 </script>
 
-<PageHeader props={{ "caseStudy": cs.caseStudy, "content":{"class":"spacing -mw-lg"}}}>
+<PageHeader props={{ "caseStudy": cs.caseStudy }}>
 
     <h1 class="text -headline -sans -uppercase">
         {@html cs.caseStudy?.title}
@@ -46,7 +46,7 @@
 <Block props={{ "class":"general" }}>
     <h2 class="text -xl -sans -bold -uppercase">Prototyping</h2>
     <p class="text -xl">
-        Given that we had strict time constraints on this project and the data was too complicated to navigate with anything static, I decided to skip past wireframes (despite what all those famous thought leaders on LinkedIn say, I find wire-framing to be really important to my process).
+        Given that we had strict time constraints on this project and the data was too complicated to navigate with anything static, I decided to skip past wireframes (despite what all those famous thought leaders on LinkedIn say, I find wireframing to be really important to my process).
     </p>
     <p class="text -lg">
         Using real sample data provided by the AI team, I built a fully functional prototype. This prototype provided users with a simple interface that showed all the predefined topics of a Moment, and allowed them to click on these topics and see the related entities. It also let them filter the entities using basic text input.
@@ -99,7 +99,7 @@
 <Block props={{ "class":"general" }}>
     <h2 class="text -xl -sans -bold -uppercase">Sell Sell Sell</h2>
     <p class="text -xl">
-        The sellable part was for our sales team to plan and execute. My role was making sure they had what they needed. Through training sessions with sales, customer service and support teams, we went through testing outcomes, the naming process, and the functionality of Connections. These sessions also allowed them to contribute by providing feedback that wasn't around usability but instead focused on branding and copy.
+        The sellable part was for our sales team to plan and execute. My role was making sure they had what they needed. Through training sessions with sales, customer service and support teams, we went through testing outcomes, the naming process, and the functionality of Connections. These sessions also allowed them to contribute by providing feedback that wasn&rsquo;t around usability but instead focused on branding and copy.
     </p>
 </Block>
 
