@@ -1,7 +1,8 @@
 {
-	"name": "nap26",
+	"name": "nap2026",
 	"private": true,
-	"version": "0.0.1",
+	"version": "1.0.0",
+	"packageManager": "pnpm@12.3.4",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
