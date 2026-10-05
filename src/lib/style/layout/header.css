@@ -26,7 +26,7 @@ header.global {
         flex-direction: row;
         justify-content: space-between;
         gap: var(--scale-sm);
-        padding: var(--scale-sm);
+        padding: var(--scale-xs);
         width: 100%;
         border-radius: var(--scale-xxl);
         background-color: var(--bg-dynamic);

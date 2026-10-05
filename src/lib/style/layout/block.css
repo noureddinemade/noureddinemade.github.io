@@ -20,7 +20,7 @@ section {
 
     /* Variants */
     &.home {
-        height: 100vh;
+        min-height: 100vh;
 
         /* Children */
         div.content {
