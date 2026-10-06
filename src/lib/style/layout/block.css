@@ -20,10 +20,13 @@ section {
 
     /* Variants */
     &.home {
+        padding: var(--scale-sm);
         min-height: 100vh;
 
         /* Children */
         div.content {
+            padding: var(--scale-xs);
+            margin: 0;
             max-width: var(--mw-xxl);
             align-items: center;
             justify-content: center;
