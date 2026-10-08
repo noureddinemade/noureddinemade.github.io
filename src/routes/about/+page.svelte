@@ -41,20 +41,28 @@
     </div>
 </Block>
 
-<Block props={{ "class":"general spacing -m-b-xxl", "content": { "class":"spacing -mw-xl" } }}>
+<Block props={{ "class":"general spacing -m-b-xxl", "content": { "class":"spacing -mw-xl -gap-xl" } }}>
 
-    <div class="columns -two spacing -gap-xl -m-b-xl">
+    <div class="columns -two spacing -gap-xl">
         <h2 class="text -xl -sans -uppercase">
             What can I help with?
         </h2>
         <Tags tags={['End-to-end Design', 'Zero-to-one Design', 'Design Systems', 'Design Strategy and Leadership', 'Product Focused Branding']} bg='dark-dark -bg -bg-accent-d-light -text -text-dark-dark text -xl -serif -regular'/>
     </div>
-    <div class="columns -two spacing -gap-xl -m-b-xl">
+    <div class="columns -two spacing -gap-xl">
         <h2 class="text -xl -sans -uppercase">
             Want to work together?
         </h2>
         <p class="text -xl -serif -regular">
             I&rsquo;m currently <span class="mark -underline -b colour -fill -fill-accent-a-base">open to work</span> but before you reach out, please check to make sure that <Link props={{ "href":"/fitcheck/", "label":{"data-text":"we&rsquo;re a good fit"} }} />.
+        </p>
+    </div>
+    <div class="columns -two spacing -gap-xl">
+        <h2 class="text -xl -sans -uppercase">
+            Where can you find me online?
+        </h2>
+        <p class="text -xl -serif -regular">
+            I&rsquo;m not as active as I used to be, but I&rsquo;m trying to write more so here&rsquo;s my <span class="text -italic -subtle -push">(pretty empty)</span> <Link props={{ "class":"-external", "href":"https://noureddinemade.substack.com/", "data-window":"true", "label":{"data-text":"Substack"} }}/>. Other than that, you can look at my <Link props={{ "class":"-external", "href":"https://linkedin.com/in/noureddinemade/", "data-window":"true", "label":{"data-text":"LinkedIn"} }}/> I guess?
         </p>
     </div>
     <div class="columns -two spacing -gap-xl">
