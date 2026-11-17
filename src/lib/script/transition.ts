@@ -1,6 +1,6 @@
 import type { TransitionConfig } from 'svelte/transition';
 import { cubicInOut } from 'svelte/easing';
-import { animation } from '$lib/style/variables';
+import { animation } from '#lib/style/variables.ts';
 
 // Page transition coordinator
 

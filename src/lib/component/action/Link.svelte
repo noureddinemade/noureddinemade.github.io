@@ -1,7 +1,7 @@
 <script lang="ts">
 
     import type { HTMLAttributes, HTMLAnchorAttributes } from 'svelte/elements';
-    import type { LinkProps } from "$lib/script/types";
+    import type { LinkProps } from "#lib/script/types.ts";
 
     let { props }: LinkProps = $props();
 

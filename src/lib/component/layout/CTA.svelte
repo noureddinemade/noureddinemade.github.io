@@ -1,7 +1,7 @@
 <script lang="ts">
 
-    import Link from "$lib/component/action/Link.svelte";
-    import Button from "$lib/component/action/Button.svelte";
+    import Link from "#lib/component/action/Link.svelte";
+    import Button from "#lib/component/action/Button.svelte";
 
     let ready = $state('');
 

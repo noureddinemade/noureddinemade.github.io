@@ -1,10 +1,10 @@
 <script lang="ts">
     
     import { onMount } from "svelte";
-    import { getRoleByID } from "$lib/script/helpers";
-    import { followInit } from "$lib/script/effect";
+    import { getRoleByID } from "#lib/script/helpers.ts";
+    import { followInit } from "#lib/script/effect.ts";
 
-    import Image from "$lib/component/asset/Image.svelte";
+    import Image from "#lib/component/asset/Image.svelte";
 
     let { id }: { id: string; } = $props();
     const role = $derived(getRoleByID(id));

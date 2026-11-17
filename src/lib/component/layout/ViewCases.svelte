@@ -1,8 +1,8 @@
 <script lang="ts">
 
-    import { cases } from "$lib/data/glossary";    
+    import { cases } from "#lib/data/glossary.ts";    
     
-    import CaseStudyItem from "$lib/component/data/CaseStudyItem.svelte";
+    import CaseStudyItem from "#lib/component/data/CaseStudyItem.svelte";
     
     const caseList = cases.filter(c => c.inList);
 

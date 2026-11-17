@@ -1,23 +1,23 @@
 <script lang="ts">
 
-    import { browser } from '$app/environment';
+    import { browser } from '$app/env';
     import { onMount, tick } from 'svelte';
     import { page } from '$app/state';
     import { onNavigate, afterNavigate } from '$app/navigation';
 
-    import { getMetaByPath, toCssVars, generateMeta } from '$lib/script/helpers';
-    import { imgLoad } from '$lib/script/utils';
-    import { coreInit, resetScroll, flags } from '$lib/script/core';
-    import { setNavPhase, transitionSpeed } from '$lib/script/transition';
-    import { cursorCleanup, cursorInit } from '$lib/script/cursor';
-    import { theme, spacing, typography, animation } from '$lib/style/variables';
+    import { getMetaByPath, toCssVars, generateMeta } from '#lib/script/helpers.ts';
+    import { imgLoad } from '#lib/script/utils.ts';
+    import { coreInit, resetScroll, flags } from '#lib/script/core.ts';
+    import { setNavPhase, transitionSpeed } from '#lib/script/transition.ts';
+    import { cursorCleanup, cursorInit } from '#lib/script/cursor.ts';
+    import { theme, spacing, typography, animation } from '#lib/style/variables.ts';
 
-    import Header from '$lib/component/layout/Header.svelte';
-    import Footer from '$lib/component/layout/Footer.svelte';
-    import Lite from '$lib/version/Lite.svelte';
-    import CTA from '$lib/component/layout/CTA.svelte';
+    import Header from '#lib/component/layout/Header.svelte';
+    import Footer from '#lib/component/layout/Footer.svelte';
+    import Lite from '#lib/version/Lite.svelte';
+    import CTA from '#lib/component/layout/CTA.svelte';
     
-    import '$lib/style/main.css';
+    import '#lib/style/main.css';
 
     const mq = browser ? window.matchMedia('(min-width: 820px)') : null;
     

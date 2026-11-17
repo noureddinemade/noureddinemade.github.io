@@ -1,4 +1,4 @@
-export { zoomInit } from '$lib/script/interaction/zoom';
-export { toggleInit, tabsInit } from '$lib/script/interaction/toggle';
-export { switchInit } from '$lib/script/interaction/switch';
-export { vidControlInit } from '$lib/script/interaction/video';
+export { zoomInit } from '#lib/script/interaction/zoom.ts';
+export { toggleInit, tabsInit } from '#lib/script/interaction/toggle.ts';
+export { switchInit } from '#lib/script/interaction/switch.ts';
+export { vidControlInit } from '#lib/script/interaction/video.ts';

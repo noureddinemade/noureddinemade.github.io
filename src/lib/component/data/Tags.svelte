@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import Tag from "$lib/component/data/Tag.svelte";
+    import Tag from "#lib/component/data/Tag.svelte";
 
     let { tags, bg, align }: { tags: string[], bg?: string, align?: string } = $props();
     

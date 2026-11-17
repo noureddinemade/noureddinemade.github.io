@@ -1,5 +1,5 @@
-import { flags, onTick, pointer, num } from '$lib/script/core';
-import type { ZoomItem } from '$lib/script/types';
+import { flags, onTick, pointer, num } from '#lib/script/core.ts';
+import type { ZoomItem } from '#lib/script/types.ts';
 
 export const zoomInit = (): (() => void) => {
     if (!flags.enabled) return () => {};

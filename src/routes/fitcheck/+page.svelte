@@ -1,12 +1,12 @@
 <script lang="">
 
-    import { transition, toggleTransitionIn, toggleTransitionOut } from "$lib/script/transition.js";
+    import { transition, toggleTransitionIn, toggleTransitionOut } from "#lib/script/transition.ts";
 
-    import Block from "$lib/component/layout/Block.svelte";
-    import PageHeader from "$lib/component/layout/PageHeader.svelte";
-    import Button from "$lib/component/action/Button.svelte";
-    import ViewYou from "$lib/component/layout/ViewYou.svelte";
-    import ViewMe from "$lib/component/layout/ViewMe.svelte";
+    import Block from "#lib/component/layout/Block.svelte";
+    import PageHeader from "#lib/component/layout/PageHeader.svelte";
+    import Button from "#lib/component/action/Button.svelte";
+    import ViewYou from "#lib/component/layout/ViewYou.svelte";
+    import ViewMe from "#lib/component/layout/ViewMe.svelte";
 
     let you = $state(false);
 

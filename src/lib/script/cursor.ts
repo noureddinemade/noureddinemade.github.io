@@ -1,4 +1,4 @@
-import { flags, onTick, pointer, num } from '$lib/script/core';
+import { flags, onTick, pointer, num } from '#lib/script/core.ts';
 
 // Module-level handles so cleanup can remove them
 let cursorEl: HTMLDivElement | null = null;

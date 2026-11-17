@@ -1,5 +1,5 @@
-import type { Role, Page, RawSwatch, ThemeSwatch, Fallback } from '$lib/script/types';
-import { roles, cases, pages } from '$lib/data/glossary';
+import type { Role, Page, RawSwatch, ThemeSwatch, Fallback } from '#lib/script/types.ts';
+import { roles, cases, pages } from '#lib/data/glossary.ts';
 
 // General
 // Capitalise words

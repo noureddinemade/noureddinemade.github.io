@@ -1,12 +1,12 @@
 <script>
     import { onMount } from "svelte";
-    import { followInit } from "$lib/script/effect";
+    import { followInit } from "#lib/script/effect.ts";
 
-    import Block from "$lib/component/layout/Block.svelte";
-    import PageHeader from "$lib/component/layout/PageHeader.svelte";
-    import Image from "$lib/component/asset/Image.svelte";
-    import Tags from "$lib/component/data/Tags.svelte";
-    import Link from "$lib/component/action/Link.svelte";
+    import Block from "#lib/component/layout/Block.svelte";
+    import PageHeader from "#lib/component/layout/PageHeader.svelte";
+    import Image from "#lib/component/asset/Image.svelte";
+    import Tags from "#lib/component/data/Tags.svelte";
+    import Link from "#lib/component/action/Link.svelte";
 
     onMount(() => followInit());
 

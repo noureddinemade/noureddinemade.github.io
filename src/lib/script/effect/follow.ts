@@ -1,6 +1,6 @@
 //
-import { flags, onTick, onScroll, pointer, num, onResize } from '$lib/script/core';
-import type { FollowItem } from '$lib/script/types';
+import { flags, onTick, onScroll, pointer, num, onResize } from '#lib/script/core.ts';
+import type { FollowItem } from '#lib/script/types.ts';
 
 //
 export const followInit = (): (() => void) => {

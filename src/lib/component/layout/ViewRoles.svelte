@@ -2,8 +2,8 @@
 
     import { onMount } from "svelte";
 
-    import { cases } from "$lib/data/glossary";
-    import { toggleInit } from "$lib/script/interaction";
+    import { cases } from "#lib/data/glossary.ts";
+    import { toggleInit } from "#lib/script/interaction.ts";
 
     import Role from "../data/Role.svelte";
     import CompanyIcon from "../asset/CompanyIcon.svelte";

@@ -1,13 +1,13 @@
 <script lang="ts">
 
-    import { caseStudySetup } from "$lib/script/caseStudy.svelte";
+    import { caseStudySetup } from "#lib/script/caseStudy.svelte.ts";
 
     // Components
-    import Block from "$lib/component/layout/Block.svelte";
-    import PageHeader from "$lib/component/layout/PageHeader.svelte";
-    import Button from "$lib/component/action/Button.svelte";
-    import Image from "$lib/component/asset/Image.svelte";
-    import Video from "$lib/component/asset/Video.svelte";
+    import Block from "#lib/component/layout/Block.svelte";
+    import PageHeader from "#lib/component/layout/PageHeader.svelte";
+    import Button from "#lib/component/action/Button.svelte";
+    import Image from "#lib/component/asset/Image.svelte";
+    import Video from "#lib/component/asset/Video.svelte";
 
     const cs = caseStudySetup();
     

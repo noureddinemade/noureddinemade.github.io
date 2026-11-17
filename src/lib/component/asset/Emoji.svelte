@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import type { EmojiProps } from "$lib/script/types";
+    import type { EmojiProps } from "#lib/script/types.ts";
 
     let { emoji, text, addOnClasses }: EmojiProps = $props();
     const classes = $derived(`emoji${ addOnClasses ? ' ' + addOnClasses : '' }`);

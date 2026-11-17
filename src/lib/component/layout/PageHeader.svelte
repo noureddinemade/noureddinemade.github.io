@@ -1,9 +1,9 @@
 <script lang="ts">
 
-    import type { PageHeaderProps } from "$lib/script/types";
+    import type { PageHeaderProps } from "#lib/script/types.ts";
     
-    import Block from "$lib/component/layout/Block.svelte";
-    import Tags from "$lib/component/data/Tags.svelte";
+    import Block from "#lib/component/layout/Block.svelte";
+    import Tags from "#lib/component/data/Tags.svelte";
 
     let { props={}, children }: PageHeaderProps = $props();
 

@@ -1,10 +1,10 @@
 <script lang="ts">
 
     import { onMount } from "svelte";
-    import { year } from "$lib/data/glossary";
-    import { marqueeInit } from "$lib/script/effect";
+    import { year } from "#lib/data/glossary.ts";
+    import { marqueeInit } from "#lib/script/effect.ts";
     
-    import Image from "$lib/component/asset/Image.svelte";
+    import Image from "#lib/component/asset/Image.svelte";
 
     onMount(marqueeInit);
     

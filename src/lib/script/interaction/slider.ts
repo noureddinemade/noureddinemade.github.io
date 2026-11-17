@@ -1,4 +1,4 @@
-import { flags } from '$lib/script/core';
+import { flags } from '#lib/script/core.ts';
 
 export const sliderInit = (slider: HTMLElement): (() => void) => {
     const slides = [...slider.children] as HTMLElement[];

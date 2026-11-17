@@ -1,7 +1,7 @@
 <script lang="ts">
 
     import type { HTMLAttributes, HTMLButtonAttributes } from 'svelte/elements';
-    import type { ButtonProps } from "$lib/script/types";
+    import type { ButtonProps } from "#lib/script/types.ts";
 
     let { props }: ButtonProps = $props();
 

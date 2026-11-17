@@ -1,4 +1,4 @@
-import type { Roles, Page } from '$lib/script/types';
+import type { Roles, Page } from '#lib/script/types.ts';
 
 export const roles: Roles = {
     dub:   {

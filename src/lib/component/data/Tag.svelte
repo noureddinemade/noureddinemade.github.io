@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import { randomAccent } from "$lib/script/helpers";
+    import { randomAccent } from "#lib/script/helpers.ts";
 
     let { tag, bg }: {tag: string, bg?: string} = $props();
 

@@ -1,10 +1,10 @@
 <script lang="ts">
 
-    import type { Role, RoleProps } from "$lib/script/types";
+    import type { Role, RoleProps } from "#lib/script/types.ts";
     
     import { onMount } from "svelte";
-    import { getRoleByID } from "$lib/script/helpers";
-    import { followInit } from "$lib/script/effect";
+    import { getRoleByID } from "#lib/script/helpers.ts";
+    import { followInit } from "#lib/script/effect.ts";
 
     let { id, children }: RoleProps = $props();
     const role: Role | false  = $derived(getRoleByID(id));

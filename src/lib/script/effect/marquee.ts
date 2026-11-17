@@ -1,4 +1,4 @@
-import { num, onResize } from '$lib/script/core';
+import { num, onResize } from '#lib/script/core.ts';
 
 const SPEED = 40;
 const MAX_FILL = 100;

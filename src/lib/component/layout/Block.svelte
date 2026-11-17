@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import type { BlockProps } from "$lib/script/types";
+    import type { BlockProps } from "#lib/script/types.ts";
        
     let { props = {}, children, beforeContent, afterContent, noContent }: BlockProps = $props();
 

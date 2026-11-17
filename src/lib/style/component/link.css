@@ -27,11 +27,11 @@ a.link {
 
     &.-next:after {
         content: '';
-        mask-image: url($lib/asset/icon/arrow-right-02.svg);
+        mask-image: url(#lib/asset/icon/arrow-right-02.svg);
     }
     &.-prev:before {
         content: '';
-        mask-image: url($lib/asset/icon/arrow-left-01.svg);
+        mask-image: url(#lib/asset/icon/arrow-left-01.svg);
     }
 
     &.-external:after {

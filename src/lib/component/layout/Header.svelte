@@ -1,19 +1,19 @@
 <script lang="ts">
 
-    import type { Page } from "$lib/script/types";
+    import type { Page } from "#lib/script/types.ts";
 
     import { tick } from "svelte";
     import { onNavigate } from "$app/navigation";
     
-    import { getCaseIndex, isCase, getMetaByPath } from "$lib/script/helpers";
-    import { marqueeInit } from "$lib/script/effect";
-    import { transitionOn } from "$lib/script/transition";
+    import { getCaseIndex, isCase, getMetaByPath } from "#lib/script/helpers.ts";
+    import { marqueeInit } from "#lib/script/effect.ts";
+    import { transitionOn } from "#lib/script/transition.ts";
     
-    import Nav from "$lib/component/layout/Nav.svelte";
-    import SubNav from "$lib/component/layout/SubNav.svelte";
-    import Link from "$lib/component/action/Link.svelte";
-    import Video from "$lib/component/asset/Video.svelte";
-    import Button from "$lib/component//action/Button.svelte";
+    import Nav from "#lib/component/layout/Nav.svelte";
+    import SubNav from "#lib/component/layout/SubNav.svelte";
+    import Link from "#lib/component/action/Link.svelte";
+    import Video from "#lib/component/asset/Video.svelte";
+    import Button from "#lib/component//action/Button.svelte";
     import Logo from "../asset/Logo.svelte";
 
     let { current }: { current: Page | null } = $props();

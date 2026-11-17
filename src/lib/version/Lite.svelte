@@ -1,9 +1,9 @@
 <script lang="ts">
 
-    import Block from "$lib/component/layout/Block.svelte";
-    import Logo from "$lib/component/asset/Logo.svelte";
-    import Tags from "$lib/component/data/Tags.svelte";
-    import Link from "$lib/component/action/Link.svelte";
+    import Block from "#lib/component/layout/Block.svelte";
+    import Logo from "#lib/component/asset/Logo.svelte";
+    import Tags from "#lib/component/data/Tags.svelte";
+    import Link from "#lib/component/action/Link.svelte";
 
 </script>
 

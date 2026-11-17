@@ -1,5 +1,5 @@
-import type { ThemeSwatches, RawSwatches, Fallback } from "$lib/script/types";
-import { generateTheme, fallback, fluid, fluidClamp } from "$lib/script/helpers";
+import type { ThemeSwatches, RawSwatches, Fallback } from "#lib/script/types.ts";
+import { generateTheme, fallback, fluid, fluidClamp } from "#lib/script/helpers.ts";
 
 // Functions
 

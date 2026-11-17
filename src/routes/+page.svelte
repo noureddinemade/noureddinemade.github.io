@@ -1,7 +1,7 @@
 <script lang="ts">
 
-    import Block from "$lib/component/layout/Block.svelte";
-    import Link from "$lib/component/action/Link.svelte";
+    import Block from "#lib/component/layout/Block.svelte";
+    import Link from "#lib/component/action/Link.svelte";
 
 </script>
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 
     import type { HTMLAttributes, HTMLImgAttributes } from "svelte/elements";
-    import type { ImageProps } from "$lib/script/types";
+    import type { ImageProps } from "#lib/script/types.ts";
 
     let { src, alt, desc, props, parent }: ImageProps = $props();
 

@@ -1,9 +1,9 @@
 //
 import { onMount } from 'svelte';
 import { page } from '$app/state';
-import { getMetaByPath } from '$lib/script/helpers';
-import { zoomInit, toggleInit, switchInit, vidControlInit, tabsInit } from '$lib/script/interaction';
-import { caseStudyFormatter } from '$lib/script/utils';
+import { getMetaByPath } from '#lib/script/helpers.ts';
+import { zoomInit, toggleInit, switchInit, vidControlInit, tabsInit } from '#lib/script/interaction.ts';
+import { caseStudyFormatter } from '#lib/script/utils.ts';
 
 // Setup each case study page
 export const caseStudySetup = () => {

@@ -1,7 +1,7 @@
 <script lang="ts">
 
-    import { getNextCase, getPrevCase } from '$lib/script/helpers';
-    import Link from '$lib/component/action/Link.svelte';
+    import { getNextCase, getPrevCase } from '#lib/script/helpers.ts';
+    import Link from '#lib/component/action/Link.svelte';
 
     let { current }: { current: number; } = $props();
 

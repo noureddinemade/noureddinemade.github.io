@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import Tags from "$lib/component/data/Tags.svelte";
+    import Tags from "#lib/component/data/Tags.svelte";
 
 </script>
 

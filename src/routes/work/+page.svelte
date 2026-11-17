@@ -1,12 +1,12 @@
 <script lang="">
 
-    import { transition, toggleTransitionIn, toggleTransitionOut } from "$lib/script/transition.js";
+    import { transition, toggleTransitionIn, toggleTransitionOut } from "#lib/script/transition.js";
 
-    import Block from "$lib/component/layout/Block.svelte";
-    import PageHeader from "$lib/component/layout/PageHeader.svelte";
-    import Button from "$lib/component/action/Button.svelte";
-    import WorkIndex from "$lib/component/layout/ViewCases.svelte";
-    import RoleIndex from "$lib/component/layout/ViewRoles.svelte";
+    import Block from "#lib/component/layout/Block.svelte";
+    import PageHeader from "#lib/component/layout/PageHeader.svelte";
+    import Button from "#lib/component/action/Button.svelte";
+    import WorkIndex from "#lib/component/layout/ViewCases.svelte";
+    import RoleIndex from "#lib/component/layout/ViewRoles.svelte";
     
     let index = $state(false);
 

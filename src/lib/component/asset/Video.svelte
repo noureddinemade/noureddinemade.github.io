@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import type { VideoProps } from "$lib/script/types";
+    import type { VideoProps } from "#lib/script/types.ts";
 
     let { vid, props }: VideoProps = $props();
 

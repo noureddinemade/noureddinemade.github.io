@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import { slider } from "$lib/script/interaction/slider";
+    import { slider } from "#lib/script/interaction/slider.ts";
 
     let { children, bg } = $props();
 

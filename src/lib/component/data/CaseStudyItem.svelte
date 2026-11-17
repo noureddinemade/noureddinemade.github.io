@@ -1,12 +1,12 @@
 <script lang="ts">
 
-    import type { Page } from "$lib/script/types";
+    import type { Page } from "#lib/script/types.ts";
     
     import { onMount } from "svelte";
-    import { followInit } from "$lib/script/effect";
+    import { followInit } from "#lib/script/effect.ts";
 
-    import Link from "$lib/component/action/Link.svelte";
-    import Tags from "$lib/component/data/Tags.svelte";
+    import Link from "#lib/component/action/Link.svelte";
+    import Tags from "#lib/component/data/Tags.svelte";
 
     let { caseStudy } : { caseStudy: Page } = $props();
 
