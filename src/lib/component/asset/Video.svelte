@@ -49,19 +49,29 @@
             ? { ...props, class: props.class ? `vid-wrap ${props.class}` : 'vid-wrap' }
             : { class: 'vid-wrap' }
     );
+
+    // Mute video
+    function muteVideo(video: HTMLVideoElement) {
+
+        if (props && props.muted) {
+            video.defaultMuted = true;
+            video.muted = true;
+        } 
+
+    }
     
 </script>
 
-<div id={vidProps.id} class={vidProps.class} data-video={vidID} data-cursor={`playback${props && props.autoplay === true ? '-playing' : '-paused'}`}>
+<div id={vidID} class={vidProps.class} data-video={vidID} data-cursor={`playback${props && props.autoplay === true ? '-playing' : '-paused'}`}>
     <video 
         data-video={vidID}
         autoplay={ props && props.autoplay ? true : false }
-        muted={ props && props.muted ? true : false }
         loop={ props && props.loop ? true : false }
         playsinline
         preload="metadata"
         aria-label={props?.["aria-label"]}
         poster={posterImage}
+        use:muteVideo
     >
         <source src={video} type="video/mp4">
     </video>
