@@ -3,6 +3,7 @@ name: Deploy SvelteKit site to GitHub Pages
 on:
     push:
         branches: ["primary"]
+    workflow_dispatch:
 
 permissions:
     contents: read
