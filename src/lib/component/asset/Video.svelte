@@ -62,7 +62,7 @@
     
 </script>
 
-<div id={vidID} class={vidProps.class} data-video={vidID} data-cursor={`playback${props && props.autoplay === true ? '-playing' : '-paused'}`}>
+<div id={vidProps.id} class={vidProps.class} data-video={vidID} data-cursor={`playback${props && props.autoplay === true ? '-playing' : '-paused'}`}>
     <video 
         data-video={vidID}
         autoplay={ props && props.autoplay ? true : false }

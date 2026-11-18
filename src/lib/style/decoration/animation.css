@@ -1,7 +1,6 @@
 /* Animations */
 
-@keyframes logoMove { to { mask-position: calc(50% + 196px) 0; } }
-
+@keyframes logoMove { to { mask-position: calc(50% + 170px) 0; } }
 @keyframes eyeBlink {
 
     0% { mask-size: 100% 100%; }
