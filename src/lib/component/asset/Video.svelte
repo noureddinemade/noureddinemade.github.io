@@ -4,6 +4,8 @@
 
     let { vid, props }: VideoProps = $props();
 
+    let paused = $state(true);
+
     const vidID = $derived.by(() => {
 
         let vidType = vid.replaceAll('/', '');
@@ -50,28 +52,35 @@
             : { class: 'vid-wrap' }
     );
 
-    // Mute video
-    function muteVideo(video: HTMLVideoElement) {
+    // Initialise video
+    function initVideo(el: HTMLVideoElement) {
+        if (props?.muted) {
+            el.defaultMuted = true;
+            el.muted = true;
+        }
 
-        if (props && props.muted) {
-            video.defaultMuted = true;
-            video.muted = true;
-        } 
+        paused = el.paused;
 
+        if (props?.autoplay) {
+            el.play().catch(() => {});
+        }
     }
     
 </script>
 
-<div id={vidProps.id} class={vidProps.class} data-video={vidID} data-cursor={`playback${props && props.autoplay === true ? '-playing' : '-paused'}`}>
+<div id={vidProps.id} class={vidProps.class} data-video={vidID} data-cursor={paused ? 'playback-paused' : 'playback-playing'}>
     <video 
         data-video={vidID}
-        autoplay={ props && props.autoplay ? true : false }
-        loop={ props && props.loop ? true : false }
+        autoplay={ props?.autoplay ?? false }
+        muted={props?.muted ?? false}
+        loop={ props?.loop ?? false }
         playsinline
         preload="metadata"
         aria-label={props?.["aria-label"]}
         poster={posterImage}
-        use:muteVideo
+        use:initVideo
+        onplay={ () => paused = false }
+        onpause={ () => paused = true }
     >
         <source src={video} type="video/mp4">
     </video>
